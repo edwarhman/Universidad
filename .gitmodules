@@ -1,0 +1,3 @@
+[submodule "micromouse"]
+	path = micromouse
+	url = git@github.com:edwarhman/micromouse.git
