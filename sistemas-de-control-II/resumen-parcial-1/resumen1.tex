@@ -1,0 +1,106 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage[margin=0.3cm]{geometry}
+
+\title{Resumen Parcial 1 Sistemas de Control II}
+\author{Emerson Warhman}
+\begin{document}
+\maketitle
+
+% Aquí va el contenido del resumen
+Hola mundo. ¿Cómo estás el día de hoy? Me llamo EME
+\section*{Forma estandar Sistema de segundo Orden}
+La forma estándar de un sistema de control de segundo orden con realimentación negativa unitaria es:
+
+\[ T(s) = \frac{\omega_n^2}{s^2 + 2\zeta \omega_n s + \omega_n^2} \]
+
+Los polos del sistema son:
+
+\[ s = -\zeta \omega_n \pm \omega_n \sqrt{\zeta^2 - 1} \]
+
+Las condiciones de amortiguamiento según el valor de $\zeta$ son:
+
+\begin{itemize}
+    \item Si \(\zeta > 1\): Sobreamortiguado
+    \item Si \(\zeta = 1\): Amortiguamiento crítico
+    \item Si \(0 < \zeta < 1\): Subamortiguado
+    \item Si \(\zeta = 0\): Sin amortiguamiento
+\end{itemize}
+
+\subsection*{Características Transitorias}
+
+Para sistemas subamortiguados (\(0 < \zeta < 1\)):
+
+\begin{itemize}
+    \item Tiempo de alza: \( t_r = \frac{1}{\omega_n} \left( \pi - \tan^{-1} \frac{\sqrt{1-\zeta^2}}{\zeta} \right) \)
+    \item Tiempo pico: \( t_p = \frac{\pi}{\omega_n \sqrt{1-\zeta^2}} \)
+    \item Sobrepico: \( M_p = e^{-\frac{\zeta \pi}{\sqrt{1-\zeta^2}}} \)
+    \item Tiempo de establecimiento (criterio 2\%): \( t_s = \frac{4}{\zeta \omega_n} \)
+\end{itemize}
+
+\section*{Estabilidad de un Sistema}
+
+\subsection*{Criterio de Jury para Sistemas Discretos}
+
+El criterio de Jury determina si todos los polos de un sistema discreto están dentro del círculo unitario en el plano z. Los pasos para aplicar el criterio son:
+
+\begin{enumerate}
+    \item Obtén el polinomio característico en la forma: \( z^n + a_{n-1} z^{n-1} + \dots + a_1 z + a_0 = 0 \).
+    \item Verifica la condición necesaria: \( |a_0| < 1 \). Si no se cumple, el sistema es inestable.
+    \item Construye la tabla de Jury con 2n filas:
+          - Fila 1: Coeficientes del polinomio de mayor a menor grado $(1, a_{n-1}, ..., a_0)$.
+          - Fila 2: Coeficientes del polinomio de menor a mayor grado $(a_0, a_1, ..., 1)$.
+          - Para filas subsiguientes, calcula los elementos usando determinantes de matrices 2x2 formadas por las dos filas anteriores.
+    \item Verifica que todos los elementos de la primera columna de la tabla sean positivos. Si es así, el sistema es estable.
+    \item Si algún elemento de la primera columna es cero o negativo, el sistema tiene polos en o fuera del círculo unitario.
+\end{enumerate}
+
+\subsection*{Criterio de Routh para Sistemas Continuos}
+
+El criterio de Routh determina si todos los polos de un sistema continuo están en el semiplano izquierdo. Los pasos para aplicar el criterio son:
+
+\begin{enumerate}
+    \item Expande la ecuación característica en forma descendente: \( s^n + a_{n-1} s^{n-1} + \dots + a_1 s + a_0 = 0 \).
+    \item Verifica que todos los coeficientes sean positivos. Si no todos son positivos, o si alguno es cero, o si hay raíces imaginarias, el sistema es inestable.
+    \item Ordena los coeficientes: Primera fila del arreglo de Routh con coeficientes de potencias pares de s $(s^n, s^{n-2}, ...)$. Segunda fila con coeficientes de potencias impares $(s^{n-1}, s^{n-3}$, ...).
+    \item Para filas subsiguientes, calcula cada elemento usando: \( -\frac{1}{a_{k-1,1}} \det \begin{pmatrix} a_{k-2,1} & a_{k-2,j+1} \\ a_{k-1,1} & a_{k-1,j+1} \end{pmatrix} \).
+    \item Verifica que todos los elementos de la primera columna del arreglo sean positivos. Si es así, el sistema es estable.
+    \item Si hay un cero en la primera columna, reemplázalo con un epsilon pequeño y analiza el límite cuando epsilon tiende a cero.
+    \item El número de cambios de signo en la primera columna indica el número de polos en el semiplano derecho.
+    \item Si todos los miembros de una fila impar son 0, se deriva la fila superior y dicha derivada se utiliza en la fila donde daba los ceros, a partir de ahí se continua con el procedimiento habitual.
+\end{enumerate}
+
+\section*{Lugar Geométrico de las Raíces}
+
+El lugar geométrico de las raíces es un método gráfico para analizar cómo cambian los polos del sistema cerrado al variar un parámetro, generalmente la ganancia K. Los pasos para trazar el lugar geométrico de las raíces son:
+
+\begin{enumerate}
+    \item Determina la función de transferencia en lazo abierto \( G(s)H(s) \).
+    \item Identifica los polos y ceros de \( G(s)H(s) \).
+    \item Dibuja los segmentos del eje real que pertenecen al lugar geométrico. Usar la regla de paridad de raíces a la derecha de un punto.
+    \item Determina las asíntotas: número de asíntotas, ángulos y punto de intersección con el eje real.
+          \begin{itemize}
+              \item $\theta_{asint}=\frac{180 (2k+1)}{N_p - N_z}$
+              \item $\sigma_{asint}=\frac{\sum P_j - \sum Z_i  }{N_p - N_z}$
+          \end{itemize}
+    \item Encuentra los puntos de ruptura y entrada resolviendo la ecuación característica.
+          \begin{itemize}
+              \item Si el LGR está entre dos polos en $\sigma$, existe al menos un punto de ruptura ahí.
+              \item Si el LGR está entre dos ceros en $\sigma$, existe al menos un punto de ingreso ahí.
+              \item Si el LGR está entre un cero y un polo pueden no existir ni puntos de ruptura ni de ingreso. o pueden haber ambos.
+          \end{itemize}
+          A partir de la E.C se despeja K y se deriva.
+          \(\frac{dK}{ds}=-\frac{1 + GH(s)}{G(s)}=0\).\\Se hallan las raíces de dicho polinomio y se evaluán en $K(s_i)$.\\ Si $K(s_i)> 0$ entonces sí es un punto de ruptura o de ingreso.
+    \item determinar el ángulo de sálida y ángulo de llegada.
+          \[\theta_{sal}=180 - \sum \angle P + \sum \angle Z\]
+          \[\theta_{ent}=180 - \sum\angle Z + \sum\angle P \]
+    \item Determinar las intersecciones con el eje imaginario usando el criterio de Routh o similar.
+    \item Dibuja el lugar conectando los polos y ceros, siguiendo las reglas de magnitud y ángulo. Tomando una serie de puntos de pruebas en las cercanias del origen del plano.
+\end{enumerate}
+
+\end{document}
