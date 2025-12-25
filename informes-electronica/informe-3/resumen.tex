@@ -1,0 +1,31 @@
+Este informe experimental analizó tres configuraciones no lineales fundamentales de amplificadores operacionales:
+
+\subsection{1. Oscilador de Puente de Wien}
+\begin{itemize}
+\item Genera señales sinusoidales mediante realimentación positiva
+\item Frecuencia de oscilación: $f_o = \frac{1}{2\pi RC}$
+\item Se verificó la condición de oscilación ($\beta A_v \geq 1$) y se midió distorsión armónica
+\item Aplicación: Generación de señales de prueba en sistemas de audio
+\end{itemize}
+
+\subsection{2. Multivibradores}
+\begin{itemize}
+\item \textbf{Astable}: Generador de onda cuadrada autónomo
+  \begin{itemize}
+  \item Período medido: $T = 2R_3C_1\ln(1+\frac{2R_1}{R_2})$
+  \item Error experimental vs teórico: 4.55\%
+  \end{itemize}
+  
+\item \textbf{Monoestable}: Produce pulsos de ancho controlado
+  \begin{itemize}
+  \item Ancho de pulso: $t_w = R_3C_1\ln(3)$
+  \item Se comprobó la dependencia con $R_3C_1$ (error: 4\%)
+  \end{itemize}
+\end{itemize}
+
+\subsection{3. Generador de Funciones}
+\begin{itemize}
+\item Circuito integrado para producir señales triangulares/cuadradas
+\item Se caracterizó la relación frecuencia-capacitancia ($f \propto 1/C$)
+\item No linealidades observadas en amplitudes altas
+\end{itemize}

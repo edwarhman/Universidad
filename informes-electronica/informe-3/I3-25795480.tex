@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{cancel}
+\usepackage{xr}
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage[spanish]{babel}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{../utils/laboratorio}
+\usepackage{csquotes}
+\usepackage[
+    backend=biber,
+    style=ieee,
+    sorting=none
+]{biblatex}
+
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\addbibresource{parte-3/bibliografia.bib}
+
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\graphicspath{
+    {./parte-1/images/}
+    {./parte-2/images/}
+    {./parte-3/images/}
+}
+
+
+\begin{document}
+\input{portada.tex}
+\tableofcontents
+\newpage
+\section{Resumen}
+\input{resumen.tex}
+
+\section{Introducción}
+\input{introduccion.tex}
+
+\section{Objetivos}
+\input{parte-1/objetivos.tex}
+
+\section {Marco teórico}
+\input{parte-1/marco-teorico.tex}
+\input{parte-2/marco-teorico.tex}
+\input{parte-3/marco-teorico.tex}
+
+\section{Metodología}
+\subsection{Osciladores}
+\input{parte-1/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Multivibradores}
+\input{parte-2/trabajo-de-preparacion.tex}
+\FloatBarrier
+\subsection{Generador de funciones}
+\input{parte-3/trabajo-de-preparacion.tex}
+\FloatBarrier
+
+\input{instrumentos.tex}
+
+\section{Presentación de resultados}
+\subsection{Osciladores}
+\input{parte-1/resultados.tex}
+\FloatBarrier
+\subsection{Multivibradores}
+\input{parte-2/resultados.tex}
+\FloatBarrier
+\subsection{Generador de funciones}
+\label{sec:resultados-generador-funciones}
+\input{parte-3/resultados.tex}
+\FloatBarrier
+
+\section{Análisis de resultados}
+\subsection{Análisis de los  osciladores}
+\input{parte-1/analisis-de-resultados.tex}
+\FloatBarrier
+\subsection{Análisis de los multivibradores}
+\input{parte-2/analisis-de-resultados.tex}
+\FloatBarrier
+\subsection{Análisis del generador de funciones}
+\input{parte-3/analisis-de-resultados.tex}
+
+\FloatBarrier
+\input{conclusiones.tex}
+
+\FloatBarrier
+\input{anexos.tex}
+\printbibliography[heading=bibintoc, title={Bibliografía}]
+\end{document}

@@ -1,0 +1,46 @@
+De los datos obtenidos en la sección \ref{sec:resultados-generador-funciones} se obtienen los errores porcentuales mostrados en las siguientes tablas
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Descripción & $V_C$ (V) & $\Delta V_C$ (V) & Valor teórico (V) & Error \% \\ \hline
+$V_C$ & 10 & 1 & 7.88 & 26.93 \\ \hline
+$V_{sat+}$ & 10 & 1 & 8.4 & 19.05 \\ \hline
+$V_C$ V[pp] & 17 & 1 & 15.76 & 7.87 \\ \hline
+$V_{sat}$ V[pp] & 17 & 1 & 16.8 & 1.19 \\ \hline
+\end{tabular}
+\caption{Comparación Resultados experimentales con valores teóricos del voltaje $V_c$ }
+\label{tab:comparacion-voltaje-Vc}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Descripción & $V_t$ (V) & $\Delta V_t$ (V) & Valor teórico (V) & Error \% \\ \hline
+Tensión & 7.6 & 0.4 & 7.0 & 8.57 \\ \hline
+\end{tabular}
+\caption{Resultados experimentales de la tensión $V_t$ y comparación con el valor teórico}
+\label{tab:comparacion-voltaje-Vt}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Descripción & $T$ ($\mu s$) & $\Delta T$ ($\mu s$) & Valor teórico ($\mu s$) & Error \% \\ \hline
+Periodo T & 192.00 & 4 & 200.00 & 4.00 \\ \hline
+Retraso SR & 32.00 & 4 & 27 & 18.52 \\ \hline
+\end{tabular}
+\caption{Resultados experimentales de tiempos y comparación con valores teóricos}
+\label{tab:comparacion-tiempo-generador}
+\end{table}
+
+De la tabla \ref{tab:comparacion-voltaje-Vc} se observa que el error porcentual del voltaje pico $V_C$ con respecto a su valor teórico es de 26.90\%, mientras que con respecto a $V_{sat+}$ el error es de 19.05\%, estos errores son algo altos. Sin embargo al observar la ilustración \ref{ilus:generador-funciones} se tiene que la forma de onda está levantada con respecto al eje horizontal por lo cual se tomaron los valores pico a pico de la señal, obteniendo un error de 7.87\% con respecto a $V_C$ y 1.19\% con respecto a $V_{sat}$. Estos errores son mucho más aceptables que los obtenidos con los valores pico.
+
+Al observar la tabla \ref{tab:comparacion-voltaje-Vt} se tiene que el error porcentual de la tensión $V_t$ con respecto a su valor teórico es de 8.57\%. Este error es aceptable ya que se encuentra dentro del rango de error esperado.
+
+De la ilustración \ref{ilus:generador-funciones} se observa que la onda $V_t$ no es completamente triangular, esto es debido a que durante el tiempo de retraso del Slewrate, el condensador se sigue cargando y descargando por encima del pico esperado con un comportamiento exponencial, cambiando así la forma de la onda a algo parecido a una senoidal, es también por esta razón, y sumado al hecho de que $V_c \approx V_t \approx V_{sat}$, que la onda triangular también se satura para valores mínimos, mientras se encuentra en la transición debida al Slewrate.
+
+De la tabla \ref{tab:comparacion-tiempo-generador} se observa que el error porcentual del periodo $T$ con respecto a su valor teórico es de 4.00\%, mientras que el error porcentual del retraso debido al Slewrate es de 18.52\%. El error del periodo es aceptable ya que se encuentra dentro del rango de error esperado, sin embargo el error del retraso es bastante alto, esto puede ser debido a la construcción del amplificador y las condiciones de funcionamiento como la temperatura, el error de 18.52\% también puede ser debido a que se tomó la medición con una escala del osciloscopio demasiado grande en comparación con el valor medido.
