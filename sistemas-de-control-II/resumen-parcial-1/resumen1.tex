@@ -13,7 +13,6 @@
 \maketitle
 
 % Aquí va el contenido del resumen
-Hola mundo. ¿Cómo estás el día de hoy? Me llamo EME
 \section*{Forma estandar Sistema de segundo Orden}
 La forma estándar de un sistema de control de segundo orden con realimentación negativa unitaria es:
 
@@ -101,6 +100,52 @@ El lugar geométrico de las raíces es un método gráfico para analizar cómo c
           \[\theta_{ent}=180 - \sum\angle Z + \sum\angle P \]
     \item Determinar las intersecciones con el eje imaginario usando el criterio de Routh o similar.
     \item Dibuja el lugar conectando los polos y ceros, siguiendo las reglas de magnitud y ángulo. Tomando una serie de puntos de pruebas en las cercanias del origen del plano.
+\end{enumerate}
+
+\section*{Compensadores}
+
+Los compensadores se utilizan para mejorar el rendimiento de los sistemas de control, como estabilidad, velocidad de respuesta y error en estado estacionario.
+
+\begin{itemize}
+    \item \textbf{Compensador de adelanto (lead)}: Aumenta la velocidad de respuesta y el margen de fase. Función de transferencia: \( G_c(s) = K \frac{s + z}{s + p} \) donde \( z < p \).
+    \item \textbf{Compensador de atraso (lag)}: Reduce el error en estado estacionario. Función de transferencia: \( G_c(s) = K \frac{s + z}{s + p} \) donde \( z > p \).
+    \item \textbf{Compensador lead-lag}: Combina adelanto y atraso para mejorar múltiples características.
+    \item \textbf{Controlador PID}: Proporcional-Integral-Derivativo. Función: \( G_c(s) = K_p + \frac{K_i}{s} + K_d s \), donde \( K_p \) para proporcional, \( K_i \) para integral, \( K_d \) para derivativo.
+\end{itemize}
+
+\subsection*{Diseño de un Compensador de Adelanto usando LGR}
+
+\[
+    G_c(s) = Kc\cdot\alpha\frac{Ts + 1}{\alpha Ts + 1}= K_c\frac{s+ 1/T }{S + 1 / \alpha T}
+\]
+
+Los pasos para diseñar un compensador de adelanto usando el lugar geométrico de las raíces son:
+
+\begin{enumerate}
+    \item Especifica las características deseadas del sistema cerrado, como el factor de amortiguamiento \(\zeta\) y la frecuencia natural \(\omega_n\).
+    \item Traza el LGR del sistema sin compensar y determina la ganancia máxima para estabilidad.
+    \item Determina la ubicación deseada de los polos dominantes en el plano s.
+    \item Calcula el ángulo de fase adicional requerido para mover el LGR a la ubicación deseada.
+    \item Elige la ubicación del polo del compensador: \( z = -\frac{1}{\alpha T} \), donde \(\alpha < 1\) y T se elige para el máximo adelanto.
+    \item Elige la ubicación del cero del compensador: \( p = -\frac{1}{T} \), con \( T = \frac{1}{\omega_m \sqrt{\alpha}} \), donde \(\omega_m\) es la frecuencia de máxima fase.
+    \item Ajusta la ganancia K para que el LGR pase por la ubicación deseada.
+\end{enumerate}
+
+\subsection*{Diseño de un Compensador de Atraso usando LGR}
+
+\[
+    G_c(s) = K_c \cdot \beta \frac{Ts + 1}{\beta Ts + 1} = K_c \frac{s + 1/T}{s + 1/(\beta T)}
+\]
+
+Los pasos para diseñar un compensador de atraso usando el lugar geométrico de las raíces son:
+
+\begin{enumerate}
+    \item Especifica las características deseadas del sistema cerrado, como el factor de amortiguamiento \(\zeta\), la frecuencia natural \(\omega_n\) y el error en estado estacionario.
+    \item Traza el LGR del sistema sin compensar y determina la ganancia K que coloca los polos en la ubicación deseada.
+    \item Verifica el error en estado estacionario. Si no cumple con las especificaciones, diseña un compensador de atraso.
+    \item Elige la ubicación del polo del compensador: \( p = -\frac{1}{\beta T} \), donde \(\beta > 1\) y T es grande para que el polo esté lejos a la izquierda.
+    \item Elige la ubicación del cero del compensador: \( z = -\frac{1}{T} \), con \( z \) cerca del polo para minimizar el cambio de fase.
+    \item Ajusta la ganancia \( K_c \) para que el LGR del sistema compensado pase por la ubicación deseada de los polos.
 \end{enumerate}
 
 \end{document}
