@@ -148,4 +148,44 @@ Los pasos para diseñar un compensador de atraso usando el lugar geométrico de 
     \item Ajusta la ganancia \( K_c \) para que el LGR del sistema compensado pase por la ubicación deseada de los polos.
 \end{enumerate}
 
+\section*{Sistemas muestreados}
+
+
+\[X^*(s) = \sum_{k=0}^{\infty}x(kT)e^{-skT} \]
+Si se define $z=e^{sT}$ entonces $s=\frac{1}{T}ln(z)$
+\[X(z) = \sum_{k=0}^{\infty}x(kT)z^{-k} \]
+
+$X(z)$ es la transformada Z de $x(kT)$
+
+Serie geométrica básica:
+\begin{center}
+    \(\sum_{k=0}^\infty r^k= \frac{1}{1- r} \), para $|r| < 1$.
+\end{center}
+
+
+\subsection*{Transformada Z inversa}
+
+\begin{itemize}
+    \item Método directo:
+          \[X(z) =x(0) + x(1)z^{-1} + x(2)z^{-2} + ...\]
+          Se obtiene dividiendo polinomio del numerador entre polinomio del denominador.
+    \item Fracciones parciales
+          \[X(z) = Z \{L^{-1}\{X(s)\}_{kT}\}\]
+    \item Tabla de transformaciones
+\end{itemize}
+
+\subsection*{Circuitos para la retención de datos}
+
+\begin{itemize}
+    \item Retentor de orden cero
+          \[Gh_0(s) = \frac{1- e^{-sT}}{s}\]
+    \item Retentor de orden uno
+          \[Gh_1(s) = \left(\frac{1- e^{-sT}}{s}\right)^2 \frac{Ts +1 }{T}\]
+\end{itemize}
+\subsection*{Función de transferencia de pulso}
+
+La función de transferencia de pulso para un sistema continuo con retenedor de orden cero es:
+
+\[ G(z) = (1 - z^{-1}) \mathcal{Z} \left\{ \frac{G(s)}{s} \right\} \]
+
 \end{document}
