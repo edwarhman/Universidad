@@ -40,6 +40,7 @@ Para sistemas subamortiguados (\(0 < \zeta < 1\)):
     \item Tiempo pico: \( t_p = \frac{\pi}{\omega_n \sqrt{1-\zeta^2}} \)
     \item Sobrepico: \( M_p = e^{-\frac{\zeta \pi}{\sqrt{1-\zeta^2}}} \)
     \item Tiempo de establecimiento (criterio 2\%): \( t_s = \frac{4}{\zeta \omega_n} \)
+    \item Frecuencia amortiguada: \(\omega_d = \omega_n \sqrt{1-\zeta^2}\)
 \end{itemize}
 
 \section*{Estabilidad de un Sistema}
@@ -187,5 +188,30 @@ Serie geométrica básica:
 La función de transferencia de pulso para un sistema continuo con retenedor de orden cero es:
 
 \[ G(z) = (1 - z^{-1}) \mathcal{Z} \left\{ \frac{G(s)}{s} \right\} \]
+
+\section*{Respuesta transitoria de los sistemas discretos}
+Dados los polos de un sistema en tiempo continuo
+
+\[ s = -\zeta \omega_n \pm \omega_n \sqrt{\zeta^2 - 1} \]
+
+Dado que \(z=e^{sT}\)
+
+tenemos
+
+\[z=e^{-\zeta\omega_nT+j\omega_nT\sqrt{1-\zeta^2}}\]
+por tanto
+
+\begin{center}
+    \(|z| = e^{-T\zeta\omega_n}\) \hfil \(\angle{z}= \omega_dT\)
+\end{center}
+
+al hacer \(T=\frac{2\pi}{\omega_s}\)
+
+\begin{center}
+    \(|z| = e^{\frac{-2\pi\zeta\omega_d }{\sqrt{1-\zeta^2}\omega_s }}\) \hfil \(\angle{z}= \frac{2\pi\omega_dT}{\omega_s}\)
+\end{center}
+
+
+
 
 \end{document}
