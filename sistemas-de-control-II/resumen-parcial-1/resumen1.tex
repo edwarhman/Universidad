@@ -269,4 +269,174 @@ Un sistema puede clasificarse en cuatro subsistemas según su controlabilidad y 
 \end{itemize}
 
 En algunos casos podemos determinar la Controlabilidad y Observabilidad de un sistema, representando en diagrama de bloques su ecuación de estado, y luego por inspección se determinan los estados desacoplados de la entrada y la salida. Los estados que estén desacoplados de la entrada serán No Controlables y los estados que estén desacoplados de la salida serán No Observables.
+
+\section*{Variables de Fase}
+
+Las variables de fase son una forma canónica de representar un sistema en el espacio de estados, donde las variables de estado se eligen como la salida del sistema y sus derivadas sucesivas.
+
+Para un sistema de orden \( n \) con una entrada \( u(t) \) y una salida \( y(t) \), las variables de fase se definen de la siguiente manera:
+
+\[
+    x_1(t) = y(t)
+\]
+
+\[
+    x_2(t) = \dot{y}(t)
+\]
+
+\[
+    \vdots
+\]
+
+\[
+    x_n(t) = y^{(n-1)}(t)
+\]
+
+La ecuación diferencial del sistema se puede escribir como:
+
+\[
+    y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_1 \dot{y} + a_0 y = b_m u^{(m)} + \dots + b_0 u
+\]
+
+En forma de variables de fase:
+
+\[
+    \dot{x}_1 = x_2
+\]
+
+\[
+    \dot{x}_2 = x_3
+\]
+
+\[
+    \vdots
+\]
+
+\[
+    \dot{x}_{n-1} = x_n
+\]
+
+\[
+    \dot{x}_n = -a_0 x_1 - a_1 x_2 - \dots - a_{n-1} x_n + b_0 u + b_1 \dot{u} + \dots + b_m u^{(m)}
+\]
+
+La representación en espacio de estados usando variables de fase es:
+
+\[
+    \dot{x} = \begin{bmatrix}
+        0      & 1      & 0      & \dots  & 0        \\
+        0      & 0      & 1      & \dots  & 0        \\
+        \vdots & \vdots & \vdots & \ddots & \vdots   \\
+        0      & 0      & 0      & \dots  & 1        \\
+        -a_0   & -a_1   & -a_2   & \dots  & -a_{n-1}
+    \end{bmatrix} x + \begin{bmatrix}
+        0      \\
+        0      \\
+        \vdots \\
+        0      \\
+        b_0
+    \end{bmatrix} u
+\]
+
+\[
+    y = \begin{bmatrix}
+        1 & 0 & 0 & \dots & 0
+    \end{bmatrix} x
+\]
+
+Esta representación es útil para el diseño de controladores y observadores.
+
+\subsection*{Caso con ceros en el numerador}
+
+\[G(s) = \frac{K[C_m s^{m-1} + c_{m-1} s^{m-2} + \dots + c_2 s + c_1]}{s^n + a_n s^{n-1} + a_{n-1} s^{n-2} + \dots + a_2 s + a_1}\]
+
+La representación en variables de estados no admite derivadas de la entrada, por ello es necesario reconstruir las ecuaciones en una forma admicible.
+
+\subsubsection{Modificando la matriz C}
+\[
+    G(s) = \frac{Y(s)}{U(s)} = \frac{X_1(s)}{U(s)} \frac{Y(s)}{X_1(s)} = \frac{K(c_2 s + c_1)}{s^3 + a_3 s^2 + a_2 s + a_1}
+\]
+
+donde
+\[
+    \frac{X_1(s)}{U(s)} = \frac{K}{s^3 + a_3 s^2 + a_2 s + a_1}
+\]
+\[
+    \frac{Y(s)}{X_1(s)} = c_2 s + c_1
+\]
+
+la primera ecuación representa el caso sin cero. Mientras que la segunda nos da la siguiente ecuación de la salida
+
+$$
+    y(t)  = c_2 \dot{x}_1(t) + c_1 x_1(t)
+$$
+$$
+    y(t)  = c_2 x_2(t) + c_1 x_1(t)
+$$
+
+
+\[
+    \begin{bmatrix}
+        \dot{x}_1     \\
+        \dot{x}_2     \\
+        \vdots        \\
+        \dot{x}_{n-1} \\
+        \dot{x}_n
+    \end{bmatrix} =
+    \begin{bmatrix}
+        0      & 1    & 0    & \cdots & 0        \\
+        0      & 0    & 1    & \cdots & 0        \\
+        \vdots &      &      & \ddots & \vdots   \\
+        0      & 0    & 0    & \cdots & 1        \\
+        -a_0   & -a_1 & -a_2 & \cdots & -a_{n-1}
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1     \\
+        x_2     \\
+        \vdots  \\
+        x_{n-1} \\
+        x_n
+    \end{bmatrix} +
+    \begin{bmatrix}
+        0      \\
+        0      \\
+        \vdots \\
+        0      \\
+        K
+    \end{bmatrix} u(t)
+\]
+
+\[
+    y(t) =
+    \begin{bmatrix}
+        c_1 & c_2 & \cdots & c_m & 0 & \cdots & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1    \\
+        x_2    \\
+        \vdots \\
+        x_n
+    \end{bmatrix}
+\]
+\subsubsection{Modificando la matriz B}
+Para hacer eso se utiliza la propiedad de que la función de transferencia es única.
+
+\[ G(s) = C (sI - A)^{-1} B \]
+
+
+\[
+    G(s) = \frac{\begin{bmatrix}
+        1 & 0 & 0 & \dots & 0
+    \end{bmatrix}Num{[sI - A]^{-1}}\begin{bmatrix}
+        b_1   \\
+        b_2   \\
+        \dots \\
+        b_n
+    \end{bmatrix}}{s^n + a_n s^{n-1} + a_{n-1} s^{n-2} + \dots + a_2 s + a_1}
+    = \frac{K[C_m s^{m-1} + c_{m-1} s^{m-2} + \dots + c_2 s + c_1]}{s^n + a_n s^{n-1} + a_{n-1} s^{n-2} + \dots + a_2 s + a_1}
+\]
+
+Se igualan los coeficientes del denominador y se despejan $b_i$.
+
+Las variables de fase son una forma sencilla de representar el sistema, pero tienen una desventaja que no son variables físicas.
 \end{document}
