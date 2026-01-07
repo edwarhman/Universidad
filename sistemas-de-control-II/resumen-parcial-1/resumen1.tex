@@ -439,4 +439,110 @@ Para hacer eso se utiliza la propiedad de que la función de transferencia es ú
 Se igualan los coeficientes del denominador y se despejan $b_i$.
 
 Las variables de fase son una forma sencilla de representar el sistema, pero tienen una desventaja que no son variables físicas.
+
+\section*{Variables Normales (Forma Modal)}
+
+Las variables normales, también conocidas como forma modal, se obtienen diagonalizando la matriz del sistema A. Esta representación es útil cuando se desea analizar los modos naturales del sistema de manera independiente.
+
+\[
+    G(s) = \frac{Y(s)}{U(s)} = \frac{K(c_m s^{m-1} + c_{m-1} s^{m-2} + \dots + c_2 s + c_1)}{(s - \lambda_1)(s - \lambda_2) \dots (s - \lambda_{n-1})(s - \lambda_n)}
+\]
+
+Ahora hemos escrito el denominador de la función de transferencia en forma factorizada.
+
+Supongamos que los polos del sistema son diferentes. Procedemnos a expandior G(s) en fracciones parciales
+
+\[
+    G(s) = \frac{Y(s)}{U(s)} = \frac{d_1}{s - \lambda_1} + \frac{d_2}{s - \lambda_2} + \dots + \frac{d_{n-1}}{s - \lambda_{n-1}} + \frac{d_n}{s - \lambda_n}
+\]
+
+Lo cual podemos escribir como
+
+\[
+    G(s) = \frac{Y(s)}{U(s)} = d_1 \frac{Z_1(s)}{U(s)} + d_2 \frac{Z_2(s)}{U(s)} + \dots + d_{n-1} \frac{Z_{n-1}(s)}{U(s)} + d_n \frac{Z_n(s)}{U(s)}
+\]
+donde
+\[
+    \begin{aligned}
+        \frac{Z_i(s)}{U(s)}      & = \frac{1}{s - \lambda_i} \quad i = 1, 2, 3, \dots, n                                 \\
+        G(s) = \frac{Y(s)}{U(s)} & = d_1 \frac{Z_1(s)}{U(s)} + d_2 \frac{Z_2(s)}{U(s)} + \dots + d_n \frac{Z_n(s)}{U(s)}
+    \end{aligned}
+\]
+
+osea
+
+\[Y(s) = d_1 Z_1(s) + d_2 Z_2(s) + \dots + d_n Z_n(s)\]
+
+En el dominio del tiempo tenemos
+
+\[
+    \begin{aligned}
+        \dot{z}_i(t) & = \lambda_i z_i(t) + u(t) \quad i = 1, 2, 3, \dots, n & \dot{Z}(t) = AZ(t) + B U(t) \\
+        y(t)         & = d_1 z_1(t) + d_2 z_2(t) + \dots + d_n z_n(t)        & y(t) = C Z(t)
+    \end{aligned}
+\]
+
+en la forma matricial nos queda
+
+\[
+    \begin{aligned}
+        \begin{bmatrix}
+            \dot{z}_1 \\
+            \dot{z}_2 \\
+            \dot{z}_3 \\
+            \vdots    \\
+            \dot{z}_n
+        \end{bmatrix} & =
+        \begin{bmatrix}
+            \lambda_1 & 0         & 0         & \cdots & 0         \\
+            0         & \lambda_2 & 0         & \cdots & 0         \\
+            0         & 0         & \lambda_3 &        & 0         \\
+            \vdots    &           &           & \ddots & \vdots    \\
+            0         & 0         & 0         & \cdots & \lambda_n
+        \end{bmatrix}
+        \begin{bmatrix}
+            z_1    \\
+            z_2    \\
+            z_3    \\
+            \vdots \\
+            z_n
+        \end{bmatrix} +
+        \begin{bmatrix}
+            1      \\
+            1      \\
+            1      \\
+            \vdots \\
+            1
+        \end{bmatrix} u(t)  \\
+        y(t)            & =
+        \begin{bmatrix}
+            d_1 & d_2 & d_3 & \cdots & d_n
+        \end{bmatrix}
+        \begin{bmatrix}
+            z_1    \\
+            z_2    \\
+            z_3    \\
+            \vdots \\
+            z_n
+        \end{bmatrix}
+    \end{aligned}
+\]
+
+
+Si el sistema tiene n polos distintos, la matriz A puede ser diagonalizada como:
+
+\[ A = P \Lambda P^{-1} \]
+
+Donde:
+- \(\Lambda\) es una matriz diagonal con los autovalores (polos) del sistema en la diagonal.
+- P es la matriz cuyas columnas son los autovectores correspondientes a cada autovalor.
+
+Definiendo las nuevas variables de estado \( z = P^{-1} x \), la ecuación de estado se transforma en:
+
+\[ \dot{z} = \Lambda z + P^{-1} B u \]
+
+\[ y = C P z + D u \]
+
+En esta forma, cada ecuación \(\dot{z}_i = \lambda_i z_i + (P^{-1} B)_i u\) está desacoplada de las demás, permitiendo un análisis modal directo. Los autovalores \(\lambda_i\) determinan la estabilidad y la dinámica de cada modo.
+
 \end{document}
