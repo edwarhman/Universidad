@@ -117,7 +117,7 @@ Los compensadores se utilizan para mejorar el rendimiento de los sistemas de con
 \subsection*{Diseño de un Compensador de Adelanto usando LGR}
 
 \[
-    G_c(s) = Kc\cdot\alpha\frac{Ts + 1}{\alpha Ts + 1}= K_c\frac{s+ 1/T }{S + 1 / \alpha T}
+    G_c(s) = K_c \cdot \alpha \frac{T s + 1}{\alpha T s + 1} = K_c \frac{s + 1/T}{s + 1/(\alpha T)}
 \]
 
 Los pasos para diseñar un compensador de adelanto usando el lugar geométrico de las raíces son:
@@ -162,6 +162,7 @@ Serie geométrica básica:
 \begin{center}
     \(\sum_{k=0}^\infty r^k= \frac{1}{1- r} \), para $|r| < 1$.
 \end{center}
+
 
 
 \subsection*{Transformada Z inversa}
@@ -214,4 +215,58 @@ al hacer \(T=\frac{2\pi}{\omega_s}\)
 
 
 
+\section*{Variables de Estado}
+
+Las variables de estado son un conjunto de variables que describen completamente el estado interno de un sistema dinámico. En la representación en espacio de estados, un sistema se describe mediante ecuaciones diferenciales de primer orden:
+
+\[\dot{x}(t) = A x(t) + B u(t)\]
+
+\[y(t) = C x(t) + D u(t)\]
+
+Donde:
+
+\begin{itemize}
+    \item \(x(t)\): Vector de estado, que contiene las variables que describen el estado del sistema en el tiempo t.
+    \item \(u(t)\): Vector de entrada o señal de control aplicada al sistema.
+    \item \(y(t)\): Vector de salida o respuesta del sistema.
+    \item \(A\): Matriz del sistema, que describe la evolución del estado (la dinámica) interno del sistema.
+    \item \(B\): Matriz de control, que relaciona cómo la entrada afecta al estado.
+    \item \(C\): Matriz de salida, que relaciona el estado con la salida medida.
+    \item \(D\): Matriz de transmisión directa, que describe la influencia directa de la entrada en la salida (usualmente cero en muchos sistemas).
+\end{itemize}
+
+Notamos que esta representación permite múltiples entradas y múltiples salidas. Además las matrices pueden ser funciones de tiempo
+En el caso de un sistema con una entrada y una salida tendremos (Sistemas Componsados)
+Notamos que en la configuración clásica solo se realimenta la salida.
+En la configuración moderna del un lazo de control automático se realimentan todas las
+variables de estado
+
+\subsection*{Relación entre la representación en espacio de estados y la función de transferencia}
+
+La función de transferencia G(s) se puede obtener a partir de las matrices de estado de la siguiente manera:
+
+\[ G(s) = C (sI - A)^{-1} B + D \]
+
+Donde I es la matriz identidad de tamaño n x n, y $(sI - A)^{-1}$ se conoce como la matriz resolvente. Los polos de la función de transferencia son los valores propios de la matriz A.
+
+\section*{Controlabilidad y observabilidad}
+
+\begin{itemize}
+    \item Controlabilidad: un sistema es controlable si cualquier estado inicial \( X(0) \) puede ser transformado en cualquier estado final \( X(t_f) \) en un tiempo finito \( t_f > 0 \) por un control \( u(t) \). \\ Un sistema es controlable si la matriz de controlabilidad tiene rango completo, es decir, rango $n$ \[ \mathcal{C} = [B, AB, A^2 B, \dots, A^{n-1} B] \]
+    \item  Observabilidad: un sistema es observable si cada estado inicial \( X(0) \) puede ser exactamente determinado a partir de mediciones de la salida en un intervalo $0\leq t \leq t_f$. \\ Un sistema es observable si la matriz de observabilidad tiene rango completo, rango n \[ \mathcal{O} = \begin{bmatrix} C \\ CA \\ CA^2 \\ \vdots \\ CA^{n-1} \end{bmatrix} \]
+
+\end{itemize}
+
+\subsection*{Clasificación de sistemas según controlabilidad y observabilidad}
+
+Un sistema puede clasificarse en cuatro subsistemas según su controlabilidad y observabilidad:
+
+\begin{itemize}
+    \item \textbf{Completamente controlable y observable}: Todos los estados son controlables y observables.
+    \item \textbf{Completamente controlable pero no observable}: Todos los estados son controlables, pero algunos no son observables.
+    \item \textbf{No controlable pero observable}: Algunos estados no son controlables, pero todos son observables.
+    \item \textbf{No controlable y no observable}: Algunos estados no son controlables ni observables.
+\end{itemize}
+
+En algunos casos podemos determinar la Controlabilidad y Observabilidad de un sistema, representando en diagrama de bloques su ecuación de estado, y luego por inspección se determinan los estados desacoplados de la entrada y la salida. Los estados que estén desacoplados de la entrada serán No Controlables y los estados que estén desacoplados de la salida serán No Observables.
 \end{document}
