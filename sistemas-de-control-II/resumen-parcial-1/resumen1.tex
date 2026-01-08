@@ -545,4 +545,39 @@ Definiendo las nuevas variables de estado \( z = P^{-1} x \), la ecuación de es
 
 En esta forma, cada ecuación \(\dot{z}_i = \lambda_i z_i + (P^{-1} B)_i u\) está desacoplada de las demás, permitiendo un análisis modal directo. Los autovalores \(\lambda_i\) determinan la estabilidad y la dinámica de cada modo.
 
+\section*{Autovalores}
+
+Los autovalores (o valores propios) de una matriz son escalares \(\lambda\) que satisfacen la ecuación:
+
+\[ A v = \lambda v \]
+
+Donde \(v\) es el autovector correspondiente, y no es el vector cero.
+
+En sistemas de control, los autovalores de la matriz A del espacio de estados son los polos del sistema, que determinan su estabilidad y respuesta dinámica.
+
+\subsection*{Cálculo de Autovalores}
+
+Para encontrar los autovalores de A, se resuelve la ecuación característica:
+
+\[ \det(A - \lambda I) = 0 \]
+
+Esta ecuación es un polinomio de grado n, cuyas raíces son los autovalores.
+
+\subsection*{Importancia en Estabilidad}
+
+- **Sistemas Continuos**: El sistema es estable si todos los autovalores tienen parte real negativa (están en el semiplano izquierdo del plano complejo).
+- **Sistemas Discretos**: El sistema es estable si todos los autovalores están dentro del círculo unitario en el plano z ($|\lambda| < 1$).
+
+Los autovalores también determinan la respuesta natural del sistema: si son reales, la respuesta es exponencial; si complejos conjugados, oscilatoria.
+
+\subsection*{Autovectores}
+
+Los autovectores son vectores no nulos \( v \) que satisfacen:
+
+\[ A v = \lambda v \]
+
+Para cada autovalor \(\lambda\), existe al menos un autovector correspondiente. Los autovectores son importantes en la diagonalización de matrices y en el análisis modal de sistemas.
+
+En sistemas de control, los autovectores permiten transformar el sistema a la forma modal, donde las ecuaciones de estado están desacopladas.
+
 \end{document}
