@@ -529,22 +529,6 @@ en la forma matricial nos queda
 \]
 
 
-Si el sistema tiene n polos distintos, la matriz A puede ser diagonalizada como:
-
-\[ A = P \Lambda P^{-1} \]
-
-Donde:
-- \(\Lambda\) es una matriz diagonal con los autovalores (polos) del sistema en la diagonal.
-- P es la matriz cuyas columnas son los autovectores correspondientes a cada autovalor.
-
-Definiendo las nuevas variables de estado \( z = P^{-1} x \), la ecuación de estado se transforma en:
-
-\[ \dot{z} = \Lambda z + P^{-1} B u \]
-
-\[ y = C P z + D u \]
-
-En esta forma, cada ecuación \(\dot{z}_i = \lambda_i z_i + (P^{-1} B)_i u\) está desacoplada de las demás, permitiendo un análisis modal directo. Los autovalores \(\lambda_i\) determinan la estabilidad y la dinámica de cada modo.
-
 \section*{Autovalores}
 
 Los autovalores (o valores propios) de una matriz son escalares \(\lambda\) que satisfacen la ecuación:
@@ -579,5 +563,28 @@ Los autovectores son vectores no nulos \( v \) que satisfacen:
 Para cada autovalor \(\lambda\), existe al menos un autovector correspondiente. Los autovectores son importantes en la diagonalización de matrices y en el análisis modal de sistemas.
 
 En sistemas de control, los autovectores permiten transformar el sistema a la forma modal, donde las ecuaciones de estado están desacopladas.
+
+\section*{Transformación Lineal de Variables}
+
+La transformación lineal de variables en el espacio de estados permite cambiar la base de las variables de estado mediante una transformación invertible. Esto es útil para simplificar el análisis o el diseño del sistema.
+
+Dada una transformación \( x = P z \), donde P es una matriz invertible de tamaño n x n, las nuevas ecuaciones de estado se obtienen como:
+
+\[ \dot{z} = P^{-1} A P z + P^{-1} B u \]
+
+\[ y = C P z + D u \]
+
+Esta transformación preserva las propiedades del sistema, como la estabilidad, la controlabilidad y la observabilidad, ya que no altera la dinámica esencial del sistema.
+
+Un caso especial es la diagonalización de la matriz A, donde P es la matriz cuyas columnas son los autovectores de A, llevando el sistema a la forma modal donde las ecuaciones están desacopladas.
+
+\subsection{Transformación a la forma diagonal o normal}
+
+Si el sistema tiene n polos distintos, la matriz A puede ser diagonalizada como:
+
+
+\[P^{-1}AP = \Lambda\]
+\[P^{-1}B=B^n\]
+\[C^n=CP\]
 
 \end{document}
