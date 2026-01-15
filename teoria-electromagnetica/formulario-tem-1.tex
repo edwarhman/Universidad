@@ -1,0 +1,268 @@
+\documentclass[12pt,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{geometry}
+\geometry{margin=0.5cm}
+
+\title{Formulario de Ecuaciones Teoría Electromagnética Tema 1}
+\author{Emerson Warhman}
+\date{}
+
+\begin{document}
+\small
+\maketitle
+
+\section*{Operaciones Vectoriales}
+
+\subsection*{Coordenadas Polares}
+
+\subsubsection*{Relación de Variables con Cartesianas}
+
+De Esféricas a Cartesianas
+\begin{align*}
+    x & = r \sin \theta \cos \phi \\
+    y & = r \sin \theta \sin \phi \\
+    z & = r \cos \theta
+\end{align*}
+
+De Cartesianas a Esféricas
+\begin{align*}
+    r      & = \sqrt{x^2 + y^2 + z^2} \quad (r \geq 0)                                               \\
+    \theta & = \cos^{-1} \frac{z}{\sqrt{x^2 + y^2 + z^2}} \quad (0^\circ \leq \theta \leq 180^\circ) \\
+    \phi   & = \tan^{-1} \frac{y}{x}
+\end{align*}
+
+\subsection*{Coordenadas Cilíndricas}
+
+\subsubsection*{Relación de Variables con Cartesianas}
+
+De Cilíndricas a Cartesianas
+\begin{align*}
+    x & = \rho \cos \phi \\
+    y & = \rho \sin \phi \\
+    z & = z
+\end{align*}
+
+De Cartesianas a Cilíndricas
+\begin{align*}
+    \rho & = \sqrt{x^2 + y^2} \quad (\rho \geq 0) \\
+    \phi & = \tan^{-1} \frac{y}{x}                \\
+    z    & = z
+\end{align*}
+
+\subsection*{Elementos Diferenciales de Volumen y Área Superficial}
+
+Para coordenadas esféricas:
+\begin{equation*}
+    dV = r^2 \sin \theta \, dr \, d\theta \, d\phi
+\end{equation*}
+
+\begin{itemize}
+    \item Para una superficie esférica constante $r$:
+          \begin{equation*}
+              dA = r^2 \sin \theta \, d\theta \, d\phi
+          \end{equation*}
+    \item Para una superficie cónica constante $\theta$:
+          \begin{equation*}
+              dA = r \sin \theta \, dr \, d\phi
+          \end{equation*}
+    \item Para una superficie meridional constante $\phi$:
+          \begin{equation*}
+              dA = r \, dr \, d\theta
+          \end{equation*}
+\end{itemize}
+
+Para coordenadas cilíndricas:
+\begin{equation*}
+    dV = \rho \, d\rho \, d\phi \, dz
+\end{equation*}
+
+\begin{itemize}
+    \item Para una superficie de radio constante $\rho$:
+          \begin{equation*}
+              dA = \rho \, d\phi \, dz
+          \end{equation*}
+    \item Para una superficie angular constante $\phi$:
+          \begin{equation*}
+              dA = d\rho \, dz
+          \end{equation*}
+    \item Para una superficie axial constante $z$:
+          \begin{equation*}
+              dA = \rho \, d\rho \, d\phi
+          \end{equation*}
+\end{itemize}
+
+\subsection*{Producto Punto}
+
+\begin{equation*}
+    \vec{A} \cdot \vec{B} = A_x B_x + A_y B_y + A_z B_z = AB \cos \theta
+\end{equation*}
+
+\subsubsection*{Proyección de un Vector sobre Otro}
+\begin{equation*}
+    \text{Proy}_{\vec{B}} \vec{A} = \frac{\vec{A} \cdot \vec{B}}{|\vec{B}|^2}
+\end{equation*}
+
+\subsection*{Producto Cruz}
+
+\begin{equation*}
+    \vec{A} \times \vec{B} = (A_y B_z - A_z B_y) \hat{a}_x + (A_z B_x - A_x B_z) \hat{a}_y + (A_x B_y - A_y B_x) \hat{a}_z
+\end{equation*}
+
+\subsection*{Productos Punto de Vectores Unitarios}
+
+\section*{Operadores Diferenciales}
+
+\subsection*{Operador Gradiente}
+
+\begin{equation*}
+    \nabla f = \frac{1}{h_1} \frac{\partial f}{\partial u_1} \hat{a}_1 + \frac{1}{h_2} \frac{\partial f}{\partial u_2} \hat{a}_2 + \frac{1}{h_3} \frac{\partial f}{\partial u_3} \hat{a}_3
+\end{equation*}
+
+\subsection*{Operador Divergencia}
+
+\begin{equation*}
+    \nabla \cdot \vec{F} = \frac{1}{h_1 h_2 h_3} \left[ \frac{\partial}{\partial u_1}(h_2 h_3 F_1) + \frac{\partial}{\partial u_2}(h_1 h_3 F_2) + \frac{\partial}{\partial u_3}(h_1 h_2 F_3) \right]
+\end{equation*}
+
+\subsection*{Operador Rotacional}
+
+\begin{equation*}
+    \nabla \times \vec{A} = \frac{1}{h_1 h_2 h_3}
+    \begin{vmatrix}
+        h_1 \hat{e}_1                 & h_2 \hat{e}_2                 & h_3 \hat{e}_3                 \\
+        \frac{\partial}{\partial u_1} & \frac{\partial}{\partial u_2} & \frac{\partial}{\partial u_3} \\
+        h_1 A_1                       & h_2 A_2                       & h_3 A_3
+    \end{vmatrix}
+\end{equation*}
+
+\section*{Cálculo de Integral de Línea}
+
+\subsection*{Integral de Línea de una Función Escalar}
+
+\begin{equation*}
+    \int_C f(x, y, z) \, ds
+\end{equation*}
+
+donde
+\begin{equation*}
+    ds = \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2 + \left(\frac{dz}{dt}\right)^2} \, dt
+\end{equation*}
+
+\begin{equation*}
+    \int_C f(x, y, z) \, ds = \int_a^b f(x(t), y(t), z(t)) \left| \frac{d\vec{r}}{dt} \right| dt
+\end{equation*}
+
+\subsection*{Integral de Línea de un Campo Vectorial}
+
+\begin{equation*}
+    \int_C \vec{F} \cdot d\vec{r} = \int_C F_x \, dx + F_y \, dy + F_z \, dz
+\end{equation*}
+
+donde
+\begin{equation*}
+    d\vec{r} = \frac{d\vec{r}}{dt} dt = \left( \frac{dx}{dt} \hat{i} + \frac{dy}{dt} \hat{j} + \frac{dz}{dt} \hat{k} \right) dt
+\end{equation*}
+
+\begin{equation*}
+    \int_C \vec{F} \cdot d\vec{r} = \int_a^b \vec{F}(\vec{r}(t)) \cdot \frac{d\vec{r}}{dt} \, dt
+\end{equation*}
+
+\section*{Ley de Coulomb}
+
+\subsection*{Densidades de Carga}
+
+\begin{itemize}
+    \item Densidad volumétrica $\rho$: $\rho = \frac{dq}{dV}$
+    \item Densidad superficial $\sigma$: $\sigma = \frac{dq}{dA}$
+    \item Densidad lineal $\lambda$: $\lambda = \frac{dq}{dl}$
+\end{itemize}
+
+\subsection*{Fuerza entre dos cargas}
+
+\begin{equation*}
+    \vec{F}_{12} = \frac{1}{4\pi \epsilon_0} \frac{q_1 q_2}{r_{12}^2} \hat{r}_{12}
+\end{equation*}
+
+\section*{Campo Eléctrico}
+
+\subsection*{Campo Eléctrico debido a una Carga Discreta}
+
+\begin{equation*}
+    \vec{E} = \frac{1}{4\pi \epsilon_0} \frac{q}{r^2} \hat{r}
+\end{equation*}
+
+\subsection*{Campo Eléctrico debido a Múltiples Cargas Discretas}
+
+\begin{equation*}
+    \vec{E} = \sum_i \frac{1}{4\pi \epsilon_0} \frac{q_i}{r_i^2} \hat{r}_i
+\end{equation*}
+
+\subsection*{Campo Eléctrico debido a una Distribución Volumétrica de Carga}
+
+\begin{equation*}
+    \vec{E} = \frac{1}{4\pi \epsilon_0} \int \frac{\rho \, dV}{r^2} \hat{r}
+\end{equation*}
+
+\subsection*{Campo Eléctrico debido a una Línea de Carga}
+
+\begin{equation*}
+    \vec{E} = \frac{1}{4\pi \epsilon_0} \int \frac{\lambda \, dl}{r^2} \hat{r}
+\end{equation*}
+
+\subsection*{Campo Eléctrico debido a una Lámina de Carga}
+
+\begin{equation*}
+    \vec{E} = \frac{\sigma}{2\epsilon_0} \hat{n}
+\end{equation*}
+
+\section*{Densidad de Flujo Eléctrico, Ley de Gauss y Divergencia}
+
+\subsection*{Densidad de Flujo Eléctrico}
+
+\begin{equation*}
+    \vec{D} = \epsilon_0 \vec{E}
+\end{equation*}
+
+\subsection*{Ley de Gauss}
+
+\begin{equation*}
+    \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{int}}}{\epsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \oint \vec{D} \cdot d\vec{A} = Q_{\text{int}}
+\end{equation*}
+
+\subsection*{Divergencia, Primera Ley de Maxwell}
+
+\begin{equation*}
+    \nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \nabla \cdot \vec{D} = \rho
+\end{equation*}
+
+\section*{Potencial Electrostático}
+
+\begin{equation*}
+    V = -\int \vec{E} \cdot d\vec{l}
+\end{equation*}
+
+\begin{equation*}
+    \vec{E} = -\nabla V
+\end{equation*}
+
+\begin{equation*}
+    \nabla^2 V = -\frac{\rho}{\epsilon_0}
+\end{equation*}
+
+\begin{equation*}
+    \nabla^2 V = 0
+\end{equation*}
+
+\end{document}
