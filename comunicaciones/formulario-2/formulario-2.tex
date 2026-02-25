@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+
+\title{Formulario de Comunicaciones: Series de Fourier}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Series de Fourier}
+
+Para una función periódica $f(t)$ con periodo $T$ y frecuencia fundamental $\omega_0 = \frac{2\pi}{T}$.
+
+\subsection{Forma Trigonométrica}
+La serie de Fourier se expresa como:
+\[ f(t) = a_0 + \sum_{n=1}^{\infty} [a_n \cos(n\omega_0 t) + b_n \sin(n\omega_0 t)] \]
+
+Donde los coeficientes son:
+\begin{itemize}
+      \item $a_0 = \frac{1}{T} \int_{-T/2}^{T/2} f(t) dt$ (Valor medio)
+      \item $a_n = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \cos(n\omega_0 t) dt$
+      \item $b_n = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \sin(n\omega_0 t) dt$
+\end{itemize}
+
+\subsection{Forma Exponencial Compleja}
+La serie de Fourier se expresa como:
+\[ f(t) = \sum_{n=-\infty} ^{\infty} c_n e^{j n \omega_0 t} \]
+
+Donde el coeficiente $c_n$ es:
+\[ c_n = \frac{1}{T} \int_{-T/2}^{T/2} f(t) e^{-j n \omega_0 t} dt \]
+
+Relación con los coeficientes trigonométricos (para $n > 0$):
+\begin{itemize}
+      \item $c_n = \frac{1}{2}(a_n - jb_n)$
+      \item $c_{-n} = \frac{1}{2}(a_n + jb_n) = c_n^*$
+      \item $c_0 = a_0$
+\end{itemize}
+
+\section{Transformada de Fourier}
+
+Para una señal no periódica $x(t)$, la transformada de Fourier se define como:
+
+\subsection{En frecuencia angular ($\omega$)}
+\begin{itemize}
+      \item \textbf{Transformada Directa:}
+            \[ X(\omega) = \int_{-\infty}^{\infty} x(t) e^{-j\omega t} dt \]
+      \item \textbf{Transformada Inversa:}
+            \[ x(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} X(\omega) e^{j\omega t} d\omega \]
+\end{itemize}
+
+\subsection{En frecuencia cíclica ($f$)}
+Dado que $\omega = 2\pi f$:
+\begin{itemize}
+      \item \textbf{Transformada Directa:}
+            \[ X(f) = \int_{-\infty}^{\infty} x(t) e^{-j2\pi f t} dt \]
+      \item \textbf{Transformada Inversa:}
+            \[ x(t) = \int_{-\infty}^{\infty} X(f) e^{j2\pi f t} df \]
+\end{itemize}
+
+\section{Modulación de Amplitud (AM)}
+
+\subsection{Doble Banda Lateral con Portadora Suprimida (DSB-SC)}
+
+Sea $m(t)$ la señal de mensaje y $c(t) = A_c \cos(2\pi f_c t)$ la portadora.
+
+\begin{itemize}
+      \item \textbf{Ecuación en el tiempo:}
+            \[ s(t) = m(t) A_c \cos(2\pi f_c t) \]
+            
+      \item \textbf{Ecuación en la frecuencia (usando frecuencia cíclica $f$):}
+            \[ S(f) = \frac{A_c}{2} [M(f - f_c) + M(f + f_c)] \]
+            Donde $M(f)$ es la transformada de Fourier del mensaje $m(t)$.
+\end{itemize}
+
+\section{Modulación Angular}
+
+\subsection{Modulación en Fase (PM)}
+
+La señal modulada en fase se expresa como:
+\[ s(t) = A_c \cos(2\pi f_c t + k_p m(t)) \]
+
+Donde:
+\begin{itemize}
+      \item \textbf{Desviación de fase:} $\Delta \phi = k_p \max|m(t)|$
+      \item \textbf{Índice de modulación:} $\beta_p = \Delta \phi$
+      \item \textbf{Frecuencia instantánea:} $f_i(t) = f_c + \frac{k_p}{2\pi} \frac{d m(t)}{dt}$
+      \item \textbf{Desviación de frecuencia:} $\Delta f = \frac{k_p}{2\pi} \max\left|\frac{d m(t)}{dt}\right|$
+      \item \textbf{Ancho de banda (Regla de Carson):}
+            \[ B_T \approx 2(\Delta f + B_m) \]
+            Para un mensaje sinusoidal: $B_T \approx 2B_m(1 + \beta_p)$
+\end{itemize}
+
+\subsection{Modulación en Frecuencia (FM)}
+
+La señal modulada en frecuencia se expresa como:
+\[ s(t) = A_c \cos\left(2\pi f_c t + 2\pi k_f \int_{0}^{t} m(\tau) d\tau\right) \]
+
+Donde:
+\begin{itemize}
+      \item \textbf{Frecuencia instantánea:} $f_i(t) = f_c + k_f m(t)$
+      \item \textbf{Desviación de frecuencia:} $\Delta f = k_f \max|m(t)|$
+      \item \textbf{Variación de la portadora:} $\Delta f_c = 2 \cdot \Delta f$
+      \item \textbf{Índice de modulación:} $\beta = \frac{\Delta f}{B_m}$
+      \item \textbf{Ancho de banda (Regla de Carson):}
+            \[ B_T \approx 2(\Delta f + B_m) = 2B_m(1 + \beta) \]
+\end{itemize}
+
+\end{document}
