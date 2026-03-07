@@ -1,0 +1,463 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2026.2.16)  7 MAR 2026 12:57
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/emers/universidad/comunicaciones/Comunicaciones_1_informe_4/main.tex
+(/home/emers/universidad/comunicaciones/Comunicaciones_1_informe_4/main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-06>
+(/home/emers/.miktex/texmfs/install/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/emers/.miktex/texmfs/install/tex/latex/base/size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/home/emers/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2025/11/09 v25.15 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count283
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2050.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2052.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2054.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2055.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2056.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2058.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2083.
+\U@D=\dimen149
+\l@unhyphenated=\language1
+
+(/home/emers/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count284
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4175.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/emers/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(/home/emers/.miktex/texmfs/install/tex/generic/babel/locale/es/babel-spanish.t
+ex)
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 4298.
+ (/home/emers/.miktex/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 51.
+
+\es@quottoks=\toks19
+\es@quotdepth=\count285
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 4.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 4.
+ (/home/emers/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/emers/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/emers/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/home/emers/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/home/emers/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/home/emers/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count286
+\Gm@cntv=\count287
+\c@Gm@tempcnt=\count288
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
+\Gm@dimlist=\toks21
+
+(/home/emers/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
+(/home/emers/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/home/emers/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen160
+\captionmargin=\dimen161
+\caption@leftmargin=\dimen162
+\caption@rightmargin=\dimen163
+\caption@width=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count291
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count292
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count293
+\float@exts=\toks22
+\float@box=\box53
+\@float@everytoks=\toks23
+\@floatcapt=\box54
+)
+(/home/emers/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count294
+)
+(main.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 8.
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
+
+(/home/emers/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count295
+\scratchdimen=\dimen168
+\scratchbox=\box55
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen169
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks25
+) (/home/emers/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/home/emers/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+<Imagenes/4-muestreo-y-retencion-c.jpg, id=1, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-c.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-c.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-c.jpg  used on input l
+ine 58.
+(pdftex.def)             Requested size: 375.80544pt x 281.83238pt.
+<Imagenes/4-muestreo-y-retencion-d1.jpg, id=2, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-d1.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-d1.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-d1.jpg  used on input 
+line 65.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/4-muestreo-y-retencion-d2.jpg, id=3, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-d2.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-d2.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-d2.jpg  used on input 
+line 70.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/4-muestreo-y-retencion-d3.jpg, id=4, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-d3.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-d3.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-d3.jpg  used on input 
+line 75.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/4-muestreo-y-retencion-d4.jpg, id=5, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-d4.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-d4.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-d4.jpg  used on input 
+line 80.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/4-muestreo-y-retencion-d6.jpg, id=6, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-d6.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-d6.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-d6.jpg  used on input 
+line 85.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/4-muestreo-y-retencion-d7.jpg, id=7, 4641.34pt x 3481.005pt>
+File: Imagenes/4-muestreo-y-retencion-d7.jpg Graphic file (type jpg)
+<use Imagenes/4-muestreo-y-retencion-d7.jpg>
+Package pdftex.def Info: Imagenes/4-muestreo-y-retencion-d7.jpg  used on input 
+line 90.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+[1
+
+{/home/emers/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./Imagenes/4-mue
+streo-y-retencion-c.jpg>] [2 <./Imagenes/4-muestreo-y-retencion-d1.jpg> <./Imag
+enes/4-muestreo-y-retencion-d2.jpg> <./Imagenes/4-muestreo-y-retencion-d3.jpg> 
+<./Imagenes/4-muestreo-y-retencion-d4.jpg> <./Imagenes/4-muestreo-y-retencion-d
+6.jpg> <./Imagenes/4-muestreo-y-retencion-d7.jpg>]
+<Imagenes/5-frecuencia-de-reloj.jpg, id=18, 4641.34pt x 3481.005pt>
+File: Imagenes/5-frecuencia-de-reloj.jpg Graphic file (type jpg)
+<use Imagenes/5-frecuencia-de-reloj.jpg>
+Package pdftex.def Info: Imagenes/5-frecuencia-de-reloj.jpg  used on input line
+ 101.
+(pdftex.def)             Requested size: 375.80544pt x 281.83238pt.
+<Imagenes/6-a.jpg, id=19, 4641.34pt x 3481.005pt>
+File: Imagenes/6-a.jpg Graphic file (type jpg)
+<use Imagenes/6-a.jpg>
+Package pdftex.def Info: Imagenes/6-a.jpg  used on input line 111.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/6-b.jpg, id=20, 4641.34pt x 3481.005pt>
+File: Imagenes/6-b.jpg Graphic file (type jpg)
+<use Imagenes/6-b.jpg>
+Package pdftex.def Info: Imagenes/6-b.jpg  used on input line 116.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/6-c.jpg, id=21, 4641.34pt x 3481.005pt>
+File: Imagenes/6-c.jpg Graphic file (type jpg)
+<use Imagenes/6-c.jpg>
+Package pdftex.def Info: Imagenes/6-c.jpg  used on input line 121.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/6-d.jpg, id=22, 4641.34pt x 3481.005pt>
+File: Imagenes/6-d.jpg Graphic file (type jpg)
+<use Imagenes/6-d.jpg>
+Package pdftex.def Info: Imagenes/6-d.jpg  used on input line 126.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/6-e.jpg, id=23, 4641.34pt x 3481.005pt>
+File: Imagenes/6-e.jpg Graphic file (type jpg)
+<use Imagenes/6-e.jpg>
+Package pdftex.def Info: Imagenes/6-e.jpg  used on input line 131.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+ [3 <./Imagenes/5-frecuencia-de-reloj.jpg>]
+Overfull \hbox (6.35374pt too wide) in paragraph at lines 138--139
+[]\OT1/cmr/bx/n/12 Instrucciones: \OT1/cmr/m/n/12 Coloque el conmutador en la p
+osici^^Son "BNC[] una la secci^^Son de transmisi^^Son
+ []
+
+[4 <./Imagenes/6-a.jpg> <./Imagenes/6-b.jpg> <./Imagenes/6-c.jpg> <./Imagenes/6
+-d.jpg> <./Imagenes/6-e.jpg>]
+<Imagenes/7-a.jpg, id=30, 4641.34pt x 3481.005pt>
+File: Imagenes/7-a.jpg Graphic file (type jpg)
+<use Imagenes/7-a.jpg>
+Package pdftex.def Info: Imagenes/7-a.jpg  used on input line 143.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/7-b.jpg, id=31, 4641.34pt x 3481.005pt>
+File: Imagenes/7-b.jpg Graphic file (type jpg)
+<use Imagenes/7-b.jpg>
+Package pdftex.def Info: Imagenes/7-b.jpg  used on input line 148.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/7-c.jpg, id=32, 4641.34pt x 3481.005pt>
+File: Imagenes/7-c.jpg Graphic file (type jpg)
+<use Imagenes/7-c.jpg>
+Package pdftex.def Info: Imagenes/7-c.jpg  used on input line 153.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+ [5 <./Imagenes/7-a.jpg> <./Imagenes/7-b.jpg> <./Imagenes/7-c.jpg>]
+<Imagenes/8-sin-ajuste.jpg, id=36, 4641.34pt x 3481.005pt>
+File: Imagenes/8-sin-ajuste.jpg Graphic file (type jpg)
+<use Imagenes/8-sin-ajuste.jpg>
+Package pdftex.def Info: Imagenes/8-sin-ajuste.jpg  used on input line 168.
+(pdftex.def)             Requested size: 375.80544pt x 281.83238pt.
+<Imagenes/8-cuadrada-bien.jpg, id=37, 4641.34pt x 3481.005pt>
+File: Imagenes/8-cuadrada-bien.jpg Graphic file (type jpg)
+<use Imagenes/8-cuadrada-bien.jpg>
+Package pdftex.def Info: Imagenes/8-cuadrada-bien.jpg  used on input line 175.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/8-senoidal.jpg, id=38, 4641.34pt x 3481.005pt>
+File: Imagenes/8-senoidal.jpg Graphic file (type jpg)
+<use Imagenes/8-senoidal.jpg>
+Package pdftex.def Info: Imagenes/8-senoidal.jpg  used on input line 180.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/8-impulso.jpg, id=39, 4641.34pt x 3481.005pt>
+File: Imagenes/8-impulso.jpg Graphic file (type jpg)
+<use Imagenes/8-impulso.jpg>
+Package pdftex.def Info: Imagenes/8-impulso.jpg  used on input line 185.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/8-triangular.jpg, id=40, 4641.34pt x 3481.005pt>
+File: Imagenes/8-triangular.jpg Graphic file (type jpg)
+<use Imagenes/8-triangular.jpg>
+Package pdftex.def Info: Imagenes/8-triangular.jpg  used on input line 190.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+ [6 <./Imagenes/8-sin-ajuste.jpg>]
+<Imagenes/9-1.jpg, id=44, 4641.34pt x 3481.005pt>
+File: Imagenes/9-1.jpg Graphic file (type jpg)
+<use Imagenes/9-1.jpg>
+Package pdftex.def Info: Imagenes/9-1.jpg  used on input line 206.
+(pdftex.def)             Requested size: 375.80544pt x 281.83238pt.
+ [7 <./Imagenes/8-cuadrada-bien.jpg> <./Imagenes/8-senoidal.jpg> <./Imagenes/8-
+impulso.jpg> <./Imagenes/8-triangular.jpg>]
+<Imagenes/9-ajuste-gain-1.jpg, id=49, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-1.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-1.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-1.jpg  used on input line 213.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/9-ajuste-gain-2.jpg, id=50, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-2.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-2.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-2.jpg  used on input line 218.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/9-ajuste-gain-3.jpg, id=51, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-3.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-3.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-3.jpg  used on input line 223.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/9-ajuste-gain-4.jpg, id=52, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-4.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-4.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-4.jpg  used on input line 228.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/9-ajuste-gain-5.jpg, id=53, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-5.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-5.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-5.jpg  used on input line 233.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/9-ajuste-gain-6.jpg, id=54, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-6.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-6.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-6.jpg  used on input line 238.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+<Imagenes/9-ajuste-gain-7.jpg, id=55, 4641.34pt x 3481.005pt>
+File: Imagenes/9-ajuste-gain-7.jpg Graphic file (type jpg)
+<use Imagenes/9-ajuste-gain-7.jpg>
+Package pdftex.def Info: Imagenes/9-ajuste-gain-7.jpg  used on input line 243.
+(pdftex.def)             Requested size: 211.38832pt x 158.49751pt.
+ [8 <./Imagenes/9-1.jpg>]
+Overfull \vbox (120.46002pt too high) has occurred while \output is active []
+
+
+[9 <./Imagenes/9-ajuste-gain-1.jpg> <./Imagenes/9-ajuste-gain-2.jpg> <./Imagene
+s/9-ajuste-gain-3.jpg> <./Imagenes/9-ajuste-gain-4.jpg> <./Imagenes/9-ajuste-ga
+in-5.jpg> <./Imagenes/9-ajuste-gain-6.jpg> <./Imagenes/9-ajuste-gain-7.jpg>]
+(main.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-06>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 5094 strings out of 469808
+ 91723 string characters out of 5470396
+ 502265 words of memory out of 5000000
+ 33728 multiletter control sequences out of 15000+600000
+ 629837 words of font info for 47 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 57i,8n,65p,476b,489s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on main.pdf (9 pages, 41086263 bytes).
+PDF statistics:
+ 76 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+
