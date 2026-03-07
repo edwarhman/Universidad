@@ -1,0 +1,43 @@
+\documentclass[12pt, a4paper, Spanish]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{
+    graphicx,
+    enumitem,
+    chngcntr,
+    csquotes,
+    amsmath,
+    mathptmx,
+    amssymb,
+    float,
+    amssymb,
+    amsfonts,
+    fullpage,
+    caption
+}% makeidx, enumerate} %despues de float, enumerate
+\usepackage{enumitem} % En el preámbulo
+\usepackage{hyperref} %[hidelinks]
+\usepackage{xcolor}
+\usepackage{multicol}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=cyan, citecolor=black}
+%\counterwithin{figure}{section}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\baselinestretch}{1.5} %interlineado
+\pagenumbering{arabic}
+%\usepackage[left=25mm, right=25mm, top=25mm, bottom=25mm]{geometry}
+\usepackage[backend=biber, citestyle=numeric]{biblatex}
+\bibliography{referencias}
+\usepackage[margin=15mm]{geometry}
+%\usepackage{hyperref}%para link referenciales
+\graphicspath{{imagenes/}} %permite importar imagenes dentro de la carpeta imagenes
+
+\pagestyle{empty}
+% \usepackage[spanish, es-tabla]{babel} %es-tabla añadido
+\begin{document}
+%x---CONTENIDO---
+% \color{white}
+\input{resultados}
+
+%\input{parte_1}
+%\input{parte_2}
+\end{document}
