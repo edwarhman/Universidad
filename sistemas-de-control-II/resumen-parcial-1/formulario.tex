@@ -1,0 +1,138 @@
+\documentclass[legalpaper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\title{\vspace{-1cm}Formulario - Sistemas de Control II}
+\author{Emerson Warhman}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1.5cm}
+
+\section*{Sistemas de Segundo Orden}
+Función de transferencia (lazo cerrado):
+\[ T(s) = \frac{\omega_n^2}{s^2 + 2\zeta \omega_n s + \omega_n^2} \]
+Polos:
+\[ s = -\zeta \omega_n \pm \omega_n \sqrt{\zeta^2 - 1} \]
+\textbf{Transitorio (Subamortiguado $0 < \zeta < 1$):}
+\begin{itemize}[leftmargin=*]
+    \item Tiempo de alza: \( t_r = \frac{\pi - \tan^{-1}(\frac{\sqrt{1-\zeta^2}}{\zeta})}{\omega_n} \)
+    \item Tiempo pico: \( t_p = \frac{\pi}{\omega_n \sqrt{1-\zeta^2}} \)
+    \item Sobrepico: \( M_p = e^{-\frac{\zeta \pi}{\sqrt{1-\zeta^2}}} \)
+    \item Tiempo de establecimiento (2\%): \( t_s = \frac{4}{\zeta \omega_n} \)
+\end{itemize}
+
+\section*{Estabilidad}
+\subsection*{Criterio de Jury (Discreto)}
+Polinomio: \( P(z) = a_n z^n + \dots + a_1 z + a_0 = 0 \)
+\begin{enumerate}[leftmargin=*]
+    \item Cond. necesaria: \( |a_0| < a_n \) (o $|a_0| < 1$ si $a_n=1$).
+    \item Tabla de Jury:
+    \[
+    \begin{array}{c|ccccc}
+        F_1 & a_n & a_{n-1} & \dots & a_0 \\
+        F_2 & a_0 & a_1 & \dots & a_n \\
+        F_3 & b_{n-1} & b_{n-2} & \dots & \\
+        \dots & & & & 
+    \end{array}
+    \]
+    donde \( b_k = \det \begin{pmatrix} a_n & a_k \\ a_0 & a_{n-k} \end{pmatrix} \) (verificar def. exacta).
+    \item Cond. suficiente: Todos los elementos de la 1ra columna $>0$.
+\end{enumerate}
+
+\subsection*{Criterio de Routh (Continuo)}
+Polinomio: \( s^n + a_{n-1}s^{n-1} + \dots + a_0 = 0 \)
+Elemento $b_1$:
+\[ b_1 = -\frac{1}{a_{k-1,1}} \det \begin{pmatrix} a_{k-2,1} & a_{k-2,2} \\ a_{k-1,1} & a_{k-1,2} \end{pmatrix} \]
+Condición: No cambios de signo en 1ra columna.
+
+\section*{Lugar Geométrico de las Raíces (LGR)}
+\textbf{Pasos para dibujar:}
+\begin{enumerate}[leftmargin=*,nosep]
+    \item Polos y ceros de G(s)H(s).
+    \item Eje Real: Regla de paridad (polos+ceros a la derecha es impar).
+    \item Asíntotas:
+    \[ \theta_a = \frac{180(2k+1)}{N_p - N_z}, \quad \sigma_a = \frac{\sum P - \sum Z}{N_p - N_z} \]
+    \item Ruptura/Ingreso: Resolver $\frac{dK}{ds} = 0$. ($K = -1/GH(s)$).
+    \item Ángulos de Salida/Llegada:
+    \[ \theta_{sal} = 180 - \sum \angle P_{otros} + \sum \angle Z \]
+    \[ \theta_{lleg} = 180 - \sum \angle Z_{otros} + \sum \angle P \]
+    \item Intersección Eje Img: Routh o $s=j\omega$.
+    \item Trazar uniendo polos a ceros/infinito.
+\end{enumerate}
+
+\section*{Compensadores}
+\textbf{Adelanto (Lead)} ($\alpha < 1$):
+\[ G_c(s) = K_c \frac{s + 1/T}{s + 1/(\alpha T)} \]
+Diseño por LGR:
+\begin{enumerate}[leftmargin=*,nosep]
+    \item Definir punto deseado $s_d$ (según $\zeta, \omega_n$).
+    \item Calcular deficiencia angular: $\phi = 180 - \sum \angle \text{vec}(s_d)$.
+    \item Ubicar polo $p$ y cero $z$ tal que aporten $\phi$.
+    \item Fórmula bisectriz o usar $\alpha = \frac{1-\sin \phi_m}{1+\sin \phi_m}$ y ajustar $T$.
+    \item Calcular $K_c$ por condición de magnitud en $s_d$.
+\end{enumerate}
+
+\textbf{Atraso (Lag)} ($\beta > 1$):
+\[ G_c(s) = K_c \frac{s + 1/T}{s + 1/(\beta T)} \]
+Diseño por LGR:
+\begin{enumerate}[leftmargin=*,nosep]
+    \item Ajustar ganancia $K$ para cumplir requisitos transitorios (polos dominantes s/compensar).
+    \item Calcular constante error actual y la requerida $\to$ hallar $\beta$.
+    \item Ubicar cero $z$ cerca del origen (ej. $0.1 Re(s_d)$) y polo $p = z/\beta$.
+    \item Ajustar $K_c \approx K$.
+\end{enumerate}
+
+\textbf{Controlador PID}:
+\[ G_c(s) = K_p + \frac{K_i}{s} + K_d s \]
+
+\section*{Sistemas Muestreados}
+Transformación: \( z = e^{sT} \), \( s = \frac{1}{T} \ln z \) \\
+Mapeo de polos:
+\[ |z| = e^{-\zeta \omega_n T}, \quad \angle z = \omega_d T \]
+donde $\omega_d = \omega_n \sqrt{1-\zeta^2}$.
+
+\section*{Espacio de Estados}
+\textbf{Variables de Fase (Forma Canónica)}
+Ecuación dif: \( y^{(n)} + \dots + a_0 y = b_m u^{(m)} + \dots + b_0 u \)
+Matriz A (común):
+\[
+A = \begin{bmatrix}
+0 & 1 & 0 & \dots \\
+\vdots & & \ddots & \\
+-a_0 & -a_1 & \dots & -a_{n-1}
+\end{bmatrix}
+\]
+\textbf{Caso 1: Ceros en numerador (Modificar C)}
+\[ G(s) = \frac{K(c_m s^{m-1} + \dots + c_1)}{s^n + \dots} \]
+\[ B = [0, \dots, 0, K]^T \]
+\[ C = [c_1, c_2, \dots, c_m, 0, \dots] \]
+\textbf{Caso 2: Ceros en numerador (Modificar B)}
+Usar unicidad de G(s): $G(s) = C(sI-A)^{-1}B$.
+\[ C = [1, 0, \dots, 0] \]
+B se halla igualando coeficientes:
+\[ \text{Num}(C(sI-A)^{-1}B) = \text{Num}(G(s)) \]
+
+\subsection*{Matrices Generales}
+Controlabilidad: $\mathcal{C} = [B, AB, \dots, A^{n-1}B]$ \\
+Observabilidad: $\mathcal{O} = [C^T, (CA)^T, \dots, (CA^{n-1})^T]^T$
+
+\subsection*{Forma Modal (Diagonal)}
+Si $A$ tiene autovalores distintos $\lambda_i$:
+\[ \Lambda = P^{-1} A P = \text{diag}(\lambda_1, \dots, \lambda_n) \]
+donde $P$ contiene los autovectores.
+\[ \dot{z} = \Lambda z + P^{-1} B u , \quad y = C P z \]
+Expansión fracciones parciales: $G(s) = \sum \frac{d_i}{s-\lambda_i}$
+\end{document}
