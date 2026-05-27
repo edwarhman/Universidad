@@ -1,0 +1,131 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\geometry{margin=2.5cm}
+
+\title{Prelaboratorio 1\\Instrumentos y Errores de Medición}
+\author{Laboratorio de Máquinas Eléctricas I}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Objetivos}
+\begin{itemize}
+    \item Identificar los tipos de instrumentos de medición utilizados en el laboratorio de máquinas eléctricas (bobina móvil, hierro móvil, electrodinámico).
+    \item Calcular errores de medición absolutos y relativos.
+    \item Aplicar correctamente el concepto de cifras significativas.
+    \item Analizar mediciones en ondas sinusoidales y no sinusoidales.
+\end{itemize}
+
+\section{Marco Teótico}
+
+\subsection{Instrumentos de Medición}
+\begin{itemize}
+    \item \textbf{Bobina móvil (D'Arsonval):} Mide corriente continua. Su principio se basa en la interacción entre el campo magnético de un imán permanente y la corriente que circula por una bobina móvil.
+    \item \textbf{Hierro móvil:} Mide corriente alterna y continua. Utiliza la fuerza de atracción entre una bobina fija y un núcleo de hierro móvil.
+    \item \textbf{Electrodinámico:} Mide potencia activa (vatímetro). Consta de dos bobinas fijas (de corriente) y una móvil (de tensión).
+\end{itemize}
+
+\subsection{Errores de Medición}
+El resultado de una medición difiere del valor verdadero debido a imperfecciones en los instrumentos y métodos. Los errores se clasifican en:
+\begin{itemize}
+    \item \textbf{Sistemáticos:} Constantes y repetibles, corregibles mediante calibración.
+    \item \textbf{Aleatorios:} Variaciones impredecibles, se reducen con promediado estadístico.
+\end{itemize}
+
+La relación entre el valor medido y el error es:
+\begin{equation}
+    A_r = A_m \pm \frac{A_{\text{clase}}}{100}
+\end{equation}
+donde $A_r$ es el valor real, $A_m$ el valor medido y $A_{\text{clase}}$ la clase del instrumento.
+
+\subsection{Cifras Significativas}
+La cantidad de cifras significativas de un resultado debe estar acotada por la primera cifra del error. Ejemplo:
+\begin{itemize}
+    \item Si el error es $\pm 0.05$, el resultado debe expresarse con 2 decimales.
+    \item No se deben reportar más cifras de las que la precisión del instrumento permite.
+\end{itemize}
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1: Error absoluto y relativo}
+Se mide una corriente de $2.35$ A con un amperímetro de clase 1.0 y escala de 5 A. Calcular:
+\begin{itemize}
+    \item Error absoluto máximo
+    \item Error relativo porcentual
+    \item Rango del valor real
+\end{itemize}
+
+\textbf{Solución:}
+\begin{align*}
+    \text{Error absoluto} &= \frac{1.0}{100} \times 5\,\text{A} = \pm 0.05\,\text{A} \\
+    \text{Error relativo} &= \frac{0.05}{2.35} \times 100\% = \pm 2.13\% \\
+    \text{Valor real} &= 2.35 \pm 0.05\,\text{A} \quad (2.30\text{ A} \leq I \leq 2.40\text{ A})
+\end{align*}
+
+\subsection{Ejercicio 2: Selección de instrumento}
+Se necesita medir una tensión aproximada de 120 V. Se dispone de dos voltímetros:
+\begin{itemize}
+    \item Voltímetro A: clase 0.5, escala 300 V
+    \item Voltímetro B: clase 1.0, escala 150 V
+\end{itemize}
+¿Cuál instrumento da menor error relativo?
+
+\textbf{Solución:}
+\begin{align*}
+    \text{Voltímetro A: } \varepsilon_A &= \frac{0.5}{100} \times 300 = \pm 1.5\,\text{V} \\
+    \varepsilon_{rA} &= \frac{1.5}{120} \times 100\% = \pm 1.25\% \\[4pt]
+    \text{Voltímetro B: } \varepsilon_B &= \frac{1.0}{100} \times 150 = \pm 1.5\,\text{V} \\
+    \varepsilon_{rB} &= \frac{1.5}{120} \times 100\% = \pm 1.25\% \\
+\end{align*}
+Ambos instrumentos dan el mismo error relativo en esta medición.
+
+\subsection{Ejercicio 3: Cifras significativas}
+Se miden los siguientes valores:
+\[
+V_1 = 12.345\,\text{V} \quad (\text{error: } \pm 0.05)
+\]
+\[
+V_2 = 0.0678\,\text{V} \quad (\text{error: } \pm 0.0005)
+\]
+Expresar correctamente cada medición con sus cifras significativas.
+
+\textbf{Solución:}
+\[
+V_1 = 12.35 \pm 0.05\,\text{V}
+\]
+\[
+V_2 = 0.0678 \pm 0.0005\,\text{V}
+\]
+
+\section{Instrumentos y Materiales}
+\begin{itemize}
+    \item Amperímetro (bobina móvil)
+    \item Voltímetro (hierro móvil)
+    \item Vatímetro (electrodinámico)
+    \item Osciloscopio
+    \item Fuente de tensión alterna
+    \item Multímetro digital
+\end{itemize}
+
+\section{Preguntas}
+\begin{enumerate}
+    \item Explique la diferencia entre un instrumento de bobina móvil y uno de hierro móvil.
+    \item ¿Por qué es importante considerar la clase de un instrumento al realizar mediciones?
+    \item ¿Cómo afecta la elección de la escala de un instrumento al error relativo de la medición?
+    \item ¿Cuántas cifras significativas debe tener una medición de 0.0450 A con un error de $\pm 0.001$ A?
+\end{enumerate}
+
+\section{Conclusiones}
+\begin{itemize}
+    \item[] \textit{(Completar después de realizar el prelaboratorio)}
+\end{itemize}
+
+\end{document}
