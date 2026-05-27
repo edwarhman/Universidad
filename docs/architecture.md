@@ -79,3 +79,10 @@ Los proyectos se organizan por trimestre académico:
 - **2026-1** (actual): `servicio/`, `sistema-de-potencia/`, `maquinas-electricas-i/`, `plantas-y-subestaciones/`, `lineas-de-transmision/`, `mecanica/`
 
 Cada proyecto tiene un campo `"semester"` en su `feature_list.json`. Los resúmenes por semestre están en `semestres/`.
+
+### Delegation Harness
+
+El líder evalúa cada tarea contra la matriz de delegación 
+(ver `docs/delegation.md`). Solo hace inline cambios triviales 
+(1-2 archivos, metadata, docs). Para todo lo demás, delega a subagentes 
+especializados.
