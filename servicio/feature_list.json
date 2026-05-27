@@ -1,7 +1,7 @@
 {
   "project": "servicio",
   "semester": "2026-1",
-  "description": "Plantilla de Servicio Comunitario — LaTeX",
+  "description": "Servicio Comunitario — Proyecto CEAPUCV",
   "rules": {
     "one_feature_at_a_time": true,
     "require_verification_to_close": true,
@@ -10,12 +10,27 @@
   "features": [
     {
       "id": 1,
-      "name": "plantilla_inicial",
-      "title": "Plantilla base de Servicio Comunitario",
-      "description": "Plantilla CEAPUCV para proyecto de Servicio Comunitario.",
+      "type": "tarea",
+      "name": "diagnostico",
+      "title": "Diagnóstico comunitario",
+      "due": "2026-06-20",
+      "description": "Diagnóstico de la comunidad para el proyecto de Servicio Comunitario.",
       "acceptance": [
-        "Compila sin errores",
-        "Estructura completa del proyecto"
+        "Documento en entregables/tareas/diagnostico/",
+        "Identificación de necesidades y propuesta inicial"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "type": "tarea",
+      "name": "plan_de_trabajo",
+      "title": "Plan de trabajo",
+      "due": "2026-07-05",
+      "description": "Plan de trabajo detallado para el proyecto.",
+      "acceptance": [
+        "Documento en entregables/tareas/plan-de-trabajo/",
+        "Cronograma y recursos definidos"
       ],
       "status": "pending"
     }

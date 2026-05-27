@@ -1,7 +1,7 @@
 {
   "project": "sistema-de-potencia",
   "semester": "2026-1",
-  "description": "Sistema de Potencia — Python y LaTeX para análisis de sistemas eléctricos de potencia",
+  "description": "Sistema de Potencia — Tareas y parciales",
   "rules": {
     "one_feature_at_a_time": true,
     "require_verification_to_close": true,
@@ -10,12 +10,40 @@
   "features": [
     {
       "id": 1,
-      "name": "estructura_inicial",
-      "title": "Estructura inicial del proyecto",
-      "description": "Crear directorio con README.md y esqueleto base para la materia.",
+      "type": "tarea",
+      "name": "tarea_1",
+      "title": "Tarea 1 — Análisis de carga",
+      "due": "2026-06-10",
+      "description": "Análisis de curva de carga y factores.",
       "acceptance": [
-        "Directorio con README.md",
-        "README.md describe la materia y el plan de trabajo"
+        "Cálculos realizados y validados",
+        "PDF en entregables/tareas/tarea-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "type": "tarea",
+      "name": "tarea_2",
+      "title": "Tarea 2 — Flujo de potencia",
+      "due": "2026-06-24",
+      "description": "Cálculos de flujo de potencia en sistema de 3 barras.",
+      "acceptance": [
+        "Cálculos realizados y validados",
+        "PDF en entregables/tareas/tarea-2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "type": "parcial",
+      "name": "parcial_1",
+      "title": "Parcial 1",
+      "due": "2026-07-02",
+      "description": "Primer parcial de Sistema de Potencia.",
+      "acceptance": [
+        "Guía de estudio creada en entregables/parciales/parcial-1/",
+        "Simulacro resuelto"
       ],
       "status": "pending"
     }

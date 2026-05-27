@@ -1,7 +1,7 @@
 {
   "project": "maquinas-electricas-i",
   "semester": "2026-1",
-  "description": "Máquinas Eléctricas I — Python y LaTeX para análisis de máquinas eléctricas",
+  "description": "Máquinas Eléctricas I — Informes, prelaboratorios, tareas y parciales",
   "rules": {
     "one_feature_at_a_time": true,
     "require_verification_to_close": true,
@@ -10,12 +10,69 @@
   "features": [
     {
       "id": 1,
-      "name": "estructura_inicial",
-      "title": "Estructura inicial del proyecto",
-      "description": "Crear directorio con README.md y esqueleto base para la materia.",
+      "type": "informe",
+      "name": "informe_1",
+      "title": "Informe 1 — Máquinas Eléctricas I",
+      "due": "2026-06-15",
+      "description": "Primer informe de laboratorio de Máquinas Eléctricas I.",
       "acceptance": [
-        "Directorio con README.md",
-        "README.md describe la materia y el plan de trabajo"
+        "Existe en entregables/informes/informe-1/",
+        "Documento LaTeX compila sin errores",
+        "Sigue la estructura: portada, introducción, marco teórico, resultados, conclusiones"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "type": "prelaboratorio",
+      "name": "prelab_1",
+      "title": "Prelaboratorio 1",
+      "due": "2026-06-08",
+      "description": "Prelaboratorio de la primera práctica.",
+      "acceptance": [
+        "Existe en entregables/prelaboratorios/prelab-1/",
+        "Documento LaTeX compila sin errores",
+        "Cálculos incluidos y correctos"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "type": "tarea",
+      "name": "tarea_1",
+      "title": "Tarea 1 — Circuito equivalente",
+      "due": "2026-06-05",
+      "description": "Cálculos de circuito equivalente de transformador.",
+      "acceptance": [
+        "Cálculos realizados y validados por el agente",
+        "PDF escaneado en entregables/tareas/tarea-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "type": "tarea",
+      "name": "tarea_2",
+      "title": "Tarea 2 — Ensayo de vacío y cortocircuito",
+      "due": "2026-06-12",
+      "description": "Cálculos de parámetros a partir de ensayos.",
+      "acceptance": [
+        "Cálculos realizados y validados por el agente",
+        "PDF escaneado en entregables/tareas/tarea-2/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "type": "parcial",
+      "name": "parcial_1",
+      "title": "Parcial 1",
+      "due": "2026-06-25",
+      "description": "Primer parcial de Máquinas Eléctricas I.",
+      "acceptance": [
+        "Fecha registrada",
+        "Guía de estudio creada en entregables/parciales/parcial-1/",
+        "Simulacro resuelto"
       ],
       "status": "pending"
     }

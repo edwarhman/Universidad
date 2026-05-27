@@ -1,7 +1,7 @@
 {
   "project": "lineas-de-transmision",
   "semester": "2026-1",
-  "description": "Líneas de Transmisión — LaTeX y Python para análisis de líneas de transmisión eléctrica",
+  "description": "Líneas de Transmisión — Tareas y parciales",
   "rules": {
     "one_feature_at_a_time": true,
     "require_verification_to_close": true,
@@ -10,12 +10,27 @@
   "features": [
     {
       "id": 1,
-      "name": "estructura_inicial",
-      "title": "Estructura inicial del proyecto",
-      "description": "Crear directorio con README.md y esqueleto base para la materia.",
+      "type": "tarea",
+      "name": "tarea_1",
+      "title": "Tarea 1 — Parámetros de líneas",
+      "due": "2026-06-14",
+      "description": "Cálculo de resistencia, inductancia y capacitancia de líneas de transmisión.",
       "acceptance": [
-        "Directorio con README.md",
-        "README.md describe la materia y el plan de trabajo"
+        "Cálculos realizados y validados",
+        "PDF en entregables/tareas/tarea-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "type": "parcial",
+      "name": "parcial_1",
+      "title": "Parcial 1",
+      "due": "2026-07-06",
+      "description": "Primer parcial de Líneas de Transmisión.",
+      "acceptance": [
+        "Guía de estudio creada en entregables/parciales/parcial-1/",
+        "Simulacro resuelto"
       ],
       "status": "pending"
     }

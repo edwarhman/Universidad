@@ -1,7 +1,7 @@
 {
   "project": "plantas-y-subestaciones",
   "semester": "2026-1",
-  "description": "Plantas y Subestaciones — LaTeX y Python para diseño y análisis de subestaciones eléctricas",
+  "description": "Plantas y Subestaciones — Tareas y parciales",
   "rules": {
     "one_feature_at_a_time": true,
     "require_verification_to_close": true,
@@ -10,12 +10,27 @@
   "features": [
     {
       "id": 1,
-      "name": "estructura_inicial",
-      "title": "Estructura inicial del proyecto",
-      "description": "Crear directorio con README.md y esqueleto base para la materia.",
+      "type": "tarea",
+      "name": "tarea_1",
+      "title": "Tarea 1 — Tipos de subestaciones",
+      "due": "2026-06-12",
+      "description": "Clasificación y componentes de subestaciones eléctricas.",
       "acceptance": [
-        "Directorio con README.md",
-        "README.md describe la materia y el plan de trabajo"
+        "Investigación realizada",
+        "PDF en entregables/tareas/tarea-1/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "type": "parcial",
+      "name": "parcial_1",
+      "title": "Parcial 1",
+      "due": "2026-07-04",
+      "description": "Primer parcial de Plantas y Subestaciones.",
+      "acceptance": [
+        "Guía de estudio creada en entregables/parciales/parcial-1/",
+        "Simulacro resuelto"
       ],
       "status": "pending"
     }
