@@ -1,5 +1,6 @@
 {
   "project": "LIE II",
+  "semester": "2025-3",
   "description": "Laboratorio de Ingeniería Eléctrica II — Python 3.12",
   "rules": {
     "one_feature_at_a_time": true,

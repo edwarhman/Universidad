@@ -1,5 +1,6 @@
 {
   "project": "sistemas-de-control-II",
+  "semester": "2025-3",
   "description": "Control de péndulo invertido — C (ESP-IDF) + Python + LaTeX",
   "rules": {
     "one_feature_at_a_time": true,

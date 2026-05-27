@@ -65,3 +65,12 @@ directorios `NN_Nombre_Demo/`, aplicación principal en `src/`.
   después de clonar.
 - `control-pendulo/` NO es submódulo, es un proyecto PlatformIO independiente
   dentro de `sistemas-de-control-II/`.
+
+## Organización por semestres
+
+Los proyectos se organizan por trimestre académico:
+
+- **2025-3** (anterior): `calculo-num-rico/`, `comunicaciones/`, `informes-electronica/`, `LIE II/`, `sistemas-de-control-II/`, `teoria-electromagnetica/`
+- **2026-1** (actual): `servicio/`
+
+Cada proyecto tiene un campo `"semester"` en su `feature_list.json`. Los resúmenes por semestre están en `semestres/`.

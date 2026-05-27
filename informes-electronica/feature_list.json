@@ -1,5 +1,6 @@
 {
   "project": "informes-electronica",
+  "semester": "2025-3",
   "description": "Informes de laboratorio de Electrónica — LaTeX + Python",
   "rules": {
     "one_feature_at_a_time": true,

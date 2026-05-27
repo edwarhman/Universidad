@@ -1,5 +1,6 @@
 {
   "project": "teoria-electromagnetica",
+  "semester": "2025-3",
   "description": "Formularios de Teoría Electromagnética — LaTeX",
   "rules": {
     "one_feature_at_a_time": true,

@@ -1,5 +1,6 @@
 {
   "project": "servicio",
+  "semester": "2026-1",
   "description": "Plantilla de Servicio Comunitario — LaTeX",
   "rules": {
     "one_feature_at_a_time": true,

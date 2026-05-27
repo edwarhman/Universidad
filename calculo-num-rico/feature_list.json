@@ -1,5 +1,6 @@
 {
   "project": "calculo-num-rico",
+  "semester": "2025-3",
   "description": "Métodos numéricos en Python — numpy, sympy, pytest",
   "rules": {
     "one_feature_at_a_time": true,

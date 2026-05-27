@@ -1,5 +1,6 @@
 {
   "project": "comunicaciones",
+  "semester": "2025-3",
   "description": "Informes de Comunicaciones I — LaTeX",
   "rules": {
     "one_feature_at_a_time": true,
