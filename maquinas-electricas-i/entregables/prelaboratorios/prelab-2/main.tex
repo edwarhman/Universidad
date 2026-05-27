@@ -1,0 +1,217 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{circuitikz}
+\geometry{margin=2.5cm}
+
+\title{Prelaboratorio 2\\Circuitos Magnéticos y Ciclo de Histéresis}
+\author{Laboratorio de Máquinas Eléctricas I}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Objetivos}
+\begin{itemize}
+    \item Analizar el comportamiento de circuitos magnéticos con núcleo ferromagnético.
+    \item Comprender el ciclo de histéresis y sus parámetros característicos.
+    \item Determinar la curva B-H de un material ferromagnético.
+    \item Calcular pérdidas por histéresis y corrientes parásitas (Foucault).
+\end{itemize}
+
+\section{Marco Teórico}
+
+\subsection{Circuitos Magnéticos}
+Un circuito magnético está compuesto por un material ferromagnético que confina el flujo magnético. La relación entre la fuerza magnetomotriz (FMM), el flujo magnético ($\phi$) y la reluctancia ($\mathcal{R}$) está dada por:
+
+\begin{equation}
+    \mathcal{F} = N I = \phi \cdot \mathcal{R}
+\end{equation}
+
+donde $N$ es el número de espiras, $I$ la corriente y $\mathcal{R}$ la reluctancia del circuito:
+
+\begin{equation}
+    \mathcal{R} = \frac{l}{\mu A}
+\end{equation}
+
+con $l$ la longitud media del núcleo, $A$ el área transversal y $\mu$ la permeabilidad del material.
+
+\subsection{Curva B-H y Ciclo de Histéresis}
+La relación entre la densidad de flujo magnético $B$ y la intensidad de campo magnético $H$ en un material ferromagnético no es lineal. Al someter el material a un ciclo completo de magnetización, se obtiene el ciclo de histéresis (Figura 1).
+
+\begin{figure}[h]
+\centering
+\begin{circuitikz}
+    \draw[->] (-3,0) -- (3,0) node[right] {$H$};
+    \draw[->] (0,-2) -- (0,2.5) node[above] {$B$};
+    \draw[thick] (0,0) .. controls (0.5,1.5) and (1.5,2) .. (2.5,0.5);
+    \draw[thick] (2.5,0.5) .. controls (2,-0.5) and (1,-1.5) .. (0,-2);
+    \draw[thick] (0,-2) .. controls (-1,-1.5) and (-2,-0.5) .. (-2.5,0.5);
+    \draw[thick] (-2.5,0.5) .. controls (-1.5,2) and (-0.5,1.5) .. (0,0);
+    \node at (2.5,0.5) [above right] {$+B_{\text{sat}}$};
+    \node at (-2.5,0.5) [above left] {$-B_{\text{sat}}$};
+    \node at (0.3,0.3) {$B_r$};
+    \node at (0.8,-0.2) {$H_c$};
+    \draw[dashed] (0.7,0) -- (0.7,-0.2);
+\end{circuitikz}
+\caption{Ciclo de histéresis típico de un material ferromagnético.}
+\label{fig:histeresis}
+\end{figure}
+
+Parámetros característicos:
+\begin{itemize}
+    \item $B_{\text{sat}}$: Inducción de saturación
+    \item $B_r$: Inducción remanente (cuando $H = 0$)
+    \item $H_c$: Campo coercitivo (cuando $B = 0$)
+\end{itemize}
+
+\subsection{Pérdidas en el Núcleo}
+Las pérdidas totales en un núcleo ferromagnético sometido a un campo alterno son:
+
+\begin{equation}
+    P_{\text{núcleo}} = P_h + P_f
+\end{equation}
+
+\textbf{Pérdidas por histéresis} ($P_h$): proporcionales al área del ciclo de histéresis y a la frecuencia:
+
+\begin{equation}
+    P_h = K_h \cdot f \cdot B_{\text{máx}}^n
+\end{equation}
+
+donde $K_h$ es una constante del material, $f$ la frecuencia, $B_{\text{máx}}$ la inducción máxima y $n$ el exponente de Steinmetz (usualmente $n \approx 1.6$ a $2.0$).
+
+\textbf{Pérdidas por corrientes parásitas} ($P_f$): debidas a las corrientes inducidas en el núcleo:
+
+\begin{equation}
+    P_f = K_f \cdot f^2 \cdot B_{\text{máx}}^2
+\end{equation}
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1: Reluctancia de un circuito magnético}
+Un núcleo toroidal de hierro silicoso tiene las siguientes dimensiones:
+\begin{itemize}
+    \item Longitud media: $l = 30\,\text{cm}$
+    \item Área transversal: $A = 5\,\text{cm}^2$
+    \item Permeabilidad relativa: $\mu_r = 2500$
+    \item Número de espiras: $N = 200$
+\end{itemize}
+
+Calcular:
+\begin{enumerate}
+    \item La reluctancia del núcleo
+    \item La corriente necesaria para producir un flujo de $\phi = 2 \times 10^{-3}\,\text{Wb}$
+    \item La inductancia del devanado
+\end{enumerate}
+
+\textbf{Solución:}
+
+\begin{align*}
+    \mu &= \mu_0 \mu_r = 4\pi \times 10^{-7} \times 2500 = 3.1416 \times 10^{-3}\,\text{H/m} \\
+    l &= 0.30\,\text{m} \\
+    A &= 5 \times 10^{-4}\,\text{m}^2 \\
+    \mathcal{R} &= \frac{l}{\mu A} = \frac{0.30}{3.1416 \times 10^{-3} \times 5 \times 10^{-4}} = \frac{0.30}{1.5708 \times 10^{-6}} \\
+    \mathcal{R} &= 1.91 \times 10^5\,\text{A-v/Wb}
+\end{align*}
+
+Corriente necesaria:
+\begin{align*}
+    \mathcal{F} &= \phi \cdot \mathcal{R} = 2 \times 10^{-3} \times 1.91 \times 10^5 = 382\,\text{A-v} \\
+    I &= \frac{\mathcal{F}}{N} = \frac{382}{200} = 1.91\,\text{A}
+\end{align*}
+
+Inductancia:
+\begin{align*}
+    L &= \frac{N\phi}{I} = \frac{200 \times 2 \times 10^{-3}}{1.91} = 0.209\,\text{H}
+\end{align*}
+
+\subsection{Ejercicio 2: Pérdidas en el núcleo}
+Un transformador con núcleo de acero al silicio opera a $60\,\text{Hz}$ con una inducción máxima de $B_{\text{máx}} = 1.2\,\text{T}$. Las constantes del material son $K_h = 0.02$ y $K_f = 0.0005$, con exponente de Steinmetz $n = 1.7$. El volumen del núcleo es $V = 500\,\text{cm}^3$.
+
+Calcular:
+\begin{enumerate}
+    \item Pérdidas por histéresis
+    \item Pérdidas por corrientes parásitas
+    \item Pérdidas totales en el núcleo
+\end{enumerate}
+
+\textbf{Solución:}
+
+\begin{align*}
+    P_h &= K_h \cdot f \cdot B_{\text{máx}}^n \cdot V \\
+    P_h &= 0.02 \times 60 \times (1.2)^{1.7} \times 500 \times 10^{-6} \\
+    P_h &= 0.02 \times 60 \times 1.373 \times 500 \times 10^{-6} \\
+    P_h &= 8.24 \times 10^{-4}\,\text{W} = 0.824\,\text{mW}
+\end{align*}
+
+\begin{align*}
+    P_f &= K_f \cdot f^2 \cdot B_{\text{máx}}^2 \cdot V \\
+    P_f &= 0.0005 \times 60^2 \times (1.2)^2 \times 500 \times 10^{-6} \\
+    P_f &= 0.0005 \times 3600 \times 1.44 \times 500 \times 10^{-6} \\
+    P_f &= 1.296 \times 10^{-3}\,\text{W} = 1.296\,\text{mW}
+\end{align*}
+
+\begin{align*}
+    P_{\text{núcleo}} &= P_h + P_f = 0.824 + 1.296 = 2.12\,\text{mW}
+\end{align*}
+
+\subsection{Ejercicio 3: Ciclo de histéresis}
+Un material ferromagnético tiene los siguientes puntos característicos en su ciclo de histéresis:
+\begin{itemize}
+    \item $B_{\text{sat}} = 1.5\,\text{T}$
+    \item $B_r = 0.9\,\text{T}$
+    \item $H_c = 200\,\text{A/m}$
+\end{itemize}
+
+Si el área del ciclo de histéresis medida es $A_{\text{ciclo}} = 300\,\text{J/m}^3$ y la frecuencia de operación es $50\,\text{Hz}$:
+\begin{enumerate}
+    \item Calcular las pérdidas por histéresis por unidad de volumen
+    \item Si el volumen del núcleo es $1000\,\text{cm}^3$, calcular la potencia perdida
+\end{enumerate}
+
+\textbf{Solución:}
+
+Las pérdidas por histéresis por unidad de volumen son proporcionales al área del ciclo:
+\begin{align*}
+    P_{h,v} &= f \times A_{\text{ciclo}} = 50 \times 300 = 15000\,\text{W/m}^3
+\end{align*}
+
+Potencia total:
+\begin{align*}
+    V &= 1000\,\text{cm}^3 = 1 \times 10^{-3}\,\text{m}^3 \\
+    P_h &= P_{h,v} \times V = 15000 \times 1 \times 10^{-3} = 15\,\text{W}
+\end{align*}
+
+\section{Materiales e Instrumentos}
+\begin{itemize}
+    \item Núcleo toroidal de hierro silicoso
+    \item Devanado de cobre (2 bobinas: excitación y medición)
+    \item Fuente de tensión alterna variable
+    \item Amperímetro (CA)
+    \item Voltímetro (CA)
+    \item Osciloscopio con puntas de prueba
+    \item Fluxímetro o sonda Hall
+\end{itemize}
+
+\section{Preguntas}
+\begin{enumerate}
+    \item ¿Qué es la permeabilidad magnética y cómo influye en la reluctancia de un circuito magnético?
+    \item Explique la diferencia entre materiales magnéticos duros y blandos en términos del ciclo de histéresis.
+    \item ¿Por qué las pérdidas por corrientes parásitas aumentan con el cuadrado de la frecuencia?
+    \item ¿Cómo se reduce el efecto de las corrientes parásitas en los núcleos de transformadores?
+    \item Si se duplica la inducción máxima $B_{\text{máx}}$, ¿cómo cambian las pérdidas por histéresis? (Use $n = 1.7$)
+\end{enumerate}
+
+\section{Conclusiones}
+\begin{itemize}
+    \item[] \textit{(Completar después de realizar el prelaboratorio)}
+\end{itemize}
+
+\end{document}
