@@ -66,3 +66,17 @@ en `progress/current.md` y en `feature_list.json`.
 - ❌ `mock` del filesystem cuando se puede usar `tmp_path`.
 - ❌ Marcar feature como `done` sin pasar `./init.sh`.
 - ❌ Ignorar warnings de compilación LaTeX (pueden indicar problemas).
+
+## Compilación LaTeX en WSL
+
+Si usas MiKTeX en WSL, los agentes deben filtrar las rutas `/mnt/c/` del PATH
+para evitar errores de permiso en `WindowsApps/`. Usa el script `scripts/compile-latex.sh`:
+
+```bash
+./scripts/compile-latex.sh main.tex -interaction=nonstopmode
+```
+
+Esto equivale a:
+```bash
+PATH=$(echo "$PATH" | tr ':' '\n' | grep -v '/mnt/c/' | tr '\n' ':') pdflatex main.tex
+```

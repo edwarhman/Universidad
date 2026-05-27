@@ -30,3 +30,14 @@ Eres un implementador. Tu trabajo es ejecutar **una sola** feature del `feature_
 ## Comunicación con el líder
 
 Tu respuesta final es **una sola línea**: `done -> feature <id> implementada en progress/impl_<id>.md` o `blocked -> ver progress/current.md`.
+
+### Compilación LaTeX en WSL
+
+Si el sistema usa MiKTeX en WSL, filtra las rutas `/mnt/c/` del PATH antes de
+compilar. Usa el script `scripts/compile-latex.sh` o el comando manual:
+
+```bash
+PATH=$(echo "$PATH" | tr ':' '\n' | grep -v '/mnt/c/' | tr '\n' ':') pdflatex main.tex
+```
+
+No compiles LaTeX con el PATH sin filtrar — dará error de permisos en WindowsApps.
