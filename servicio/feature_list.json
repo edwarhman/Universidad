@@ -1,0 +1,22 @@
+{
+  "project": "servicio",
+  "description": "Plantilla de Servicio Comunitario — LaTeX",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "plantilla_inicial",
+      "title": "Plantilla base de Servicio Comunitario",
+      "description": "Plantilla CEAPUCV para proyecto de Servicio Comunitario.",
+      "acceptance": [
+        "Compila sin errores",
+        "Estructura completa del proyecto"
+      ],
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "project": "comunicaciones",
+  "description": "Informes de Comunicaciones I — LaTeX",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "informe_1",
+      "title": "Informe 1 de Comunicaciones",
+      "description": "Completar informe 1.",
+      "acceptance": [
+        "main.tex compila sin errores"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "name": "informe_2",
+      "title": "Informe 2 de Comunicaciones",
+      "description": "Completar informe 2.",
+      "acceptance": [
+        "main.tex compila sin errores"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "name": "informe_3",
+      "title": "Informe 3 de Comunicaciones",
+      "description": "Completar informe 3.",
+      "acceptance": [
+        "main.tex compila sin errores"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "name": "informe_4",
+      "title": "Informe 4 de Comunicaciones",
+      "description": "Completar informe 4.",
+      "acceptance": [
+        "main.tex compila sin errores"
+      ],
+      "status": "done"
+    }
+  ]
+}

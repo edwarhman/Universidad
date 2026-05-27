@@ -1,0 +1,42 @@
+{
+  "project": "teoria-electromagnetica",
+  "description": "Formularios de Teoría Electromagnética — LaTeX",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "formulario_1",
+      "title": "Formulario TEM 1",
+      "description": "Formulario de Teoría Electromagnética 1.",
+      "acceptance": [
+        "formulario-tem-1.tex compila sin errores"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "name": "formulario_2",
+      "title": "Formulario TEM 2",
+      "description": "Formulario de Teoría Electromagnética 2.",
+      "acceptance": [
+        "formulario-tem-2.tex compila sin errores"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "name": "limpiar_artefactos",
+      "title": "Limpiar artefactos de compilación",
+      "description": "Eliminar archivos .aux, .log, .synctex.gz, .fdb_latexmk, .fls del directorio raíz. Revisar .gitignore.",
+      "acceptance": [
+        "No hay artefactos LaTeX trackeados en el directorio raíz",
+        ".gitignore excluye *.aux *.log *.synctex.gz *.fdb_latexmk *.fls"
+      ],
+      "status": "pending"
+    }
+  ]
+}

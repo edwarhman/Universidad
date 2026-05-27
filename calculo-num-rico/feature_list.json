@@ -1,0 +1,34 @@
+{
+  "project": "calculo-num-rico",
+  "description": "Métodos numéricos en Python — numpy, sympy, pytest",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "test_coverage",
+      "title": "Mejorar cobertura de tests",
+      "description": "Aumentar la cobertura de tests para los módulos existentes (autovalores, ecuaciones no lineales, interpolación, sistemas lineales).",
+      "acceptance": [
+        "Cada módulo tiene tests que cubren casos borde",
+        "pytest pasa sin errores",
+        "flake8 pasa sin errores"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "name": "colab_compat",
+      "title": "Compatibilidad con Google Colab",
+      "description": "Algunos módulos asumen ejecución interactiva en Colab. Documentar y/o adaptar para ejecución headless.",
+      "acceptance": [
+        "Los scripts se pueden ejecutar tanto en Colab como en terminal",
+        "La documentación aclara las diferencias de ejecución"
+      ],
+      "status": "pending"
+    }
+  ]
+}

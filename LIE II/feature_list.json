@@ -1,0 +1,34 @@
+{
+  "project": "LIE II",
+  "description": "Laboratorio de Ingeniería Eléctrica II — Python 3.12",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "practica_amplitud_y_fase",
+      "title": "Práctica de Amplitud y Fase",
+      "description": "Implementar la práctica de amplitud y fase en Python. El archivo practica_amplitud_y_fase.py está vacío.",
+      "acceptance": [
+        "practica_amplitud_y_fase.py implementa cálculos de amplitud y fase",
+        "El script es ejecutable y produce salida válida",
+        "Sigue docs/conventions.md (PEP 8, nombres, etc.)"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "name": "main_cli",
+      "title": "CLI principal",
+      "description": "Completar main.py como punto de entrada para las prácticas de LIE II.",
+      "acceptance": [
+        "main.py ejecuta la práctica seleccionada por argumento",
+        "Sigue docs/conventions.md"
+      ],
+      "status": "pending"
+    }
+  ]
+}

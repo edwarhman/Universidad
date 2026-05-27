@@ -1,0 +1,43 @@
+{
+  "project": "sistemas-de-control-II",
+  "description": "Control de péndulo invertido — C (ESP-IDF) + Python + LaTeX",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "pid_tuner_gui",
+      "title": "PID Tuner GUI",
+      "description": "Mantener y mejorar pid_tuner.py (GUI Tkinter para sintonización PID vía UART).",
+      "acceptance": [
+        "pid_tuner.py se ejecuta sin errores",
+        "Comunicación UART funcional con ESP32"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "name": "informe_4",
+      "title": "Informe 4 de Control",
+      "description": "Completar informe 4 de sistemas de control.",
+      "acceptance": [
+        "main.tex compila sin errores"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "name": "pendulo_demo",
+      "title": "Demo péndulo invertido",
+      "description": "Completar y verificar el proyecto 04_Inverted_Pendulum_Project.",
+      "acceptance": [
+        "Compila con pio run sin errores",
+        "Integra encoder, stepper, LCD y PID"
+      ],
+      "status": "pending"
+    }
+  ]
+}

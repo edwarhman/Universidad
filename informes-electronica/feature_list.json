@@ -1,0 +1,66 @@
+{
+  "project": "informes-electronica",
+  "description": "Informes de laboratorio de Electrónica — LaTeX + Python",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "informe_1",
+      "title": "Informe de laboratorio 1",
+      "description": "Completar informe 1 de Electrónica.",
+      "acceptance": [
+        "main.tex compila sin errores",
+        "Sigue la estructura estándar (portada, resumen, ... conclusiones)"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "name": "informe_2",
+      "title": "Informe de laboratorio 2",
+      "description": "Completar informe 2 con cálculos en Python.",
+      "acceptance": [
+        "main.tex compila sin errores",
+        "Los cálculos en Python producen resultados correctos"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 3,
+      "name": "informe_3",
+      "title": "Informe de laboratorio 3",
+      "description": "Completar informe 3 con cálculos en Python.",
+      "acceptance": [
+        "main.tex compila sin errores",
+        "Los cálculos en Python producen resultados correctos"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "name": "prelaboratorio_4",
+      "title": "Prelaboratorio 4",
+      "description": "Completar el prelaboratorio 4.",
+      "acceptance": [
+        "Compila sin errores",
+        "Contenido completo según la guía"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "name": "prelaboratorio_5",
+      "title": "Prelaboratorio 5",
+      "description": "Completar el prelaboratorio 5.",
+      "acceptance": [
+        "Compila sin errores",
+        "Contenido completo según la guía"
+      ],
+      "status": "pending"
+    }
+  ]
+}
