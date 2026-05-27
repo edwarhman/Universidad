@@ -11,10 +11,15 @@ universidad/
 ├── comunicaciones/             # LaTeX — informes Comunicaciones I
 ├── informes-electronica/       # LaTeX + Python — informes de laboratorio de Electrónica
 ├── LIE II/                     # Python — Laboratorio de Ing. Eléctrica II
+├── lineas-de-transmision/      # — Líneas de Transmisión
+├── maquinas-electricas-i/      # — Máquinas Eléctricas I
+├── mecanica/                   # — Mecánica
 ├── micromouse/                 # C (ESP-IDF, PlatformIO) — submódulo git
+├── plantas-y-subestaciones/    # — Plantas y Subestaciones
 ├── programas/                  # PDFs del pensum de Ingeniería Eléctrica UCV
 ├── servicio/                   # LaTeX — plantilla Servicio Comunitario
 ├── sistemas-de-control-II/     # C (ESP-IDF, PlatformIO) + Python + LaTeX
+├── sistema-de-potencia/        # — Sistema de Potencia
 ├── teoria-electromagnetica/    # LaTeX — formularios
 ├── docs/                       # Documentación del harness (arquitectura, convenciones, verificación)
 ├── progress/                   # Bitácora de sesiones global
@@ -71,6 +76,6 @@ directorios `NN_Nombre_Demo/`, aplicación principal en `src/`.
 Los proyectos se organizan por trimestre académico:
 
 - **2025-3** (anterior): `calculo-num-rico/`, `comunicaciones/`, `informes-electronica/`, `LIE II/`, `sistemas-de-control-II/`, `teoria-electromagnetica/`
-- **2026-1** (actual): `servicio/`
+- **2026-1** (actual): `servicio/`, `sistema-de-potencia/`, `maquinas-electricas-i/`, `plantas-y-subestaciones/`, `lineas-de-transmision/`, `mecanica/`
 
 Cada proyecto tiene un campo `"semester"` en su `feature_list.json`. Los resúmenes por semestre están en `semestres/`.

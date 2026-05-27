@@ -1,0 +1,23 @@
+{
+  "project": "plantas-y-subestaciones",
+  "semester": "2026-1",
+  "description": "Plantas y Subestaciones — LaTeX y Python para diseño y análisis de subestaciones eléctricas",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "estructura_inicial",
+      "title": "Estructura inicial del proyecto",
+      "description": "Crear directorio con README.md y esqueleto base para la materia.",
+      "acceptance": [
+        "Directorio con README.md",
+        "README.md describe la materia y el plan de trabajo"
+      ],
+      "status": "pending"
+    }
+  ]
+}
