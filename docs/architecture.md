@@ -21,6 +21,7 @@ universidad/
 ├── sistemas-de-control-II/     # C (ESP-IDF, PlatformIO) + Python + LaTeX
 ├── sistema-de-potencia/        # — Sistema de Potencia
 ├── teoria-electromagnetica/    # LaTeX — formularios
+├── pendulo-invertido/          # LaTeX — Papers y artículos de investigación
 ├── docs/                       # Documentación del harness (arquitectura, convenciones, verificación)
 ├── progress/                   # Bitácora de sesiones global
 ├── .opencode/                  # Configuración de opencode (agentes, skills)
@@ -36,7 +37,7 @@ universidad/
 |----------|-----------|--------------|
 | Python | `calculo-num-rico/`, `informes-electronica/`, `LIE II/`, `sistemas-de-control-II/` | pytest, flake8 |
 | C (ESP-IDF) | `micromouse/`, `sistemas-de-control-II/control-pendulo/` | PlatformIO (`pio run`) |
-| LaTeX | `comunicaciones/`, `informes-electronica/`, `sistemas-de-control-II/`, `teoria-electromagnetica/`, `servicio/` | pdflatex + biber |
+| LaTeX | `comunicaciones/`, `informes-electronica/`, `sistemas-de-control-II/`, `teoria-electromagnetica/`, `servicio/`, `pendulo-invertido/` | pdflatex + biber |
 
 ## Principios de diseño
 
@@ -76,7 +77,7 @@ directorios `NN_Nombre_Demo/`, aplicación principal en `src/`.
 Los proyectos se organizan por trimestre académico:
 
 - **2025-3** (anterior): `calculo-num-rico/`, `comunicaciones/`, `informes-electronica/`, `LIE II/`, `sistemas-de-control-II/`, `teoria-electromagnetica/`
-- **2026-1** (actual): `servicio/`, `sistema-de-potencia/`, `maquinas-electricas-i/`, `plantas-y-subestaciones/`, `lineas-de-transmision/`, `mecanica/`
+- **2026-1** (actual): `servicio/`, `sistema-de-potencia/`, `maquinas-electricas-i/`, `plantas-y-subestaciones/`, `lineas-de-transmision/`, `mecanica/`, `pendulo-invertido/`
 
 Cada proyecto tiene un campo `"semester"` en su `feature_list.json`. Los resúmenes por semestre están en `semestres/`.
 

@@ -1,0 +1,26 @@
+{
+  "project": "pendulo-invertido",
+  "semester": "2026-1",
+  "description": "Papers, artículos y presentaciones para jornadas y encuentros de investigación",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_verification_to_close": true,
+    "valid_status": ["pending", "in_progress", "awaiting_review", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "type": "tarea",
+      "name": "transcripcion_informe_pendulo",
+      "title": "Transcripción de informe sobre péndulo invertido",
+      "due": "2026-06-01",
+      "description": "Transcribir a digital un informe hecho a lápiz y papel sobre el péndulo invertido del laboratorio de Sistemas de Control II.",
+      "acceptance": [
+        "Documento LaTeX compilado en entregables/tareas/transcripcion-pendulo/",
+        "Mismo contenido que el original en papel",
+        "Formato apto para jornadas de investigación"
+      ],
+      "status": "pending"
+    }
+  ]
+}
