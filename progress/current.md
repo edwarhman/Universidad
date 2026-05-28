@@ -1,23 +1,24 @@
 # Sesión actual
 
-## Proyecto: maquinas-electricas-i
-## Feature: 1 — Prelaboratorio 1 — Instrumentos y Errores de Medición
+## Proyecto: (infraestructura — repo raíz)
+## Feature: compile-latex.sh y documentación WSL MiKTeX
 ## Inicio: 2026-05-27
 ## Plan:
-- Actualizar feature_list.json con descripciones de prelabs según guía de prácticas
-- Eliminar archivo Zone.Identifier en recursos/
-- Crear estructura y contenido del prelab-1 en entregables/prelaboratorios/prelab-1/
-- Compilar y verificar documento LaTeX
+- Crear scripts/compile-latex.sh con filtro de rutas /mnt/c/ del PATH
+- Actualizar docs/verification.md con sección de compilación LaTeX en WSL
+- Actualizar .opencode/agents/implementer.md con reglas para compilar en WSL
+- Ejecutar ./init.sh para verificar
 - Commit
 
 ## Estado
 
 - [x] En progreso
 - [ ] Bloqueado (razón: )
-- [ ] Completado
+- [x] Completado
 
 ## Notas
-- Prelab 1 compila correctamente (PDF 3 páginas generado)
-- fancyhdr.sty no disponible en el sistema, se eliminó del preámbulo
-- Zone.Identifier eliminado de recursos/
-- Commit: 629e66e
+- Commit: 32ab8ef
+- scripts/compile-latex.sh creado y ejecutable
+- docs/verification.md actualizado con sección "Compilación LaTeX en WSL"
+- .opencode/agents/implementer.md actualizado con reglas WSL
+- ./init.sh → OK

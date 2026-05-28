@@ -1,0 +1,476 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\geometry{margin=2.5cm}
+
+\title{Tarea --- Cálculo de Corriente de Falla Trifásica\\Sistema de Potencia II}
+\author{TA Prof. Rafael Gil Bernal}
+\date{27 de mayo de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Datos del Sistema}
+
+\subsection{Topología}
+
+El sistema tiene tres niveles de tensión y la siguiente configuración radial:
+
+\[
+\text{G} \xrightarrow[]{j0.6296} \boxed{A} \xrightarrow[T1]{j0.175} \boxed{B} \xrightarrow[L1+L2]{j0.42} \boxed{C} \xrightarrow[T2]{j0.2} \boxed{D}
+\]
+
+\[
+\text{ Motor M }(j1.8) \parallel \text{ Carga CP }
+\]
+
+\subsection{Datos de los componentes (en pu, base 100 MVA)}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Componente & $S_{\text{nom}}$ & $X$ (base propia) & $X$ (base común) \\
+\midrule
+Generador G & 54 MVA & $X_d'' = 0.34$ pu & $j0.6296$ pu \\
+T1 & 60 MVA & $X_{cc} = 10.5\%$ & $j0.175$ pu \\
+L1 (20 km) & --- & $X_+ = 0.5$ $\Omega$/km & $j0.21$ pu \\
+L2 (20 km) & --- & $X_+ = 0.5$ $\Omega$/km & $j0.21$ pu \\
+T2 & 50 MVA & $X_{cc} = 10\%$ & $j0.2$ pu \\
+Motor M & 10 MVA & $X_d'' = 0.18$ pu & $j1.8$ pu \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Bases del sistema}
+
+\[
+S_{\text{base}} = 100\text{ MVA (trifásica)}
+\]
+
+\[
+V_{\text{base},A} = V_{\text{base},D} = \frac{13.8}{\sqrt{3}}\text{ kV (fase-tierra)} \quad
+V_{\text{base},B} = V_{\text{base},C} = \frac{69}{\sqrt{3}}\text{ kV (fase-tierra)}
+\]
+
+\[
+I_{\text{base},A} = I_{\text{base},D} = \frac{S_{\text{base}}}{\sqrt{3}\,V_{LL}} = \frac{100\times10^3}{\sqrt{3}\times13.8} = 4183.7\text{ A}
+\]
+
+\[
+I_{\text{base},B} = I_{\text{base},C} = \frac{100\times10^3}{\sqrt{3}\times69} = 836.7\text{ A}
+\]
+
+\[
+Z_{\text{base},A} = Z_{\text{base},D} = \frac{V_{LL}^2}{S_{\text{base}}} = \frac{13.8^2}{100} = 1.9\;\Omega
+\]
+
+\[
+Z_{\text{base},B} = Z_{\text{base},C} = \frac{69^2}{100} = 47.61\;\Omega
+\]
+
+\section{Casos de Pre-Falla}
+
+\subsection{Caso base}
+\begin{itemize}
+    \item Tensión en barra D: $V_D = 0.98\angle0^\circ$ pu (fase-tierra)
+    \item Motor: $S_M = 0.3$ pu, $\cos\phi = 0.95$ (atraso)
+    \item Carga pasiva: $S_{CP} = 1.05$ pu, $\cos\phi = 0.85$ (atraso)
+\end{itemize}
+
+Corriente del motor (caso base):
+\[
+\dot{I}_M = \left(\frac{S_M}{V_D}\right)^* = \frac{0.3\angle-\cos^{-1}0.95}{0.98\angle0^\circ} = 0.102\angle-18.19^\circ\text{ pu}
+\]
+
+Corriente de la carga pasiva:
+\[
+\dot{I}_{CP} = \frac{1.05\angle-\cos^{-1}0.85}{0.98\angle0^\circ} = 0.3571\angle-31.79^\circ\text{ pu}
+\]
+
+Corriente total del generador:
+\[
+\dot{I}_G = \dot{I}_M + \dot{I}_{CP} = 0.102\angle-18.19^\circ + 0.3571\angle-31.79^\circ = 0.457\angle-28.78^\circ\text{ pu}
+\]
+
+\subsection{Caso máxima demanda}
+\begin{itemize}
+    \item Tensión en barra D: $V_D = 0.98\angle0^\circ$ pu
+    \item Motor: $S_M = 0.6$ pu, $\cos\phi = 0.95$ (atraso)
+    \item Carga pasiva: $S_{CP} = 1.05$ pu, $\cos\phi = 0.85$ (atraso)
+\end{itemize}
+
+Corriente del motor:
+\[
+\dot{I}_M = \frac{0.6\angle-18.19^\circ}{0.98\angle0^\circ} = 0.204\angle-18.19^\circ\text{ pu}
+\]
+
+Corriente total del generador:
+\[
+\dot{I}_G = 0.204\angle-18.19^\circ + 0.3571\angle-31.79^\circ = 0.552\angle-27.10^\circ\text{ pu}
+\]
+
+\section{Tensiones de Pre-Falla en Cada Barra}
+
+Recorriendo el sistema desde la barra D hacia atrás (con $V_D = 0.98\angle0^\circ$ como referencia):
+
+\subsection{Caso base}
+
+\[
+\dot{I}_G = 0.401 - j0.220\text{ pu}
+\]
+
+\textbf{Barra C:}
+\[
+\dot{V}_C = \dot{V}_D + jX_{T2}\,\dot{I}_G = 0.98 + j0.2(0.401 - j0.220)
+\]
+\[
+\dot{V}_C = 0.98 + 0.044 + j0.0802 = 1.024 + j0.0802 = 1.027\angle4.48^\circ\text{ pu}
+\]
+
+\textbf{Barra B:}
+\[
+\dot{V}_B = \dot{V}_C + jX_{L12}\,\dot{I}_G,\quad X_{L12} = X_{L1} + X_{L2} = j0.42
+\]
+\[
+\dot{V}_B = (1.024 + j0.0802) + 0.0924 + j0.1684 = 1.116 + j0.249 = 1.144\angle12.56^\circ\text{ pu}
+\]
+
+\textbf{Barra A:}
+\[
+\dot{V}_A = \dot{V}_B + jX_{T1}\,\dot{I}_G = (1.116 + j0.249) + 0.0385 + j0.0702
+\]
+\[
+\dot{V}_A = 1.155 + j0.319 = 1.198\angle15.43^\circ\text{ pu}
+\]
+
+\textbf{Barra D:}
+\[
+\dot{V}_D = 0.98\angle0^\circ\text{ pu (dato)}
+\]
+
+\subsection{Caso máxima demanda}
+
+\[
+\dot{I}_G = 0.552\angle-27.10^\circ = 0.491 - j0.251\text{ pu}
+\]
+
+\textbf{Barra C:}
+\[
+\dot{V}_C = 0.98 + j0.2(0.491 - j0.251) = 0.98 + 0.050 + j0.098 = 1.030 + j0.098 = 1.035\angle5.44^\circ\text{ pu}
+\]
+
+\textbf{Barra B:}
+\[
+\dot{V}_B = (1.030 + j0.098) + j0.42(0.491 - j0.251) = 1.030 + j0.098 + 0.105 + j0.206
+\]
+\[
+\dot{V}_B = 1.135 + j0.304 = 1.175\angle15.01^\circ\text{ pu}
+\]
+
+\textbf{Barra A:}
+\[
+\dot{V}_A = (1.135 + j0.304) + j0.175(0.491 - j0.251) = 1.135 + j0.304 + 0.044 + j0.086
+\]
+\[
+\dot{V}_A = 1.179 + j0.390 = 1.242\angle18.31^\circ\text{ pu}
+\]
+
+\textbf{Barra D:}
+\[
+\dot{V}_D = 0.98\angle0^\circ\text{ pu (dato)}
+\]
+
+\section{Matriz de Admitancias (Y-Bus)}
+
+Para la red de secuencia positiva con 4 barras:
+
+Admitancias de cada elemento:
+\[
+y_G = \frac{1}{j0.6296} = -j1.588,\quad
+y_{T1} = \frac{1}{j0.175} = -j5.714,\quad
+y_{L12} = \frac{1}{j0.42} = -j2.381
+\]
+\[
+y_{T2} = \frac{1}{j0.2} = -j5.0,\quad
+y_M = \frac{1}{j1.8} = -j0.5556
+\]
+
+Matriz Y-Bus ($4\times4$):
+
+\[
+\mathbf{Y}_{\text{bus}} = 
+\begin{bmatrix}
+y_G + y_{T1} & -y_{T1} & 0 & 0\\[4pt]
+-y_{T1} & y_{T1} + y_{L12} & -y_{L12} & 0\\[4pt]
+0 & -y_{L12} & y_{L12} + y_{T2} & -y_{T2}\\[4pt]
+0 & 0 & -y_{T2} & y_{T2} + y_M
+\end{bmatrix}
+\]
+
+Sustituyendo:
+
+\[
+\boxed{
+\mathbf{Y}_{\text{bus}} = 
+\begin{bmatrix}
+-j7.302 & j5.714 & 0 & 0\\[4pt]
+j5.714 & -j8.095 & j2.381 & 0\\[4pt]
+0 & j2.381 & -j7.381 & j5.0\\[4pt]
+0 & 0 & j5.0 & -j5.5556
+\end{bmatrix}
+}
+\]
+
+\section{Matriz de Impedancias de Barra (Z-Bus)}
+
+Para un sistema radial, la impedancia equivalente de Thevenin vista desde cada barra se obtiene combinando impedancias en serie y paralelo.
+
+\subsection{Impedancia equivalente en Barra D ($Z_{44}$)}
+
+Hacia el generador: $Z_{G} = j0.6296 + j0.175 + j0.42 + j0.2 = j1.4246$ pu
+
+Hacia el motor: $Z_{M} = j1.8$ pu
+
+\[
+Z_{44} = \frac{j1.4246 \times j1.8}{j1.4246 + j1.8} = \frac{-2.564}{j3.2246} = j0.7953\text{ pu}
+\]
+
+\subsection{Impedancia equivalente en Barra C ($Z_{33}$)}
+
+Hacia el generador: $j0.6296 + j0.175 + j0.21 = j1.0146$ pu (solo L1, sin L2)
+Hacia el motor: $j0.2 + j1.8 = j2.0$ pu
+
+\[
+Z_{33} = \frac{j1.0146 \times j2.0}{j1.0146 + j2.0} = j0.6731\text{ pu}
+\]
+
+\subsection{Impedancia equivalente en Barra B ($Z_{22}$)}
+
+Hacia el generador: $j0.6296 + j0.175 = j0.8046$ pu
+Hacia el motor: $j0.21 + j0.21 + j0.2 + j1.8 = j2.42$ pu
+
+\[
+Z_{22} = \frac{j0.8046 \times j2.42}{j0.8046 + j2.42} = j0.6040\text{ pu}
+\]
+
+\subsection{Impedancia equivalente en Barra A ($Z_{11}$)}
+
+Hacia el generador: $j0.6296$ pu
+Hacia el motor: $j0.175 + j0.42 + j0.2 + j1.8 = j2.595$ pu
+
+\[
+Z_{11} = \frac{j0.6296 \times j2.595}{j0.6296 + j2.595} = j0.5067\text{ pu}
+\]
+
+\section{Corriente de Falla Trifásica Balanceada}
+
+La corriente de falla trifásica en la barra $k$ es:
+
+\[
+I_{f,k} = \frac{V_k(0)}{Z_{kk}}
+\]
+
+\subsection{Caso base}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $V_k(0)$ (pu) & $Z_{kk}$ (pu) & $I_f$ (pu) \\
+\midrule
+A & $1.198\angle15.43^\circ$ & $j0.5067$ & $2.364\angle-74.57^\circ$ \\
+B & $1.144\angle12.56^\circ$ & $j0.6040$ & $1.894\angle-77.44^\circ$ \\
+C & $1.027\angle4.48^\circ$ & $j0.6731$ & $1.525\angle-85.52^\circ$ \\
+D & $0.98\angle0^\circ$ & $j0.7953$ & $1.232\angle-90^\circ$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Valores reales (kA simétricos RMS):
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $I_f$ (pu) & $I_{\text{base}}$ (A) & $I_f$ (kA) \\
+\midrule
+A & $2.364$ & 4183.7 & $9.89$ \\
+B & $1.894$ & 836.7 & $1.58$ \\
+C & $1.525$ & 836.7 & $1.28$ \\
+D & $1.232$ & 4183.7 & $5.15$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Caso máxima demanda}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $V_k(0)$ (pu) & $Z_{kk}$ (pu) & $I_f$ (pu) \\
+\midrule
+A & $1.242\angle18.31^\circ$ & $j0.5067$ & $2.451\angle-71.69^\circ$ \\
+B & $1.175\angle15.01^\circ$ & $j0.6040$ & $1.945\angle-74.99^\circ$ \\
+C & $1.035\angle5.44^\circ$ & $j0.6731$ & $1.538\angle-84.56^\circ$ \\
+D & $0.98\angle0^\circ$ & $j0.7953$ & $1.232\angle-90^\circ$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Valores reales (kA simétricos RMS):
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $I_f$ (pu) & $I_{\text{base}}$ (A) & $I_f$ (kA) \\
+\midrule
+A & $2.451$ & 4183.7 & $10.25$ \\
+B & $1.945$ & 836.7 & $1.63$ \\
+C & $1.538$ & 836.7 & $1.29$ \\
+D & $1.232$ & 4183.7 & $5.15$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Corriente Asimétrica Momentánea (Pico)}
+
+La corriente asimétrica momentánea considera el peor caso de asimetría DC:
+
+\[
+I_{\text{mom}} = \sqrt{2} \times I_{\text{sym}} \times \text{FA}
+\]
+
+donde FA es el factor de asimetría:
+\[
+\text{FA} = 1 + e^{-\pi/(X/R)}
+\]
+
+Sin datos de resistencia, se asume un factor conservador $\text{FA} = 1.8$ (corresponde a $X/R \approx 15$).
+
+\subsection{Caso base}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $I_{\text{sym}}$ (kA RMS) & $I_{\text{mom}}$ (kA pico) \\
+\midrule
+A & $9.89$ & $25.18$ \\
+B & $1.58$ & $4.02$ \\
+C & $1.28$ & $3.26$ \\
+D & $5.15$ & $13.11$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Caso máxima demanda}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $I_{\text{sym}}$ (kA RMS) & $I_{\text{mom}}$ (kA pico) \\
+\midrule
+A & $10.25$ & $26.09$ \\
+B & $1.63$ & $4.15$ \\
+C & $1.29$ & $3.28$ \\
+D & $5.15$ & $13.11$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Corriente Asimétrica de Interrupción (6 ciclos)}
+
+A 60 Hz, 6 ciclos corresponden a $t = 0.1$ s. Para este tiempo de interrupción:
+
+\[
+I_{\text{DC}}(t) = \sqrt{2}\,I_{\text{sym}}\,e^{-\omega t/(X/R)}
+\]
+
+\[
+I_{\text{asym,int}}(t) = \sqrt{I_{\text{sym}}^2 + I_{\text{DC}}(t)^2}
+\]
+
+Para $X/R = 15$ (valor típico asumido):
+\[
+\frac{I_{\text{DC}}}{I_{\text{sym}}\sqrt{2}} = e^{-2\pi\times60\times0.1/15} = e^{-2.513} = 0.081
+\]
+
+\[
+I_{\text{asym,int}} = I_{\text{sym}}\sqrt{1 + 2(0.081)^2} = 1.007\,I_{\text{sym}}
+\]
+
+\subsection{Caso base}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $I_{\text{sym}}$ (kA) & $I_{\text{asym,int}}$ (kA) \\
+\midrule
+A & $9.89$ & $9.96$ \\
+B & $1.58$ & $1.59$ \\
+C & $1.28$ & $1.29$ \\
+D & $5.15$ & $5.19$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Caso máxima demanda}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Barra & $I_{\text{sym}}$ (kA) & $I_{\text{asym,int}}$ (kA) \\
+\midrule
+A & $10.25$ & $10.32$ \\
+B & $1.63$ & $1.64$ \\
+C & $1.29$ & $1.30$ \\
+D & $5.15$ & $5.19$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Resumen de Resultados}
+
+\subsection{Caso base}
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+Barra & Tensión pre-falla (pu) & $I_{\text{sym}}$ (kA) & $I_{\text{mom}}$ (kA pico) & $I_{\text{int,6cic}}$ (kA) \\
+\midrule
+A & $1.198\angle15.43^\circ$ & 9.89 & 25.18 & 9.96 \\
+B & $1.144\angle12.56^\circ$ & 1.58 & 4.02 & 1.59 \\
+C & $1.027\angle4.48^\circ$ & 1.28 & 3.26 & 1.29 \\
+D & $0.98\angle0^\circ$ & 5.15 & 13.11 & 5.19 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Caso máxima demanda}
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+Barra & Tensión pre-falla (pu) & $I_{\text{sym}}$ (kA) & $I_{\text{mom}}$ (kA pico) & $I_{\text{int,6cic}}$ (kA) \\
+\midrule
+A & $1.242\angle18.31^\circ$ & 10.25 & 26.09 & 10.32 \\
+B & $1.175\angle15.01^\circ$ & 1.63 & 4.15 & 1.64 \\
+C & $1.035\angle5.44^\circ$ & 1.29 & 3.28 & 1.30 \\
+D & $0.98\angle0^\circ$ & 5.15 & 13.11 & 5.19 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Notas}
+\begin{enumerate}
+    \item Los valores de resistencia no fueron proporcionados; se asumió $X/R = 15$ para el cálculo de la componente asimétrica.
+    \item La corriente momentánea usa factor de asimetría $\text{FA} = 1.8$.
+    \item La corriente de interrupción a 6 ciclos considera la atenuación de la componente DC con constante de tiempo $\tau = X/(\omega R)$.
+    \item Las tensiones de pre-falla se calcularon recorriendo el sistema desde la barra D (referencia $0.98\angle0^\circ$ pu) hacia el generador.
+    \item En la barra D, la corriente de falla es la misma en ambos casos porque la impedancia de Thevenin no cambia y la tensión pre-falla es la misma (dato del problema).
+\end{enumerate}
+
+\end{document}

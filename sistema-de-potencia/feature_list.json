@@ -11,41 +11,16 @@
     {
       "id": 1,
       "type": "tarea",
-      "name": "tarea_1",
-      "title": "Tarea 1 — Análisis de carga",
-      "due": "2026-06-10",
-      "description": "Análisis de curva de carga y factores.",
+      "name": "tarea_fallas",
+      "title": "Tarea — Cálculo de corriente de falla trifásica",
+      "due": "2026-05-27",
+      "description": "Ejercicio TA Prof. Gil: corriente de falla trifásica balanceada, corriente asimétrica momentánea, corriente asimétrica de interrupción (6 ciclos), matriz de admitancias.",
       "acceptance": [
-        "Cálculos realizados y validados",
-        "PDF en entregables/tareas/tarea-1/"
+        "Documento solución en entregables/tareas/tarea-fallas/",
+        "Cálculos detallados en pu y valores reales",
+        "Matriz de admitancias incluida"
       ],
-      "status": "pending"
-    },
-    {
-      "id": 2,
-      "type": "tarea",
-      "name": "tarea_2",
-      "title": "Tarea 2 — Flujo de potencia",
-      "due": "2026-06-24",
-      "description": "Cálculos de flujo de potencia en sistema de 3 barras.",
-      "acceptance": [
-        "Cálculos realizados y validados",
-        "PDF en entregables/tareas/tarea-2/"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": 3,
-      "type": "parcial",
-      "name": "parcial_1",
-      "title": "Parcial 1",
-      "due": "2026-07-02",
-      "description": "Primer parcial de Sistema de Potencia.",
-      "acceptance": [
-        "Guía de estudio creada en entregables/parciales/parcial-1/",
-        "Simulacro resuelto"
-      ],
-      "status": "pending"
+      "status": "done"
     }
   ]
 }
