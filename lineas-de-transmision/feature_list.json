@@ -11,18 +11,34 @@
     {
       "id": 1,
       "type": "tarea",
-      "name": "tarea_1",
+      "name": "tarea_conductores",
+      "title": "Tarea — Análisis comparativo de conductores eléctricos",
+      "due": "2026-06-01",
+      "description": "Investigación y comparativa de conductores AAC, AAAC, ACAR, AACSR, ACSR según normas ASTM B, BRITISH, DIN. Evaluar conductores Adriana 500 MCM, Adrián 750 MCM, Emerson 950 MCM, Carla 1100 MCM, Yonatan 1024 MCM. Incluye contacto con proveedor para precios y condiciones.",
+      "acceptance": [
+        "Documento completo con tabla comparativa de conductores",
+        "Parámetros: calibre, sección, diámetro, peso, carga de rotura, resistencia, ampacidad, longitud máxima de despacho, peso neto, peso bruto, marca",
+        "Comparación por normas ASTM B, BRITISH, DIN",
+        "Evaluación de los 5 conductores asignados",
+        "Información de contacto con proveedor (precio, condiciones de pago y entrega)"
+      ],
+      "status": "awaiting_review"
+    },
+    {
+      "id": 2,
+      "type": "tarea",
+      "name": "tarea_parametros",
       "title": "Tarea 1 — Parámetros de líneas",
       "due": "2026-06-14",
       "description": "Cálculo de resistencia, inductancia y capacitancia de líneas de transmisión.",
       "acceptance": [
         "Cálculos realizados y validados",
-        "PDF en entregables/tareas/tarea-1/"
+        "PDF en entregables/tareas/parametros-lineas/"
       ],
       "status": "pending"
     },
     {
-      "id": 2,
+      "id": 3,
       "type": "parcial",
       "name": "parcial_1",
       "title": "Parcial 1",

@@ -1,0 +1,251 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\geometry{margin=2.5cm}
+
+\title{Tarea --- Vectores Velocidad y Aceleración\\en Coordenadas Polares}
+\author{Mecánica Aplicada}
+\date{28 de mayo de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+
+Las coordenadas polares $(r,\theta)$ son un sistema de coordenadas curvilíneas
+ortogonales donde la posición de un punto $P$ se describe mediante su distancia
+$r$ al origen y el ángulo $\theta$ que forma el radio vector con el eje polar.
+Este sistema es particularmente útil cuando el movimiento tiene una componente
+rotacional o cuando la trayectoria es curva.
+
+Para describir el movimiento en coordenadas polares se definen dos vectores
+unitarios:
+\begin{itemize}
+    \item $\mathbf{e}_r$: vector unitario radial, en dirección de $r$ creciente.
+    \item $\mathbf{e}_\theta$: vector unitario transversal, perpendicular a
+          $\mathbf{e}_r$ en dirección de $\theta$ creciente.
+\end{itemize}
+
+\section{Vectores unitarios y sus derivadas}
+
+El vector de posición en coordenadas polares es:
+
+\begin{equation}
+    \mathbf{r} = r\,\mathbf{e}_r
+    \label{eq:posicion}
+\end{equation}
+
+Los vectores unitarios $\mathbf{e}_r$ y $\mathbf{e}_\theta$ pueden expresarse
+en coordenadas cartesianas como:
+
+\begin{align}
+    \mathbf{e}_r &= \cos\theta\,\mathbf{i} + \sin\theta\,\mathbf{j} \label{eq:er} \\
+    \mathbf{e}_\theta &= -\sin\theta\,\mathbf{i} + \cos\theta\,\mathbf{j} \label{eq:etheta}
+\end{align}
+
+\subsection{Derivada de $\mathbf{e}_r$}
+
+Derivando (\ref{eq:er}) respecto al tiempo:
+
+\begin{align*}
+    \dot{\mathbf{e}}_r &= \frac{d}{dt}(\cos\theta)\,\mathbf{i} + \frac{d}{dt}(\sin\theta)\,\mathbf{j} \\
+    &= (-\sin\theta)\,\dot{\theta}\,\mathbf{i} + (\cos\theta)\,\dot{\theta}\,\mathbf{j} \\
+    &= \dot{\theta}\,(-\sin\theta\,\mathbf{i} + \cos\theta\,\mathbf{j}) \\
+    &= \dot{\theta}\,\mathbf{e}_\theta
+\end{align*}
+
+\begin{equation}
+    \boxed{\dot{\mathbf{e}}_r = \dot{\theta}\,\mathbf{e}_\theta}
+    \label{eq:der_er}
+\end{equation}
+
+\subsection{Derivada de $\mathbf{e}_\theta$}
+
+Derivando (\ref{eq:etheta}) respecto al tiempo:
+
+\begin{align*}
+    \dot{\mathbf{e}}_\theta &= \frac{d}{dt}(-\sin\theta)\,\mathbf{i} + \frac{d}{dt}(\cos\theta)\,\mathbf{j} \\
+    &= (-\cos\theta)\,\dot{\theta}\,\mathbf{i} + (-\sin\theta)\,\dot{\theta}\,\mathbf{j} \\
+    &= -\dot{\theta}\,(\cos\theta\,\mathbf{i} + \sin\theta\,\mathbf{j}) \\
+    &= -\dot{\theta}\,\mathbf{e}_r
+\end{align*}
+
+\begin{equation}
+    \boxed{\dot{\mathbf{e}}_\theta = -\dot{\theta}\,\mathbf{e}_r}
+    \label{eq:der_etheta}
+\end{equation}
+
+\section{Vector Velocidad}
+
+La velocidad se define como la derivada temporal del vector de posición:
+
+\[
+\mathbf{v} = \dot{\mathbf{r}} = \frac{d}{dt}(r\,\mathbf{e}_r)
+\]
+
+Aplicando la regla del producto:
+
+\begin{align*}
+    \mathbf{v} &= \dot{r}\,\mathbf{e}_r + r\,\dot{\mathbf{e}}_r \\
+    &= \dot{r}\,\mathbf{e}_r + r(\dot{\theta}\,\mathbf{e}_\theta) \\
+    &= \dot{r}\,\mathbf{e}_r + r\dot{\theta}\,\mathbf{e}_\theta
+\end{align*}
+
+\begin{equation}
+    \boxed{\mathbf{v} = \dot{r}\,\mathbf{e}_r + r\dot{\theta}\,\mathbf{e}_\theta}
+    \label{eq:velocidad}
+\end{equation}
+
+\subsection{Componentes de la velocidad}
+
+\begin{itemize}
+    \item \textbf{Componente radial:} $v_r = \dot{r}$
+    
+    Representa la rapidez con la que cambia la distancia al origen.
+    
+    \item \textbf{Componente transversal:} $v_\theta = r\dot{\theta}$
+    
+    Representa la velocidad debida al cambio de dirección (movimiento angular).
+    También se conoce como velocidad acimutal.
+\end{itemize}
+
+La magnitud de la velocidad es:
+
+\[
+|\mathbf{v}| = \sqrt{\dot{r}^2 + (r\dot{\theta})^2}
+\]
+
+\section{Vector Aceleración}
+
+La aceleración se define como la derivada temporal del vector velocidad:
+
+\[
+\mathbf{a} = \dot{\mathbf{v}} = \frac{d}{dt}(\dot{r}\,\mathbf{e}_r + r\dot{\theta}\,\mathbf{e}_\theta)
+\]
+
+Aplicando la regla del producto a cada término:
+
+\begin{align*}
+    \mathbf{a} &= \frac{d}{dt}(\dot{r}\,\mathbf{e}_r) + \frac{d}{dt}(r\dot{\theta}\,\mathbf{e}_\theta) \\[4pt]
+    &= \ddot{r}\,\mathbf{e}_r + \dot{r}\,\dot{\mathbf{e}}_r
+       + \dot{r}\dot{\theta}\,\mathbf{e}_\theta + r\ddot{\theta}\,\mathbf{e}_\theta
+       + r\dot{\theta}\,\dot{\mathbf{e}}_\theta
+\end{align*}
+
+Sustituyendo (\ref{eq:der_er}) y (\ref{eq:der_etheta}):
+
+\begin{align*}
+    \mathbf{a} &= \ddot{r}\,\mathbf{e}_r + \dot{r}(\dot{\theta}\,\mathbf{e}_\theta)
+               + \dot{r}\dot{\theta}\,\mathbf{e}_\theta + r\ddot{\theta}\,\mathbf{e}_\theta
+               + r\dot{\theta}(-\dot{\theta}\,\mathbf{e}_r) \\[4pt]
+    &= \ddot{r}\,\mathbf{e}_r + \dot{r}\dot{\theta}\,\mathbf{e}_\theta
+       + \dot{r}\dot{\theta}\,\mathbf{e}_\theta + r\ddot{\theta}\,\mathbf{e}_\theta
+       - r\dot{\theta}^2\,\mathbf{e}_r \\[4pt]
+    &= (\ddot{r} - r\dot{\theta}^2)\,\mathbf{e}_r
+       + (2\dot{r}\dot{\theta} + r\ddot{\theta})\,\mathbf{e}_\theta
+\end{align*}
+
+\begin{equation}
+    \boxed{\mathbf{a} = (\ddot{r} - r\dot{\theta}^2)\,\mathbf{e}_r
+           + (2\dot{r}\dot{\theta} + r\ddot{\theta})\,\mathbf{e}_\theta}
+    \label{eq:aceleracion}
+\end{equation}
+
+\subsection{Componentes de la aceleración}
+
+\begin{itemize}
+    \item \textbf{Componente radial:} $a_r = \ddot{r} - r\dot{\theta}^2$
+    
+    El término $\ddot{r}$ es la aceleración radial debida al cambio en la
+    distancia al origen. El término $-r\dot{\theta}^2$ es la aceleración
+    centrípeta, dirigida hacia el origen.
+    
+    \item \textbf{Componente transversal:} $a_\theta = 2\dot{r}\dot{\theta} + r\ddot{\theta}$
+    
+    El término $2\dot{r}\dot{\theta}$ es la aceleración de Coriolis (en el
+    contexto de coordenadas polares). El término $r\ddot{\theta}$ es la
+    aceleración angular.
+\end{itemize}
+
+La magnitud de la aceleración es:
+
+\[
+|\mathbf{a}| = \sqrt{(\ddot{r} - r\dot{\theta}^2)^2 + (2\dot{r}\dot{\theta} + r\ddot{\theta})^2}
+\]
+
+\section{Forma alternativa de la componente transversal}
+
+La componente transversal puede expresarse de forma más compacta:
+
+\begin{align*}
+    a_\theta &= 2\dot{r}\dot{\theta} + r\ddot{\theta} \\
+    &= \frac{1}{r}\frac{d}{dt}(r^2\dot{\theta})
+\end{align*}
+
+Demostración:
+
+\[
+\frac{d}{dt}(r^2\dot{\theta}) = 2r\dot{r}\dot{\theta} + r^2\ddot{\theta}
+   = r(2\dot{r}\dot{\theta} + r\ddot{\theta}) = r\,a_\theta
+\]
+
+\[
+\therefore a_\theta = \frac{1}{r}\frac{d}{dt}(r^2\dot{\theta})
+\]
+
+Esta forma es útil cuando se conserva el momento angular ($r^2\dot{\theta} = \text{cte}$).
+
+\section{Casos particulares}
+
+\subsection{Movimiento circular ($r = \text{cte}$, $\dot{r} = 0$, $\ddot{r} = 0$)}
+
+\begin{align*}
+    \mathbf{v} &= r\dot{\theta}\,\mathbf{e}_\theta \\
+    \mathbf{a} &= -r\dot{\theta}^2\,\mathbf{e}_r + r\ddot{\theta}\,\mathbf{e}_\theta
+\end{align*}
+
+Para movimiento circular uniforme ($\ddot{\theta} = 0$):
+\[
+\mathbf{a} = -r\dot{\theta}^2\,\mathbf{e}_r = -\frac{v^2}{r}\,\mathbf{e}_r
+\]
+
+\subsection{Movimiento rectilíneo radial ($\dot{\theta} = 0$, $\ddot{\theta} = 0$)}
+
+\begin{align*}
+    \mathbf{v} &= \dot{r}\,\mathbf{e}_r \\
+    \mathbf{a} &= \ddot{r}\,\mathbf{e}_r
+\end{align*}
+
+\section{Resumen de expresiones}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Magnitud & Expresión & Componentes \\
+\midrule
+Posición & $\mathbf{r} = r\,\mathbf{e}_r$ & --- \\
+Velocidad & $\mathbf{v} = \dot{r}\,\mathbf{e}_r + r\dot{\theta}\,\mathbf{e}_\theta$ &
+$v_r = \dot{r},\; v_\theta = r\dot{\theta}$ \\
+Aceleración & $\mathbf{a} = (\ddot{r} - r\dot{\theta}^2)\,\mathbf{e}_r
+            + (2\dot{r}\dot{\theta} + r\ddot{\theta})\,\mathbf{e}_\theta$ &
+$a_r = \ddot{r} - r\dot{\theta}^2,\; a_\theta = 2\dot{r}\dot{\theta} + r\ddot{\theta}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Derivadas de vectores unitarios (resumen)}
+
+\[
+\boxed{\dot{\mathbf{e}}_r = \dot{\theta}\,\mathbf{e}_\theta}
+\qquad
+\boxed{\dot{\mathbf{e}}_\theta = -\dot{\theta}\,\mathbf{e}_r}
+\]
+
+\end{document}
