@@ -11,18 +11,32 @@
     {
       "id": 1,
       "type": "tarea",
-      "name": "tarea_1",
-      "title": "Tarea 1 — Estática",
-      "due": "2026-06-10",
-      "description": "Ejercicios de equilibrio de fuerzas y momentos.",
+      "name": "tarea_vel_acel_polares",
+      "title": "Tarea — Vectores velocidad y aceleración en coordenadas polares",
+      "due": "2026-05-28",
+      "description": "Demostrar las expresiones de los vectores velocidad y aceleración en coordenadas polares.",
       "acceptance": [
-        "Cálculos realizados y validados",
-        "PDF en entregables/tareas/tarea-1/"
+        "Demostración completa de ambas expresiones",
+        "Desarrollo paso a paso en entregables/tareas/vel-acel-polares/",
+        "Formato LaTeX compilable o PDF"
       ],
       "status": "pending"
     },
     {
       "id": 2,
+      "type": "tarea",
+      "name": "tarea_estatica",
+      "title": "Tarea 1 — Estática",
+      "due": "2026-06-10",
+      "description": "Ejercicios de equilibrio de fuerzas y momentos.",
+      "acceptance": [
+        "Cálculos realizados y validados",
+        "PDF en entregables/tareas/tarea-estatica/"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 3,
       "type": "parcial",
       "name": "parcial_1",
       "title": "Parcial 1",
