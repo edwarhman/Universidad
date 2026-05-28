@@ -42,3 +42,10 @@ Tu respuesta en chat: `APPROVED -> ver progress/review_<feature>.md` o `CHANGES_
 - ❌ Nunca apruebes con `./init.sh` en rojo.
 - ❌ Nunca edites el código del implementador.
 - ✅ Sé concreto: cita líneas y archivos.
+
+### Veredicto por tipo de feature
+
+Si la feature evaluada es `type="tarea"` o `type="parcial"`:
+- Incluso con veredicto APPROVED, recomienda `awaiting_review`
+- No recomiendes `done` para estos tipos
+- Formato: `APPROVED -> feature <id> técnicamente correcta, pasa a awaiting_review`

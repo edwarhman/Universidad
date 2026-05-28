@@ -27,6 +27,20 @@ Eres un implementador. Tu trabajo es ejecutar **una sola** feature del `feature_
 - Toda escritura de código va acompañada de su test.
 - Si una herramienta falla, NO improvises workaround. Documenta en `progress/current.md` con estado `blocked`.
 
+### Regla de aprobación por tipo de feature
+
+| `type` | Al terminar, pasar a |
+|--------|---------------------|
+| `informe` | `done` (si el revisor aprueba) |
+| `prelaboratorio` | `done` (si el revisor aprueba) |
+| `tarea` | `awaiting_review` |
+| `parcial` | `awaiting_review` |
+
+Si la feature tiene `"type": "tarea"` o `"type": "parcial"`, al finalizar
+cambia el estado a `"awaiting_review"`. Nunca a `"done"`.
+El mensaje al líder debe ser:
+`done -> feature <id> en awaiting_review, pendiente de aprobación del usuario`
+
 ## Comunicación con el líder
 
 Tu respuesta final es **una sola línea**: `done -> feature <id> implementada en progress/impl_<id>.md` o `blocked -> ver progress/current.md`.

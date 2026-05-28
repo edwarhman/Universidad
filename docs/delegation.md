@@ -59,3 +59,19 @@ Si el líder empieza un inline y descubre complejidad inesperada:
 1. Descarta cambios inline
 2. Delega al subagente correspondiente
 3. Anota en progress/current.md el escalamiento
+
+### Ciclo de vida por tipo de feature
+
+**Informes y prelaboratorios:**
+\[
+\text{pending} \rightarrow \text{in\_progress} \rightarrow \text{done}
+\]
+
+**Tareas y parciales:**
+\[
+\text{pending} \rightarrow \text{in\_progress} \rightarrow \text{awaiting\_review} \xrightarrow{\text{aprobación del usuario}} \text{done}
+\]
+
+Las tareas requieren comparación con el original hecho a mano. Los parciales
+requieren visto bueno del usuario. Los agentes nunca pasan estos tipos a
+`done` directamente.

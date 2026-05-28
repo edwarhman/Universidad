@@ -1,0 +1,614 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2698}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0020}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0908}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0493}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0361}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0150}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0974}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0021}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0609}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0655}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0006}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0012}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0569}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0020}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0249}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0382}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0348}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1055}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0363}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0092}}@{}}
+\toprule()
+\endhead
+\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4646} + 12\tabcolsep}}{%
+} &
+\multicolumn{11}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.3845} + 20\tabcolsep}}{%
+\textbf{FECHA}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1509} + 4\tabcolsep}@{}}{%
+} \\
+\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4646} + 12\tabcolsep}}{%
+} &
+\multicolumn{11}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.3845} + 20\tabcolsep}}{%
+\textbf{FECHA DE CURSO DE INDUCCIÓN 1}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1509} + 4\tabcolsep}@{}}{%
+} \\
+\multicolumn{7}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4646} + 12\tabcolsep}}{%
+} &
+\multicolumn{11}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.3845} + 20\tabcolsep}}{%
+\textbf{CÓDIGO PROYECTO}
+
+\textbf{(Para ser llenado por la Coordinación)}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1509} + 4\tabcolsep}@{}}{%
+} \\
+\multicolumn{20}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.9908} + 38\tabcolsep}}{%
+\textbf{PROPONENTE(S) DEL PROYECTO}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{APELLIDOS Y NOMBRES}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1418} + 4\tabcolsep}}{%
+\textbf{C.I. N°}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1485} + 4\tabcolsep}}{%
+\textbf{ESCUELA}} &
+\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1892} + 12\tabcolsep}}{%
+\textbf{FIRMA}} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2397} + 8\tabcolsep}}{%
+\textbf{CORREO - CELULAR}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1418} + 4\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1485} + 4\tabcolsep}}{%
+} &
+\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1892} + 12\tabcolsep}}{%
+} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2397} + 8\tabcolsep}}{%
+} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1418} + 4\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1485} + 4\tabcolsep}}{%
+} &
+\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1892} + 12\tabcolsep}}{%
+} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2397} + 8\tabcolsep}}{%
+} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1418} + 4\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1485} + 4\tabcolsep}}{%
+} &
+\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1892} + 12\tabcolsep}}{%
+} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2397} + 8\tabcolsep}}{%
+} & \\
+\multicolumn{20}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.9908} + 38\tabcolsep}}{%
+\textbf{IDENTIFICACIÓN DEL PROYECTO}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{TÍTULO DEL PROYECTO}
+
+(Debe reflejar el trabajo a realizar)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Apoyo Educativo al ``\emph{Centro Educativo de la Asociación de
+Profesores de la Universidad Central de Venezuela}'' (CEAPUCV) adscrita
+a la Parroquia Nuestra señora del rosario del municipio Baruta del
+Distrito Capital.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{COMUNIDAD BENEFICIARIA}
+
+(Identificar la comunidad y su ubicación geográfica)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Estudiantes de educación básica y media general de la comunidad de la
+parroquia Nuestra señora del rosario y municipios vecinos quienes
+asisten a las actividades escolares de manera formal.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\multirow{2}{*}{\textbf{ÁREA DEL PROYECTO}
+
+(Seleccionar una sola opción)}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1401} + 2\tabcolsep}}{%
+Ambiental} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0378} + 2\tabcolsep}}{%
+X} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1123} + 2\tabcolsep}}{%
+Apoyo Tecnológico} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0630} + 2\tabcolsep}}{%
+X} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1511} + 10\tabcolsep}}{%
+Educativa} & X &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1403} + 2\tabcolsep}}{%
+Infraestructura} & X & \\
+& &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1401} + 2\tabcolsep}}{%
+Prevención de Emergencias} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0378} + 2\tabcolsep}}{%
+X} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1123} + 2\tabcolsep}}{%
+Seguridad e Higiene} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0630} + 2\tabcolsep}}{%
+X} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1511} + 10\tabcolsep}}{%
+Seguridad Social} & &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1403} + 2\tabcolsep}}{%
+} & & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{RESUMEN DEL PROYECTO}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Proceso pedagógico de enseñanza y aprendizaje a aquellos estudiantes de
+Educación Básica y Media General, en áreas de formación inscritas en el
+programa curricular de escolarización del país (vigente), así como
+charlas al público general asistente sobre diversos tópicos académicos y
+de recuperación de espacios.} & \\
+\multicolumn{20}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.9908} + 38\tabcolsep}}{%
+\textbf{DESCRIPCIÓN DEL PROYECTO}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Justificación}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Teniendo en consideración la crisis educativa que atraviesa el país,
+esta iniciativa es de gran importancia y pertinencia social ya que
+permite a los estudiantes de distintas áreas de la ingeniería transmitir
+a un grupo de estudiantes los conocimientos que han aprendido en sus
+carreras. Además, resulta importante señalar el claro ejemplo que dan a
+estos jóvenes al hacer un ejercicio de ciudadanía activa. También es
+importante considerar el impacto directo que tienen en estos jóvenes
+para mantenerlos motivados a seguir sus estudios a nivel universitario.}
+& \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Objetivo general}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Impartir charlas y clases a los estudiantes que asisten al
+``\emph{Centro Educativo de la Asociación de Profesores de la
+Universidad Central de Venezuela}'' adscrita a la Parroquia Nuestra
+señora del rosario, del Municipio Baruta del Distrito Capital.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Objetivos específicos}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+\begin{minipage}[t]{\linewidth}\raggedright
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Captar un grupo de estudiantes universitarios de diversas carreras
+  profesionales que puedan prestar el servicio comunitario al impartir
+  las clases formales de áreas de formación como: matemática, física,
+  química, ciencias naturales (biología y ciencias de la Tierra), grupos
+  de interés (grupos de creación, recreación y productividad), entre
+  otros; por medio de charlas semanales.
+\item
+  Enseñar a la comunidad a realizar periódicamente jornadas de reciclaje
+  y recuperación de espacios físicos del plantel educativo, tales como
+  salones y laboratorios.
+\item
+  Monitorear el contenido de clases impartido por los prestadores del
+  servicio comunitario a los asistentes, así como de las charlas de
+  recuperación de espacio, por parte de los proponentes del Servicio
+  Comunitario de forma Macro.
+\end{enumerate}
+\end{minipage}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Limitaciones y/o alcances}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Dentro de las limitaciones presentes en el proyecto se tendría la
+ausencia de personal docente calificado para la atención de las áreas
+científicas, así como la logística para la organización de un horario
+común entre las partes; no obstante, de ser superado estas limitaciones,
+se espera alcanzar de forma satisfactoria que los estudiantes que
+asistan al programa, logren obtener un alto desempeño en sus estudios,
+mejorando así sus calificaciones escolares; por otra parte se espera
+motivar e incentivar a los mismos a estudiar una carrera a nivel
+universitario, según sus vocaciones y aptitudes.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Descripción general del Proyecto}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Venezuela atraviesa una crisis multidimensional en la que resaltamos la
+crisis educacional que actualmente atraviesan los planteles educativos
+tanto público como privados debido a la escasez de profesores y los
+bajos sueldos. En el municipio Baruta existen diversos planteles
+educativos en los que actualmente no cuentan con profesores para dictar
+algunas áreas de formación en el horario escolar; siendo difícil contar
+con voluntarios capacitados intelectualmente para impartir estos
+conocimientos (en especial en las áreas de matemática, química y
+física). En ese sentido, resulta necesario contar con una mayor cantidad
+de voluntarios que puedan colaborar con este proyecto de la parroquia y
+puedan cubrir los horarios de las clases señaladas y requeridas en pro
+de mejorar la calidad educativa nacional.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Descripción de la Comunidad}
+
+Se debe describir la ubicación geográfica, el número de integrantes, la
+descripción social, etc.)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+La comunidad está conformada por aquellos niños, adolescentes y adultos
+que asisten al ``\emph{Centro Educativo de la Asociación de Profesores
+de la Universidad Central de Venezuela}'' ubicado en la parroquia
+Nuestra señora del rosario del municipio Baruta, del Distrito Capital.
+En promedio se estima la participación de entre 30 y 60 personas de
+diversas edades y niveles de estudios por cada grupo de trabajo.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Actividades específicas del estudiante}
+
+(Debe describir las actividades para lograr los objetivos específicos e
+indicar si requiere previa formación técnica)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+\uline{Primera fase}: Hacer un proceso de convocatoria en el que se
+cuantifique la cantidad de estudiantes que pueden prestar el servicio
+comunitario (un estudiante por curso).
+
+\uline{Segunda fase}: Establecer el horario de clases para cada uno.
+
+\uline{Tercera fase}: Organizar reuniones mensuales con ellos para que
+puedan reportar sus actividades y realizar un informe de cumplimiento
+del servicio comunitario.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\multirow{2}{*}{\textbf{Cronograma}}} &
+\multicolumn{12}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4774} + 22\tabcolsep}}{%
+\textbf{Actividades}} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2417} + 10\tabcolsep}}{%
+\textbf{Semanas y fechas}} & \\
+& &
+\multicolumn{12}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4774} + 22\tabcolsep}}{%
+Preparar las clases a dictar, según el año escolar y materia asignada
+por la coordinación del plantel. Dictado de las clases preparadas, según
+el cronograma proporcionado por el supervisor. Reuniones semanales de
+supervisión de actividades ejecutadas} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2417} + 10\tabcolsep}}{%
+Se estima realizar el dictado de 120 horas distribuidas en 20 clases (un
+lapso - trimestral).} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\multirow{2}{*}{\textbf{Recursos requeridos}}} &
+\multicolumn{12}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4774} + 22\tabcolsep}}{%
+\textbf{Materiales, Equipos y Recursos financieros}} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2417} + 10\tabcolsep}}{%
+\textbf{Aportado por:}} & \\
+& &
+\multicolumn{12}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.4774} + 22\tabcolsep}}{%
+Marcadores, Tiza, Pizarra, hojas de reciclaje y similares} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2417} + 10\tabcolsep}}{%
+El Plantel y los estudiantes del plantel. Por los facilitadores.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Logros sociales}
+
+(Debe relacionarse con el objetivo general y los objetivos específicos e
+incluir indicadores de avance)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Poder brindar a la comunidad de la Parroquia Nuestra señora del Rosario
+un programa de clases para los estudiantes, en diversas asignaturas que
+actualmente carece el centro educativo. Este programa les ayudará a
+reforzar contenidos vistos, a impartir contenidos que no hayan podido
+ver, adelantar contenidos a cursar en el venidero año escolar; y a
+motivarlos en continuar sus estudios a nivel universitario.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Logros para el estudiante}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Los estudiantes de ingeniería que presten el servicio se llevarán la
+grata experiencia de haber podido transmitir sus conocimientos y de
+saber que su ``qué hacer'' está impactando de forma directa en un grupo
+de jóvenes que necesitan de sus conocimientos y motivación. También
+resulta una oportunidad importante para que tengan una primera
+aproximación a la docencia y a como dirigirse al público en general.}
+& \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Vinculación con la Comunidad}
+
+(Estrategias de vinculación con la comunidad para lograr el aprendizaje
+-- servicio)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Se ofrecerán asesorías por medio de charlas y clases a los integrantes
+de la comunidad, capacitándolos en el área de interés, para mejorar las
+condiciones de vida de la comunidad y el rendimiento escolar. Se darán
+clases teóricas y prácticas de diversas asignaturas.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Magnitud del Proyecto}
+
+(Debe indicar si se puede establecer continuidad del mismo)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+El Proyecto planteado tiene un carácter Macro, ya que el mismo puede ser
+fácilmente replicable en cualquier centro educativo a nivel nacional
+cuyo propósito sea el de impartir y reforzar el conocimiento en materia
+de educación escolar en los distintos niveles.} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{Participación de miembros de la comunidad}
+
+(Debe describir las actividades que se esperan de la comunidad para el
+logro de los objetivos)} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Se espera que estas actividades se realicen de forma continua con el
+propósito de lograr afianzar los conocimientos durante el año escolar,
+así como el preparar (por medio de la nivelación académica) a los
+estudiantes para el venidero año escolar. De igual forma se espera
+contar con el apoyo de los padres y representantes de estos niños y
+jóvenes en dar continuidad a la asistencia de los mismos a las jornadas
+educativas, incluso apoyando con la logística que sea necesaria, la cual
+sería formulada por la coordinación del proyecto.} & \\
+\multicolumn{20}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.9908} + 38\tabcolsep}}{%
+\textbf{COORDINADOR DE PROYECTO}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{NOMBRES Y APELLIDOS}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Gerlis Caropresse} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{ESCUELA}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Eléctrica} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{DEPARTAMENTO}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Comunicaciones} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{DIRECCIÓN DE OFICINA}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Escuela de Ingeniería Eléctrica, piso 1, Ofic. 213-D} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{TELÉFONO DE OFICINA}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+0412-981-9018} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{CORREO ELECTRÓNICO}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+serviciocomunitario.eie.ing.ucv@gmail.com} & \\
+\multicolumn{9}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.5641} + 16\tabcolsep}}{%
+} &
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1282} + 6\tabcolsep}}{%
+} &
+\multicolumn{7}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2986} + 12\tabcolsep}}{%
+} & \\
+\multicolumn{20}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.9908} + 38\tabcolsep}}{%
+\textbf{COORDINADOR DE ESCUELA (INGENIERÍA ELECTRICA)}} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{NOMBRES Y APELLIDOS}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Gerlis Caropresse} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{ESCUELA}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Eléctrica} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{DEPARTAMENTO}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Comunicaciones} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{DIRECCIÓN DE OFICINA}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+Escuela de Ingeniería Eléctrica, piso 1, Ofic. 213-D} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{TELÉFONO DE OFICINA}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+0412-981-9018} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+\textbf{CORREO ELECTRÓNICO}} &
+\multicolumn{18}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7191} + 34\tabcolsep}}{%
+serviciocomunitario.eie.ing.ucv@gmail.com} & \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2717} + 2\tabcolsep}}{%
+} &
+\multicolumn{6}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2902} + 10\tabcolsep}}{%
+} &
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1291} + 6\tabcolsep}}{%
+\textbf{FIRMA}} &
+\multicolumn{8}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.2998} + 14\tabcolsep}}{%
+} & \\
+\multicolumn{20}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.9908} + 38\tabcolsep}}{%
+\textbf{REPRESENTANTE DE LA COMUNIDAD}} & \\
+\textbf{NOMBRES Y APELLIDOS} &
+\multicolumn{19}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7211} + 36\tabcolsep}}{%
+} & \\
+\textbf{INSTITUCIÓN} &
+\multicolumn{19}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7211} + 36\tabcolsep}}{%
+} & \\
+\textbf{CARGO} &
+\multicolumn{19}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7211} + 36\tabcolsep}}{%
+} & \\
+\textbf{DIRECCIÓN} &
+\multicolumn{19}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7211} + 36\tabcolsep}}{%
+} & \\
+\textbf{TELÉFONOS} &
+\multicolumn{19}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7211} + 36\tabcolsep}}{%
+} & \\
+\textbf{CORREO ELECTRÓNICO} &
+\multicolumn{19}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.7211} + 36\tabcolsep}}{%
+} & \\
+\multirow{2}{*}{} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0927} + 2\tabcolsep}}{%
+\textbf{FIRMA}} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1994} + 8\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1285} + 4\tabcolsep}}{%
+\multirow{2}{*}{\textbf{SELLO HÚMEDO}}} &
+\multicolumn{9}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.3004} + 16\tabcolsep}}{%
+\multirow{2}{*}{}} & \\
+&
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.0927} + 2\tabcolsep}}{%
+} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 40\tabcolsep) * \real{0.1994} + 8\tabcolsep}}{%
+} & & & & & & & & & & & & & \\
+\bottomrule()
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0381}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2372}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0206}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0700}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0498}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0933}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0582}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0097}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0319}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0847}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0847}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.1019}}@{}}
+\toprule()
+\endhead
+\multicolumn{13}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{1.0000} + 24\tabcolsep}@{}}{%
+\textbf{ORGANIZACIÓN DE DESARROLLO SOCIAL QUE PROMUEVE EL PROYECTO (si
+aplica)}} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2753} + 2\tabcolsep}}{%
+\textbf{NOMBRE}} &
+\multicolumn{11}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7247} + 20\tabcolsep}@{}}{%
+Centro Educativo de la Asociación de Profesores de la Universidad
+Central de Venezuela (CEAPUCV)} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2753} + 2\tabcolsep}}{%
+\textbf{DIRECCIÓN}} &
+\multicolumn{11}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7247} + 20\tabcolsep}@{}}{%
+Calle Caurimare, ramal 3, Urb. Colinas de Bello Monte. Parroquia Nuestra
+señora del Rosario, municipio Baruta.} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2753} + 2\tabcolsep}}{%
+\textbf{TELÉFONOS}} &
+\multicolumn{11}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7247} + 20\tabcolsep}@{}}{%
+0424 -1872803} \\
+\multicolumn{2}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2753} + 2\tabcolsep}}{%
+\multirow{2}{*}{}} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0905} + 2\tabcolsep}}{%
+\textbf{FIRMA}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2013} + 4\tabcolsep}}{%
+} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.1297} + 2\tabcolsep}}{%
+\multirow{2}{*}{\textbf{SELLO HÚMEDO}}} &
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3032} + 6\tabcolsep}@{}}{%
+\multirow{2}{*}{}} \\
+& &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0905} + 2\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2013} + 4\tabcolsep}}{%
+} \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+\textbf{EVALUACIÓN (para ser llenado por la Coordinación)}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2713} + 4\tabcolsep}@{}}{%
+} \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2713} + 4\tabcolsep}@{}}{%
+\textbf{CUMPLE}} \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+} & \textbf{SI} & \textbf{NO} & \textbf{No Aplica} \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Cumple con los requisitos formales de presentación?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿El proyecto es coherente con la Ley de Servicio Comunitario?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Define claramente el objetivo general y los objetivos específicos?} & &
+& \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Especifica los indicadores de logros sociales y del estudiante?} & &
+& \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Es factible el logro de los objetivos propuestos con los recursos
+previstos?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Identifica y describe a la comunidad?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Define claramente los beneficiarios de acuerdo al perfil del proyecto?}
+& & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Describe el tiempo de desarrollo y ejecución?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Define los recursos requeridos?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Describe las actividades de los estudiantes?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Describe la participación de la comunidad?} & & & \\
+\multicolumn{10}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7287} + 18\tabcolsep}}{%
+¿Describe las estrategias de vinculación con la comunidad?} & & & \\
+\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2959} + 4\tabcolsep}}{%
+\textbf{MODIFICACIONES SUGERIDAS}} &
+\multicolumn{10}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7041} + 18\tabcolsep}@{}}{%
+} \\
+\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2959} + 4\tabcolsep}}{%
+\textbf{OBSERVACIONES}} &
+\multicolumn{10}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.7041} + 18\tabcolsep}@{}}{%
+} \\
+&
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3775} + 6\tabcolsep}}{%
+\textbf{APROBADO}} & \textbf{FECHA} &
+\multicolumn{2}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.1782} + 2\tabcolsep}}{%
+} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3129} + 8\tabcolsep}@{}}{%
+\textbf{SELLO}} \\
+&
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3775} + 6\tabcolsep}}{%
+\textbf{APROBADO CON MODIFICACIONES}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2715} + 4\tabcolsep}}{%
+\textbf{FIRMA}} &
+\multicolumn{5}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3129} + 8\tabcolsep}@{}}{%
+\multirow{4}{*}{}} \\
+&
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3775} + 6\tabcolsep}}{%
+\textbf{APROBADO CON EXCEPCIONES}} &
+\multicolumn{3}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.2715} + 4\tabcolsep}}{%
+\multirow{3}{*}{}} \\
+&
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3775} + 6\tabcolsep}}{%
+\textbf{DIFERIDO}} \\
+&
+\multicolumn{4}{>{\raggedright\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.3775} + 6\tabcolsep}}{%
+\textbf{NO APROBADO}} \\
+\bottomrule()
+\end{longtable}
+
+\end{document}

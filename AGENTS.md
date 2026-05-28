@@ -50,6 +50,8 @@
   respuesta en chat debe ser solo una referencia al archivo.
 - **Si te bloqueas**, documenta en `progress/current.md` con estado
   `blocked` y termina la sesión. No inventes workarounds.
+- **Tareas y parciales nunca pasan a `done` sin aprobación del usuario.** 
+  El agente solo puede dejarlos en `awaiting_review`.
 
 ## 5. Cierre de sesión
 

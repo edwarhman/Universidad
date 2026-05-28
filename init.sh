@@ -102,7 +102,7 @@ for f in glob.glob("*/feature_list.json"):
     proyecto = f.split("/")[0]
     try:
         data = json.load(open(f))
-        valid = {"pending", "in_progress", "done", "blocked"}
+        valid = {"pending", "in_progress", "awaiting_review", "done", "blocked"}
         in_progress = [feat for feat in data.get("features", []) if feat.get("status") == "in_progress"]
         if len(in_progress) > 1:
             print(f"[FAIL]  {proyecto}: {len(in_progress)} features en in_progress (máximo 1)")

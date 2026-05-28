@@ -80,3 +80,15 @@ Esto equivale a:
 ```bash
 PATH=$(echo "$PATH" | tr ':' '\n' | grep -v '/mnt/c/' | tr '\n' ':') pdflatex main.tex
 ```
+
+### Criterios de cierre por tipo de actividad
+
+| Tipo | Criterio | Estado final |
+|------|----------|-------------|
+| `informe` | Compila LaTeX, cálculos correctos, estructura completa | `done` |
+| `prelaboratorio` | Compila LaTeX, cálculos correctos | `done` |
+| `tarea` | Cálculos validados, PDF/material generado | `awaiting_review` |
+| `parcial` | Guía de estudio, simulacro, fecha registrada | `awaiting_review` |
+
+Para tareas y parciales, el usuario debe dar el visto bueno después de
+comparar con su trabajo original para pasar de `awaiting_review` a `done`.

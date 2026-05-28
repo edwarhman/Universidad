@@ -14,6 +14,7 @@
 ## C2 — El estado es coherente
 
 - [ ] Como mucho una feature `in_progress` en cada `feature_list.json`.
+- [ ] `awaiting_review` es un estado válido — features en este estado esperan aprobación del usuario.
 - [ ] Toda feature `done` tiene verificación asociada que pasa.
 - [ ] `progress/current.md` está vacío o describe la sesión activa (sin basura
       de sesiones anteriores).
