@@ -168,11 +168,14 @@ La cantidad de cifras significativas con que debe reportarse un resultado está 
 \centering
 \begin{circuitikz}[american, scale=0.7, transform shape]
     \draw
-    %% AC Source
-    (0,0) to[sV, l=$120$\,V, i=$I_{AC}$] (0,2)
+    %% Fuente de CA variable (Variac)
+    (0,0) to[sV, l_={120\,V, 60\,Hz}] (0,2)
     
-    %% AC+ → nodo izquierdo del puente (línea recta horizontal)
-    (0,2) -- (2.5,2)
+    %% Flecha de ajuste variable sobre el generador
+    (0.35,0.2) -- (-0.35,1.8)
+    
+    %% AC+ → nodo izquierdo del puente (Iac sobre el positivo)
+    (0,2) to[short, i=$I_{AC}$] (2.5,2)
     
     %% AC- → nodo derecho del puente (pasa por debajo del diamante)
     (0,0) -- (5.5,0) -- (5.5,2)
@@ -191,8 +194,11 @@ La cantidad de cifras significativas con que debe reportarse un resultado está 
     %% Carga: solo resistencia
     (7,3.5) to[R, l=$33\,\Omega$, i=$I_{DC}$] (7,0.5)
     
+    %% Extensión para voltímetro a la derecha del circuito
+    (7,3.5) -- (9.5,3.5)
+    (7,0.5) -- (9.5,0.5)
     %% Voltímetro
-    (7,3.5) to[open, v=$V_{DC}$] (7,0.5)
+    (9.5,3.5) to[open, v=$V_{DC}$] (9.5,0.5)
     ;
 \end{circuitikz}
 \vspace{0.3cm}
@@ -203,11 +209,14 @@ La cantidad de cifras significativas con que debe reportarse un resultado está 
 \centering
 \begin{circuitikz}[american, scale=0.7, transform shape]
     \draw
-    %% AC Source
-    (0,0) to[sV, l=$120$\,V, i=$I_{AC}$] (0,2)
+    %% Fuente de CA variable (Variac)
+    (0,0) to[sV, l_={120\,V, 60\,Hz}] (0,2)
     
-    %% AC+ → nodo izquierdo del puente (línea recta horizontal)
-    (0,2) -- (2.5,2)
+    %% Flecha de ajuste variable sobre el generador
+    (0.35,0.2) -- (-0.35,1.8)
+    
+    %% AC+ → nodo izquierdo del puente (Iac sobre el positivo)
+    (0,2) to[short, i=$I_{AC}$] (2.5,2)
     
     %% AC- → nodo derecho del puente (pasa por debajo del diamante)
     (0,0) -- (5.5,0) -- (5.5,2)
@@ -231,8 +240,11 @@ La cantidad de cifras significativas con que debe reportarse un resultado está 
     (8.5,3.5) to[C, l=$33\,\mu$F] (8.5,0.5)
     (8.5,0.5) -- (7,0.5)
     
+    %% Extensión para voltímetro a la derecha del circuito
+    (8.5,3.5) -- (10.5,3.5)
+    (8.5,0.5) -- (10.5,0.5)
     %% Voltímetro
-    (7.75,3.5) to[open, v=$V_{DC}$] (7.75,0.5)
+    (10.5,3.5) to[open, v=$V_{DC}$] (10.5,0.5)
     ;
 \end{circuitikz}
 \vspace{0.3cm}
