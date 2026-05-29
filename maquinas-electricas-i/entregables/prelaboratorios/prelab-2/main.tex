@@ -9,14 +9,15 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{circuitikz}
+\usetikzlibrary{babel}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
 \geometry{margin=2.5cm}
 
-\title{Prelaboratorio 2\\Circuitos Magnéticos y Ciclo de Histéresis}
-\author{Laboratorio de Máquinas Eléctricas I}
-\date{}
-
 \begin{document}
-\maketitle
+\input{portada}
+
+\tableofcontents
+\newpage
 
 \section{Objetivos}
 \begin{itemize}
@@ -93,125 +94,58 @@ donde $K_h$ es una constante del material, $f$ la frecuencia, $B_{\text{máx}}$ 
     P_f = K_f \cdot f^2 \cdot B_{\text{máx}}^2
 \end{equation}
 
-\section{Ejercicios}
-
-\subsection{Ejercicio 1: Reluctancia de un circuito magnético}
-Un núcleo toroidal de hierro silicoso tiene las siguientes dimensiones:
+\section{Instrumentos y Materiales}
 \begin{itemize}
-    \item Longitud media: $l = 30\,\text{cm}$
-    \item Área transversal: $A = 5\,\text{cm}^2$
-    \item Permeabilidad relativa: $\mu_r = 2500$
-    \item Número de espiras: $N = 200$
-\end{itemize}
-
-Calcular:
-\begin{enumerate}
-    \item La reluctancia del núcleo
-    \item La corriente necesaria para producir un flujo de $\phi = 2 \times 10^{-3}\,\text{Wb}$
-    \item La inductancia del devanado
-\end{enumerate}
-
-\textbf{Solución:}
-
-\begin{align*}
-    \mu &= \mu_0 \mu_r = 4\pi \times 10^{-7} \times 2500 = 3.1416 \times 10^{-3}\,\text{H/m} \\
-    l &= 0.30\,\text{m} \\
-    A &= 5 \times 10^{-4}\,\text{m}^2 \\
-    \mathcal{R} &= \frac{l}{\mu A} = \frac{0.30}{3.1416 \times 10^{-3} \times 5 \times 10^{-4}} = \frac{0.30}{1.5708 \times 10^{-6}} \\
-    \mathcal{R} &= 1.91 \times 10^5\,\text{A-v/Wb}
-\end{align*}
-
-Corriente necesaria:
-\begin{align*}
-    \mathcal{F} &= \phi \cdot \mathcal{R} = 2 \times 10^{-3} \times 1.91 \times 10^5 = 382\,\text{A-v} \\
-    I &= \frac{\mathcal{F}}{N} = \frac{382}{200} = 1.91\,\text{A}
-\end{align*}
-
-Inductancia:
-\begin{align*}
-    L &= \frac{N\phi}{I} = \frac{200 \times 2 \times 10^{-3}}{1.91} = 0.209\,\text{H}
-\end{align*}
-
-\subsection{Ejercicio 2: Pérdidas en el núcleo}
-Un transformador con núcleo de acero al silicio opera a $60\,\text{Hz}$ con una inducción máxima de $B_{\text{máx}} = 1.2\,\text{T}$. Las constantes del material son $K_h = 0.02$ y $K_f = 0.0005$, con exponente de Steinmetz $n = 1.7$. El volumen del núcleo es $V = 500\,\text{cm}^3$.
-
-Calcular:
-\begin{enumerate}
-    \item Pérdidas por histéresis
-    \item Pérdidas por corrientes parásitas
-    \item Pérdidas totales en el núcleo
-\end{enumerate}
-
-\textbf{Solución:}
-
-\begin{align*}
-    P_h &= K_h \cdot f \cdot B_{\text{máx}}^n \cdot V \\
-    P_h &= 0.02 \times 60 \times (1.2)^{1.7} \times 500 \times 10^{-6} \\
-    P_h &= 0.02 \times 60 \times 1.373 \times 500 \times 10^{-6} \\
-    P_h &= 8.24 \times 10^{-4}\,\text{W} = 0.824\,\text{mW}
-\end{align*}
-
-\begin{align*}
-    P_f &= K_f \cdot f^2 \cdot B_{\text{máx}}^2 \cdot V \\
-    P_f &= 0.0005 \times 60^2 \times (1.2)^2 \times 500 \times 10^{-6} \\
-    P_f &= 0.0005 \times 3600 \times 1.44 \times 500 \times 10^{-6} \\
-    P_f &= 1.296 \times 10^{-3}\,\text{W} = 1.296\,\text{mW}
-\end{align*}
-
-\begin{align*}
-    P_{\text{núcleo}} &= P_h + P_f = 0.824 + 1.296 = 2.12\,\text{mW}
-\end{align*}
-
-\subsection{Ejercicio 3: Ciclo de histéresis}
-Un material ferromagnético tiene los siguientes puntos característicos en su ciclo de histéresis:
-\begin{itemize}
-    \item $B_{\text{sat}} = 1.5\,\text{T}$
-    \item $B_r = 0.9\,\text{T}$
-    \item $H_c = 200\,\text{A/m}$
-\end{itemize}
-
-Si el área del ciclo de histéresis medida es $A_{\text{ciclo}} = 300\,\text{J/m}^3$ y la frecuencia de operación es $50\,\text{Hz}$:
-\begin{enumerate}
-    \item Calcular las pérdidas por histéresis por unidad de volumen
-    \item Si el volumen del núcleo es $1000\,\text{cm}^3$, calcular la potencia perdida
-\end{enumerate}
-
-\textbf{Solución:}
-
-Las pérdidas por histéresis por unidad de volumen son proporcionales al área del ciclo:
-\begin{align*}
-    P_{h,v} &= f \times A_{\text{ciclo}} = 50 \times 300 = 15000\,\text{W/m}^3
-\end{align*}
-
-Potencia total:
-\begin{align*}
-    V &= 1000\,\text{cm}^3 = 1 \times 10^{-3}\,\text{m}^3 \\
-    P_h &= P_{h,v} \times V = 15000 \times 1 \times 10^{-3} = 15\,\text{W}
-\end{align*}
-
-\section{Materiales e Instrumentos}
-\begin{itemize}
-    \item Núcleo toroidal de hierro silicoso
-    \item Devanado de cobre (2 bobinas: excitación y medición)
-    \item Fuente de tensión alterna variable
+    \item Núcleo macizo ferromagnético
+    \item Núcleo laminado ferromagnético
+    \item Devanados de cobre (primario y secundario)
+    \item Fuente de tensión alterna variable (Variac)
     \item Amperímetro (CA)
     \item Voltímetro (CA)
-    \item Osciloscopio con puntas de prueba
-    \item Fluxímetro o sonda Hall
+    \item Osciloscopio de dos canales con puntas de prueba
+    \item Resistencia shunt
+    \item Circuito integrador RC ($R = \SI{150}{\kilo\ohm}$, $C = \SI{1}{\micro\farad}$)
+    \item Cables de conexión
 \end{itemize}
 
-\section{Preguntas}
+\section{Procedimiento de Laboratorio}
+
+\subsection{Núcleo macizo}
 \begin{enumerate}
-    \item ¿Qué es la permeabilidad magnética y cómo influye en la reluctancia de un circuito magnético?
-    \item Explique la diferencia entre materiales magnéticos duros y blandos en términos del ciclo de histéresis.
-    \item ¿Por qué las pérdidas por corrientes parásitas aumentan con el cuadrado de la frecuencia?
-    \item ¿Cómo se reduce el efecto de las corrientes parásitas en los núcleos de transformadores?
-    \item Si se duplica la inducción máxima $B_{\text{máx}}$, ¿cómo cambian las pérdidas por histéresis? (Use $n = 1.7$)
+    \item Realizar el montaje con un núcleo macizo, tomando en cuenta que la constante de tiempo $RC$ debe ser muy superior al periodo de la red (por ejemplo, $C = \SI{1}{\micro\farad}$ y $R = \SI{150}{\kilo\ohm}$), utilizando las bobinas disponibles en el laboratorio. El circuito integrador está disponible en el laboratorio.
+    \item Observar la forma de onda de la tensión y la corriente de alimentación.
+    \item Discutir en torno a la forma de onda de la corriente.
+    \item Medir la potencia consumida por la bobina.
+    \item Trazar sobre papel milimetrado el ciclo de histéresis para una tensión de alimentación comprendida entre \SI{40}{V} y \SI{110}{V}.
+    \item Calcular las escalas del ciclo de histéresis en unidades de campo (factor de escala vertical $K_v$ y factor de escala horizontal $K_h$, según las ecuaciones del marco teórico).
+    \item Calcular:
+          \begin{enumerate}
+              \item Las pérdidas del núcleo.
+              \item Las pérdidas por histéresis, a partir de las dimensiones del núcleo y el área del ciclo.
+              \item Las pérdidas por corrientes parásitas (Foucault).
+          \end{enumerate}
+    \item Deducir el valor de la corriente de magnetización a la tensión especificada en el paso~5 y compararla con la corriente medida en el osciloscopio.
 \end{enumerate}
 
-\section{Conclusiones}
-\begin{itemize}
-    \item[] \textit{(Completar después de realizar el prelaboratorio)}
-\end{itemize}
+\subsection{Núcleo laminado}
+\begin{enumerate}
+    \item Realizar el montaje con un núcleo laminado, tomando en cuenta una constante de tiempo $RC$ muy superior al periodo de la red (por ejemplo, $C = \SI{1}{\micro\farad}$ y $R = \SI{150}{\kilo\ohm}$), utilizando las bobinas disponibles en el laboratorio.
+    \item Observar las formas de onda de la tensión de alimentación, la corriente y la inducción en el hierro.
+    \item Discutir en torno a la forma de onda de la corriente.
+    \item Medir la potencia consumida por la bobina.
+    \item Trazar sobre papel milimetrado el ciclo de histéresis para una tensión de alimentación comprendida entre \SI{40}{V} y \SI{120}{V}.
+    \item Calcular las escalas del ciclo de histéresis en unidades de campo.
+    \item Calcular:
+          \begin{enumerate}
+              \item Las pérdidas del núcleo.
+              \item Las pérdidas por histéresis, a partir de las dimensiones del núcleo y el área del ciclo.
+              \item Las pérdidas por corrientes parásitas (Foucault).
+          \end{enumerate}
+    \item Deducir el valor de la corriente de magnetización a la tensión especificada en el paso~5 y compararla con la corriente medida en el osciloscopio.
+\end{enumerate}
+
+\begin{center}
+    \textbf{Nota:} Para calcular la sección efectiva del circuito magnético con núcleo laminado, suponer un factor de apilamiento del \SI{93}{\percent}.
+\end{center}
 
 \end{document}

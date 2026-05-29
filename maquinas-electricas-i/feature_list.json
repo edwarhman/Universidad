@@ -21,7 +21,7 @@
         "Cálculos de errores incluidos y correctos",
         "Cifras significativas aplicadas correctamente"
       ],
-      "status": "in_progress"
+      "status": "awaiting_review"
     },
     {
       "id": 2,
@@ -33,9 +33,10 @@
       "acceptance": [
         "Existe en entregables/prelaboratorios/prelab-2/",
         "Documento LaTeX compila sin errores",
+        "Portada incluida (UCV, Facultad, Escuela, Dpto Potencia)",
         "Cálculos incluidos y correctos"
       ],
-      "status": "pending"
+      "status": "in_progress"
     }
   ]
 }

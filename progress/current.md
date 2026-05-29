@@ -1,27 +1,44 @@
 # Sesión actual
 
-## Proyecto: lineas-de-transmision
-## Feature: tarea_conductores — Tarea: Análisis comparativo de conductores eléctricos
-## Inicio: 2026-05-27
+## Proyecto: maquinas-electricas-i
+## Feature: prelab_1 — Prelaboratorio 1: Instrumentos y Errores de Medición
+## Inicio: 2026-05-28
 ## Plan:
-- Crear feature_list.json con la nueva tarea de conductores (id=1, tarea_conductores)
-- Crear directorio entregables/tareas/conductores/ con .gitkeep
-- Crear documento LaTeX base (main.tex) con estructura de comparativa
-- Compilar main.tex → main.pdf
-- Actualizar feature_list.json: pending → in_progress → awaiting_review
-- Commit
+- Agregar portadas a prelab-1 y prelab-2 (formato UCV, Facultad, Escuela, Dpto Potencia)
+- Expandir marco teórico del prelab-1 con recurso "Simbología de Instrumentos Analógicos" (Prof. Blondell)
+- Extraer e incluir 6 imágenes desde el .docx (magnitud, corriente, seguridad, posición, precisión, mecanismo)
+- Agregar bibliografía con hyperref
+- Refinar lenguaje a tono universitario
+- Crear skill redactar-latex con patrones descubiertos
 
 ## Estado
 
-- [x] feature_list.json actualizado con 3 features
-- [x] Directorio conductores/ creado con .gitkeep
-- [x] main.tex creado con plantilla de comparativa
-- [x] main.pdf compilado exitosamente (5 páginas, 135774 bytes)
+### prelab-1 (Instrumentos y Errores de Medición)
+- [x] portada.tex creada (UCV, Facultad, Escuela, Dpto Potencia)
+- [x] main.tex: \maketitle → \input{portada}
+- [x] Objetivo General agregado
+- [x] Marco teórico reestructurado (clasificación, simbología, errores, cifras significativas)
+- [x] 6 imágenes incluidas desde recurso .docx (con [H] placement)
+- [x] Bibliografía: Profesor Blondell con hyperref
+- [x] Lenguaje ajustado (tono universitario)
+- [x] Diagramas de circuito añadidos (puente rectificador con carga R y R∥C)
+- [x] Índice con hipervínculos agregado (\tableofcontents)
 - [ ] Bloqueado (razón: )
-- [x] Status de tarea_conductores: awaiting_review
+- [x] main.pdf compila sin errores (8 páginas)
+
+### prelab-2 (Circuitos Magnéticos y Ciclo de Histéresis)
+- [x] portada.tex creada (UCV, Facultad, Escuela, Dpto Potencia)
+- [x] main.tex: \maketitle → \input{portada}
+- [x] \usetikzlibrary{babel} agregado (conflicto babel-circuitikz)
+- [x] Ejercicios eliminados (3 ejercicios)
+- [x] Preguntas eliminadas (5 preguntas)
+- [x] Conclusiones eliminadas
+- [x] Instrumentos y Materiales expandido
+- [x] Procedimiento de Laboratorio añadido (Núcleo Macizo + Núcleo Laminado)
+- [ ] Bloqueado (razón: )
+- [x] main.pdf compila sin errores (4 páginas)
 
 ## Notas
-- Conductores evaluados: Adriana 500 MCM, Adrián 750 MCM, Emerson 950 MCM, Carla 1100 MCM, Yonatan 1024 MCM
-- Normas: ASTM B, BRITISH (BS), DIN
-- Tipos de conductores: AAC, AAAC, ACAR, AACSR, ACSR
-- Pendiente: completar datos técnicos en tablas, contacto con proveedor, análisis
+- Skill creado: `.opencode/skills/redactar-latex/SKILL.md`
+- Para compilar en WSL: limpiar PATH de rutas Windows
+- Prelab-1 pendiente de aprobación del usuario para pasar a done

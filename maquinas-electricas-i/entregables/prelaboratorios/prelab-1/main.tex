@@ -7,103 +7,144 @@
 \usepackage{geometry}
 \usepackage{siunitx}
 \usepackage{enumitem}
+\usepackage{float}
+\usepackage{circuitikz}
+\usetikzlibrary{babel}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
 \geometry{margin=2.5cm}
-
-\title{Prelaboratorio 1\\Instrumentos y Errores de Medición}
-\author{Laboratorio de Máquinas Eléctricas I}
-\date{}
+\sloppy
 
 \begin{document}
-\maketitle
+\input{portada}
+
+\tableofcontents
+\newpage
 
 \section{Objetivos}
+
+\subsection*{Objetivo General}
 \begin{itemize}
-    \item Identificar los tipos de instrumentos de medición utilizados en el laboratorio de máquinas eléctricas (bobina móvil, hierro móvil, electrodinámico).
+    \item Afianzar los conocimientos sobre procesos de medición, la utilización de instrumentos de medición y el cálculo de errores.
+\end{itemize}
+
+\subsection*{Objetivos Específicos}
+\begin{itemize}
+    \item Identificar los tipos de instrumentos de medición utilizados en el laboratorio de máquinas eléctricas y cómo utilizarlos correctamente.
     \item Calcular errores de medición absolutos y relativos.
     \item Aplicar correctamente el concepto de cifras significativas.
     \item Analizar mediciones en ondas sinusoidales y no sinusoidales.
 \end{itemize}
 
-\section{Marco Teótico}
+\section{Marco Teórico}
 
-\subsection{Instrumentos de Medición}
+\subsection{Clasificación de los Instrumentos de Medición}
+
+El contenido del presente marco teórico está basado en el recurso del Profesor Blondell~\cite{blondell}.
+
+Existen diversos instrumentos para medir magnitudes eléctricas como intensidad, tensión, resistencia, potencia y frecuencia. Su funcionamiento se fundamenta principalmente en los efectos electromagnéticos, electrostáticos y electrotérmicos de la corriente eléctrica. Según su funcionamiento interno, se clasifican en:
+
 \begin{itemize}
-    \item \textbf{Bobina móvil (D'Arsonval):} Mide corriente continua. Su principio se basa en la interacción entre el campo magnético de un imán permanente y la corriente que circula por una bobina móvil.
-    \item \textbf{Hierro móvil:} Mide corriente alterna y continua. Utiliza la fuerza de atracción entre una bobina fija y un núcleo de hierro móvil.
-    \item \textbf{Electrodinámico:} Mide potencia activa (vatímetro). Consta de dos bobinas fijas (de corriente) y una móvil (de tensión).
+    \item \textbf{Bobina móvil (D'Arsonval):} Consta de un imán permanente y una o varias bobinas giratorias que se desvían por el efecto electromagnético al paso de la corriente a medir. Este tipo de instrumento solo es apto para corriente continua (CC). Se utiliza comúnmente en galvanómetros, amperímetros y voltímetros de CC de alta precisión.
+
+    \item \textbf{Hierro móvil:} Posee uno o varios elementos de hierro giratorios que son desviados por el campo magnético de una bobina fija atravesada por la corriente que se quiere medir. Pueden utilizarse tanto en corriente continua como en corriente alterna (CA).
+
+    \item \textbf{Electrodinámicos:} No tienen imanes ni hierro móvil, sino bobinas fijas (de corriente) y bobinas móviles (de tensión). Las bobinas móviles se mueven por el campo de las fijas. Sirven para CC y CA, y se usan sobre todo como vatímetros (medición de potencia activa).
 \end{itemize}
+
+\subsection{Simbología de los Instrumentos Analógicos}
+
+Los instrumentos analógicos se diferencian entre sí gracias a una simbología estándar internacional, que viene impresa en la carcasa del aparato. Esta simbología nos indica los siguientes datos:
+
+\begin{enumerate}
+    \item \textbf{Magnitud eléctrica que mide:} Se imprime de forma independiente sobre la esfera, generalmente mediante una letra que identifica la magnitud (ver Figura~\ref{fig:magnitud-electrica}).
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.55\textwidth]{img/magnitud-electrica.jpeg}
+              \caption{Símbolos de magnitud eléctrica.}
+              \label{fig:magnitud-electrica}
+          \end{figure}
+
+    \item \textbf{Clase de corriente:} Indica el tipo de corriente para el cual está diseñado el instrumento. En la Figura~\ref{fig:clase-corriente} se muestran los símbolos normalizados.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.35\textwidth]{img/clase-corriente.jpeg}
+              \caption{Símbolos de clase de corriente.}
+              \label{fig:clase-corriente}
+          \end{figure}
+
+    \item \textbf{Seguridad en la manipulación:} Las fallas de aislamiento pueden provocar una diferencia de potencial entre la caja del instrumento y sus partes metálicas con tierra. Por ello, los aparatos se someten a una tensión de prueba aplicada entre la caja y sus partes activas, que depende de la tensión nominal y se informa como \textit{tensión de prueba de aislamiento}. Se indica mediante una estrella con un número en su interior que representa dicha tensión en kilovoltios (kV). En la Figura~\ref{fig:tension-ensayo} se muestran algunos ejemplos.
+
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.4\textwidth]{img/tabla-tension-ensayo.jpeg}
+              \caption{Ejemplos de símbolos de tensión de prueba de aislamiento.}
+              \label{fig:tension-ensayo}
+          \end{figure}
+
+    \item \textbf{Posición de funcionamiento:} Indica la orientación en la que debe operar el instrumento para garantizar su precisión. En la Figura~\ref{fig:posicion-funcionamiento} se muestran los símbolos normalizados.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.35\textwidth]{img/posicion-funcionamiento.jpeg}
+              \caption{Símbolos de posición de funcionamiento.}
+              \label{fig:posicion-funcionamiento}
+          \end{figure}
+
+    \item \textbf{Clase de precisión:} Número que indica el error porcentual del instrumento (ver Figura~\ref{fig:clase-precision}). El cálculo del error asociado se desarrolla en la Sección~\ref{sec:errores}.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.5\textwidth]{img/clase-precision.jpeg}
+              \caption{Símbolos de clase de precisión.}
+              \label{fig:clase-precision}
+          \end{figure}
+
+    \item \textbf{Mecanismo de funcionamiento:} Mediante símbolos gráficos se distingue el principio de operación del instrumento. En la Figura~\ref{fig:mecanismo} se muestran los símbolos normalizados.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=0.5\textwidth]{img/mecanismo-funcionamiento.jpeg}
+              \caption{Símbolos de mecanismo de funcionamiento.}
+              \label{fig:mecanismo}
+          \end{figure}
+\end{enumerate}
 
 \subsection{Errores de Medición}
-El resultado de una medición difiere del valor verdadero debido a imperfecciones en los instrumentos y métodos. Los errores se clasifican en:
+\label{sec:errores}
+
+Toda medición difiere del valor verdadero debido a imperfecciones en los instrumentos y métodos empleados. Los errores se clasifican en:
+
 \begin{itemize}
-    \item \textbf{Sistemáticos:} Constantes y repetibles, corregibles mediante calibración.
-    \item \textbf{Aleatorios:} Variaciones impredecibles, se reducen con promediado estadístico.
+    \item \textbf{Sistemáticos:} Son constantes y repetibles; pueden corregirse mediante calibración del instrumento.
+    \item \textbf{Aleatorios:} Son variaciones impredecibles que se reducen mediante el promediado estadístico de múltiples mediciones.
 \end{itemize}
 
-La relación entre el valor medido y el error es:
+Para cuantificar el error de un instrumento se utiliza el concepto de \textit{clase de precisión}. El error absoluto máximo está dado por:
+
 \begin{equation}
-    A_r = A_m \pm \frac{A_{\text{clase}}}{100}
+    \varepsilon = \frac{\text{clase}}{100} \times A_{\text{máx}}
 \end{equation}
-donde $A_r$ es el valor real, $A_m$ el valor medido y $A_{\text{clase}}$ la clase del instrumento.
+
+donde $\text{clase}$ es la clase de precisión del instrumento y $A_{\text{máx}}$ es el alcance (valor máximo de la escala). El valor real $A_r$ se expresa entonces como:
+
+\begin{equation}
+    A_r = A_m \pm \varepsilon
+\end{equation}
+
+siendo $A_m$ el valor medido.
+
+Según su precisión, los instrumentos se clasifican en:
+\begin{itemize}
+    \item \textbf{Instrumentos de precisión:} clases 0.1, 0.2, 0.5.
+    \item \textbf{Instrumentos industriales:} clases 1, 1.5, 2.5, 5.
+\end{itemize}
 
 \subsection{Cifras Significativas}
-La cantidad de cifras significativas de un resultado debe estar acotada por la primera cifra del error. Ejemplo:
+
+La cantidad de cifras significativas con que debe reportarse un resultado está acotada por la precisión del instrumento. Reglas prácticas:
+
 \begin{itemize}
-    \item Si el error es $\pm 0.05$, el resultado debe expresarse con 2 decimales.
-    \item No se deben reportar más cifras de las que la precisión del instrumento permite.
+    \item La primera cifra incierta del resultado coincide con la primera cifra del error.
+    \item No deben reportarse más decimales de los que la resolución del instrumento permite.
+    \item Ejemplo: si el error es $\pm 0.05$, el resultado debe expresarse con 2 decimales.
 \end{itemize}
-
-\section{Ejercicios}
-
-\subsection{Ejercicio 1: Error absoluto y relativo}
-Se mide una corriente de $2.35$ A con un amperímetro de clase 1.0 y escala de 5 A. Calcular:
-\begin{itemize}
-    \item Error absoluto máximo
-    \item Error relativo porcentual
-    \item Rango del valor real
-\end{itemize}
-
-\textbf{Solución:}
-\begin{align*}
-    \text{Error absoluto} &= \frac{1.0}{100} \times 5\,\text{A} = \pm 0.05\,\text{A} \\
-    \text{Error relativo} &= \frac{0.05}{2.35} \times 100\% = \pm 2.13\% \\
-    \text{Valor real} &= 2.35 \pm 0.05\,\text{A} \quad (2.30\text{ A} \leq I \leq 2.40\text{ A})
-\end{align*}
-
-\subsection{Ejercicio 2: Selección de instrumento}
-Se necesita medir una tensión aproximada de 120 V. Se dispone de dos voltímetros:
-\begin{itemize}
-    \item Voltímetro A: clase 0.5, escala 300 V
-    \item Voltímetro B: clase 1.0, escala 150 V
-\end{itemize}
-¿Cuál instrumento da menor error relativo?
-
-\textbf{Solución:}
-\begin{align*}
-    \text{Voltímetro A: } \varepsilon_A &= \frac{0.5}{100} \times 300 = \pm 1.5\,\text{V} \\
-    \varepsilon_{rA} &= \frac{1.5}{120} \times 100\% = \pm 1.25\% \\[4pt]
-    \text{Voltímetro B: } \varepsilon_B &= \frac{1.0}{100} \times 150 = \pm 1.5\,\text{V} \\
-    \varepsilon_{rB} &= \frac{1.5}{120} \times 100\% = \pm 1.25\% \\
-\end{align*}
-Ambos instrumentos dan el mismo error relativo en esta medición.
-
-\subsection{Ejercicio 3: Cifras significativas}
-Se miden los siguientes valores:
-\[
-V_1 = 12.345\,\text{V} \quad (\text{error: } \pm 0.05)
-\]
-\[
-V_2 = 0.0678\,\text{V} \quad (\text{error: } \pm 0.0005)
-\]
-Expresar correctamente cada medición con sus cifras significativas.
-
-\textbf{Solución:}
-\[
-V_1 = 12.35 \pm 0.05\,\text{V}
-\]
-\[
-V_2 = 0.0678 \pm 0.0005\,\text{V}
-\]
 
 \section{Instrumentos y Materiales}
 \begin{itemize}
@@ -111,21 +152,118 @@ V_2 = 0.0678 \pm 0.0005\,\text{V}
     \item Voltímetro (hierro móvil)
     \item Vatímetro (electrodinámico)
     \item Osciloscopio
-    \item Fuente de tensión alterna
+    \item Fuente de tensión alterna ajustable (Variac)
     \item Multímetro digital
+    \item Puente rectificador de onda completa
+    \item Resistencia de \SI{33}{\ohm} a \SI{25}{\celsius}
+    \item Condensador de \SI{33}{\micro\farad}
+    \item Cables de conexión
 \end{itemize}
 
-\section{Preguntas}
+\section{Procedimiento de Laboratorio}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{circuitikz}[american, scale=0.7, transform shape]
+    \draw
+    %% AC Source
+    (0,0) to[sV, l=$120$\,V, i=$I_{AC}$] (0,2)
+    
+    %% AC+ → nodo izquierdo del puente (línea recta horizontal)
+    (0,2) -- (2.5,2)
+    
+    %% AC- → nodo derecho del puente (pasa por debajo del diamante)
+    (0,0) -- (5.5,0) -- (5.5,2)
+    
+    %% Puente rectificador (rombo de lados iguales)
+    %% Centro (4,2), Izq (2.5,2), Der (5.5,2), Sup (4,3.5), Inf (4,0.5)
+    (2.5,2) to[D, l=D$_1$] (4,3.5)
+    (4,0.5) to[D, l=D$_4$] (2.5,2)
+    (5.5,2) to[D, l_=D$_2$] (4,3.5)
+    (4,0.5) to[D, l_=D$_3$] (5.5,2)
+    
+    %% Salida DC
+    (4,3.5) -- (7,3.5)
+    (4,0.5) -- (7,0.5)
+    
+    %% Carga: solo resistencia
+    (7,3.5) to[R, l=$33\,\Omega$, i=$I_{DC}$] (7,0.5)
+    
+    %% Voltímetro
+    (7,3.5) to[open, v=$V_{DC}$] (7,0.5)
+    ;
+\end{circuitikz}
+\vspace{0.3cm}
+\par (a) Montaje para ondas sinusoidales rectificadas
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{circuitikz}[american, scale=0.7, transform shape]
+    \draw
+    %% AC Source
+    (0,0) to[sV, l=$120$\,V, i=$I_{AC}$] (0,2)
+    
+    %% AC+ → nodo izquierdo del puente (línea recta horizontal)
+    (0,2) -- (2.5,2)
+    
+    %% AC- → nodo derecho del puente (pasa por debajo del diamante)
+    (0,0) -- (5.5,0) -- (5.5,2)
+    
+    %% Puente rectificador (rombo de lados iguales)
+    (2.5,2) to[D, l=D$_1$] (4,3.5)
+    (4,0.5) to[D, l=D$_4$] (2.5,2)
+    (5.5,2) to[D, l_=D$_2$] (4,3.5)
+    (4,0.5) to[D, l_=D$_3$] (5.5,2)
+    
+    %% Salida DC
+    (4,3.5) -- (6.5,3.5)
+    (4,0.5) -- (7,0.5)
+    
+    %% Amperímetro en línea común DC+
+    (6.5,3.5) to[short, i=$I_{DC}$] (7,3.5)
+    
+    %% Carga: Resistencia y Capacitor en paralelo
+    (7,3.5) to[R, l=$33\,\Omega$] (7,0.5)
+    (7,3.5) -- (8.5,3.5)
+    (8.5,3.5) to[C, l=$33\,\mu$F] (8.5,0.5)
+    (8.5,0.5) -- (7,0.5)
+    
+    %% Voltímetro
+    (7.75,3.5) to[open, v=$V_{DC}$] (7.75,0.5)
+    ;
+\end{circuitikz}
+\vspace{0.3cm}
+\par (b) Montaje para ondas no sinusoidales
+\end{minipage}
+\caption{Diagramas de montaje del procedimiento experimental.}
+\label{fig:montajes-experimentales}
+\end{figure}
+
+\subsection{Medición de ondas sinusoidales o sinusoidales rectificadas}
 \begin{enumerate}
-    \item Explique la diferencia entre un instrumento de bobina móvil y uno de hierro móvil.
-    \item ¿Por qué es importante considerar la clase de un instrumento al realizar mediciones?
-    \item ¿Cómo afecta la elección de la escala de un instrumento al error relativo de la medición?
-    \item ¿Cuántas cifras significativas debe tener una medición de 0.0450 A con un error de $\pm 0.001$ A?
+    \item Realizar un montaje con una fuente alterna ajustable (fuente de \SI{120}{V} a \SI{60}{Hz} en serie con un autotransformador o Variac) que alimente una carga compuesta por un puente rectificador de onda completa, el cual alimenta en corriente continua un elemento resistivo de \SI{33}{\ohm} a \SI{25}{\celsius}.
+    \item Medir con instrumentos de los tipos descritos en el marco teórico (bobina móvil, hierro móvil y electrodinámico) los valores de tensión y corriente del lado de corriente continua, así como la corriente del lado de corriente alterna.
+    \item Calcular el coeficiente de conversión que introduce un equipo magnetoeléctrico para dar valores eficaces. Comprobar este valor calculado con las mediciones realizadas.
 \end{enumerate}
 
-\section{Conclusiones}
-\begin{itemize}
-    \item[] \textit{(Completar después de realizar el prelaboratorio)}
-\end{itemize}
+\subsection{Medición de ondas no sinusoidales}
+\begin{enumerate}
+    \item Realizar un montaje con una fuente alterna ajustable (fuente de \SI{120}{V} a \SI{60}{Hz} en serie con un autotransformador o Variac) que alimente una carga compuesta por un puente rectificador de onda completa, el cual alimenta en corriente continua un elemento resistivo de \SI{33}{\ohm} en paralelo con un condensador de aproximadamente \SI{33}{\micro\farad}.
+    \item Medir con instrumentos de los tipos descritos en el marco teórico los valores de tensión y corriente del lado de corriente continua y la corriente del lado de corriente alterna.
+    \item Calcular el coeficiente de conversión que introduce un equipo magnetoeléctrico para dar valores eficaces. Comprobar este valor calculado con las mediciones realizadas.
+    \item Realizar varias mediciones para tensiones de alimentación diferentes y deducir el valor de la resistencia utilizada.
+    \item Trazar la curva de tensión versus corriente sobre papel milimetrado, marcando cada punto de medición con sus correspondientes errores.
+    \item Explicar las discrepancias entre las mediciones del punto~1 y las realizadas en el punto~2, utilizando un osciloscopio para observar las formas de onda de la corriente y la tensión.
+\end{enumerate}
+
+\begin{thebibliography}{99}
+
+\bibitem{blondell}
+J.~Blondell, \textit{Simbología de los Instrumentos Analógicos para Mediciones Eléctricas}, 2026. Recurso digital.
+
+\end{thebibliography}
 
 \end{document}
