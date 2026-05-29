@@ -2,10 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
-\usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
-\usepackage{enumitem}
 \usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
 \usepackage{xcolor}
 
@@ -16,23 +14,22 @@
 \definecolor{azul-ucv}{RGB}{0, 51, 102}
 \definecolor{rojo-accento}{RGB}{180, 30, 30}
 
-\newcommand{\fila}[3]{%
+\newcommand{\fila}[2]{%
   \noindent
   \begin{minipage}[t]{\textwidth}
     \noindent
-    \begin{minipage}[t]{0.38\textwidth}
+    \begin{minipage}[t]{0.54\textwidth}
       \centering
       \vspace{0pt}
-      \includegraphics[width=0.95\textwidth, height=3.2cm, keepaspectratio]{#3}
+      \includegraphics[width=0.98\textwidth, height=4.2cm, keepaspectratio]{#2}
     \end{minipage}
     \hfill
-    \begin{minipage}[t]{0.58\textwidth}
+    \begin{minipage}[t]{0.42\textwidth}
       \vspace{0pt}
-      \textbf{\textcolor{azul-ucv}{\large #1}}\\[2pt]
-        \small #2
+      \textbf{\textcolor{azul-ucv}{\LARGE #1}}
     \end{minipage}
   \end{minipage}
-  \vspace{0.1cm}
+  \vspace{0.15cm}
 }
 
 \begin{document}
@@ -47,64 +44,32 @@
 \vspace{0.1cm}
 
 % ===== A =====
-\fila{A. Magnitud Eléctrica}
-  {Es la única que se imprime en forma independiente y sobre cualquier ángulo de la esfera. Indica la magnitud que mide el instrumento: intensidad (A), tensión (V), resistencia ($\Omega$), potencia (W), frecuencia (Hz), etc.}
-  {img/magnitud-electrica.jpeg}
+\fila{A. Magnitud Eléctrica}{img/magnitud-electrica.jpeg}
 
 \noindent\rule{\textwidth}{0.4pt}
 
 % ===== B =====
-\fila{B. Clase de Corriente}
-  {Indica el tipo de corriente para el cual está diseñado el instrumento:
-  \begin{itemize}[nosep, leftmargin=*, before=\vspace{1pt}, after=\vspace{1pt}]
-    \item[] \textbf{——} Corriente continua (CC)
-    \item[] $\sim$ Corriente alterna (CA)
-    \item[] $\cong$ Corriente continua y alterna (CC/CA)
-    \item[] $\approx$ Corriente alterna trifásica
-  \end{itemize}}
-  {img/clase-corriente.jpeg}
+\fila{B. Clase de Corriente}{img/clase-corriente.jpeg}
 
 \noindent\rule{\textwidth}{0.4pt}
 
 % ===== C =====
-\fila{C. Seguridad en la Manipulación}
-  {Las fallas de aislamiento provocan diferencia de potencial entre la caja y tierra. Los aparatos se someten a una tensión de prueba (\textit{tensión de ensayo}) indicada con una estrella con un número en su interior, representando la tensión en kilovoltios (kV).}
-  {img/tabla-tension-ensayo.jpeg}
+\fila{C. Seguridad en la Manipulación}{img/tabla-tension-ensayo.jpeg}
+
+\noindent\rule{\textwidth}{0.4pt}
 
 % ===== D =====
-\fila{D. Posición de Funcionamiento}
-  {Indica la orientación en la que debe operar el instrumento para garantizar su precisión:
-  \begin{itemize}[nosep, leftmargin=*, before=\vspace{1pt}, after=\vspace{1pt}]
-    \item[] \rule{1em}{0.5pt} Horizontal
-    \item[] $\uparrow$ Vertical
-    \item[] $\angle\,60^\circ$ Inclinada
-  \end{itemize}}
-  {img/posicion-funcionamiento.jpeg}
+\fila{D. Posición de Funcionamiento}{img/posicion-funcionamiento.jpeg}
 
 \noindent\rule{\textwidth}{0.4pt}
 
 % ===== E =====
-\fila{E. Clase de Precisión}
-  {Número que indica el error porcentual del instrumento. La precisión se expresa en \% del valor a plena escala.
-  \begin{itemize}[nosep, leftmargin=*, before=\vspace{1pt}, after=\vspace{1pt}]
-    \item[] \textbf{Precisión:} 0.1, 0.2, 0.5
-    \item[] \textbf{Industriales:} 1, 1.5, 2.5, 5
-  \end{itemize}
-  $\displaystyle \varepsilon = \frac{\text{clase}}{100} \times A_{\text{máx}}$}
-  {img/clase-precision.jpeg}
+\fila{E. Clase de Precisión}{img/clase-precision.jpeg}
 
 \noindent\rule{\textwidth}{0.4pt}
 
 % ===== F =====
-\fila{F. Mecanismo de Funcionamiento}
-  {Mediante símbolos gráficos se distingue el principio de operación interno del instrumento:
-  \begin{itemize}[nosep, leftmargin=*, before=\vspace{1pt}, after=\vspace{1pt}]
-    \item[] Bobina móvil (imán permanente)
-    \item[] Hierro móvil
-    \item[] Electrodinámico (bobinas fija y móvil)
-    \item[] Rectificador
-  \end{itemize}}
-  {img/mecanismo-funcionamiento.jpeg}
+\fila{F. Mecanismo de Funcionamiento}{img/mecanismo-funcionamiento.jpeg}
 
 \vfill
 
