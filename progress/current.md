@@ -15,3 +15,6 @@
 - [ ] Bloqueado (razón: )
 
 ## Notas
+- Imágenes redimensionadas a 0.38\textwidth (~10.7cm), 3.2cm altura — ~3.6× más grandes que versión anterior
+- Layout: fila única por ítem, imagen a la izquierda + texto a la derecha
+- 2 páginas en landscape
