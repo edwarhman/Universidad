@@ -1,0 +1,118 @@
+\documentclass[12pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{float}
+
+\geometry{margin=0.8cm}
+\pagestyle{empty}
+\sloppy
+
+% Colores
+\definecolor{azul-ucv}{RGB}{0, 51, 102}
+\definecolor{gris-claro}{gray}{0.92}
+\definecolor{rojo-accento}{RGB}{180, 30, 30}
+
+% Comando para tarjeta de símbolo
+\newcommand{\tarjeta}[3]{%
+  \noindent
+  \begin{minipage}[t]{\linewidth}
+    \vspace{0.15cm}
+    \noindent
+    \begin{minipage}[t]{0.22\linewidth}
+      \centering
+      \includegraphics[width=\linewidth, height=3.8cm, keepaspectratio]{#3}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.74\linewidth}
+      \textbf{\textcolor{azul-ucv}{\Large #1}}\\[2pt]
+      #2
+    \end{minipage}
+    \vspace{0.1cm}
+  \end{minipage}
+  \vspace{0.15cm}
+}
+
+\begin{document}
+
+% Encabezado
+\begin{center}
+  \textcolor{azul-ucv}{\Huge\textbf{Simbología de Instrumentos Analógicos}}\\[4pt]
+  \textcolor{rojo-accento}{\large Guía de referencia rápida para mediciones eléctricas}\\[6pt]
+  \rule{\linewidth}{1pt}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{multicols}{2}
+\raggedcolumns
+
+\tarjeta{A. Magnitud Eléctrica}
+  {Es la única que se imprime en forma independiente y sobre cualquier ángulo de la esfera. Indica la magnitud que mide el instrumento: intensidad (A), tensión (V), resistencia ($\Omega$), potencia (W), frecuencia (Hz), etc.}
+  {img/magnitud-electrica.jpeg}
+
+\tarjeta{B. Clase de Corriente}
+  {Indica el tipo de corriente para el cual está diseñado el instrumento:
+  \begin{itemize}[nosep, leftmargin=*, before=\vspace{2pt}, after=\vspace{2pt}]
+    \item[] \textbf{——} Corriente continua (CC)
+    \item[] $\sim$ Corriente alterna (CA)
+    \item[] $\cong$ Corriente continua y alterna (CC/CA)
+    \item[] $\sim$ \raisebox{0.5ex}{\rule{0.4cm}{0.5pt}} Corriente alterna trifásica
+  \end{itemize}}
+  {img/clase-corriente.jpeg}
+
+\tarjeta{C. Seguridad en la Manipulación}
+  {Las fallas de aislamiento pueden provocar diferencia de potencial entre la caja y tierra. Los aparatos se someten a una tensión de prueba (\textit{tensión de ensayo}) que se indica con una estrella con un número en su interior, representando la tensión en kilovoltios (kV).}
+  {img/tabla-tension-ensayo.jpeg}
+
+\tarjeta{D. Posición de Funcionamiento}
+  {Indica la orientación en la que debe operar el instrumento para garantizar su precisión:
+  \begin{itemize}[nosep, leftmargin=*, before=\vspace{2pt}, after=\vspace{2pt}]
+    \item[] $\square$ Horizontal
+    \item[] $\perp$ Vertical
+    \item[] $\angle$ Inclinada (ej.: $60^\circ$)
+  \end{itemize}}
+  {img/posicion-funcionamiento.jpeg}
+
+\tarjeta{E. Clase de Precisión}
+  {Número que indica el error porcentual del instrumento. La precisión se expresa en tanto por ciento del valor a plena escala.
+  \begin{itemize}[nosep, leftmargin=*, before=\vspace{2pt}, after=\vspace{2pt}]
+    \item[] \textbf{Instrumentos de precisión:} 0.1, 0.2, 0.5
+    \item[] \textbf{Instrumentos industriales:} 1, 1.5, 2.5, 5
+  \end{itemize}
+  El error absoluto máximo se calcula como:
+  $\displaystyle \varepsilon = \frac{\text{clase}}{100} \times A_{\text{máx}}$}
+  {img/clase-precision.jpeg}
+
+\tarjeta{F. Mecanismo de Funcionamiento}
+  {Mediante símbolos gráficos se distingue el principio de operación interno del instrumento:
+  \begin{itemize}[nosep, leftmargin=*, before=\vspace{2pt}, after=\vspace{2pt}]
+    \item[] Bobina móvil (imán permanente)
+    \item[] Hierro móvil
+    \item[] Electrodinámico (bobinas fija y móvil)
+    \item[] Rectificador
+  \end{itemize}}
+  {img/mecanismo-funcionamiento.jpeg}
+
+\end{multicols}
+
+\vfill
+
+% Pie de página
+\noindent\rule{\textwidth}{0.5pt}\\[2pt]
+\noindent
+{\small
+  \textcolor{gris-claro!60!black}{Basado en:} J.~Blondell, \textit{Simbología de los Instrumentos Analógicos para Mediciones Eléctricas}. \\
+  \textcolor{gris-claro!60!black}{Prof.} Emerson Warhman \hfill \textcolor{gris-claro!60!black}{\today}
+}
+
+\end{document}

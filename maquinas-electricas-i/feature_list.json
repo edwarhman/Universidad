@@ -37,6 +37,21 @@
         "Cálculos incluidos y correctos"
       ],
       "status": "in_progress"
+    },
+    {
+      "id": 3,
+      "type": "material-de-apoyo",
+      "name": "infografia-simbologia",
+      "title": "Infografía — Simbología de Instrumentos Analógicos",
+      "due": "2026-06-01",
+      "description": "Infografía de 1-2 páginas como referencia rápida para estudiantes de laboratorio sobre simbología de instrumentos analógicos (magnitud, corriente, seguridad, posición, precisión, mecanismo).",
+      "acceptance": [
+        "Existe en entregables/material-de-apoyo/infografia-simbologia/",
+        "Documento LaTeX compila sin errores",
+        "Incluye imágenes de los 6 parámetros",
+        "Máximo 2 páginas"
+      ],
+      "status": "in_progress"
     }
   ]
 }

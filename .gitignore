@@ -1,0 +1,21 @@
+# Build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Compiled PDFs (track source, not output)
+*.pdf
+
+# OS generated files
+Thumbs.db
+.DS_Store
+__pycache__/
+*.pyc
