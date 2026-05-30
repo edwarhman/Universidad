@@ -1,0 +1,431 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
+\geometry{margin=2.5cm}
+\sloppy
+
+\begin{document}
+\input{portada}
+
+\tableofcontents
+\newpage
+
+% ======================================================================
+\section{Problema 5 --- Actuador Magnético}
+% ======================================================================
+
+\subsection{Datos del Enunciado}
+
+A partir del texto proporcionado, se extraen las siguientes magnitudes físicas:
+
+\begin{itemize}[nosep]
+    \item Fuerza mecánica del muelle ($F_{\text{muelle}}$): \SI{15}{\newton}
+    \item Espesor de cada pieza de plástico ($g$): \SI{2}{\milli\meter} = $2 \times 10^{-3}$\si{\meter}
+    \item Número de entrehierros equivalentes ($k$): $2$ (dos piezas de plástico en los extremos)
+    \item Sección transversal del núcleo ($S$): \SI{100}{\square\mm} = $10^{-4}$\si{\square\meter}
+    \item Flujo magnético inicial del devanado 1 ($\Phi_1$): \SI{70}{\micro\weber}
+    \item Número de espiras del devanado 2 ($N_2$): $150$ espiras
+    \item Permeabilidad del vacío ($\mu_0$): $4\pi \times 10^{-7}$\si{\henry\per\meter}
+    \item Condición especial: La reluctancia del hierro es despreciable ($\mathcal{R}_{\text{Fe}} \approx 0$).
+\end{itemize}
+
+\subsection{Condición de Apertura del Circuito}
+
+El muelle tira de la pieza móvil hacia afuera, mientras que el campo magnético genera una fuerza de atracción que intenta mantener el circuito cerrado. Para que el muelle logre separar las piezas, la fuerza de atracción magnética ($F_{\text{mag}}$) debe reducirse hasta igualar o ser menor que la fuerza del muelle:
+
+\begin{equation}
+    F_{\text{mag}} \le F_{\text{muelle}}
+\end{equation}
+
+La fuerza magnética total en un circuito con $k$ entrehierros simétricos viene dada por:
+
+\begin{equation}
+    F_{\text{mag}} = k \cdot \frac{B^2 \cdot S}{2\mu_0}
+\end{equation}
+
+Como $k = 2$ (dos entrehierros) y la densidad de flujo es $B = \Phi/S$, sustituimos para obtener la fuerza en función del flujo magnético neto ($\Phi_{\text{neto}}$):
+
+\begin{equation}
+    F_{\text{mag}} = 2 \cdot \frac{\left(\dfrac{\Phi_{\text{neto}}}{S}\right)^2 \cdot S}{2\mu_0}
+    = \frac{\Phi_{\text{neto}}^2}{\mu_0 \cdot S}
+\end{equation}
+
+\subsection{Cálculo del Flujo Magnético Crítico ($\Phi_{\text{máx}}$)}
+
+Calculamos cuál es el flujo máximo que tolera el circuito antes de que el muelle venza la atracción magnética:
+
+\begin{equation}
+    F_{\text{muelle}} = \frac{\Phi_{\text{máx}}^2}{\mu_0 \cdot S}
+\end{equation}
+
+Despejando $\Phi_{\text{máx}}$:
+
+\begin{equation}
+    \Phi_{\text{máx}} = \sqrt{F_{\text{muelle}} \cdot \mu_0 \cdot S}
+\end{equation}
+
+Sustituyendo los valores numéricos:
+
+\begin{align}
+    \Phi_{\text{máx}} &= \sqrt{15 \cdot (4\pi \times 10^{-7}) \cdot 10^{-4}} \nonumber \\
+                      &= \sqrt{1.88495 \times 10^{-9}} \nonumber \\
+                      &\approx 4.3416 \times 10^{-5}\ \si{\weber}
+                        = \SI{43.42}{\micro\weber}
+\end{align}
+
+\begin{center}
+    \fbox{\parbox{0.9\textwidth}{
+        \textbf{Conclusión intermedia:} El flujo original es de \SI{70}{\micro\weber}.
+        Para bajar el flujo a un nivel crítico de \SI{43.42}{\micro\weber}, la corriente
+        del devanado 2 debe circular en sentido \textbf{opuesto} (antagonista) al devanado 1.
+    }}
+\end{center}
+
+\subsection{Reluctancia Total del Circuito}
+
+Dado que la reluctancia del material ferromagnético es despreciable, la oposición al flujo se concentra únicamente en las dos piezas plásticas (entrehierros):
+
+\begin{equation}
+    \mathcal{R}_{\text{total}} = 2 \cdot \mathcal{R}_g = 2 \cdot \frac{g}{\mu_0 \cdot S}
+\end{equation}
+
+\begin{align}
+    \mathcal{R}_{\text{total}}
+    &= 2 \cdot \frac{2 \times 10^{-3}}{(4\pi \times 10^{-7}) \cdot 10^{-4}} \nonumber \\
+    &= \frac{4 \times 10^{-3}}{1.2566 \times 10^{-10}} \nonumber \\
+    &\approx 3.1831 \times 10^{7}\ \si{\ampere\volt\per\weber}
+\end{align}
+
+\subsection{Determinación de la Intensidad de Corriente ($I_2$)}
+
+Aplicando la Ley de Hopkinson para circuitos magnéticos en la condición de umbral:
+
+\begin{equation}
+    \mathcal{F}_{\text{neta}} = \Phi_{\text{máx}} \cdot \mathcal{R}_{\text{total}}
+\end{equation}
+
+\begin{equation}
+    \mathcal{F}_1 - \mathcal{F}_2 = \Phi_{\text{máx}} \cdot \mathcal{R}_{\text{total}}
+\end{equation}
+
+Sabemos que la fuerza magnetomotriz del devanado 1 ($\mathcal{F}_1$) es la responsable de generar el flujo inicial de \SI{70}{\micro\weber} en vacío:
+
+\begin{equation}
+    \mathcal{F}_1 = \Phi_1 \cdot \mathcal{R}_{\text{total}}
+\end{equation}
+
+Reemplazando $\mathcal{F}_1$ y expandiendo $\mathcal{F}_2 = N_2 \cdot I_2$:
+
+\begin{equation}
+    \Phi_1 \cdot \mathcal{R}_{\text{total}} - N_2 \cdot I_2 = \Phi_{\text{máx}} \cdot \mathcal{R}_{\text{total}}
+\end{equation}
+
+Despejamos el término del segundo devanado ($N_2 \cdot I_2$):
+
+\begin{equation}
+    N_2 \cdot I_2 = (\Phi_1 - \Phi_{\text{máx}}) \cdot \mathcal{R}_{\text{total}}
+\end{equation}
+
+\begin{equation}
+    I_2 = \frac{(\Phi_1 - \Phi_{\text{máx}}) \cdot \mathcal{R}_{\text{total}}}{N_2}
+\end{equation}
+
+Sustituyendo los valores finales:
+
+\begin{align*}
+    \Phi_1 - \Phi_{\text{máx}} &= 70 \times 10^{-6} - 43.416 \times 10^{-6}
+                                 = 26.584 \times 10^{-6}\ \si{\weber} \\
+    \mathcal{R}_{\text{total}} &= 3.1831 \times 10^{7}\ \si{\ampere\volt\per\weber} \\
+    N_2 &= 150\ \text{espiras}
+\end{align*}
+
+\begin{align}
+    I_2 &= \frac{(26.584 \times 10^{-6}) \cdot (3.1831 \times 10^{7})}{150} \nonumber \\
+        &= \frac{846.19}{150} \nonumber \\
+        &\approx \SI{5.64}{\ampere}
+\end{align}
+
+\subsection{Resultado Final}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        El valor mínimo de intensidad de corriente continua que deberá circular por el
+        devanado 2 para que el muelle logre abrir el circuito magnético es de
+        \textbf{\SI{5.64}{\ampere}}.
+    }%
+}
+
+\newpage
+
+% ======================================================================
+\section{Problema 1-2 --- Circuito Magnético de Tres Ramales}
+% ======================================================================
+
+\subsection{Datos del Enunciado}
+
+\begin{itemize}[nosep]
+    \item Bobinas en los ramales laterales:
+          \begin{itemize}
+              \item $N_1 = 100$ espiras (rama A)
+              \item $N_2 = 100$ espiras (rama B)
+          \end{itemize}
+    \item Están conectadas en \textbf{serie}, con sus f.m.m. dirigiendo el flujo hacia el ramal central C en la misma dirección.
+    \item \textbf{Geometría del núcleo:}
+          \begin{itemize}
+              \item Sección de ramas A y B: $S_A = S_B = \SI{1250}{\square\mm} = 1250 \times 10^{-6}\ \si{\square\meter}$
+              \item Sección de rama central C: $S_C = \SI{2500}{\square\mm} = 2500 \times 10^{-6}\ \si{\square\meter}$
+              \item Longitud de rama A: $l_A = \SI{150}{\mm} = \SI{0.15}{\meter}$
+              \item Longitud de rama B: $l_B = \SI{150}{\mm} = \SI{0.15}{\meter}$
+              \item Longitud de rama C: $l_C = \SI{50}{\mm} = \SI{0.05}{\meter}$
+              \item Espesor del entrehierro (rama central): $g = \SI{3.7}{\mm} = 3.7 \times 10^{-3}\ \si{\meter}$
+          \end{itemize}
+    \item \textbf{Propiedades del material:} Acero.
+          \begin{itemize}
+              \item Factor de relleno: $k_r = 0.94$
+              \item Se desprecia el efecto de bordes y la dispersión.
+          \end{itemize}
+    \item \textbf{Objetivo:} Calcular la corriente $I$ necesaria para que la densidad de flujo en la rama central sea $B_C = \SI{0.6}{\tesla}$.
+\end{itemize}
+
+\subsection{Análisis del Flujo y Simetría}
+
+Por simetría ($l_A = l_B$, $S_A = S_B$) y con las f.m.m. empujando el flujo hacia el centro:
+
+\begin{equation}
+    \Phi_C = \Phi_A + \Phi_B
+\end{equation}
+
+\begin{equation}
+    \Phi_A = \Phi_B = \frac{\Phi_C}{2}
+\end{equation}
+
+El flujo en la rama central:
+
+\begin{equation}
+    \Phi_C = B_C \cdot S_C = 0.6 \cdot (2500 \times 10^{-6}) = 1.5 \times 10^{-3}\ \si{\weber}
+\end{equation}
+
+Por lo tanto:
+
+\begin{equation}
+    \Phi_A = \Phi_B = \frac{1.5 \times 10^{-3}}{2} = 0.75 \times 10^{-3}\ \si{\weber}
+\end{equation}
+
+\subsection{Densidades de Flujo en el Acero}
+
+Aplicando el factor de relleno $k_r = 0.94$:
+
+\begin{align}
+    B_{\text{Fe},\,C} &= \frac{\Phi_C}{k_r \cdot S_C}
+    = \frac{0.6}{0.94} \approx \SI{0.6383}{\tesla} \\
+    B_{\text{Fe},\,A} &= B_{\text{Fe},\,B}
+    = \frac{\Phi_A}{k_r \cdot S_A}
+    = \frac{0.75 \times 10^{-3}}{0.94 \cdot (1250 \times 10^{-6})}
+    \approx \SI{0.6383}{\tesla}
+\end{align}
+
+La densidad de flujo es uniforme en todo el hierro ($B \approx \SI{0.6383}{\tesla}$).
+
+\subsection{Intensidad de Campo Magnético ($H$)}
+
+Para el acero, con $B \approx \SI{0.64}{\tesla}$ y usando valores típicos de tablas de curvas B-H (Fitzgerald, Kosow), se tiene aproximadamente:
+
+\begin{equation}
+    H_{\text{Fe}} \approx \SI{200}{\ampere\per\meter}
+\end{equation}
+
+Para el entrehierro (aire):
+
+\begin{equation}
+    H_g = \frac{B_C}{\mu_0}
+    = \frac{0.6}{4\pi \times 10^{-7}}
+    \approx \SI{477464.83}{\ampere\per\meter}
+\end{equation}
+
+\subsection{Aplicación de la Ley de Ampère}
+
+Tomando una malla que recorra la rama lateral A y la rama central C:
+
+\begin{equation}
+    \sum N \cdot I = \sum H \cdot l
+\end{equation}
+
+Solo actúa la bobina de la rama A ($N_1 \cdot I$):
+
+\begin{equation}
+    N_1 \cdot I = H_{\text{Fe}} \cdot l_A + H_{\text{Fe}} \cdot l_C + H_g \cdot g
+\end{equation}
+
+Sustituyendo:
+
+\begin{align}
+    100 \cdot I &= 200 \cdot (0.15) + 200 \cdot (0.05) + 477464.83 \cdot (3.7 \times 10^{-3}) \nonumber \\
+    100 \cdot I &= 30 + 10 + 1766.62 \nonumber \\
+    100 \cdot I &= 1806.62 \nonumber \\
+    I &\approx \SI{18.07}{\ampere}
+\end{align}
+
+\subsection{Resultado Final}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        La intensidad de corriente necesaria para alcanzar una inducción de
+        \SI{0.6}{\tesla} en la rama central es de aproximadamente
+        \textbf{\SI{18.07}{\ampere}}.
+    }%
+}
+
+\newpage
+
+% ======================================================================
+\section{Problema 1 --- Relé Magnético}
+% ======================================================================
+
+\subsection{Datos del Enunciado}
+
+\begin{itemize}[nosep]
+    \item Curva de magnetización del hierro: $B = 0.0006 \cdot H$ ($\mu_{\text{Fe}} = 6 \times 10^{-4}$\si{\henry\per\meter})
+    \item Dimensiones: $a = \SI{100}{\mm} = \SI{0.1}{\m}$, $b = \SI{50}{\mm} = \SI{0.05}{\m}$
+    \item Sección uniforme del núcleo ($S$): \SI{100}{\square\mm} = $10^{-4}$\si{\square\meter}
+    \item Longitud del entrehierro inicial ($\delta$): \SI{1}{\mm} = $10^{-3}$\si{\meter}
+    \item Número de entrehierros ($k$): $2$
+    \item Constante elástica del muelle ($K$): \SI{10320}{\newton\per\meter}
+    \item Número de espiras ($N$): $5000$
+    \item Resistencia de la bobina ($R$): \SI{1000}{\ohm}
+    \item $\mu_0 = 4\pi \times 10^{-7}$\si{\henry\per\meter}
+\end{itemize}
+
+\subsection{Propiedades Magnéticas del Hierro}
+
+A partir de la ecuación $B = \mu_{\text{Fe}} \cdot H$:
+
+\begin{equation}
+    \mu_{\text{Fe}} = 0.0006 = 6 \times 10^{-4}\ \si{\henry\per\meter}
+\end{equation}
+
+\begin{equation}
+    \mu_r = \frac{\mu_{\text{Fe}}}{\mu_0}
+    = \frac{6 \times 10^{-4}}{4\pi \times 10^{-7}} \approx 477.46
+\end{equation}
+
+\subsection{Cálculo de Reluctancias (Relé Abierto)}
+
+\subsubsection*{Longitud media del hierro}
+
+\[
+l_{\text{Fe}} = b + a + a + b = 2a + 2b = 2(0.1) + 2(0.05) = \SI{0.3}{\meter}
+\]
+
+\subsubsection*{Reluctancia del hierro}
+
+\begin{equation}
+    \mathcal{R}_{\text{Fe}} = \frac{l_{\text{Fe}}}{\mu_{\text{Fe}} \cdot S}
+    = \frac{0.3}{(6 \times 10^{-4}) \cdot 10^{-4}}
+    = 5 \times 10^{6}\ \si{\ampere\volt\per\weber}
+\end{equation}
+
+\subsubsection*{Reluctancia de los entrehierros}
+
+\begin{equation}
+    \mathcal{R}_g = \frac{2\delta}{\mu_0 \cdot S}
+    = \frac{2 \times 10^{-3}}{(4\pi \times 10^{-7}) \cdot 10^{-4}}
+    \approx 15.915 \times 10^{6}\ \si{\ampere\volt\per\weber}
+\end{equation}
+
+\subsubsection*{Reluctancia total (abierto)}
+
+\begin{equation}
+    \mathcal{R}_{\text{total, abierto}} = \mathcal{R}_{\text{Fe}} + \mathcal{R}_g
+    = 5 \times 10^{6} + 15.915 \times 10^{6}
+    = 20.915 \times 10^{6}\ \si{\ampere\volt\per\weber}
+\end{equation}
+
+\begin{center}
+    \fbox{\parbox{0.9\textwidth}{%
+        \textbf{Justificación:} La reluctancia del hierro representa
+        aproximadamente el $24\,\%$ de la reluctancia total
+        ($5 / 20.915$). Por lo tanto, \textbf{no se puede despreciar}.
+    }}
+\end{center}
+
+\subsection{Apartado 1: Fuerza Magnetomotriz y Tensión Mínima}
+
+Fuerza del muelle en apertura máxima:
+
+\begin{equation}
+    F_{\text{muelle}} = K \cdot \delta = 10320 \cdot 10^{-3} = \SI{10.32}{\newton}
+\end{equation}
+
+Fuerza de atracción magnética (dos entrehierros):
+
+\begin{equation}
+    F_{\text{mag}} = \frac{\Phi^2}{\mu_0 \cdot S}
+\end{equation}
+
+Igualando $F_{\text{mag}} = F_{\text{muelle}}$:
+
+\begin{align}
+    10.32 &= \frac{\Phi^2}{(4\pi \times 10^{-7}) \cdot 10^{-4}} \nonumber \\
+    \Phi^2 &= 10.32 \cdot 1.2566 \times 10^{-10} = 1.2968 \times 10^{-9} \nonumber \\
+    \Phi &= \sqrt{1.2968 \times 10^{-9}} \approx 3.601 \times 10^{-5}\ \si{\weber}
+\end{align}
+
+Fuerza magnetomotriz:
+
+\begin{equation}
+    \mathcal{F} = N \cdot I = \Phi \cdot \mathcal{R}_{\text{total, abierto}}
+    = (3.601 \times 10^{-5}) \cdot (20.915 \times 10^{6})
+    \approx \SI{753.15}{\ampere\volt}
+\end{equation}
+
+Corriente y tensión mínima:
+
+\begin{align}
+    I &= \frac{\mathcal{F}}{N} = \frac{753.15}{5000} \approx \SI{0.1506}{\ampere} \\
+    V &= I \cdot R = 0.1506 \cdot 1000 = \SI{150.6}{\volt}
+\end{align}
+
+\subsection{Apartado 2: Coeficiente de Autoinducción}
+
+\subsubsection*{Antes de cerrar (abierto: $\delta = \SI{1}{\mm}$)}
+
+\begin{equation}
+    L_{\text{abierto}} = \frac{N^2}{\mathcal{R}_{\text{total, abierto}}}
+    = \frac{5000^2}{20.915 \times 10^{6}}
+    \approx \SI{1.195}{\henry}
+\end{equation}
+
+\subsubsection*{Después de cerrar (cerrado: $\delta = 0$)}
+
+\begin{equation}
+    \mathcal{R}_{\text{total, cerrado}} = \mathcal{R}_{\text{Fe}} = 5 \times 10^{6}\ \si{\ampere\volt\per\weber}
+\end{equation}
+
+\begin{equation}
+    L_{\text{cerrado}} = \frac{N^2}{\mathcal{R}_{\text{total, cerrado}}}
+    = \frac{5000^2}{5 \times 10^{6}}
+    = \SI{5}{\henry}
+\end{equation}
+
+\subsection{Resultados Finales}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        \begin{enumerate}
+            \item Fuerza magnetomotriz mínima: \textbf{\SI{753.15}{\ampere\volt}}
+            \item Tensión mínima: \textbf{\SI{150.6}{\volt}}
+            \item Autoinducción (abierto): \textbf{\SI{1.195}{\henry}}
+            \item Autoinducción (cerrado): \textbf{\SI{5}{\henry}}
+        \end{enumerate}
+    }%
+}
+
+\end{document}

@@ -19,12 +19,24 @@
 \tableofcontents
 \newpage
 
+\section{Introducción}
+
+Esta práctica busca reforzar en el estudiante los conocimientos relacionados con el comportamiento del circuito magnético de dos tipos de núcleos ferromagnéticos: macizo y laminado. Se plantea el estudio de un circuito magnético, así como la medición del correspondiente Ciclo de Histéresis.
+
 \section{Objetivos}
+
+\subsection*{Objetivo General}
 \begin{itemize}
-    \item Analizar el comportamiento de circuitos magnéticos con núcleo ferromagnético.
-    \item Comprender el ciclo de histéresis y sus parámetros característicos.
+    \item Analizar y comparar el comportamiento de núcleos ferromagnéticos macizo y laminado, evaluando sus curvas B-H, ciclo de histéresis y pérdidas asociadas.
+\end{itemize}
+
+\subsection*{Objetivos Específicos}
+\begin{itemize}
+    \item Comprender el ciclo de histéresis y sus parámetros característicos ($B_{\text{sat}}$, $B_r$, $H_c$).
     \item Determinar la curva B-H de un material ferromagnético.
     \item Calcular pérdidas por histéresis y corrientes parásitas (Foucault).
+    \item Comparar las formas de onda de corriente y las pérdidas entre un núcleo macizo y uno laminado.
+    \item Evaluar el efecto del laminado en la reducción de pérdidas por corrientes parásitas.
 \end{itemize}
 
 \section{Marco Teórico}
@@ -49,19 +61,7 @@ La relación entre la densidad de flujo magnético $B$ y la intensidad de campo 
 
 \begin{figure}[h]
 \centering
-\begin{circuitikz}
-    \draw[->] (-3,0) -- (3,0) node[right] {$H$};
-    \draw[->] (0,-2) -- (0,2.5) node[above] {$B$};
-    \draw[thick] (0,0) .. controls (0.5,1.5) and (1.5,2) .. (2.5,0.5);
-    \draw[thick] (2.5,0.5) .. controls (2,-0.5) and (1,-1.5) .. (0,-2);
-    \draw[thick] (0,-2) .. controls (-1,-1.5) and (-2,-0.5) .. (-2.5,0.5);
-    \draw[thick] (-2.5,0.5) .. controls (-1.5,2) and (-0.5,1.5) .. (0,0);
-    \node at (2.5,0.5) [above right] {$+B_{\text{sat}}$};
-    \node at (-2.5,0.5) [above left] {$-B_{\text{sat}}$};
-    \node at (0.3,0.3) {$B_r$};
-    \node at (0.8,-0.2) {$H_c$};
-    \draw[dashed] (0.7,0) -- (0.7,-0.2);
-\end{circuitikz}
+\includegraphics[width=0.6\textwidth]{figures/figura-ciclo-histeresis.png}
 \caption{Ciclo de histéresis típico de un material ferromagnético.}
 \label{fig:histeresis}
 \end{figure}
@@ -72,6 +72,8 @@ Parámetros característicos:
     \item $B_r$: Inducción remanente (cuando $H = 0$)
     \item $H_c$: Campo coercitivo (cuando $B = 0$)
 \end{itemize}
+
+Como se ha visto, para cambiar la orientación de los dominios magnéticos se requiere energía, lo que origina pérdidas en todas las máquinas y transformadores. Las pérdidas por histéresis en el núcleo de hierro corresponden a la energía necesaria para reorientar los dominios durante cada ciclo de corriente alterna aplicada al núcleo. El área comprendida dentro del ciclo de histéresis es directamente proporcional a la energía perdida por ciclo. Cuanto menores sean las variaciones de la fuerza magnetomotriz aplicada al núcleo, menor será el área del ciclo y, por tanto, menores serán las pérdidas resultantes~\cite{chapman}.
 
 \subsection{Pérdidas en el Núcleo}
 Las pérdidas totales en un núcleo ferromagnético sometido a un campo alterno son:
@@ -88,7 +90,14 @@ Las pérdidas totales en un núcleo ferromagnético sometido a un campo alterno 
 
 donde $K_h$ es una constante del material, $f$ la frecuencia, $B_{\text{máx}}$ la inducción máxima y $n$ el exponente de Steinmetz (usualmente $n \approx 1.6$ a $2.0$).
 
-\textbf{Pérdidas por corrientes parásitas} ($P_f$): debidas a las corrientes inducidas en el núcleo:
+\textbf{Pérdidas por corrientes parásitas} ($P_f$): un flujo variable en el tiempo induce voltajes en el núcleo ferromagnético, generando corrientes circulantes (corrientes de remolino o parásitas) que disipan energía en forma de calor~\cite{chapman}. La magnitud de estas pérdidas depende del tamaño de los remolinos y de la resistividad del material. Para reducirlas se emplean dos métodos:
+
+\begin{itemize}
+    \item \textbf{Laminación del núcleo:} dividir el núcleo en finas láminas aisladas entre sí limita el tamaño de los remolinos, reduciendo el voltaje inducido y las pérdidas asociadas.
+    \item \textbf{Aleaciones de alta resistividad:} agregar silicio al acero del núcleo aumenta su resistividad, disminuyendo la corriente inducida para un flujo dado.
+\end{itemize}
+
+La combinación de ambos métodos puede reducir las pérdidas por corrientes parásitas hasta hacerlas mucho menores que las pérdidas por histéresis:
 
 \begin{equation}
     P_f = K_f \cdot f^2 \cdot B_{\text{máx}}^2
@@ -109,6 +118,13 @@ donde $K_h$ es una constante del material, $f$ la frecuencia, $B_{\text{máx}}$ 
 \end{itemize}
 
 \section{Procedimiento de Laboratorio}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/figura-integrador.png}
+\caption{Utilización del circuito integrador para la medición del ciclo de histéresis~\cite{guia}.}
+\label{fig:integrador}
+\end{figure}
 
 \subsection{Núcleo macizo}
 \begin{enumerate}
@@ -147,5 +163,15 @@ donde $K_h$ es una constante del material, $f$ la frecuencia, $B_{\text{máx}}$ 
 \begin{center}
     \textbf{Nota:} Para calcular la sección efectiva del circuito magnético con núcleo laminado, suponer un factor de apilamiento del \SI{93}{\percent}.
 \end{center}
+
+\begin{thebibliography}{99}
+
+\bibitem{chapman}
+S.~Chapman, \textit{Máquinas Eléctricas}, 5.ª ed., McGraw-Hill, 2012.
+
+\bibitem{guia}
+J.~M.~Pérez, \textit{Práctica~2: Circuitos Magnéticos y Ciclo de Histéresis}, Laboratorio de Máquinas~I, Universidad Central de Venezuela, 2013.
+
+\end{thebibliography}
 
 \end{document}

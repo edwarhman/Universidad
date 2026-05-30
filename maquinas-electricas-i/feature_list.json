@@ -36,7 +36,7 @@
         "Portada incluida (UCV, Facultad, Escuela, Dpto Potencia)",
         "Cálculos incluidos y correctos"
       ],
-      "status": "pending"
+      "status": "done"
     },
     {
       "id": 3,
@@ -51,7 +51,21 @@
         "Incluye imágenes de los 6 parámetros",
         "Máximo 2 páginas"
       ],
-      "status": "in_progress"
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "type": "tarea",
+      "name": "tarea_circuitos_magneticos",
+      "title": "Tarea — Circuitos Magnéticos",
+      "due": "2026-06-02",
+      "description": "Resolver 3 problemas sobre circuitos magnéticos (cálculo de flujo, reluctancia, corriente de excitación y curva B-H).",
+      "acceptance": [
+        "Documento PDF en entregables/tareas/tarea-circuitos-magneticos/",
+        "3 problemas resueltos paso a paso",
+        "Incluye diagramas y cálculos detallados"
+      ],
+      "status": "awaiting_review"
     }
   ]
 }

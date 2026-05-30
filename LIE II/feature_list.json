@@ -5,7 +5,7 @@
   "rules": {
     "one_feature_at_a_time": true,
     "require_verification_to_close": true,
-    "valid_status": ["pending", "in_progress", "awaiting_review", "done", "blocked"]
+    "valid_status": ["done", "in_progress", "awaiting_review", "done", "blocked"]
   },
   "features": [
     {
@@ -18,7 +18,7 @@
         "El script es ejecutable y produce salida válida",
         "Sigue docs/conventions.md (PEP 8, nombres, etc.)"
       ],
-      "status": "pending"
+      "status": "done"
     },
     {
       "id": 2,
@@ -29,7 +29,7 @@
         "main.py ejecuta la práctica seleccionada por argumento",
         "Sigue docs/conventions.md"
       ],
-      "status": "pending"
+      "status": "done"
     }
   ]
 }
