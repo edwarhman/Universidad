@@ -1,0 +1,13 @@
+\section{Conclusiones}
+
+Se cumplió el objetivo de estabilizar el péndulo físico mediante el diseño e implementación de los controladores PID y de realimentación de estados con los observadores identidad, de orden reducido y funcional lineal.
+
+El comportamiento real de los controladores respondió de forma muy aproximada al comportamiento teórico esperado, las diferencias observadas se atribuyen a perturbaciones externas como la fricción y la resistencia del viento, así como al efecto de haber linealizado el sistema al rededor de un punto de operación.
+
+Al comparar cada uno de los modelos utilizados se concluye que el PID posee un desempeño menos robusto ya que es más susceptible a las perturbaciones y tiene más dificultades para mantenerse estable.
+
+Por otro lado los controladores por realimentación del estado tienen un comportamiento muy similar entre ellos, notándose el funcional lineal como el más robusto de todos. Esto se debe a que el funcional lineal fue diseñado ajustando un único polo acoplado para el lazo cerrado mientras que para los demás observadores el diseño de las variables de estado se hace de forma independiente para cada polo separado.
+
+Se evidenció la ventaja del control por realimentación del estado sobre el PID al permitir diseñar la ubicación exacta de los polos del sistema haciendo que este se comportara como se deseaba, a diferencia del PID en el cual se tuvo que depender de un proceso de ensayo y error hasta obtener el mejor resultado, y que estuvo limitado ya que no se podía incrementar mucho la ganancia del derivativo debido al ruido en la lectura del ángulo. Sin embargo el PID tiene la ventaja de que es más intuitivo ajustar sus parámetros en base a la velocidad, las oscilaciones, el amortiguamiento y el error en estado estacionario sin necesidad de tener un conocimiento profundo sobre el sistema.
+
+Para mejorar el comportamiento del péndulo se puede agregar un filtro pasabajo que reduzca el ruido en la lectura del ángulo. Esto permitiría hacer mejores ajustes en el PID ya que se podrían obtener mayores valores en la ganancia proporcional y derivativo sin que el carro vibre bruscamente. Sin embargo hacer esto hace que el sistema responda más lento. Otra mejora sería diseñar observadores más lentos, los utilizados tienen polos en $z = 0.5$, esto haría que el sistema sea menos sensible al ruido. También se puede optar por no linealizar las ecuaciones del sistema, esto hará que el comportamiento teórico sea más parecido al real. Para reducir las vibraciones y el ruido se pueden aumentar la tensión en las correas utilizando tensores y cambiando los rieles por unos más sólidos. En futuros experimentos también se podría comparar la lectura de los sensores con las salidas del observador identidad.

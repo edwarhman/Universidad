@@ -1,3 +1,3 @@
 # Historial de sesiones — pendulo-invertido
 
-<!-- Formato: fecha | feature | estado -->
+2026-05-31 | transcripcion_informe_pendulo | done — Transcripción completa, PDF generado, correcciones aplicadas

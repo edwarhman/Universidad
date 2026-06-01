@@ -1,0 +1,166 @@
+\section{Diseño de Servosistema de Tipo 1}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+        node distance = 1.5cm and 1.0cm,
+        block/.style = {draw, rectangle, minimum height=1em, minimum width=3em, outer sep=0pt},
+        sum/.style = {draw, circle, node distance=1.5cm},
+        input/.style = {coordinate},
+        output/.style = {coordinate},
+        arrow/.style = {->, >=stealth, thick}
+    ]
+
+        % Trayectoria Directa (Bloques Principales)
+        \node [input] (input) {};
+        \node [sum, right=of input] (sum1) {};
+        \node [block, right=of sum1] (integrator) {$\displaystyle\int$};
+        \node [block, right=of integrator] (ki) {$K_i$};
+        \node [sum, right=of ki] (sum2) {};
+        \node [block, right=2cm of sum2] (system) {$\mathbf{\dot{x}} = \mathbf{A}\mathbf{x} + \mathbf{B}u$};
+        \node [block, right=1.5cm of system] (matrixC) {$\mathbf{C}$};
+        \node [output, right=of matrixC] (output) {};
+
+        % Conexiones de la línea principal
+        \draw [arrow] (input) -- node[pos=0.2, above] {$r(n)$} (sum1);
+        \draw [arrow] (sum1) -- node[above] {$e(n)$} (integrator);
+        \draw [arrow] (integrator) -- (ki);
+        \draw [arrow] (ki) -- (sum2);
+        \draw [arrow] (sum2) -- node[above] {$u(n)$} (system);
+        \draw [arrow] (system) -- node[above] {$\mathbf{x}(n)$} (matrixC);
+        \draw [arrow] (matrixC) -- node[pos=0.8, above] {$y(n)$} (output);
+
+        % Lazo de Realimentación de Estados (Matriz K)
+        \node [block, below=1.2cm of system] (matrixK) {$\mathbf{K}$};
+        
+        % Conexiones del Lazo K
+        \draw [thick] (system) -- node[coordinate] (branch1) {} (matrixC);
+        \draw [arrow] (branch1) |- (matrixK);
+        \draw [arrow] (matrixK) -| node[pos=0.9, left] {$-$} (sum2);
+
+        % Lazo de Realimentación de Salida al Integrador
+        \draw [thick] (matrixC) -- node[coordinate] (branch2) {} (output);
+        \draw [arrow] (branch2) -- ++(0,-2.2) -| node[pos=0.9, left] {$-$} (sum1);
+
+    \end{tikzpicture}
+    \caption{Diagrama de bloques del Servosistema de Tipo 1 con realimentación de estados.}
+    \label{fig:diagrama_bloques}
+\end{figure}
+
+Para controlar la posición es necesario estructurar un sistema de tipo 1. El sistema del péndulo invertido montado en un carro no tiene un integrador natural, por lo tanto se realimenta la variable de posición a la entrada y se inserta un integrador en el camino directo como se muestra en la figura 2.
+
+\[
+u = -\mathbf{K}\mathbf{x} + K_i e_I
+\]
+
+\[
+\dot{e}_I = r - y = r - \mathbf{C}\mathbf{x}
+\]
+
+El sistema ampliado queda:
+
+\[
+\hat{\mathbf{A}} = \begin{bmatrix} \mathbf{G} & \mathbf{0} \\ -\mathbf{C} & 1 \end{bmatrix} = \begin{bmatrix} 1 & 0.01 & -0.0001 & 0 & 0 \\ 0 & 1 & -0.003 & -0.0001 & 0 \\ 0 & 0 & 1.0028 & 0.01 & 0 \\ 0 & 0 & 0.5659 & 1.0028 & 0 \\ -1 & 0 & 0 & 0 & 1 \end{bmatrix}, \quad \hat{\mathbf{B}} = \begin{bmatrix} \mathbf{H} \\ 0 \end{bmatrix} = \begin{bmatrix} 0.0001 \\ 0.01 \\ -0.0001 \\ -0.003 \\ 0 \end{bmatrix}
+\]
+
+Para la asignación de polos se utilizaron los siguientes polos deseados:
+
+\[
+p = [0.9515, \, 0.9775 + j0.0257, \, 0.9775 - j0.0257, \, 0.742]
+\]
+
+Para ello se utilizó la fórmula de Ackermann:
+
+\[
+\mathbf{K}_{amp} = \begin{bmatrix} 0 & 0 & 0 & 0 & 1 \end{bmatrix} \mathbf{M}_c^{-1} \alpha(\hat{\mathbf{A}})
+\]
+
+donde $\alpha$ es el polinomio característico deseado:
+
+\[
+\alpha = z^5 - 4.714 z^4 + 8.846 z^3 - 8.365 z^2 + 3.946 z - 0.714
+\]
+
+Se obtiene $\mathbf{K}_{amp}$  de donde:
+
+\[
+\mathbf{K} = \begin{bmatrix} -28.8466 & -14.9071 & -54.4323 & -9.3951 \end{bmatrix}
+\]
+
+\[
+K_i = -9.1010
+\]
+
+\subsection{Observador Identidad}
+
+Para diseñar el observador identidad se seleccionan autovalores que sean más rápidos que los polos a lazo cerrado del sistema, en este caso se seleccionaron en:
+
+\[
+\alpha_{obs} = z^4 - 2.8 z^3 + 2.9366 z^2 - 1.3536 z + 0.2315
+\]
+
+Para encontrar la matriz de realimentación del observador se utilizó el sistema dual de la fórmula de Ackermann:
+
+\[
+\mathbf{L} = \alpha_{obs}(\mathbf{G}) \begin{bmatrix} \mathbf{C} \\ \mathbf{C}\mathbf{G} \\ \mathbf{C}\mathbf{G}^2 \\ \mathbf{C}\mathbf{G}^3 \end{bmatrix}^{-1} \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}
+\]
+
+dando como resultado:
+
+\[
+\mathbf{L} = \begin{bmatrix} 0.49 & 0.5 & 0.9997 & 26.3034 \end{bmatrix}^T
+\]
+
+El observador se construye como:
+
+\[
+\mathbf{A}_o = \mathbf{G} - \mathbf{L}\mathbf{C}, \quad \mathbf{B}_o = \mathbf{H} - \mathbf{L} D
+\]
+
+\subsection{Observador de Orden Reducido}
+
+Utilizaremos solo la dinámica de la barra.
+
+\[
+\mathbf{A}_{22} = \begin{bmatrix} 1.0028 & 0.01 \\ 0.5659 & 1.0028 \end{bmatrix}, \quad \mathbf{A}_{12} = \begin{bmatrix} -0.0001 & 0 \\ -0.003 & -0.0001 \end{bmatrix}^T
+\]
+
+\[
+\mathbf{B}_2 = \begin{bmatrix} -0.0001 \\ -0.003 \end{bmatrix}
+\]
+
+La matriz $\mathbf{C}$ ya está en la forma apropiada. La forma del observador es:
+
+\[
+\tilde{\mathbf{x}}(n+1) = (\mathbf{A}_{22} - \mathbf{L}\mathbf{A}_{12})\tilde{\mathbf{x}}(n) + \mathbf{B}_2 u(n) + \dots
+\]
+
+El autovalor del observador será colocado en 0.5.
+
+\[
+\det(z\mathbf{I} - \mathbf{A}_{22} + \mathbf{L}\mathbf{A}_{12}) = z - 0.5
+\]
+
+\[
+L = 20.28
+\]
+
+Sustituyendo:
+
+\[
+\tilde{\mathbf{x}}(n+1) = 0.5 \tilde{\mathbf{x}}(n) + \dots
+\]
+
+\subsection{Funcional Lineal Simple}
+
+Cálculo del índice de observabilidad:
+
+\[
+\text{Rango} \, \mathbf{M}_o = 4 \implies \text{índice de observabilidad} = 2
+\]
+
+El observador puede construirse con un solo autovalor el cual es $z = 0.5$. Además se debe cumplir:
+
+\[
+\mathbf{T}\mathbf{A} - \mathbf{F}\mathbf{T} = \mathbf{W} = \mathbf{G}_c \mathbf{C}
+\]

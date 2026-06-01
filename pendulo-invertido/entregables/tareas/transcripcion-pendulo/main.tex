@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Paquetes esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, positioning, babel}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+
+% --- Configuración de página ---
+\geometry{margin=2.5cm, top=3cm, bottom=3cm}
+\onehalfspacing
+
+% --- Título ---
+\title{\textbf{Informe de Laboratorio: \\ Control de Péndulo Invertido}}
+\author{}
+\date{}
+
+\begin{document}
+
+% ===================== PORTADA =====================
+\input{portada}
+
+% ===================== OBJETIVOS =====================
+\newpage
+\input{objetivos}
+
+% ===================== MODELO =====================
+\newpage
+\input{modelo}
+
+% ===================== SERVOSISTEMA TIPO 1 =====================
+\newpage
+\input{servosistema}
+
+% ===================== CONTROLADORES PID =====================
+\newpage
+\input{pid}
+
+% ===================== PROCEDIMIENTO EXPERIMENTAL =====================
+\newpage
+\input{procedimiento}
+
+% ===================== ANÁLISIS DE RESULTADOS =====================
+\newpage
+\input{resultados}
+
+% ===================== CONCLUSIONES =====================
+\newpage
+\input{conclusiones}
+
+\end{document}

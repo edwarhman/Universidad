@@ -1,16 +1,15 @@
-# Sesión actual — pendulo-invertido
+# Sesión actual
 
-## Proyecto: pendulo-invertido
+## Proyecto:
 ## Feature:
 ## Inicio:
 ## Plan:
 
--
-
 ## Estado
 
-- [ ] En progreso
+### 
+
+- [ ] Tarea
 - [ ] Bloqueado (razón: )
-- [ ] Completado
 
 ## Notas

@@ -1,0 +1,23 @@
+\section{Diseño de Controladores PID}
+
+\subsection{Análisis de la barra}
+
+\[
+\theta = \frac{3/4l}{s^2 - 3g/4l} u
+\]
+
+\subsection{Análisis del carro}
+
+\[
+x = \frac{1}{s^2} u
+\]
+
+Mediante proceso de ensayo y error se obtuvieron los siguientes controladores:
+
+\[
+PID_1(z) = 0.4 + 0.02 \frac{1}{z} + 0.157 z
+\]
+
+\[
+PID_2(z) = -18 - \frac{91}{z} - 0.02 z
+\]

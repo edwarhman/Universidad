@@ -1,0 +1,27 @@
+\section{Procedimiento Experimental}
+
+El prototipo del péndulo invertido cuenta con una barra anclada a un carro el cual es desplazado a través de una correa de goma por un motor a pasos, mide aproximadamente 1 metro de largo y cuenta con dos finales de carreras que sirven para dar una referencia de la posición del carro y como apagador de emergencia del sistema en caso de que se rebase el límite del riel previniendo que se estropeen componentes del sistema. El péndulo es controlado por un microcontrolador ESP32 que toma las lecturas del ángulo del péndulo desde un encoder. El sistema también cuenta con una rutina de calibración la cual le permite buscar el cero de posición y el rango máximo del riel.
+
+\subsection{Implementación de los controladores PID}
+
+Durante la implementación del los PID se observaron una serie de errores de códigos que impedían el correcto funcionamiento del sistema. Los comandos enviados al motor eran de los de una impresora lo cual bloqueaba el avance o causaba un movimiento errático del programa debido a los cambios abruptos de velocidad. Otro error era que la salida del PID interno es un comando de aceleración y se le pasaba directamente al motor que recibe comandos de velocidad, se corrigió esto integrando la salida de aceleración del motor para obtener una velocidad, haciendo los movimientos más suaves.
+
+Otro problema que se identificó es que la ganancia del modelo asumido tenía que corregirse, se multiplicó por un factor de corrección en el código para que coincidiera con el comportamiento real del carro. Resueltos estos problemas el péndulo se mantuvo estable. A partir de aquí se realizó un proceso de ensayo y error en laboratorio para ajustar los valores de los PID que hicieran el sistema lo más robusto posible, obteniendo por resultado:
+
+\[
+PID_{EXT} = 0.4 + 0.02 \frac{1}{z} + 0.157 z
+\]
+
+\[
+PID_{INT} = -18 - \frac{91}{z} - 0.02 z
+\]
+
+Es importante mencionar que se tomó una medida de seguridad con las salidas de los PID utilizados en el código, estas se limitaron para que su salida no pudiese superar a la transformada de grados a velocidad y aceleración del carro. Al momento de sintonizar los PID también se tomó en cuenta que el lazo del péndulo debe ser mucho más rápido que el lazo de posición.
+
+\subsection{Implementación de controladores por realimentación de variables de estado utilizando observador}
+
+Se adaptó la rutina de gestión del PID para que funcionara con realimentación por variables de estados utilizando los tres observadores: Identidad, de orden reducido y funcional lineal simple. Se agregaron los valores de las matrices calculados en el estudio del modelo matemático de manera que el péndulo se mantuvo estable para cada uno de ellos.
+
+\subsection{Comparación de los modelos y resultados}
+
+Se diseñó una prueba para evaluar los controladores. Esta consiste en cambiar la posición de referencia en intervalos de tiempo fijos y observar la respuesta del sistema a este cambio. Otra prueba consiste en perturbar al péndulo de manera que su ángulo cambie drásticamente respecto a la vertical y luego observar la capacidad del controlador para regresar el péndulo a su estado estable. Durante estas pruebas se guardaron los datos de la posición del carro, el ángulo del péndulo y las acciones de control del sistema durante el proceso. En esta última prueba se utilizó un ventilador para generar una corriente de aire en el camino del péndulo y evaluar el comportamiento de este al recibir una perturbación continua de viento. Las tres pruebas se realizaron para cada uno de los controladores bajo estudio.
