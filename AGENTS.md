@@ -60,3 +60,9 @@
 3. Mueve el resumen de `progress/current.md` al final de `progress/history.md`.
 4. Vacía `progress/current.md` dejando solo la plantilla.
 5. No dejes archivos temporales, prints de debug ni TODOs.
+
+## 6. Preferencias del usuario
+
+- **Abrir archivos**: cuando el usuario pida abrir un archivo, usa
+  `nohup xdg-open "<ruta_absoluta>" &>/dev/null &` para lanzarlo con la
+  aplicación predeterminada del sistema en segundo plano (sin bloquear el chat).
