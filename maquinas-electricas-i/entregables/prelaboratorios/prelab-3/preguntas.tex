@@ -1,0 +1,90 @@
+\section{Preguntas para el Prelaboratorio}
+
+\begin{enumerate}
+    \item \textbf{Explique detalladamente la función de las espiras de sombra en un contactor de corriente alterna.}
+
+    Cuando un contactor electromagnético se alimenta con corriente alterna ($i(t) = I_m \sin(\omega t)$), el flujo magnético resultante también es alterno y cruza por cero dos veces en cada período de la señal. Dado que la fuerza de atracción mecánica que ejerce el electroimán sobre la armadura móvil es proporcional al cuadrado del flujo magnético ($F \propto \phi^2$), esta fuerza oscila al doble de la frecuencia de la red y cae a cero en cada cruce por cero del flujo. 
+
+    En esos instantes de fuerza nula, los resortes de retorno mecánicos intentan abrir el contactor, lo que ocasiona que la armadura móvil vibre y golpee repetidamente contra el núcleo fijo. Esta vibración produce un ruido molesto (zumbido) y un desgaste mecánico acelerado de las caras polares y los contactos eléctricos.
+
+    Para resolver este inconveniente, se insertan las \textit{espiras de sombra} (o anillos de desfase), que son anillos conductores cerrados de cobre o latón embutidos en una parte de la sección de los polos del núcleo. El principio de funcionamiento es el siguiente:
+    \begin{itemize}
+        \item El flujo magnético alterno principal $\phi(t)$ atraviesa el núcleo. Una fracción de este flujo pasa por la zona del polo que contiene la espira de sombra, induciendo en ella una fuerza electromotriz (f.e.m.) según la Ley de Faraday.
+        \item Al ser la espira de sombra un circuito cerrado de muy baja resistencia, se establece una corriente inducida circulante de gran intensidad.
+        \item Esta corriente inducida genera su propio flujo magnético auxiliar $\phi_{\text{espira}}(t)$, el cual, por la Ley de Lenz, se desfasa en el tiempo respecto al flujo principal.
+        \item De este modo, la cara polar queda dividida en dos zonas con flujos desfasados: la zona no sombreada con flujo $\phi_1(t)$ y la zona sombreada con flujo neto $\phi_2(t) = \phi_1(t) + \phi_{\text{espira}}(t)$.
+        \item Al estar los flujos desfasados en el tiempo (idealmente entre $50^\circ$ y $90^\circ$), sus correspondientes fuerzas de atracción no pasan por cero de forma simultánea. La suma de ambas fuerzas da como resultado una fuerza de atracción total neta que siempre es mayor que cero y superior a la fuerza de oposición del resorte de retorno, eliminando así la vibración y el zumbido del contactor.
+    \end{itemize}
+
+    \item \textbf{¿Por qué es necesario el entrehierro permanente en el circuito magnético de un contactor?}
+
+    El entrehierro permanente es una pequeña separación de material no magnético (aire o una lámina no magnética) que se introduce deliberadamente en el camino del flujo del circuito magnético cuando la armadura móvil se encuentra en su posición completamente cerrada. Generalmente, se logra haciendo la columna central del núcleo en forma de ``E'' ligeramente más corta que las columnas laterales.
+
+    Su necesidad radica en el fenómeno de la \textit{remanencia magnética} y la histéresis de los materiales ferromagnéticos del núcleo. Cuando la bobina del contactor se desenergiza para abrir el circuito, el campo magnético aplicado se anula, pero el material del núcleo retiene una densidad de flujo magnético residual o remanente ($B_r$).
+
+    Si no existiera un entrehierro permanente (es decir, si las superficies metálicas del núcleo y la armadura móvil estuvieran en contacto perfecto cara a cara):
+    \begin{itemize}
+        \item La reluctancia del circuito magnético cerrado sería extremadamente pequeña.
+        \item Un flujo remanente relativamente bajo podría generar una fuerza de atracción residual lo suficientemente grande como para vencer la fuerza de los resortes de retorno.
+        \item Como consecuencia, la armadura móvil se quedarse ``pegada'' al núcleo aun después de haber interrumpido la alimentación de la bobina. Esto impediría la apertura de los contactos de potencia, provocando que la carga continúe energizada, lo cual representa un grave riesgo de seguridad y de daño a los equipos operados.
+    \end{itemize}
+
+    Al introducir el entrehierro permanente, se añade una reluctancia de valor elevado en el camino del flujo magnético. Esto reduce drásticamente el flujo remanente residual, haciendo que la fuerza de atracción remanente sea muy inferior a la fuerza del resorte antagónico, lo que garantiza una apertura rápida, confiable y segura de los contactos al desenergizar la bobina.
+
+    \item \textbf{Defina corriente de llamada y corriente de mantenimiento. ¿Por qué la corriente de llamada es significativamente mayor?}
+
+    Se definen como:
+    \begin{itemize}
+        \item \textbf{Corriente de llamada ($I_{\text{llamada}}$):} Es la corriente instantánea de gran magnitud que circula por la bobina del contactor en el momento exacto de su energización, estando la armadura móvil en su posición de reposo (contactor abierto).
+        \item \textbf{Corriente de mantenimiento ($I_{\text{mantenimiento}}$):} Es la corriente de régimen permanente que circula por la bobina una vez que la armadura móvil ha completado su recorrido y se encuentra cerrada contra el núcleo fijo.
+    \end{itemize}
+
+    La razón por la cual la corriente de llamada es significativamente mayor (típicamente entre 6 y 10 veces la corriente de mantenimiento en contactores de corriente alterna) se explica analizando la impedancia de la bobina:
+    \begin{equation}
+        Z = R + jX_L = R + j\omega L
+    \end{equation}
+    Donde $R$ es la resistencia óhmica del bobinado (que es constante y muy pequeña) y $X_L = \omega L$ es la reactancia inductiva, la cual depende directamente de la inductancia $L$ de la bobina. La inductancia de la bobina en un circuito magnético viene dada por:
+    \begin{equation}
+        L = \frac{N^2}{\mathcal{R}_{\text{total}}}
+    \end{equation}
+    Donde $N$ es el número de espiras y $\mathcal{R}_{\text{total}}$ es la reluctancia total del circuito magnético.
+    \begin{itemize}
+        \item \textbf{En el instante de llamada (contactor abierto):} El entrehierro entre el núcleo y la armadura móvil es máximo. Dado que la permeabilidad magnética del aire es muy baja comparada con la del material ferromagnético, la reluctancia $\mathcal{R}_{\text{total}}$ es muy alta. Esto hace que la inductancia $L$ sea muy pequeña y, por ende, la reactancia inductiva $X_L$ sea casi despreciable. La impedancia de la bobina es mínima, permitiendo el paso de una corriente muy elevada.
+        \item \textbf{En el estado de mantenimiento (contactor cerrado):} El entrehierro se reduce al mínimo (quedando solo el entrehierro permanente). La reluctancia $\mathcal{R}_{\text{total}}$ disminuye de forma drástica. Como resultado, la inductancia $L$ y la reactancia inductiva $X_L$ aumentan considerablemente. La impedancia $Z$ aumenta sustancialmente, lo que reduce la corriente a un valor mucho menor (corriente de mantenimiento), suficiente para mantener el circuito magnético cerrado con baja disipación de calor.
+    \end{itemize}
+
+    \item \textbf{¿Qué parámetros define la norma IEC 60947 para los contactores?}
+
+    La norma internacional \textbf{IEC 60947-4-1} (Aparamenta de baja tensión - Parte 4-1: Contactores y arrancadores de motor) establece los parámetros constructivos, de diseño y operativos de los contactores. Los más importantes son:
+    \begin{itemize}
+        \item \textbf{Tensión nominal de empleo ($U_e$):} Tensión que, en combinación con la corriente nominal de empleo, determina la aplicación del contactor.
+        \item \textbf{Tensión nominal de aislamiento ($U_i$):} Tensión de referencia para los ensayos dieléctricos y distancias de fuga.
+        \item \textbf{Tensión nominal de resistencia a los impulsos ($U_{\text{imp}}$):} Valor de pico de una tensión de onda de choque que el contactor puede soportar sin fallar.
+        \item \textbf{Corriente nominal de empleo ($I_e$):} Corriente definida por el fabricante que considera la tensión de empleo, la frecuencia nominal, la categoría de servicio y el tipo de envolvente.
+        \item \textbf{Corriente térmica convencional al aire libre ($I_{\text{th}}$):} Máxima corriente de ensayo que puede conducir un contactor en servicio continuo (de 8 horas) sin que el calentamiento de sus partes activas exceda los límites normativos.
+        \item \textbf{Poder nominal de cierre y de corte:} Corrientes máximas que el contactor puede establecer e interrumpir bajo condiciones normalizadas de cortocircuito, factor de potencia y tensión.
+        \item \textbf{Durabilidad (eléctrica y mecánica):} Número de maniobras garantizadas antes del reemplazo de contactos o del aparato completo.
+        \item \textbf{Categoría de empleo o de servicio:} Define las condiciones de carga eléctrica para las cuales el contactor está diseñado.
+    \end{itemize}
+
+    \item \textbf{Investigue las categorías de servicio AC-1, AC-3 y AC-4. ¿En qué aplicaciones se utiliza cada una?}
+
+    La norma IEC 60947-4-1 clasifica las categorías de servicio en corriente alterna en función del tipo de carga y las condiciones de maniobra:
+    \begin{itemize}
+        \item \textbf{Categoría AC-1 (Cargas no inductivas o débilmente inductivas):}
+        \begin{itemize}
+            \item \textit{Características:} Factor de potencia elevado ($\cos\varphi \geq 0.95$). Al cierre no existen sobrecorrientes severas, y a la apertura la tensión de arco se extingue fácilmente.
+            \item \textit{Aplicaciones:} Calefacción eléctrica, hornos de resistencia, redes de distribución de iluminación incandescente y cargas resistivas en general.
+        \end{itemize}
+        \item \textbf{Categoría AC-3 (Motores de jaula de ardilla - arranque y desconexión a motor lanzado):}
+        \begin{itemize}
+            \item \textit{Características:} Al cierre, el contactor debe soportar la corriente de arranque del motor (típicamente entre 5 y 8 veces la corriente nominal, $I_{\text{arr}} \approx 5-8 \cdot I_n$). A la apertura, debe interrumpir la corriente nominal del motor lanzado ($I_n$) con un factor de potencia del orden de $\cos\varphi \approx 0.35$ a $0.8$.
+            \item \textit{Aplicaciones:} Bombas centrífugas, ventiladores, compresores, escaleras mecánicas, mezcladoras, acondicionadores de aire y todo motor de jaula de ardilla de arranque normal que no requiera frenado brusco ni inversión de marcha repetitiva.
+        \end{itemize}
+        \item \textbf{Categoría AC-4 (Motores de jaula de ardilla - arranque, frenado a contracorriente, inversión de marcha e impulsos - ``Jogging'' y ``Plugging''):}
+        \begin{itemize}
+            \item \textit{Características:} Condiciones de servicio extremadamente severas. El contactor debe realizar cierres y aperturas consecutivas a motor parado o en proceso de arranque. Al abrir, debe interrumpir corrientes elevadas (de 5 a 8 veces la nominal) con factores de potencia muy bajos, lo que provoca arcos eléctricos de gran energía y un desgaste acelerado de los contactos.
+            \item \textit{Aplicaciones:} Grúas industriales, polipastos, ascensores, máquinas herramienta con reversiones frecuentes, imprentas, trefiladoras y aplicaciones con posicionamiento intermitente por impulsos.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}

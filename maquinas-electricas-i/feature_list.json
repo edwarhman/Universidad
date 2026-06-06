@@ -65,7 +65,22 @@
         "3 problemas resueltos paso a paso",
         "Incluye diagramas y cálculos detallados"
       ],
-      "status": "awaiting_review"
+      "status": "done"
+    },
+    {
+      "id": 5,
+      "type": "prelaboratorio",
+      "name": "prelab_3",
+      "title": "Prelaboratorio 3 — Circuito Magnético de un Contactor",
+      "due": "2026-06-11",
+      "description": "Estudio del contactor electromagnético: partes constitutivas, circuito magnético, espiras de sombra, corriente de llamada y mantenimiento.",
+      "acceptance": [
+        "Existe en entregables/prelaboratorios/prelab-3/",
+        "Documento LaTeX compila sin errores",
+        "Portada incluida (UCV, Facultad, Escuela, Dpto Potencia)",
+        "Preguntas del prelaboratorio respondidas"
+      ],
+      "status": "done"
     }
   ]
 }
