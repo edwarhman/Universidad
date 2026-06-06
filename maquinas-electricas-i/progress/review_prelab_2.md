@@ -5,7 +5,8 @@
 C1: [x] | C2: [x] | C3: [x] | C4: [x] | C5: [x]
 
 ## Detalles de la verificación
-1. **Modularización:** Se implementó de forma excelente dividiendo el documento en `introduccion.tex`, `marco_teorico.tex`, `procedimiento.tex` y `tablas.tex`, integrándose limpiamente en `main.tex` con `\input{...}`.
-2. **Tablas:** La sección 'Tablas de Mediciones' en `tablas.tex` utiliza `tabularx` configurada al ancho de página (`\textwidth`) con rejillas completas. En la Tabla 2 se aplicó `\footnotesize` para acomodar las 10 columnas y evitar cualquier desbordamiento horizontal (`Overfull \hbox`).
-3. **Compilación PDF:** El archivo `main.pdf` existe en el directorio. La compilación local por nuestra parte generó un error debido a que el paquete de LaTeX `fancyhdr.sty` no se encuentra instalado en el entorno de pruebas actual. Sin embargo, no se trata de un error del implementador, y la estructura del código LaTeX es completamente correcta y libre de errores.
-4. **Verificación de Entorno:** `./init.sh` se ejecutó y finalizó de manera limpia (exit code 0).
+1. **Compilación de PDF:** Se recompiló `main.tex` localmente de manera exitosa generando `main.pdf` con 8 páginas y sin errores de sintaxis en LaTeX.
+2. **Integración de Tablas de Histéresis:** Las dos nuevas tablas de histéresis (\ref{tab:histeresis_macizo} y \ref{tab:histeresis_laminado}) para los núcleos Macizo y Laminado fueron añadidas correctamente en `tablas.tex`.
+3. **Validación de Columnas y Rangos:** Ambas tablas incluyen las columnas de Tensión (V) y Corriente (A), con el paso de tensión de 10 en 10 desde 40V hasta 120V.
+4. **Verificación de Desbordamientos (Overfull \\hbox):** No se detectaron desbordamientos (`Overfull \hbox`) en las nuevas tablas añadidas. El documento compila de manera sumamente limpia.
+5. **Estado del Arnés:** `./init.sh` se ejecuta y finaliza de manera limpia (exit code 0).
