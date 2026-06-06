@@ -21,7 +21,7 @@
         "Cálculos de errores incluidos y correctos",
         "Cifras significativas aplicadas correctamente"
       ],
-      "status": "done"
+      "status": "awaiting_review"
     },
     {
       "id": 2,
@@ -36,7 +36,7 @@
         "Portada incluida (UCV, Facultad, Escuela, Dpto Potencia)",
         "Cálculos incluidos y correctos"
       ],
-      "status": "done"
+      "status": "awaiting_review"
     },
     {
       "id": 3,

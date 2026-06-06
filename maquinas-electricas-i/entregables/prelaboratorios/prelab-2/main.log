@@ -1,124 +1,87 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2026.5.13)  27 MAY 2026 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.31)  5 JUN 2026 23:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-11-06>
-(/home/emers/.miktex/texmfs/install/tex/latex/base/article.cls
+L3 programming layer <2026-05-26>
+(/home/emers/.TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(/home/emers/.miktex/texmfs/install/tex/latex/base/size12.clo
+(/home/emers/.TinyTeX/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count275
-\c@section=\count276
-\c@subsection=\count277
-\c@subsubsection=\count278
-\c@paragraph=\count279
-\c@subparagraph=\count280
-\c@figure=\count281
-\c@table=\count282
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+\bibindent=\dimen150
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/babel/babel.sty
-Package: babel 2025/11/09 v25.15 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
-\babel@savecnt=\count283
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2050.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2052.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2054.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2055.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2056.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2058.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2083.
-\U@D=\dimen149
-\l@unhyphenated=\language1
-
-(/home/emers/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+) (/home/emers/.TinyTeX/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count284
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2084.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2086.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2088.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2089.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2090.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2092.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2117.
+\U@D=\dimen151
+\l@unhyphenated=\language4
+ (/home/emers/.TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count284
-Package babel Info: Configuration files are deprecated, as
-(babel)             they can break document portability.
-(babel)             Reported on input line 4175.
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(/home/emers/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/babel/locale/es/babel-spanish.t
-ex)
+\bbl@dirlevel=\count285
+ (/home/emers/.TinyTeX/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
 Package babel Info: Importing font and identification data for spanish
-(babel)             from babel-es.ini. Reported on input line 4298.
- (/home/emers/.miktex/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+(babel)             from babel-es.ini. Reported on input line 4356.
+ (/home/emers/.TinyTeX/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Spanish' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 51.
-
 \es@quottoks=\toks19
-\es@quotdepth=\count285
+\es@quotdepth=\count286
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
-on input line 5.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
- on input line 5.
- (/home/emers/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 5.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 5.
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(/home/emers/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+(/home/emers/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
-(/home/emers/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
-\ex@=\dimen150
-))
-(/home/emers/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+\ex@=\dimen152
+)) (/home/emers/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen151
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen153
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count286
+\inf@bad=\count287
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count287
-\leftroot@=\count288
+\uproot@=\count288
+\leftroot@=\count289
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count289
-\DOTSCASE@=\count290
+\classnum@=\count290
+\DOTSCASE@=\count291
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -128,853 +91,151 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen152
+\big@size=\dimen154
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count291
+\macc@depth=\count292
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count292
+\c@MaxMatrixCols=\count293
 \dotsspace@=\muskip17
-\c@parentequation=\count293
-\dspbrk@lvl=\count294
+\c@parentequation=\count294
+\dspbrk@lvl=\count295
 \tag@help=\toks21
-\row@=\count295
-\column@=\count296
-\maxfields@=\count297
+\row@=\count296
+\column@=\count297
+\maxfields@=\count298
 \andhelp@=\toks22
-\eqnshift@=\dimen153
-\alignsep@=\dimen154
-\tagshift@=\dimen155
-\tagwidth@=\dimen156
-\totwidth@=\dimen157
-\lineht@=\dimen158
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
 \@envbody=\toks23
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/home/emers/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+)) (/home/emers/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen159
-\Gin@req@width=\dimen160
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/home/emers/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (/home/emers/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(/home/emers/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+ (/home/emers/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count298
-\Gm@cntv=\count299
-\c@Gm@tempcnt=\count300
-\Gm@bindingoffset=\dimen161
-\Gm@wd@mp=\dimen162
-\Gm@odd@mp=\dimen163
-\Gm@even@mp=\dimen164
-\Gm@layoutwidth=\dimen165
-\Gm@layoutheight=\dimen166
-\Gm@layouthoffset=\dimen167
-\Gm@layoutvoffset=\dimen168
+\Gm@cnth=\count299
+\Gm@cntv=\count300
+\c@Gm@tempcnt=\count301
+\Gm@bindingoffset=\dimen163
+\Gm@wd@mp=\dimen164
+\Gm@odd@mp=\dimen165
+\Gm@even@mp=\dimen166
+\Gm@layoutwidth=\dimen167
+\Gm@layoutheight=\dimen168
+\Gm@layouthoffset=\dimen169
+\Gm@layoutvoffset=\dimen170
 \Gm@dimlist=\toks26
-
-(/home/emers/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
-(/home/emers/.miktex/texmfs/install/tex/latex/siunitx/siunitx.sty
+) (/home/emers/.TinyTeX/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2026-05-15 v3.5.5 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count301
-\l__siunitx_number_exponent_fixed_int=\count302
-\l__siunitx_number_min_decimal_int=\count303
-\l__siunitx_number_min_integer_int=\count304
-\l__siunitx_number_round_precision_int=\count305
-\l__siunitx_number_lower_threshold_int=\count306
-\l__siunitx_number_upper_threshold_int=\count307
-\l__siunitx_number_group_first_int=\count308
-\l__siunitx_number_group_size_int=\count309
-\l__siunitx_number_group_min_int=\count310
-\l__siunitx_number_group_minimum_int=\count311
-\l__siunitx_compound_count_int=\count312
-
-(/home/emers/.miktex/texmfs/install/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
- (CN)
-
-(/home/emers/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count313
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/home/emers/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-))
+\l__siunitx_number_uncert_offset_int=\count302
+\l__siunitx_number_exponent_fixed_int=\count303
+\l__siunitx_number_min_decimal_int=\count304
+\l__siunitx_number_min_integer_int=\count305
+\l__siunitx_number_round_precision_int=\count306
+\l__siunitx_number_lower_threshold_int=\count307
+\l__siunitx_number_upper_threshold_int=\count308
+\l__siunitx_number_group_first_int=\count309
+\l__siunitx_number_group_size_int=\count310
+\l__siunitx_number_group_min_int=\count311
+\l__siunitx_number_group_minimum_int=\count312
+\l__siunitx_compound_count_int=\count313
 \l__siunitx_table_tmp_box=\box55
-\l__siunitx_table_tmp_dim=\dimen169
-\l__siunitx_table_column_width_dim=\dimen170
+\l__siunitx_table_tmp_dim=\dimen171
+\l__siunitx_table_column_width_dim=\dimen172
 \l__siunitx_table_integer_box=\box56
 \l__siunitx_table_decimal_box=\box57
 \l__siunitx_table_uncert_box=\box58
 \l__siunitx_table_before_box=\box59
 \l__siunitx_table_after_box=\box60
-\l__siunitx_table_before_dim=\dimen171
-\l__siunitx_table_carry_dim=\dimen172
+\l__siunitx_table_before_dim=\dimen173
+\l__siunitx_table_carry_dim=\dimen174
 \l__siunitx_unit_tmp_int=\count314
 \l__siunitx_unit_position_int=\count315
 \l__siunitx_unit_total_int=\count316
-\l__siunitx_sexagesimal_tmp_dim=\dimen173
+\l__siunitx_sexagesimal_tmp_dim=\dimen175
 \l__siunitx_sexagesimal_marker_box=\box61
 \l__siunitx_sexagesimal_unit_box=\box62
-
-(/home/emers/.miktex/texmfs/install/tex/latex/tools/array.sty
+ (/home/emers/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen174
+\col@sep=\dimen176
 \ar@mcellbox=\box63
-\extrarowheight=\dimen175
+\extrarowheight=\dimen177
 \NC@list=\toks27
 \extratabsurround=\skip54
 \backup@length=\skip55
 \ar@cellbox=\box64
-))
-(/home/emers/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
+)) (/home/emers/.TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip56
-\enit@outerparindent=\dimen176
+\enit@outerparindent=\dimen178
 \enit@toks=\toks28
 \enit@inbox=\box65
 \enit@count@id=\count317
 \enitdp@description=\count318
 )
-(/home/emers/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip57
-\f@nch@offset@elh=\skip58
-\f@nch@offset@erh=\skip59
-\f@nch@offset@olh=\skip60
-\f@nch@offset@orh=\skip61
-\f@nch@offset@elf=\skip62
-\f@nch@offset@erf=\skip63
-\f@nch@offset@olf=\skip64
-\f@nch@offset@orf=\skip65
-\f@nch@height=\skip66
-\f@nch@footalignment=\skip67
-\f@nch@widthL=\skip68
-\f@nch@widthC=\skip69
-\f@nch@widthR=\skip70
-\@temptokenb=\toks29
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/circuitikz/circuitikz.sty
-Package: circuitikz 2026/02/04{} The CircuiTikz circuit drawing package version
- 1.8.5
+! LaTeX Error: File `fancyhdr.sty' not found.
 
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.te
-x
-\pgfutil@everybye=\toks30
-\pgfutil@tempdima=\dimen177
-\pgfutil@tempdimb=\dimen178
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box66
-) (/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
-))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks31
-\pgfkeys@temptoks=\toks32
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.11 \usepackage
+                {circuitikz}^^M
+*** (cannot \read from terminal in nonstop modes)
 
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfil
-tered.code.tex
-\pgfkeys@tmptoks=\toks33
-))
-\pgf@x=\dimen179
-\pgf@y=\dimen180
-\pgf@xa=\dimen181
-\pgf@ya=\dimen182
-\pgf@xb=\dimen183
-\pgf@yb=\dimen184
-\pgf@xc=\dimen185
-\pgf@yc=\dimen186
-\pgf@xd=\dimen187
-\pgf@yd=\dimen188
-\w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count319
-\c@pgf@countb=\count320
-\c@pgf@countc=\count321
-\c@pgf@countd=\count322
-\t@pgf@toka=\toks34
-\t@pgf@tokb=\toks35
-\t@pgf@tokc=\toks36
-\pgf@sys@id@count=\count323
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
-File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count324
-\pgfsyssoftpath@bigbuffer@items=\count325
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)) (/home/emers/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(/home/emers/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen189
-\pgfmath@count=\count326
-\pgfmath@box=\box67
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code.
-tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count327
-)) (/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen190
-\pgf@picmaxx=\dimen191
-\pgf@picminy=\dimen192
-\pgf@picmaxy=\dimen193
-\pgf@pathminx=\dimen194
-\pgf@pathmaxx=\dimen195
-\pgf@pathminy=\dimen196
-\pgf@pathmaxy=\dimen197
-\pgf@xx=\dimen198
-\pgf@xy=\dimen199
-\pgf@yx=\dimen256
-\pgf@yy=\dimen257
-\pgf@zx=\dimen258
-\pgf@zy=\dimen259
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen260
-\pgf@path@lasty=\dimen261
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen262
-\pgf@shorten@start@additional=\dimen263
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box68
-\pgf@hbox=\box69
-\pgf@layerbox@main=\box70
-\pgf@picture@serial@count=\count328
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen264
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen265
-\pgf@pt@y=\dimen266
-\pgf@pt@temp=\dimen267
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen268
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen269
-\pgf@sys@shading@range@num=\count329
-\pgf@shadingcount=\count330
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box71
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box72
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen270
-\pgf@nodesepend=\dimen271
-)
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-))
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
-(/home/emers/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/home/emers/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen272
-\pgffor@skip=\dimen273
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
-))
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count331
-\pgfplotmarksize=\dimen274
-)
-\tikz@lastx=\dimen275
-\tikz@lasty=\dimen276
-\tikz@lastxsaved=\dimen277
-\tikz@lastysaved=\dimen278
-\tikz@lastmovetox=\dimen279
-\tikz@lastmovetoy=\dimen280
-\tikzleveldistance=\dimen281
-\tikzsiblingdistance=\dimen282
-\tikz@figbox=\box73
-\tikz@figbox@bg=\box74
-\tikz@tempbox=\box75
-\tikz@tempbox@bg=\box76
-\tikztreelevel=\count332
-\tikznumberofchildren=\count333
-\tikznumberofcurrentchild=\count334
-\tikz@fig@count=\count335
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count336
-\pgfmatrixcurrentcolumn=\count337
-\pgf@matrix@numberofcolumns=\count338
-)
-\tikz@expandcount=\count339
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarrows.
-meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen283
-\pgfarrowlength=\dimen284
-\pgfarrowwidth=\dimen285
-\pgfarrowlinewidth=\dimen286
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarybending.code.tex
-File: tikzlibrarybending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulebending.co
-de.tex
-File: pgfmodulebending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulenonlineart
-ransformations.code.tex
-File: pgfmodulenonlineartransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgftransformnonlinearflatness=\dimen287
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibrarycurvili
-near.code.tex
-File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@curvilinear@time@a=\dimen288
-\pgf@curvilinear@length@a=\dimen289
-\pgf@curvilinear@length@b=\dimen290
-\pgf@curvilinear@length@c=\dimen291
-\pgf@curvilinear@length@d=\dimen292
-)
-\pgf@arrows@the@rigidity=\dimen293
-))
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryfpu.code.tex
-(/home/emers/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryfpu.cod
-e.tex))
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count340
-\pgf@circ@count@b=\count341
-\pgf@circ@count@c=\count342
-\pgf@circ@res@up=\dimen294
-\pgf@circ@res@down=\dimen295
-\pgf@circ@res@zero=\dimen296
-\pgf@circ@res@left=\dimen297
-\pgf@circ@res@right=\dimen298
-\pgf@circ@res@other=\dimen299
-\pgf@circ@res@step=\dimen300
-\pgf@circ@res@temp=\dimen301
-\pgf@circ@Rlen=\dimen302
-\pgf@circ@scaled@Rlen=\dimen303
-\pgfstartlinewidth=\dimen304
-) (/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircutils.tex
-\ctikz@scratchbox=\box77
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircpath.tex
-\ctikz@vif@count=\count343
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircshapes.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircmonopoles.tex
-) (/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircbipoles.tex
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count344
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircquadpoles.tex
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircmultipoles.te
-x) (/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcirclabel.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircvoltage.tex
-\pgfcirc@labelshift=\dimen305
-)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcirccurrent.tex)
-(/home/emers/.miktex/texmfs/install/tex/generic/circuitikz/pgfcircflow.tex))
-(/home/emers/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count345
-)
-No file main.aux.
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 18.
-(/home/emers/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
-\scratchdimen=\dimen306
-\scratchbox=\box78
-\nofMPsegments=\count347
-\nofMParguments=\count348
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count349
-\MPscratchDim=\dimen307
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
-\everyMPtoPDFconversion=\toks43
-) (/home/emers/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/home/emers/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=35.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-(/home/emers/.miktex/texmfs/install/tex/latex/translations/dicts/translations-b
-asic-dictionary-spanish.trsl
-File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
-nslations-basic-dictionary')
-)
-Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `spanish'. on input line 18.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
-
-
-(/home/emers/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
-
-
-(/home/emers/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-! Argument of \language@active@arg> has an extra }.
-<inserted text> 
-                \par 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \language@active@arg> was complete.
-<to be read again> 
-                   \par 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
--
-! Paragraph ended before \pgfkeys@addpath was complete.
-<to be read again> 
-                   \par 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Runaway argument?
--
-! Paragraph ended before \pgfkeys@splitter was complete.
-<to be read again> 
-                   \par 
-l.52     \draw[->]
-                   (-3,0) -- (3,0) node[right] {$H$};
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Missing character: There is no / in font nullfont!
-Missing character: There is no / in font nullfont!
-! Argument of \language@active@arg> has an extra }.
-<inserted text> 
-                \par 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \language@active@arg> was complete.
-<to be read again> 
-                   \par 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
--
-! Paragraph ended before \pgfkeys@addpath was complete.
-<to be read again> 
-                   \par 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \scan_stop: 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-Runaway argument?
--
-! Paragraph ended before \pgfkeys@splitter was complete.
-<to be read again> 
-                   \par 
-l.53     \draw[->]
-                   (0,-2) -- (0,2.5) node[above] {$B$};
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Missing character: There is no / in font nullfont!
-Missing character: There is no / in font nullfont!
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[1
-
-{/home/emers/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] [2] [3]
-Overfull \hbox (8.05667pt too wide) in paragraph at lines 208--209
-[]\T1/cmr/m/n/12 ¾Cómo se reduce el efecto de las corrientes parásitas en los n
-úcleos de transformadores? 
- []
-
-[4] [5] (main.aux
-LaTeX Info: Redefining \. on input line 8.
-LaTeX Info: Redefining \% on input line 8.
-)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-11-06>
- ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 39326 strings out of 469808
- 1011898 string characters out of 5470396
- 1648110 words of memory out of 5000000
- 67600 multiletter control sequences out of 15000+600000
- 642579 words of font info for 79 fonts, out of 8000000 for 9000
- 0 hyphenation exceptions out of 8191
- 99i,11n,118p,432b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecti1200
-.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx12
-00.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm
-0800.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/ec
-bx1440.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/
-ecrm1200.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi60
-0/ecbx1728.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi
-600/ecrm1440.pk> </home/emers/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/d
-pi600/ecrm2074.pk></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfon
-ts/cm/cmmi12.pfb></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></home/emers/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on main.pdf (5 pages, 157797 bytes).
-PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 7460 strings out of 469309
+ 161433 string characters out of 5465397
+ 546668 words of memory out of 5000000
+ 36309 multiletter control sequences out of 15000+600000
+ 628783 words of font info for 42 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 57i,0n,65p,221b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

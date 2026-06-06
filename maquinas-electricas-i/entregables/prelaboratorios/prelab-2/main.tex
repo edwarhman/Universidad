@@ -10,8 +10,13 @@
 \usepackage{fancyhdr}
 \usepackage{circuitikz}
 \usetikzlibrary{babel}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
 \usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
 \geometry{margin=2.5cm}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 \begin{document}
 \input{portada}
@@ -19,150 +24,10 @@
 \tableofcontents
 \newpage
 
-\section{Introducción}
-
-Esta práctica busca reforzar en el estudiante los conocimientos relacionados con el comportamiento del circuito magnético de dos tipos de núcleos ferromagnéticos: macizo y laminado. Se plantea el estudio de un circuito magnético, así como la medición del correspondiente Ciclo de Histéresis.
-
-\section{Objetivos}
-
-\subsection*{Objetivo General}
-\begin{itemize}
-    \item Analizar y comparar el comportamiento de núcleos ferromagnéticos macizo y laminado, evaluando sus curvas B-H, ciclo de histéresis y pérdidas asociadas.
-\end{itemize}
-
-\subsection*{Objetivos Específicos}
-\begin{itemize}
-    \item Comprender el ciclo de histéresis y sus parámetros característicos ($B_{\text{sat}}$, $B_r$, $H_c$).
-    \item Determinar la curva B-H de un material ferromagnético.
-    \item Calcular pérdidas por histéresis y corrientes parásitas (Foucault).
-    \item Comparar las formas de onda de corriente y las pérdidas entre un núcleo macizo y uno laminado.
-    \item Evaluar el efecto del laminado en la reducción de pérdidas por corrientes parásitas.
-\end{itemize}
-
-\section{Marco Teórico}
-
-\subsection{Circuitos Magnéticos}
-Un circuito magnético está compuesto por un material ferromagnético que confina el flujo magnético. La relación entre la fuerza magnetomotriz (FMM), el flujo magnético ($\phi$) y la reluctancia ($\mathcal{R}$) está dada por:
-
-\begin{equation}
-    \mathcal{F} = N I = \phi \cdot \mathcal{R}
-\end{equation}
-
-donde $N$ es el número de espiras, $I$ la corriente y $\mathcal{R}$ la reluctancia del circuito:
-
-\begin{equation}
-    \mathcal{R} = \frac{l}{\mu A}
-\end{equation}
-
-con $l$ la longitud media del núcleo, $A$ el área transversal y $\mu$ la permeabilidad del material.
-
-\subsection{Curva B-H y Ciclo de Histéresis}
-La relación entre la densidad de flujo magnético $B$ y la intensidad de campo magnético $H$ en un material ferromagnético no es lineal. Al someter el material a un ciclo completo de magnetización, se obtiene el ciclo de histéresis (Figura 1).
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\textwidth]{figures/figura-ciclo-histeresis.png}
-\caption{Ciclo de histéresis típico de un material ferromagnético.}
-\label{fig:histeresis}
-\end{figure}
-
-Parámetros característicos:
-\begin{itemize}
-    \item $B_{\text{sat}}$: Inducción de saturación
-    \item $B_r$: Inducción remanente (cuando $H = 0$)
-    \item $H_c$: Campo coercitivo (cuando $B = 0$)
-\end{itemize}
-
-Como se ha visto, para cambiar la orientación de los dominios magnéticos se requiere energía, lo que origina pérdidas en todas las máquinas y transformadores. Las pérdidas por histéresis en el núcleo de hierro corresponden a la energía necesaria para reorientar los dominios durante cada ciclo de corriente alterna aplicada al núcleo. El área comprendida dentro del ciclo de histéresis es directamente proporcional a la energía perdida por ciclo. Cuanto menores sean las variaciones de la fuerza magnetomotriz aplicada al núcleo, menor será el área del ciclo y, por tanto, menores serán las pérdidas resultantes~\cite{chapman}.
-
-\subsection{Pérdidas en el Núcleo}
-Las pérdidas totales en un núcleo ferromagnético sometido a un campo alterno son:
-
-\begin{equation}
-    P_{\text{núcleo}} = P_h + P_f
-\end{equation}
-
-\textbf{Pérdidas por histéresis} ($P_h$): proporcionales al área del ciclo de histéresis y a la frecuencia:
-
-\begin{equation}
-    P_h = K_h \cdot f \cdot B_{\text{máx}}^n
-\end{equation}
-
-donde $K_h$ es una constante del material, $f$ la frecuencia, $B_{\text{máx}}$ la inducción máxima y $n$ el exponente de Steinmetz (usualmente $n \approx 1.6$ a $2.0$).
-
-\textbf{Pérdidas por corrientes parásitas} ($P_f$): un flujo variable en el tiempo induce voltajes en el núcleo ferromagnético, generando corrientes circulantes (corrientes de remolino o parásitas) que disipan energía en forma de calor~\cite{chapman}. La magnitud de estas pérdidas depende del tamaño de los remolinos y de la resistividad del material. Para reducirlas se emplean dos métodos:
-
-\begin{itemize}
-    \item \textbf{Laminación del núcleo:} dividir el núcleo en finas láminas aisladas entre sí limita el tamaño de los remolinos, reduciendo el voltaje inducido y las pérdidas asociadas.
-    \item \textbf{Aleaciones de alta resistividad:} agregar silicio al acero del núcleo aumenta su resistividad, disminuyendo la corriente inducida para un flujo dado.
-\end{itemize}
-
-La combinación de ambos métodos puede reducir las pérdidas por corrientes parásitas hasta hacerlas mucho menores que las pérdidas por histéresis:
-
-\begin{equation}
-    P_f = K_f \cdot f^2 \cdot B_{\text{máx}}^2
-\end{equation}
-
-\section{Instrumentos y Equipos}
-\begin{itemize}
-    \item Núcleo macizo ferromagnético
-    \item Núcleo laminado ferromagnético
-    \item Devanados de cobre
-    \item Fuente de tensión alterna variable (Variac)
-    \item Amperímetro (CA)
-    \item Voltímetro (CA)
-    \item Osciloscopio de dos canales con puntas de prueba
-    \item Resistencia shunt
-    \item Circuito integrador RC ($R = \SI{150}{\kilo\ohm}$, $C = \SI{1}{\micro\farad}$)
-    \item Cables de conexión
-\end{itemize}
-
-\section{Procedimiento de Laboratorio}
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth]{figures/figura-integrador.png}
-\caption{Utilización del circuito integrador para la medición del ciclo de histéresis~\cite{guia}.}
-\label{fig:integrador}
-\end{figure}
-
-\subsection{Núcleo macizo}
-\begin{enumerate}
-    \item Realizar el montaje con un núcleo macizo, tomando en cuenta que la constante de tiempo $RC$ debe ser muy superior al periodo de la red (por ejemplo, $C = \SI{1}{\micro\farad}$ y $R = \SI{150}{\kilo\ohm}$), utilizando las bobinas disponibles en el laboratorio. El circuito integrador está disponible en el laboratorio.
-    \item Observar la forma de onda de la tensión y la corriente de alimentación.
-    \item Discutir en torno a la forma de onda de la corriente.
-    \item Medir la potencia consumida por la bobina.
-    \item Trazar sobre papel milimetrado el ciclo de histéresis para una tensión de alimentación comprendida entre \SI{40}{V} y \SI{110}{V}.
-    \item Calcular las escalas del ciclo de histéresis en unidades de campo (factor de escala vertical $K_v$ y factor de escala horizontal $K_h$, según las ecuaciones del marco teórico).
-    \item Calcular:
-          \begin{enumerate}
-              \item Las pérdidas del núcleo.
-              \item Las pérdidas por histéresis, a partir de las dimensiones del núcleo y el área del ciclo.
-              \item Las pérdidas por corrientes parásitas (Foucault).
-          \end{enumerate}
-    \item Deducir el valor de la corriente de magnetización a la tensión especificada en el paso~5 y compararla con la corriente medida en el osciloscopio.
-\end{enumerate}
-
-\subsection{Núcleo laminado}
-\begin{enumerate}
-    \item Realizar el montaje con un núcleo laminado, tomando en cuenta una constante de tiempo $RC$ muy superior al periodo de la red (por ejemplo, $C = \SI{1}{\micro\farad}$ y $R = \SI{150}{\kilo\ohm}$), utilizando las bobinas disponibles en el laboratorio.
-    \item Observar las formas de onda de la tensión de alimentación, la corriente y la inducción en el hierro.
-    \item Discutir en torno a la forma de onda de la corriente.
-    \item Medir la potencia consumida por la bobina.
-    \item Trazar sobre papel milimetrado el ciclo de histéresis para una tensión de alimentación comprendida entre \SI{40}{V} y \SI{120}{V}.
-    \item Calcular las escalas del ciclo de histéresis en unidades de campo.
-    \item Calcular:
-          \begin{enumerate}
-              \item Las pérdidas del núcleo.
-              \item Las pérdidas por histéresis, a partir de las dimensiones del núcleo y el área del ciclo.
-              \item Las pérdidas por corrientes parásitas (Foucault).
-          \end{enumerate}
-    \item Deducir el valor de la corriente de magnetización a la tensión especificada en el paso~5 y compararla con la corriente medida en el osciloscopio.
-\end{enumerate}
-
-\begin{center}
-    \textbf{Nota:} Para calcular la sección efectiva del circuito magnético con núcleo laminado, suponer un factor de apilamiento del \SI{93}{\percent}.
-\end{center}
+\input{introduccion}
+\input{marco_teorico}
+\input{procedimiento}
+\input{tablas}
 
 \begin{thebibliography}{99}
 

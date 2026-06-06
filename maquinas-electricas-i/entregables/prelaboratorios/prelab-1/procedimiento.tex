@@ -1,0 +1,124 @@
+\section{Instrumentos y Equipos}
+\begin{itemize}
+    \item Amperímetro
+    \item Voltímetro
+    \item Vatímetro
+    \item Osciloscopio
+    \item Fuente de tensión alterna ajustable (Variac)
+    \item Multímetro digital
+    \item Puente rectificador de onda completa
+    \item Resistencia de \SI{33}{\ohm} a \SI{25}{\celsius}
+    \item Condensador de \SI{33}{\micro\farad}
+    \item Cables de conexión
+\end{itemize}
+
+\section{Procedimiento de Laboratorio}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{circuitikz}[american, scale=0.6, transform shape]
+    \draw
+    %% Fuente de CA variable (Variac)
+    (0,0) to[sV, l_={120\,V, 60\,Hz}] (0,2)
+    
+    %% Flecha de ajuste variable sobre el generador
+    (0.35,0.2) -- (-0.35,1.8)
+    
+    %% AC+ → nodo izquierdo del puente (Iac sobre el positivo)
+    (0,2) to[short, i=$I_{AC}$] (2.5,2)
+    
+    %% AC- → nodo derecho del puente (pasa por debajo del diamante)
+    (0,0) -- (5.5,0) -- (5.5,2)
+    
+    %% Puente rectificador (rombo de lados iguales)
+    %% Centro (4,2), Izq (2.5,2), Der (5.5,2), Sup (4,3.5), Inf (4,0.5)
+    (2.5,2) to[D, l=D$_1$] (4,3.5)
+    (4,0.5) to[D, l=D$_4$] (2.5,2)
+    (5.5,2) to[D, l_=D$_2$] (4,3.5)
+    (4,0.5) to[D, l_=D$_3$] (5.5,2)
+    
+    %% Salida DC
+    (4,3.5) -- (7,3.5)
+    (4,0.5) -- (7,0.5)
+    
+    %% Carga: solo resistencia
+    (7,3.5) to[R, l=$33\,\Omega$, i=$I_{DC}$] (7,0.5)
+    
+    %% Extensión para voltímetro a la derecha del circuito
+    (7,3.5) -- (9.5,3.5)
+    (7,0.5) -- (9.5,0.5)
+    %% Voltímetro
+    (9.5,3.5) to[open, v=$V_{DC}$] (9.5,0.5)
+    ;
+\end{circuitikz}
+\vspace{0.3cm}
+\par (a) Montaje para ondas sinusoidales rectificadas
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{circuitikz}[american, scale=0.6, transform shape]
+    \draw
+    %% Fuente de CA variable (Variac)
+    (0,0) to[sV, l_={120\,V, 60\,Hz}] (0,2)
+    
+    %% Flecha de ajuste variable sobre el generador
+    (0.35,0.2) -- (-0.35,1.8)
+    
+    %% AC+ → nodo izquierdo del puente (Iac sobre el positivo)
+    (0,2) to[short, i=$I_{AC}$] (2.5,2)
+    
+    %% AC- → nodo derecho del puente (pasa por debajo del diamante)
+    (0,0) -- (5.5,0) -- (5.5,2)
+    
+    %% Puente rectificador (rombo de lados iguales)
+    (2.5,2) to[D, l=D$_1$] (4,3.5)
+    (4,0.5) to[D, l=D$_4$] (2.5,2)
+    (5.5,2) to[D, l_=D$_2$] (4,3.5)
+    (4,0.5) to[D, l_=D$_3$] (5.5,2)
+    
+    %% Salida DC
+    (4,3.5) -- (6.5,3.5)
+    (4,0.5) -- (7,0.5)
+    
+    %% Amperímetro en línea común DC+
+    (6.5,3.5) to[short, i=$I_{DC}$] (7,3.5)
+    
+    %% Carga: Resistencia y Capacitor en paralelo
+    (7,3.5) to[R, l=$33\,\Omega$] (7,0.5)
+    (7,3.5) -- (8.5,3.5)
+    (8.5,3.5) to[C, l=$33\,\mu$F] (8.5,0.5)
+    (8.5,0.5) -- (7,0.5)
+    
+    %% Extensión para voltímetro a la derecha del circuito
+    (8.5,3.5) -- (10.5,3.5)
+    (8.5,0.5) -- (10.5,0.5)
+    %% Voltímetro
+    (10.5,3.5) to[open, v=$V_{DC}$] (10.5,0.5)
+    ;
+\end{circuitikz}
+\vspace{0.3cm}
+\par (b) Montaje para ondas no sinusoidales
+\end{minipage}
+\caption{Diagramas de montaje del procedimiento experimental.}
+\label{fig:montajes-experimentales}
+\end{figure}
+
+\subsection{Medición de ondas sinusoidales o sinusoidales rectificadas}
+\begin{enumerate}
+    \item Realizar un montaje con una fuente alterna ajustable (fuente de \SI{120}{V} a \SI{60}{Hz} en serie con un autotransformador o Variac) que alimente una carga compuesta por un puente rectificador de onda completa, el cual alimenta en corriente continua un elemento resistivo de \SI{33}{\ohm} a \SI{25}{\celsius}.
+    \item Medir con instrumentos de los tipos descritos en el marco teórico (bobina móvil, hierro móvil y electrodinámico) los valores de tensión y corriente del lado de corriente continua, así como la corriente del lado de corriente alterna.
+    \item Calcular el coeficiente de conversión que introduce un equipo magnetoeléctrico para dar valores eficaces. Comprobar este valor calculado con las mediciones realizadas.
+\end{enumerate}
+
+\subsection{Medición de ondas no sinusoidales}
+\begin{enumerate}
+    \item Realizar un montaje con una fuente alterna ajustable (fuente de \SI{120}{V} a \SI{60}{Hz} en serie con un autotransformador o Variac) que alimente una carga compuesta por un puente rectificador de onda completa, el cual alimenta en corriente continua un elemento resistivo de \SI{33}{\ohm} en paralelo con un condensador de aproximadamente \SI{33}{\micro\farad}.
+    \item Medir con instrumentos de los tipos descritos en el marco teórico los valores de tensión y corriente del lado de corriente continua y la corriente del lado de corriente alterna.
+    \item Calcular el coeficiente de conversión que introduce un equipo magnetoeléctrico para dar valores eficaces. Comprobar este valor calculado con las mediciones realizadas.
+    \item Realizar varias mediciones para tensiones de alimentación diferentes y deducir el valor de la resistencia utilizada.
+    \item Trazar la curva de tensión versus corriente sobre papel milimetrado, marcando cada punto de medición con sus correspondientes errores.
+    \item Explicar las discrepancias entre las mediciones del punto~1 y las realizadas en el punto~2, utilizando un osciloscopio para observar las formas de onda de la corriente y la tensión.
+\end{enumerate}
