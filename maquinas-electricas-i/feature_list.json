@@ -81,6 +81,21 @@
         "Preguntas del prelaboratorio respondidas"
       ],
       "status": "done"
+    },
+    {
+      "id": 6,
+      "type": "informe",
+      "name": "informe_2",
+      "title": "Informe 2 — Ciclo de Histéresis en Núcleos Ferromagnéticos Macizos y Laminados",
+      "due": "2026-06-13",
+      "description": "Informe sobre el ciclo de histéresis y pérdidas en el núcleo en materiales ferromagnéticos macizos y laminados.",
+      "acceptance": [
+        "Existe en entregables/informes/Informe2/",
+        "Documento LaTeX compila sin errores",
+        "Secciones completas: Portada, Introducción, Objetivos, Marco Teórico, Metodología, Equipos e Instrumentos, Diagramas de Conexiones, Resultados, Análisis de Resultados, Conclusiones y Referencias",
+        "Cálculos y análisis de curvas de histéresis incluidos"
+      ],
+      "status": "awaiting_review"
     }
   ]
 }

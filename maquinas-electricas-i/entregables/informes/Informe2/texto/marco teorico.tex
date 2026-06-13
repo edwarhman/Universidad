@@ -1,0 +1,81 @@
+\section{Marco teórico}
+
+
+\subsection{Material Ferromagnético}
+Un material ferromagnético es aquel que posee una permeabilidad magnética extremadamente alta y presenta la capacidad de imantarse fuertemente ante la presencia de un campo magnético externo, reteniendo parte de esa magnetización incluso cuando el campo original desaparece. A nivel microscópico, este fenómeno se explica mediante la existencia de ``dominios magnéticos'', que son regiones diminutas donde los momentos magnéticos de los electrones (espines) se encuentran alineados en una misma dirección debido a fuerzas de intercambio cuántico. En su estado natural, estos dominios apuntan en direcciones aleatorias, cancelándose mutuamente; sin embargo, al ser expuestos a una inducción externa, se orientan en paralelo al campo, multiplicando drásticamente la densidad de flujo magnético total del sistema. 
+
+\subsection{Circuito Magnético y Núcleo Ferromagnético}
+Un circuito magnético es un modelo matemático y físico que describe una trayectoria cerrada a través de la cual se canaliza el flujo magnético, basándose en una analogía directa con los circuitos eléctricos (donde la fuerza magnetomotriz equivale al voltaje, el flujo magnético a la corriente, y la reluctancia a la resistencia eléctrica). Cuando este circuito se implementa utilizando un núcleo ferromagnético, se aprovecha la propiedad del material para guiar y confinar las líneas de campo con una oposición mínima (baja reluctancia). De este modo, el núcleo actúa como un ``conductor de magnetismo'' que evita la dispersión del flujo en el aire, permitiendo concentrar la energía y lograr un acoplamiento electromagnético altamente eficiente entre los diferentes devanados de un dispositivo, como ocurre en transformadores.
+
+\subsection{Núcleo Macizo}
+Un núcleo macizo es una estructura magnética constituida por una única pieza sólida y continua de material ferromagnético. Si bien es ideal para aplicaciones de corriente continua (DC) donde el flujo es constante, presenta graves deficiencias en sistemas de corriente alterna (AC). Al estar expuesto a campos magnéticos variables, la ley de Faraday estipula que se inducen corrientes eléctricas en la propia masa conductora del hierro. Al ser un bloque sólido sin interrupciones, estas corrientes parásitas (o de Foucault) circulan libremente en bucles grandes y de baja resistencia, disipando masivamente energía en forma de calor por efecto Joule, lo que provoca bajas eficiencias y un calentamiento crítico en el dispositivo.
+
+\subsection{Núcleo Laminado}
+Un núcleo laminado es la solución tecnológica estándar para circuitos magnéticos que operan con corriente alterna. En lugar de una pieza sólida, el núcleo se construye mediante el apilamiento de múltiples chapas o láminas delgadas de acero eléctrico, donde cada una de ellas está recubierta individualmente por una capa milimétrica de material aislante (barniz u óxido). Esta configuración no altera la capacidad del núcleo para guiar el flujo magnético global, pero interrumpe por completo la conductividad eléctrica en el sentido transversal. Como consecuencia, las corrientes de Foucault quedan confinadas a secciones microscópicas dentro de cada lámina, lo que incrementa drásticamente la resistencia efectiva al paso de la corriente y disminuye de forma contundente las pérdidas de energía por calor.
+
+\subsection{Pérdidas de Energía en Núcleos Ferromagnéticos}
+
+Las pérdidas de energía en núcleos ferromagnéticos ocurren cuando el material se somete a un campo magnético variable, transformando parte de esa energía en calor no deseado. Esto ocurre principalmente por dos fenómenos físicos: la histéresis magnética y las corrientes parásitas.
+
+\subsubsection{Pérdidas por Histéresis ($P_h$)}
+Las pérdidas por histéresis se deben a la fricción interna de los dominios magnéticos del material, los cuales se reorientan constantemente con cada ciclo de corriente alterna. La energía perdida equivale físicamente al área encerrada dentro de la curva o lazo de histéresis del material conductor.
+
+\subsubsection{Pérdidas por Corrientes de Foucault ($P_e$)}
+Por su parte, las pérdidas por corrientes de Foucault (o parásitas) aparecen porque el flujo magnético variable induce voltajes y pequeñas corrientes circulares dentro del propio hierro del núcleo. Al recorrer el material, estas corrientes generan calor por efecto Joule.
+
+Para solucionar este problema y reducir el calentamiento, los núcleos de los transformadores y motores no se fabrican de una sola pieza sólida. En su lugar, se construyen mediante el apilamiento de delgadas láminas de acero al silicio.
+
+Estas láminas están aisladas eléctricamente entre sí por una capa de barniz. Su función es interrumpir y bloquear el camino físico de las corrientes parásitas, lo que eleva la resistencia eléctrica del núcleo y minimiza drásticamente la disipación de energía.
+
+\subsection{Ciclo de Histéresis}
+El ciclo de histéresis es la representación gráfica del retraso que sufre la densidad de flujo magnético ($B$) respecto a la intensidad del campo magnético aplicado ($H$) cuando un material ferromagnético se somete a ciclos de magnetización y desmagnetización. Este lazo cerrado ilustra el área total encerrada por la curva que representa de forma directa la cantidad de energía disipada en forma de calor por unidad de volumen durante cada ciclo de corriente alterna.
+
+
+\subsection{ Principio de Funcionamiento del Circuito Integrador}
+Para la medición y visualización experimental del Ciclo de Histéresis, se requiere obtener señales proporcionales a la densidad de flujo ($B$) y a la intensidad de campo ($H$). De acuerdo con la ley de Faraday, la tensión inducida en el devanado secundario ($V_2$) depende de la variación del flujo magnético en el tiempo ($\partial \phi / \partial t$):
+\begin{equation}
+V_2 = N_2 \frac{\partial \phi}{\partial t}
+\end{equation}
+
+Asumiendo que el flujo es perpendicular a la sección transversal en todo momento, la relación del flujo se define como:
+\begin{equation}
+\phi = \int_S \vec{B} \cdot d\vec{A} = BA
+\end{equation}
+Donde $B$ es la densidad de flujo en el núcleo y $A$ es el área efectiva de la sección transversal. Sustituyendo (2) en (1), se obtiene:
+\begin{equation}
+V_2 = N_2 A \frac{\partial B}{\partial t}
+\end{equation}
+
+Para integrar esta señal se utiliza un circuito pasivo RC. Bajo la condición de diseño $R \gg X_c$, la corriente del secundario se simplifica a:
+\begin{equation}
+I_2 = \frac{V_2}{R}
+\end{equation}
+
+La tensión en el condensador ($V_c$) se comporta como la integral en el tiempo de la tensión inducida:
+\begin{equation}
+V_c = \frac{1}{C} \int I_2 \,dt = \frac{1}{C} \int \frac{V_2}{R} \,dt
+\end{equation}
+
+Sustituyendo (3) en (5), se deduce la proporcionalidad directa con la densidad de flujo magnético:
+\begin{equation}
+V_c = \frac{N_2 A B}{CR}
+\end{equation}
+
+\subsection{Factores de Escala del Osciloscopio}
+Para transformar las lecturas del osciloscopio a unidades de ingeniería magnética, se definen los siguientes factores de escala:
+
+\subsubsection{Factor de Escala Vertical ($K_v$)}
+Calibra el eje vertical para medir la densidad de flujo en unidades de [Tesla/div], donde $V_c$ representa la escala del canal respectivo del osciloscopio llevada a Volt/div:
+\begin{equation}
+K_v = \frac{V_c CR}{N_2 A} \quad \left[\text{Tesla / div}\right]
+\end{equation}
+
+\subsubsection{Factor de Escala Horizontal ($K_h$)}
+Aplicando la Ley de Ampère en el lado del primario se establece la relación de la intensidad de campo $H$:
+\begin{equation}
+H = \frac{N_1 I_1}{L}
+\end{equation}
+Donde $I_1$ es la corriente del primario y $L$ es la longitud del camino magnético promedio. Sinsando la corriente a través de la tensión en la resistencia shunt ($V_{\text{shunt}}$) sobre $R_s$, y utilizando la escala del canal horizontal ($V_s$) en Volt/div, se determina el factor de escala:
+\begin{equation}
+K_h = \frac{N_1 V_s}{R_s L} \quad \left[\text{A / m} \cdot \text{div}\right]
+\end{equation}
