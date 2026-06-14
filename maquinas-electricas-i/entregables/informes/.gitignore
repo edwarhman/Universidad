@@ -1,0 +1,29 @@
+## Archivos auxiliares de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+*.thm
+
+## Archivos de error de latexmk/biber
+*-SAVE-ERROR
+
+## PDFs generados (no fuente)
+*.pdf
+
+## Directorio de compilacion (latexmk -outdir)
+_site/
