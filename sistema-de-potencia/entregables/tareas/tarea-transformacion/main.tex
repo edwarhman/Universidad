@@ -1,0 +1,491 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,angles,quotes,shapes,decorations.pathmorphing}
+
+\def\ground#1{\draw #1 -- ++(0.3,-0.2) -- ++(-0.6,-0.2) -- ++(0.6,-0.2) -- ++(-0.6,-0.2) -- ++(0.3,-0.2);}
+\geometry{margin=2.5cm}
+
+\title{Tarea --- Relaciones de Transformación y Redes de Secuencia\\Sistema de Potencia II}
+\author{Emerson Warhman \\ C.I. 25.795.480}
+\date{22 de junio de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Relaciones de Transformación Trifásica}
+
+\subsection{Conexión Estrella-Estrella (Y-Y)}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.9]
+% Núcleo del transformador
+\draw[thick] (0,-1.5) rectangle (1,1.5);
+% Devanado primario
+\draw (0.5,1.2) circle(0.3);
+\node at (0.5,1.5) {$N_1$};
+% Devanado secundario
+\draw (0.5,-1.2) circle(0.3);
+\node at (0.5,-1.5) {$N_2$};
+% Líneas primario Y
+\draw (-1.5,1.2) -- (0.2,1.2) node[right]{};
+\draw (-1.5,0) -- (0.2,0);
+\draw (-1.5,-1.2) -- (0.2,-1.2);
+\draw (-1.5,1.2) node[left]{A};
+\draw (-1.5,0) node[left]{B};
+\draw (-1.5,-1.2) node[left]{C};
+\draw (-1.3,1.2) -- ++(0,-1.8) -- ++(1.3,0);
+\ground{(0,-0.6)}
+\draw (-1.3,0) -- ++(0,-0.6);
+% Líneas secundario Y
+\draw (0.8,1.2) -- (2.5,1.2);
+\draw (0.8,0) -- (2.5,0);
+\draw (0.8,-1.2) -- (2.5,-1.2);
+\draw (2.5,1.2) node[right]{a};
+\draw (2.5,0) node[right]{b};
+\draw (2.5,-1.2) node[right]{c};
+\draw (1.2,1.2) -- ++(0,-1.8) -- ++(-1.2,0);
+\ground{(0,-0.6)}
+\draw (1.2,0) -- ++(0,-0.6);
+% Etiqueta
+\node at (0,-2.5) {(a) Diagrama de conexión Y-Y};
+\end{tikzpicture}
+\caption{Conexión Y-Y}
+\label{fig:yy}
+\end{figure}
+
+Para la conexión Y-Y, las tensiones de fase del primario y secundario están en fase. La relación de transformación es:
+
+\[
+a = \frac{N_1}{N_2} = \frac{V_{AN}}{V_{an}} = \frac{V_{BN}}{V_{bn}} = \frac{V_{CN}}{V_{cn}}
+\]
+
+donde $V_{AN}$, $V_{BN}$, $V_{CN}$ son las tensiones fase-neutro del primario, y $V_{an}$, $V_{bn}$, $V_{cn}$ las del secundario.
+
+Las tensiones de línea (fase-fase) también están en fase y se relacionan por el mismo factor:
+
+\[
+\frac{V_{AB}}{V_{ab}} = \frac{V_{BC}}{V_{bc}} = \frac{V_{CA}}{V_{ca}} = a
+\]
+
+\subsubsection*{Relación de corrientes}
+
+\[
+\frac{I_A}{I_a} = \frac{I_B}{I_b} = \frac{I_C}{I_c} = \frac{1}{a}
+\]
+
+
+\subsection{Conexión Delta-Delta ($\Delta$-$\Delta$)}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.9]
+% Núcleo del transformador
+\draw[thick] (0,-1.5) rectangle (1,1.5);
+\node at (0.5,1.8) {$N_1$};
+\node at (0.5,-1.8) {$N_2$};
+% Primario Delta
+\draw (-1.5,1.2) -- (0.2,1.2);
+\draw (-1.5,0) -- (0.2,0);
+\draw (-1.5,-1.2) -- (0.2,-1.2);
+\draw (-1.5,1.2) node[left]{A};
+\draw (-1.5,0) node[left]{B};
+\draw (-1.5,-1.2) node[left]{C};
+\draw (-1.5,1.2) -- (-2.0,1.7) -- (-2.0,2.5) -- (-1.5,2.5);
+\draw (-1.5,0) -- (-2.0,-0.5) -- (-2.0,-1.7) -- (-1.5,-1.7);
+% Secundario Delta
+\draw (0.8,1.2) -- (2.5,1.2);
+\draw (0.8,0) -- (2.5,0);
+\draw (0.8,-1.2) -- (2.5,-1.2);
+\draw (2.5,1.2) node[right]{a};
+\draw (2.5,0) node[right]{b};
+\draw (2.5,-1.2) node[right]{c};
+\draw (2.5,1.2) -- (3.0,1.7) -- (3.0,2.5) -- (2.5,2.5);
+\draw (2.5,0) -- (3.0,-0.5) -- (3.0,-1.7) -- (2.5,-1.7);
+\node at (-0.5,-2.5) {(b) Diagrama de conexión $\Delta$-$\Delta$};
+\end{tikzpicture}
+\caption{Conexión $\Delta$-$\Delta$}
+\label{fig:dd}
+\end{figure}
+
+En la conexión $\Delta$-$\Delta$, las tensiones de línea en ambos lados son iguales a las tensiones de fase. No hay desplazamiento de fase entre primario y secundario.
+
+\[
+a = \frac{N_1}{N_2} = \frac{V_{AB}}{V_{ab}} = \frac{V_{BC}}{V_{bc}} = \frac{V_{CA}}{V_{ca}}
+\]
+
+donde $V_{AB}$ y $V_{ab}$ son tensiones de línea.
+
+\subsubsection*{Relación de corrientes}
+
+Las corrientes de línea se relacionan con las corrientes de fase del delta:
+
+\[
+I_A = \sqrt{3}\,I_{AB}\angle-30^\circ,\qquad
+I_a = \sqrt{3}\,I_{ab}\angle-30^\circ
+\]
+
+\[
+\frac{I_A}{I_a} = \frac{1}{a}
+\]
+
+
+\subsection{Conexión Estrella-Delta (Y-$\Delta$)}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.9]
+\draw[thick] (0,-1.5) rectangle (1,1.5);
+\node at (0.5,1.8) {$N_1$};
+\node at (0.5,-1.8) {$N_2$};
+% Primario Y
+\draw (-1.5,1.2) -- (0.2,1.2);
+\draw (-1.5,0) -- (0.2,0);
+\draw (-1.5,-1.2) -- (0.2,-1.2);
+\draw (-1.5,1.2) node[left]{A};
+\draw (-1.5,0) node[left]{B};
+\draw (-1.5,-1.2) node[left]{C};
+\draw (-1.3,1.2) -- ++(0,-1.8) -- ++(1.3,0);
+\ground{(0,-0.6)}
+\draw (-1.3,0) -- ++(0,-0.6);
+% Secundario Delta
+\draw (0.8,1.2) -- (2.5,1.2);
+\draw (0.8,0) -- (2.5,0);
+\draw (0.8,-1.2) -- (2.5,-1.2);
+\draw (2.5,1.2) node[right]{a};
+\draw (2.5,0) node[right]{b};
+\draw (2.5,-1.2) node[right]{c};
+\draw (2.5,1.2) -- (3.0,1.7) -- (3.0,2.5) -- (2.5,2.5);
+\draw (2.5,0) -- (3.0,-0.5) -- (3.0,-1.7) -- (2.5,-1.7);
+\node at (0,-2.5) {(c) Diagrama de conexión Y-$\Delta$};
+\end{tikzpicture}
+\caption{Conexión Y-$\Delta$}
+\label{fig:yd}
+\end{figure}
+
+La conexión Y-$\Delta$ introduce un desplazamiento de fase de $30^\circ$ entre las tensiones de línea del primario y secundario.
+
+\subsubsection*{Relación de tensiones}
+
+Tensión de fase del primario (Y):
+\[
+V_{AN} = \frac{V_{AB}}{\sqrt{3}}\angle-30^\circ
+\]
+
+Tensión de fase del secundario ($\Delta$):
+\[
+V_{ab} = \frac{N_2}{N_1}\,V_{AN} = \frac{V_{AB}}{a\sqrt{3}}\angle-30^\circ
+\]
+
+La relación entre tensiones de línea es:
+\[
+\frac{V_{AB}}{V_{ab}} = a\sqrt{3}
+\]
+
+La tensión de línea del secundario adelanta $30^\circ$ a la del primario (según la norma de secuencia ABC y la conexión estándar):
+
+\[
+V_{ab} = \frac{V_{AB}}{a\sqrt{3}}\angle+30^\circ
+\]
+
+\subsubsection*{Relación de corrientes}
+
+\[
+\frac{I_A}{I_a} = \frac{\sqrt{3}}{a}
+\]
+
+
+\subsection{Conexión Delta-Estrella ($\Delta$-Y)}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.9]
+\draw[thick] (0,-1.5) rectangle (1,1.5);
+\node at (0.5,1.8) {$N_1$};
+\node at (0.5,-1.8) {$N_2$};
+% Primario Delta
+\draw (-1.5,1.2) -- (0.2,1.2);
+\draw (-1.5,0) -- (0.2,0);
+\draw (-1.5,-1.2) -- (0.2,-1.2);
+\draw (-1.5,1.2) node[left]{A};
+\draw (-1.5,0) node[left]{B};
+\draw (-1.5,-1.2) node[left]{C};
+\draw (-1.5,1.2) -- (-2.0,1.7) -- (-2.0,2.5) -- (-1.5,2.5);
+\draw (-1.5,0) -- (-2.0,-0.5) -- (-2.0,-1.7) -- (-1.5,-1.7);
+% Secundario Y
+\draw (0.8,1.2) -- (2.5,1.2);
+\draw (0.8,0) -- (2.5,0);
+\draw (0.8,-1.2) -- (2.5,-1.2);
+\draw (2.5,1.2) node[right]{a};
+\draw (2.5,0) node[right]{b};
+\draw (2.5,-1.2) node[right]{c};
+\draw (1.2,1.2) -- ++(0,-1.8) -- ++(-1.2,0);
+\ground{(0,-0.6)}
+\draw (1.2,0) -- ++(0,-0.6);
+\node at (0,-2.5) {(d) Diagrama de conexión $\Delta$-Y};
+\end{tikzpicture}
+\caption{Conexión $\Delta$-Y}
+\label{fig:dy}
+\end{figure}
+
+La conexión $\Delta$-Y también introduce un desplazamiento de fase de $30^\circ$, pero en sentido contrario al Y-$\Delta$.
+
+\subsubsection*{Relación de tensiones}
+
+Tensión de fase del primario ($\Delta$):
+\[
+V_{AB} = V_{AN} \quad (\text{en delta, tensión de fase = tensión de línea})
+\]
+
+Tensión de fase del secundario (Y):
+\[
+V_{an} = \frac{N_2}{N_1}\,V_{AN} = \frac{V_{AB}}{a}
+\]
+
+Tensión de línea del secundario:
+\[
+V_{ab} = \sqrt{3}\,V_{an}\angle+30^\circ
+\]
+
+Relación entre tensiones de línea:
+\[
+\frac{V_{AB}}{V_{ab}} = \frac{a}{\sqrt{3}}
+\]
+
+La tensión de línea del secundario atrasa $30^\circ$ respecto a la del primario:
+\[
+V_{ab} = \frac{V_{AB}\sqrt{3}}{a}\angle-30^\circ
+\]
+
+\subsubsection*{Relación de corrientes}
+
+\[
+\frac{I_A}{I_a} = \frac{a}{\sqrt{3}}
+\]
+
+\subsection{Resumen de relaciones}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Conexión & $\displaystyle\frac{V_{\text{línea,1}}}{V_{\text{ línea,2}}}$ & Desfase & $\displaystyle\frac{I_{\text{ línea,1}}}{I_{\text{ línea,2}}}$ \\
+\midrule
+Y-Y  & $a$              & $0^\circ$  & $1/a$ \\
+$\Delta$-$\Delta$ & $a$     & $0^\circ$  & $1/a$ \\
+Y-$\Delta$ & $a\sqrt{3}$ & $+30^\circ$ (sec. adelanta) & $\sqrt{3}/a$ \\
+$\Delta$-Y & $a/\sqrt{3}$ & $-30^\circ$ (sec. atrasa) & $a/\sqrt{3}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+donde $a = N_1/N_2$ es la relación de espiras del transformador monofásico equivalente.
+
+\newpage
+\section{Redes de Secuencia para la Conexión Estrella-Estrella}
+
+\subsection{Red de secuencia positiva y negativa}
+
+Para las secuencias positiva y negativa, las corrientes están balanceadas ($I_a + I_b + I_c = 0$), por lo que no circula corriente por el neutro. El transformador Y-Y se comporta como tres transformadores monofásicos independientes. La red de secuencia positiva (y negativa) es simplemente la impedancia del transformador:
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\draw (0,0) node[circle,fill,inner sep=2pt]{} -- (1,0) node[circle,fill,inner sep=2pt]{};
+\draw[decorate,decoration={coil,segment length=5pt,amplitude=3pt}] (1,0) -- (3,0);
+\draw (3,0) node[circle,fill,inner sep=2pt]{} -- (4,0) node[circle,fill,inner sep=2pt]{};
+\node[above] at (0,0) {$k$};
+\node[above] at (4,0) {$m$};
+\draw (0,-0.5) node[circle,fill,inner sep=2pt]{} -- (4,-0.5) node[circle,fill,inner sep=2pt]{};
+\node[below] at (0,-0.5) {$n$};
+\node[below] at (4,-0.5) {$n'$};
+\node at (2,0.5) {$jX_1$};
+\node at (2,-1.0) {Secuencia $+$ y $-$};
+\end{tikzpicture}
+\caption{Redes de secuencia positiva y negativa para transformador Y-Y}
+\end{figure}
+
+\subsection{Red de secuencia cero}
+
+Para la secuencia cero, las corrientes son iguales en magnitud y fase ($I_{a0} = I_{b0} = I_{c0}$). La corriente por el neutro es $I_n = 3I_{a0}$. La red de secuencia cero depende del tipo de conexión a tierra de los neutros:
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\draw (0,0) node[circle,fill,inner sep=2pt]{} -- (1,0) node[circle,fill,inner sep=2pt]{};
+\draw[decorate,decoration={coil,segment length=5pt,amplitude=3pt}] (1,0) -- (3,0);
+\draw (3,0) node[circle,fill,inner sep=2pt]{} -- (4,0) node[circle,fill,inner sep=2pt]{};
+\node[above] at (0,0) {$k$};
+\node[above] at (4,0) {$m$};
+\draw (0,-0.5) node[circle,fill,inner sep=2pt]{} -- (0.5,-0.5) -- (3.5,-0.5) -- (4,-0.5) node[circle,fill,inner sep=2pt]{};
+\node[below] at (0,-0.5) {$n$};
+\node[below] at (4,-0.5) {$n'$};
+\draw (0.5,-0.5) -- (0.5,-1.3);
+\draw[decorate,decoration={coil,segment length=5pt,amplitude=3pt}] (0.5,-1.3) -- (0.5,-2.3);
+\draw (0.5,-2.3) -- (0.5,-2.5);
+\node[left] at (0.5,-1.8) {$3Z_n$};
+\ground{(0.5,-2.5)}
+\draw (3.5,-0.5) -- (3.5,-1.3);
+\draw[decorate,decoration={coil,segment length=5pt,amplitude=3pt}] (3.5,-1.3) -- (3.5,-2.3);
+\draw (3.5,-2.3) -- (3.5,-2.5);
+\node[right] at (3.5,-1.8) {$3Z_m$};
+\ground{(3.5,-2.5)}
+\node at (2,0.8) {$jX_0$};
+\node at (2,1.3) {Secuencia $0$};
+\end{tikzpicture}
+\caption{Red de secuencia cero para transformador Y-Y con neutros a tierra}
+\end{figure}
+
+\subsubsection*{Casos particulares}
+
+\begin{enumerate}
+  \item \textbf{Ambos neutros sólidamente puestos a tierra:} $Z_n = Z_m = 0$, la red de secuencia cero es un cortocircuito en serie con $jX_0$.
+  \item \textbf{Un neutro a tierra y el otro aislado:} No hay camino para la corriente de secuencia cero $\Rightarrow$ el transformador se comporta como un circuito abierto para la secuencia cero.
+  \item \textbf{Neutro a tierra a través de impedancia:} Se añade $3Z_n$ y/o $3Z_m$ en serie.
+  \item \textbf{Ambos neutros aislados:} La secuencia cero no puede circular $\Rightarrow$ circuito abierto.
+\end{enumerate}
+
+\newpage
+\section{Gráficos de los Sistemas de Secuencia Balanceados}
+
+\subsection{Sistema trifásico desbalanceado de ejemplo}
+
+Consideremos el siguiente sistema desbalanceado de tensiones (valores en pu, secuencia ABC):
+
+\[
+\begin{aligned}
+V_a &= 1.00\angle 0^\circ \\
+V_b &= 0.85\angle -130^\circ \\
+V_c &= 1.10\angle 110^\circ
+\end{aligned}
+\]
+
+\subsection{Componentes de secuencia}
+
+Aplicando la transformación de componentes simétricas:
+
+\[
+\begin{bmatrix}
+V_0 \\ V_1 \\ V_2
+\end{bmatrix}
+= \frac{1}{3}
+\begin{bmatrix}
+1 & 1 & 1 \\
+1 & \alpha & \alpha^2 \\
+1 & \alpha^2 & \alpha
+\end{bmatrix}
+\begin{bmatrix}
+V_a \\ V_b \\ V_c
+\end{bmatrix}
+\]
+
+donde $\alpha = 1\angle120^\circ = -\frac12 + j\frac{\sqrt{3}}{2}$.
+
+Calculando:
+
+\[
+\begin{aligned}
+V_0 &= \frac13(1.00\angle0^\circ + 0.85\angle-130^\circ + 1.10\angle110^\circ) \\
+    &= \frac13(1.00 - 0.546 - j0.651 - 0.376 + j1.034) \\
+    &= \frac13(0.078 + j0.383) = 0.130\angle78.5^\circ\text{ pu}
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+V_1 &= \frac13(1.00\angle0^\circ + 0.85\angle-130^\circ\angle120^\circ + 1.10\angle110^\circ\angle240^\circ) \\
+    &= \frac13(1.00\angle0^\circ + 0.85\angle-10^\circ + 1.10\angle-10^\circ) \\
+    &= \frac13(1.00 + 0.837 - j0.148 + 1.084 - j0.191) \\
+    &= \frac13(2.921 - j0.339) = 0.979\angle-6.6^\circ\text{ pu}
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+V_2 &= \frac13(1.00\angle0^\circ + 0.85\angle-130^\circ\angle240^\circ + 1.10\angle110^\circ\angle120^\circ) \\
+    &= \frac13(1.00\angle0^\circ + 0.85\angle110^\circ + 1.10\angle230^\circ) \\
+    &= \frac13(1.00 - 0.291 + j0.799 - 0.707 - j0.843) \\
+    &= \frac13(0.002 - j0.044) = 0.015\angle-87.4^\circ\text{ pu}
+\end{aligned}
+\]
+
+\subsection{Diagramas fasoriales}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.8]
+% Ejes
+\draw[->,gray!30] (-1.5,0) -- (1.5,0) node[right]{Re};
+\draw[->,gray!30] (0,-1.5) -- (0,1.5) node[above]{Im};
+
+% Sistema desbalanceado original
+\draw[->,thick,red] (0,0) -- ({cos(0)},{sin(0)}) node[right]{$V_a$};
+\draw[->,thick,blue] (0,0) -- ({0.85*cos(-130)},{0.85*sin(-130)}) node[left]{$V_b$};
+\draw[->,thick,green!70!black] (0,0) -- ({1.1*cos(110)},{1.1*sin(110)}) node[left]{$V_c$};
+\node at (0,-1.7) {(a) Sistema desbalanceado original};
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[scale=1.8]
+% Ejes
+\draw[->,gray!30] (-1.5,0) -- (1.5,0) node[right]{Re};
+\draw[->,gray!30] (0,-1.5) -- (0,1.5) node[above]{Im};
+
+% Secuencia positiva (+)
+\draw[->,thick,red] (0,0) -- ({0.979*cos(-6.6)},{0.979*sin(-6.6)}) node[right]{$V_{a1}$};
+\draw[->,thick,blue] (0,0) -- ({0.979*cos(113.4)},{0.979*sin(113.4)}) node[above]{$V_{b1}$};
+\draw[->,thick,green!70!black] (0,0) -- ({0.979*cos(-126.6)},{0.979*sin(-126.6)}) node[left]{$V_{c1}$};
+\node at (0,-1.7) {(b) Secuencia positiva $(+)$};
+\end{tikzpicture}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=1.8]
+% Ejes
+\draw[->,gray!30] (-1.5,0) -- (1.5,0) node[right]{Re};
+\draw[->,gray!30] (0,-1.5) -- (0,1.5) node[above]{Im};
+
+% Secuencia negativa (-)
+\draw[->,thick,red] (0,0) -- ({0.015*cos(-87.4)},{0.015*sin(-87.4)}) node[right]{$V_{a2}$};
+\draw[->,thick,blue] (0,0) -- ({0.015*cos(32.6)},{0.015*sin(32.6)}) node[right]{$V_{b2}$};
+\draw[->,thick,green!70!black] (0,0) -- ({0.015*cos(152.6)},{0.015*sin(152.6)}) node[left]{$V_{c2}$};
+\node at (0,-1.7) {(c) Secuencia negativa $(-)$};
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[scale=1.8]
+% Ejes
+\draw[->,gray!30] (-1.5,0) -- (1.5,0) node[right]{Re};
+\draw[->,gray!30] (0,-1.5) -- (0,1.5) node[above]{Im};
+
+% Secuencia cero (0)
+\draw[->,thick,red] (0,0) -- ({0.130*cos(78.5)},{0.130*sin(78.5)}) node[above]{$V_{a0}$};
+\draw[->,thick,blue] (0,0) -- ({0.130*cos(78.5)},{0.130*sin(78.5)});
+\draw[->,thick,green!70!black] (0,0) -- ({0.130*cos(78.5)},{0.130*sin(78.5)});
+\node at (0.3,0) {\small $V_{b0},V_{c0}$};
+\node at (0,-1.7) {(d) Secuencia cero $(0)$};
+\end{tikzpicture}
+\caption{Descomposición en componentes simétricas}
+\end{figure}
+
+\subsection{Verificación}
+
+Se cumple que:
+\[
+\begin{aligned}
+V_a &= V_{a0} + V_{a1} + V_{a2} \\
+    &= 0.130\angle78.5^\circ + 0.979\angle-6.6^\circ + 0.015\angle-87.4^\circ \\
+    &= (0.026 + j0.127) + (0.973 - j0.113) + (0.001 - j0.015) \\
+    &= 1.00 + j0 \approx 1.00\angle0^\circ
+\end{aligned}
+\]
+
+Lo cual verifica que la descomposición es correcta.
+
+\end{document}
