@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{circuitikz}
+\usetikzlibrary{babel}
+\usepackage{float}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
+\geometry{margin=2.5cm}
+\sloppy
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\begin{document}
+\input{portada}
+
+\tableofcontents
+\newpage
+
+\input{introduccion}
+\input{marco_teorico}
+\input{procedimiento}
+\input{tablas}
+
+\clearpage
+\begin{thebibliography}{99}
+
+\bibitem{chapman}
+S.~Chapman, \textit{Máquinas Eléctricas}, 5.ª ed., McGraw-Hill, 2012.
+
+\bibitem{mit}
+E.E.~Staff del M.I.T., \textit{Circuitos Magnéticos y Transformadores}, Editorial Reverté, Argentina, 1981.
+
+\bibitem{ras}
+Enrique Ras, \textit{Transformadores de Potencia, de Medida y de Protección}, 4.ª ed., Editorial Marcombo, España, 1978.
+
+\bibitem{covenin}
+Comisión Venezolana de Normas Industriales (COVENIN), \textit{Norma COVENIN 3172-95: Transformadores de Potencia — Métodos de Ensayo}, Venezuela, 1995.
+
+\end{thebibliography}
+
+\end{document}

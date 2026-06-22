@@ -1,0 +1,103 @@
+\section{Tablas de Mediciones}
+
+A continuación se presentan las tablas estructuradas para el registro de los datos experimentales que se obtendrán durante la sesión de laboratorio. Cada tabla corresponde a uno de los ensayos descritos en el procedimiento y permitirá, junto con los cálculos asociados, determinar los parámetros del circuito equivalente del transformador monofásico bajo estudio.
+
+\begin{table}[H]
+    \centering
+    \caption{Medición de resistencia de devanados.}
+    \label{tab:resistencia}
+    \begin{tabularx}{\textwidth}{| X | c | c | c | c |}
+        \hline
+        \textbf{Devanado} & \textbf{Lectura 1} & \textbf{Lectura 2} & \textbf{Lectura 3} & \textbf{Lectura 4} \\ \hline
+        Primario (AT) & $\Omega$ & $\Omega$ & $\Omega$ & $\Omega$ \\ \hline
+        Secundario (BT) & $\Omega$ & $\Omega$ & $\Omega$ & $\Omega$ \\ \hline
+    \end{tabularx}
+    \bigskip
+
+    \begin{tabularx}{\textwidth}{| X | c | c | c | c |}
+        \hline
+        \textbf{Parámetro} & \textbf{$R$ a $T_A$} & \textbf{$T_A$} & \textbf{$T_O$} & \textbf{$R$ a $T_O$} \\ \hline
+        Resistencia AT & $\Omega$ & $\mathrm{^\circ C}$ & $\mathrm{^\circ C}$ & $\Omega$ \\ \hline
+        Resistencia BT & $\Omega$ & $\mathrm{^\circ C}$ & $\mathrm{^\circ C}$ & $\Omega$ \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Medición de la relación de transformación.}
+    \label{tab:relacion}
+    \begin{tabularx}{\textwidth}{| c | Y | Y | c | Y | Y | c |}
+        \hline
+        \multirow{2}{*}{\textbf{Paso}} & \multicolumn{3}{c|}{\textbf{Serie directa}} & \multicolumn{3}{c|}{\textbf{Serie invertida}} \\ \cline{2-7}
+         & $V_{AT}$ (V) & $V_{BT}$ (V) & $a = V_{AT}/V_{BT}$ & $V_{AT}$ (V) & $V_{BT}$ (V) & $a = V_{AT}/V_{BT}$ \\ \hline
+        1 & & & & & & \\ \hline
+        2 & & & & & & \\ \hline
+        3 & & & & & & \\ \hline
+        4 & & & & & & \\ \hline
+        \textbf{Promedio} & -- & -- & & -- & -- & \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Verificación de polaridad.}
+    \label{tab:polaridad}
+    \begin{tabularx}{\textwidth}{| X | Y | Y | X |}
+        \hline
+        \textbf{Tensión aplicada $E_p$ (V)} & \textbf{Tensión $E_x$ (V)} & \textbf{Comparación} & \textbf{Polaridad} \\ \hline
+        & & $E_x > E_p$ / $E_x < E_p$ & Aditiva / Sustractiva \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Ensayo de cortocircuito.}
+    \label{tab:cortocircuito}
+    \begin{tabularx}{\textwidth}{| Y | Y | Y | Y |}
+        \hline
+        \textbf{$V_{cc}$ (V)} & \textbf{$I_{cc}$ (A)} & \textbf{$P_{cc}$ (W)} & \textbf{Observaciones} \\ \hline
+        & & & \\ \hline
+    \end{tabularx}
+    \bigskip
+
+    \begin{tabularx}{\textwidth}{| Y | Y | Y | Y | Y |}
+        \hline
+        \textbf{$f_{cc}$} & \textbf{$V_{ccc}$ (V)} & \textbf{$P_{ccc}$ (W)} & \textbf{$R_{cc}$ ($\Omega$)} & \textbf{$X_{cc}$ ($\Omega$)} \\ \hline
+        & & & & \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Ensayo de vacío (circuito abierto).}
+    \label{tab:vacio}
+    \begin{tabularx}{\textwidth}{| Y | Y | Y | Y | Y | Y |}
+        \hline
+        \textbf{$V_0$ (V)} & \textbf{$I_0$ (A)} & \textbf{$P_0$ (W)} & \textbf{$\cos\varphi_0$} & \textbf{$R_c$ ($\Omega$)} & \textbf{$X_m$ ($\Omega$)} \\ \hline
+        $0,5\,V_n$ & & & & & \\ \hline
+        $0,8\,V_n$ & & & & & \\ \hline
+        $1,0\,V_n$ & & & & & \\ \hline
+        $1,1\,V_n$ & & & & & \\ \hline
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Resumen de parámetros del circuito equivalente (referidos al primario).}
+    \label{tab:parametros}
+    \begin{tabularx}{\textwidth}{| X | c | X |}
+        \hline
+        \textbf{Parámetro} & \textbf{Símbolo} & \textbf{Valor} \\ \hline
+        Resistencia del primario & $R_1$ & $\Omega$ \\ \hline
+        Resistencia del secundario referida & $R_2'$ & $\Omega$ \\ \hline
+        Resistencia equivalente de cortocircuito & $R_{cc}$ & $\Omega$ \\ \hline
+        Reactancia de cortocircuito & $X_{cc}$ & $\Omega$ \\ \hline
+        Impedancia de cortocircuito & $Z_{cc}$ & $\Omega$ \\ \hline
+        Relación de transformación & $a$ & \\ \hline
+        Resistencia de pérdidas en el núcleo & $R_c$ & $\Omega$ \\ \hline
+        Reactancia de magnetización & $X_m$ & $\Omega$ \\ \hline
+        Corriente de vacío & $I_0$ & A \\ \hline
+        Pérdidas en el hierro (nominales) & $P_{Fe}$ & W \\ \hline
+        Pérdidas en el cobre (nominales) & $P_{cu}$ & W \\ \hline
+    \end{tabularx}
+\end{table}
