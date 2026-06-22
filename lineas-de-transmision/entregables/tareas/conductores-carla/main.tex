@@ -1,0 +1,405 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{pdflscape}
+\geometry{margin=2.5cm}
+
+\title{Tarea --- Análisis Comparativo de Conductores Eléctricos\\para Líneas de Transmisión}
+\author{Carla\\Líneas de Transmisión}
+\date{1 de junio de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+
+Este informe presenta un análisis comparativo de los principales tipos de
+conductores utilizados en líneas de transmisión eléctrica, evaluando sus
+parámetros técnicos para el calibre asignado de \textbf{1100 MCM}.
+
+La investigación se realizó con base en el catálogo técnico de \textbf{CVG CABELUM}
+(Conductores de Aluminio del Caroní, C.A.), empresa estatal venezolana ubicada
+en Ciudad Bolívar, única productora nacional de conductores eléctricos de alta
+potencia. La sección transversal aproximada para 1100 MCM es de
+$557.37\text{ mm}^2$.
+
+\section{Consideraciones de Fabricación y Alcance del Catálogo}
+
+Al revisar exhaustivamente el catálogo de CVG CABELUM, se identificaron las
+siguientes consideraciones técnicas importantes:
+
+\begin{enumerate}
+    \item \textbf{Calibres exactos:} El catálogo fabrica de forma exacta el
+        calibre \textbf{1100.0 MCM} para las tecnologías \textbf{AAAC} (pág.
+        32) y \textbf{ACAR} (pág. 44). Para \textbf{AAC} y \textbf{ACSR} los
+        calibres comerciales más cercanos son \textbf{1113 MCM} (\textit{Marigold}
+        en AAC; \textit{Finch / Bluejay} en ACSR).
+
+    \item \textbf{Normas DIN y BRITISH:} Estas normas no miden en MCM, sino
+        en mm$^2$. Para el valor de 1100 MCM ($\approx 557\text{ mm}^2$), la
+        planta tiene dos calibres comerciales: \textbf{DIN 550/560}
+        ($549.65\text{--}561.70\text{ mm}^2$) y el calibre BRITISH
+        \textbf{Moose} ($500\text{ mm}^2$ nominal).
+
+    \item \textbf{Limitaciones:} La norma BRITISH se queda corta en AAC y AAAC
+        (topando en calibres menores de 750/700 mm$^2$), pero en ACSR dispone
+        del calibre \textbf{Moose}. Las normas DIN y BRITISH no contemplan la
+        tipología \textbf{ACAR}.
+\end{enumerate}
+
+\section{Tipos de Conductores Evaluados}
+
+\subsection{AAC (All Aluminum Conductor) --- ASTM B-231}
+Conductor de aluminio puro 1350-H19. Características:
+\begin{itemize}
+    \item Alta conductividad eléctrica
+    \item Bajo peso
+    \item Menor resistencia mecánica
+    \item Usos: distribución urbana, cortas distancias
+\end{itemize}
+
+\subsection{AAAC (All Aluminum Alloy Conductor) --- ASTM B-399}
+Conductor de aleación de aluminio 6201-T81. Características:
+\begin{itemize}
+    \item Mayor resistencia mecánica que AAC
+    \item Buena relación resistencia-peso
+    \item Resistencia a la corrosión
+    \item Usos: líneas de media y larga distancia
+\end{itemize}
+
+\subsection{ACAR (Aluminum Conductor Alloy Reinforced) --- ASTM B-524}
+Conductor de aluminio con refuerzo de aleación. Características:
+\begin{itemize}
+    \item Combinación de alambres de aluminio puro y de aleación 6201
+    \item Balance entre conductividad y resistencia
+    \item Usos: líneas que requieren mayor capacidad mecánica
+\end{itemize}
+
+\subsection{ACSR (Aluminum Conductor Steel Reinforced) --- ASTM B-232}
+Conductor de aluminio con refuerzo de acero galvanizado. Características:
+\begin{itemize}
+    \item El más utilizado en transmisión
+    \item Excelente relación resistencia-peso
+    \item Máxima resistencia mecánica de la línea
+    \item Usos: líneas de transmisión de alta tensión
+\end{itemize}
+
+\section{Tabla Comparativa --- Calibre 1100 MCM / 1113 MCM}
+
+Evaluado bajo los parámetros disponibles en el catálogo de CABELUM para el
+calibre asignado:
+
+\begin{landscape}
+\begin{center}
+\begin{tabular}{p{4cm}c|c|c|c}
+\toprule
+\textbf{Parámetro} & \textbf{AAC} & \textbf{AAAC} & \textbf{ACAR} & \textbf{ACSR} \\
+& (Marigold) & (1100 MCM) & (1100 MCM 33/4) & (Finch) \\
+\midrule
+Norma de fabricación & ASTM B-231 & ASTM B-399 & ASTM B-524 & ASTM B-232 y B-498 \\
+\midrule
+Calibre comercial & 1113 kcmil & 1100 kcmil & 1100 kcmil & 1113 kcmil \\
+\midrule
+Sección (mm$^2$) & 564.0 & 557.0 & 557.0 & 636.60 \\
+\midrule
+Diámetro (mm) & 30.87 & 30.42 & 30.65 & 32.85 \\
+\midrule
+Peso neto (kg/km) & 1553.0 & 1502 & 1532 & 2128 \\
+\midrule
+Carga de rotura (kgf) & 8903 & 15909 & 9413 & 17737 \\
+\midrule
+Resistencia DC 20$^\circ$C ($\Omega$/km) & 0.05112 & 0.06120 & 0.05264 & 0.05152 \\
+\midrule
+Ampacidad (A) & 1080 & 998 & 1061 & 1100 \\
+\midrule
+Long. máx. despacho (m) & 2120 & 2770 & 2150 & 1580 \\
+\midrule
+Peso neto carrete (kg) & 3292 & 4141 & 3294 & 3362 \\
+\midrule
+Peso bruto carrete (kg) & 3592 & 4571 & 3594 & 3662 \\
+\midrule
+Tipo de carrete & $75"\times38"\times34"$ & $84"$ & $75"\times38"\times34"$ & $75"\times38"\times34"$ \\
+\midrule
+Marca & CABELUM & CABELUM & CABELUM & CABELUM \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{Nota sobre ampacidad:} Calculada bajo condiciones estándar de CABELUM
+(temperatura ambiente 25$^\circ$C, temperatura del conductor 75$^\circ$C,
+viento de 0.6 m/s y radiación solar de 1000 W/m$^2$).
+\end{landscape}
+
+\section{Desglose por Norma y Tipo de Conductor}
+
+\begin{landscape}
+\subsection{Conductor AAC (All Aluminum Conductor)}
+
+Comparativa del calibre Marigold (ASTM) frente a los calibres más cercanos
+de las normas europeas:
+
+\begin{center}
+\begin{tabular}{p{4cm}c|c|c}
+\toprule
+\textbf{Parámetro} & \textbf{ASTM B-231} & \textbf{BRITISH (BS 215)} & \textbf{DIN 48201-5} \\
+& (1113 kcmil Marigold) & (Tarantula) & (500 mm$^2$) \\
+\midrule
+Designación de calibre & 1113 kcmil & 750 mm$^2$ nominal & 500 mm$^2$ nominal \\
+\midrule
+Sección real (mm$^2$) & 564.0 & 794.87 & 499.83 \\
+\midrule
+Diámetro (mm) & 30.87 & 36.61 & 29.10 \\
+\midrule
+Peso (kg/km) & 1553.0 & 2192 & 1379 \\
+\midrule
+Carga de rotura (kgf) & 8903 & 12243 & 7615 \\
+\midrule
+Resistencia DC 20$^\circ$C ($\Omega$/km) & 0.05112 & 0.03627 & 0.05782 \\
+\midrule
+Ampacidad (A) & 1080 & 899 & 689 \\
+\midrule
+Long. máx. despacho (m) & 2120 & 1510 & 1120 \\
+\midrule
+Peso neto carrete (kg) & 3292 & 3310 & 1544 \\
+\midrule
+Peso bruto carrete (kg) & 3592 & 3610 & 1689 \\
+\midrule
+Marca & CABELUM & CABELUM & CABELUM \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\subsection{Conductor AAAC (All Aluminum Alloy Conductor)}
+
+Comparativa del calibre exacto 1100 MCM (ASTM) frente a los límites europeos:
+
+\begin{center}
+\begin{tabular}{p{4cm}c|c|c}
+\toprule
+\textbf{Parámetro} & \textbf{ASTM B-399} & \textbf{BRITISH (BS 3242)} & \textbf{DIN 48201-6} \\
+& (1100 kcmil) & (Araucaria) & (500 mm$^2$) \\
+\midrule
+Designación de calibre & 1100 kcmil & 700 mm$^2$ nominal & 500 mm$^2$ nominal \\
+\midrule
+Sección real (mm$^2$) & 557.0 & 821.15 & 499.83 \\
+\midrule
+Diámetro (mm) & 30.42 & 37.26 & 29.10 \\
+\midrule
+Peso (kg/km) & 1502 & 2266 & 1379 \\
+\midrule
+Carga de rotura (kgf) & 15909 & 23465 & 14236 \\
+\midrule
+Resistencia DC 20$^\circ$C ($\Omega$/km) & 0.06120 & 0.04046 & 0.0671 \\
+\midrule
+Ampacidad (A) & 998 & --- & --- \\
+\midrule
+Long. máx. despacho (m) & 2770 & 1450 & 2390 \\
+\midrule
+Peso neto carrete (kg) & 4141 & 3286 & 3296 \\
+\midrule
+Peso bruto carrete (kg) & 4571 & 3586 & 3596 \\
+\midrule
+Marca & CABELUM & CABELUM & CABELUM \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\subsection{Conductor ACAR (Aluminum Conductor Alloy Reinforced)}
+
+La norma BRITISH y la norma DIN \textbf{no contemplan la fabricación de la
+tipología ACAR} en el catálogo de CABELUM. Se fabrica bajo pedido únicamente
+con estándares americanos.
+
+\begin{center}
+\begin{tabular}{p{4cm}c|c|c}
+\toprule
+\textbf{Parámetro} & \textbf{ASTM B-524} & \textbf{BRITISH} & \textbf{DIN} \\
+& (1100.0 MCM 33/4) & & \\
+\midrule
+Designación de calibre & 1100.0 MCM (33 Al / 4 Aleac.) & No disponible & No disponible \\
+\midrule
+Sección real (mm$^2$) & 557.0 & --- & --- \\
+\midrule
+Diámetro (mm) & 30.65 & --- & --- \\
+\midrule
+Peso (kg/km) & 1532 & --- & --- \\
+\midrule
+Carga de rotura (kgf) & 9413 & --- & --- \\
+\midrule
+Resistencia DC 20$^\circ$C ($\Omega$/km) & 0.05264 & --- & --- \\
+\midrule
+Ampacidad (A) & 1061 & --- & --- \\
+\midrule
+Long. máx. despacho (m) & 2150 & --- & --- \\
+\midrule
+Peso neto carrete (kg) & 3294 & --- & --- \\
+\midrule
+Peso bruto carrete (kg) & 3594 & --- & --- \\
+\midrule
+Marca & CABELUM & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{landscape}
+
+\begin{landscape}
+\subsection{Conductor ACSR (Aluminum Conductor Steel Reinforced)}
+
+Comparativa del modelo Finch (1113 kcmil) contra los calibres de gran
+potencia europeos:
+
+\begin{center}
+\begin{tabular}{p{4cm}c|c|c}
+\toprule
+\textbf{Parámetro} & \textbf{ASTM B-232} & \textbf{BRITISH (BS 215 P.2)} & \textbf{DIN 48204} \\
+& (1113 kcmil Finch) & (Moose) & (550/70) \\
+\midrule
+Designación de calibre & 1113 kcmil & 500 mm$^2$ nominal & 550/70 mm$^2$ nominal \\
+\midrule
+Sección real (mm$^2$) & 636.60 & 597.00 & 620.90 \\
+\midrule
+Diámetro (mm) & 32.85 & 31.77 & 32.40 \\
+\midrule
+Peso (kg/km) & 2128 & 1996 & 2085 \\
+\midrule
+Carga de rotura (kgf) & 17737 & 16417 & 17073 \\
+\midrule
+Resistencia DC 20$^\circ$C ($\Omega$/km) & 0.05152 & 0.05470 & 0.0526 \\
+\midrule
+Ampacidad (A) & 1100 & 763 & 734 \\
+\midrule
+Long. máx. despacho (m) & 1580 & 1690 & 1620 \\
+\midrule
+Peso neto carrete (kg) & 3362 & 3377 & 3378 \\
+\midrule
+Peso bruto carrete (kg) & 3662 & 3677 & 3678 \\
+\midrule
+Marca & CABELUM & CABELUM & CABELUM \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{landscape}
+
+\section{Análisis Comparativo}
+
+\subsection{Por tipo de conductor}
+
+El \textbf{AAC Marigold} (1113 kcmil) presenta la menor resistencia eléctrica
+(0.05112 $\Omega$/km) y una ampacidad de 1080 A, pero su carga de rotura
+(8903 kgf) es la más baja, limitando su uso a cortas distancias.
+
+El \textbf{AAAC 1100 MCM} ofrece la carga de rotura más alta del grupo
+(15909 kgf) gracias a la aleación 6201-T81, aunque su resistencia eléctrica
+es la mayor (0.06120 $\Omega$/km) y su ampacidad la más baja (998 A).
+
+El \textbf{ACAR 1100 MCM 33/4} consigue una ampacidad de 1061 A con una
+carga de rotura de 9413 kgf, siendo una opción equilibrada.
+
+El \textbf{ACSR Finch} (1113 kcmil), con su núcleo de acero, ofrece la mayor
+carga de rotura (17737 kgf) y la ampacidad más alta (1100 A), aunque su peso
+(2128 kg/km) es significativamente mayor.
+
+\subsection{Por norma de fabricación}
+
+Las normas \textbf{DIN} y \textbf{BRITISH} no contemplan la denominación MCM.
+Para el calibre de Carla (1100 MCM $\approx 557\text{ mm}^2$), el calibre
+europeo más cercano es el \textbf{DIN 500 mm$^2$} en AAC y AAAC, y el
+\textbf{Moose 500 mm$^2$} (BS) o \textbf{550/70 mm$^2$} (DIN) en ACSR.
+
+\subsection{Conductor asignado: Carla 1100 MCM}
+
+El conductor de tipo \textbf{AAAC 1100 MCM} ofrece la mayor resistencia
+mecánica del grupo (15909 kgf), con una sección de 557 mm$^2$ y un diámetro
+de 30.42 mm, fabricado por CVG CABELUM bajo norma ASTM B-399.
+
+\section{Contacto con Proveedor --- CVG CABELUM}
+
+\subsection{Datos de Contacto}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Dependencia} & \textbf{Datos} \\
+\midrule
+Oficina Comercial Caracas & Av. La Estancia, Edf. General, Piso 4, Chuao \\
+& Teléfonos: 0414-103.16.55 / 0416-834.25.29 \\
+\midrule
+Planta Ciudad Bolívar & Vía Perimetral, Nueva Zona Industrial \\
+& Teléfonos: 0285-444.35.22 / 0416-685.12.18 \\
+\midrule
+Correos electrónicos & comercializacion@cabelum.com.ve \\
+& contacto@cabelum.com.ve \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Condiciones Comerciales}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Aspecto} & \textbf{Información} \\
+\midrule
+Precio & No es fijo. Se cotiza bajo Fórmula de Reajuste \\
+& de Precios indexada al valor del metal en la \\
+& bolsa de la LME (London Metal Exchange). \\
+\midrule
+Condiciones de pago & Anticipo del 50\% al 70\% para proceder al \\
+& trefilado y cableado. Saldo restante contra \\
+& informes de inspección de calidad en fábrica. \\
+\midrule
+Condiciones de entrega & FOB Planta (Incoterms) en Ciudad Bolívar u \\
+& O.A.D (Puesto en Obra) según se acuerde. \\
+\midrule
+Plazo de entrega & 45 a 60 días, dependiendo de la cola de \\
+& producción y disponibilidad de alambrón. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Conclusiones Técnicas}
+
+\begin{enumerate}
+    \item \textbf{Comportamiento eléctrico frente al mecánico:} El conductor de
+        tipo \textbf{AAAC 1100 MCM} ofrece la mayor carga de rotura del grupo
+        (15909 kgf), siendo la opción más robusta mecánicamente, aunque su
+        ampacidad (998 A) es la menor del conjunto.
+
+    \item \textbf{Calibres exactos:} CABELUM fabrica el calibre exacto
+        \textbf{1100 MCM} en AAAC y ACAR. Para AAC y ACSR los calibres
+        comerciales más cercanos son \textbf{1113 MCM} (Marigold y Finch).
+
+    \item \textbf{Limitaciones de normas:} Las normas \textbf{DIN} y
+        \textbf{BRITISH} no contemplan la denominación MCM. El calibre DIN
+        más cercano es el 500 mm$^2$ y el BRITISH el Moose (500 mm$^2$).
+
+    \item \textbf{Logística de empaque:} Los carretes utilizados son modelos
+        de 75" × 38" × 34" o de 84" para el AAAC (4500 Kg), limitando la
+        estiba a 6 o 4 carretes por contenedor de 20 pies respectivamente.
+\end{enumerate}
+
+\section{Referencias}
+
+\begin{enumerate}
+    \item ASTM B-231 --- Especificación estándar para conductores AAC de aluminio 1350
+    \item ASTM B-399 --- Especificación estándar para conductores AAAC de aleación 6201-T81
+    \item ASTM B-524 --- Especificación estándar para conductores ACAR
+    \item ASTM B-232 --- Especificación estándar para conductores ACSR
+    \item CVG CABELUM --- Catálogo técnico de conductores desnudos, Planta Ciudad Bolívar
+    \item British Standards BS 215 / BS 3242 --- Conductores para líneas de transmisión
+    \item DIN 48201 / 48204 --- Normas alemanas para conductores eléctricos
+\end{enumerate}
+
+\end{document}
