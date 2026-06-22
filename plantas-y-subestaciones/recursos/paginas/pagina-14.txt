@@ -1,0 +1,13 @@
+COVENIN 391 Agosto 1974
+
+20%,
+C.2 Transformadores con dos o tres devanados
+No. SIMBOLO DESCRIPCION
+UNIFILAR
+<
+Transformador trifásico con
+Y dos devanados separados, co-
+4.C2.7 nexión estrella - zig - zag.
+
+Opcional
+

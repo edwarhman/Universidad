@@ -1,0 +1,23 @@
+COVENIN 391
+
+Agosto 1974
++20.
+
+C.2 Transformadores con dos o tri: devanados
+
+N?
+
+IMBOLO
+UNIFILAR MULTIFILAR
+
+DESCRIPCION
+
+4.C2.7
+
+mM
+EA
+
+Transformador trifásico con dos
+devanados separados, conexión
+estrella - zig-zag.
+

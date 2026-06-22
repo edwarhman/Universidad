@@ -1,0 +1,40 @@
+.18.
+
+Parte |.C: Transformadores
+Cv1 Símbolos generales
+
+No.
+
+SIMBOLO
+
+UNIFILAR
+
+MULTIFILAR
+
+DESCRIPCION
+
+4.C1,1
+
+Transformador con dos devanados
+separados,
+
+4.C1.2
+
+Transformador con tres devanados
+separados. .
+
+Nota. - Bl cfrculo representanilo el'
+tercer devanado puede dibujarse a uno
+u otro lado de los devanados anteriores
+
+4.C1.3
+
+O
+p
+O
+
+E
+E
+
+Autotransformador.
+

@@ -1,0 +1,36 @@
+.198,
+C.2 Transformadores con dos o tres devanados
+SIMBOLO
+No. UNIFILAR DESCRIPCION
+115kV Transformador trifósico con dos de-
+Y 4000kVA vanados separados,
+4.C2.1 ¡YY yy] us Ej.: Conexión: estrella-delta, simbolo
+Opei 2PARD Y. Ye del grupo vectorial: Yd11; relación de
+pcional A curo transformación: 115/13, 8kV, 4000kVA,
+? 60Hz; tensión de cortocircuito: 7,5%
+
+Banco trifásico de tres transforma-
+
+Y dores monofásicos con dos devanados
+4.C2.2 3 IM separados.
+Opcional PEARL Conexión: estrella-delta.
+Y Transformador trifísico con tres de-
+vanados separados.
+4.C2.3 Conexión: 'estrella-:estrella- delta.
+; Or
+Ppcionall Y Pp pa
+Y Banco trifásico de tres transformado-
+4,C2,4 3 res monofásicos con tres devanados -
+
+separados,
+Opcional Y A Conexión: estrella-estrella-delta.
+
+4.02.5 Transformador monofásico con cam-
+me biador de tomas accionado sin tensión
+
+¡Opcional
+
+4.C2.,6 Transformador trifásico con cambia-
+
+Opcional dor de tomas accionado con carga
+

@@ -1,0 +1,19 @@
+COVENIN 391 Agogto 1974
+.15.
+
+B.4 Máquinas Sincrónicas
+
+No SIMBOLO DESCRIPCION !
+4.B4.1 (6) Generador sincrónico |
+!
+7 1
+4.B4.2 (us) Motor sincrónico
+4.B4.3 Cs) Generador (GS)o motor (MS) sincrónico trifásico
+! de iman permanente
+3
+4.B4.4 E) Generador (GS) $ motor (MS) sincrónico monofásico
+a ¿
+4.B4.5 6) Generador (GS) $ motor (MS) sincrónico trifásico
+conectado en estrella y con neutro inaccesible
+78
+

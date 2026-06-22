@@ -1,0 +1,25 @@
+COTENIN 591
+
+Agosto lyy+
+
+A
+
+parados conectados en delta.
+
+“El.
+C.3 Autotransformadores
+SIMBOLO
+No. | UNIFILAR MULTIFILAR DESCRIPCIÓN
+4.C3.1 Autotransformador monofásico.
+Autotransformador trifásico. Cone-
+4, 03.2 xión estrella, con cambiador de tomas.
+!
+Banco de autotransformadores mono- |
+físicos, conexión estrella, con came=- |
+4.03.3 : ! m !
+biador de tomas.
+|
+Banco de autotransformadores mono-
+f£sicos, conexión estrella, con cam-
+4.03.4 biador de tomas y con devanados se-
+

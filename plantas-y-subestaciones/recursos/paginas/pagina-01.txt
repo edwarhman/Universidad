@@ -1,0 +1,56 @@
+COVENIN 391
+
+SECCION k:
+
+Agosto 1974
+
+MAQUINAS Y TRANSFORMADORES
+
+Parte L.Az
+
+Parte h.B:
+
+Parte L,C:
+
+Elementos componentes de los símbolos de
+máquinas y transformadores.
+
+Máquinas
+
+B.1
+B.2
+
+B.3
+
+B.4
+B.5
+B6
+
+Símbolos generales.
+Máquinas de corriente continua,
+
+Máquinas de corriente alterna con
+colector.
+
+Máquinas sincrónicas,
+Máquinas de inducción.
+
+Convertidores sincrónicos.
+
+Transformadores.
+
+c.1
+
+c.2
+
+C.3
+c.k
+
+Símbolos generales,
+
+Transformadores con dos o tres arro
+llados.
+
+Autotransformedores.
+
+Reguladores de inducción.

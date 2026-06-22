@@ -1,0 +1,20 @@
+COVENIN 391 Agosto 197%
+
+«1h,
+
+B.3 Máquinas de corriente alterna con colector
+
+No. SIMBOLO DESCRIPCION
+4.B3.1 Cs) Generador de corriente alterna,
+- 4,B3,2 O) Motor de corriente alterna,
+Motor de corriente alterna monofásice, en
+4.B3.3 a pones
+4.B3.4 (7 Motor de repulsión monofásico.
+5 Motor de corriente alterna monofásico en
+4.B3. serie, tipo "Deri'!,
+Motor de corriente alterna trifásico, en serie.
+4.B3.6
+pi Motor trifásico, con colector, con caracte=
+4.B3.7 rfstica derivación (shunt) y con doble juego
+.D3. de escobillas (motor schrage).
+

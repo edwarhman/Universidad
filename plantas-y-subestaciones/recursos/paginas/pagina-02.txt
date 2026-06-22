@@ -1,0 +1,16 @@
+WU pasaras o
+
+de
+SECCION 4: MAQUINAS Y TRANSFORMADORES
+Parte 1.A: Elementos componentes de los símbolos de máquinas y transformadores
+
+No. SIMBOLO DESCRIPCION
+4,A.1 SY YN Devanado.
+4.4.2 2) Devanado de compensación o conmutación.
+4.4.3 rim Devanado en serie.
+2.A,4 CY Devanado de excitación.en derivanióno
+independiente.
+4.A.5 Escobilla sobre anillo rozante (Ideslizante).
+
+4.A.6 Escobilla sobre colector.
+

@@ -1,0 +1,78 @@
+ITA
+
+AUR 7 or
+
+«19.
+
+C.2 Transformadores con dos o tres devanados
+
+No.
+
+UNIFILAR
+
+SIMBOLO
+MULTIFILAR
+
+DESCRIPCION
+
+4.C2.1
+
+115kv 115kvV
+
+4000KVA 4000KVA
+(A) 60Hz
+O, ;
+5)
+Yd 11
+
+60Hz
+
+5%
+Ydll
+13, 8k v]
+
+Transformador trifásico con dos de-
+vanados separados.
+
+Ej.: Conexión: estrella -delta; simbo-
+lo del grupo vectorial: Ydll: relación
+de transformación: 115/13,8kvV,
+4000KVA, 60Hz; tensión de cortocir-
+cuito: 7,5%
+
+4.C2.2
+
+Banco trifásico de tres transforma=
+dores monofásicos con dos devanados
+separados.
+
+Conexión: Estrella-Belta.
+
+4.C2.3
+
+r trifísico con tres de»
+vanados separados.
+Conexión: Bstrella-Estrella-lelta. *
+
+4.C2.4
+
+4.C2.5
+
+4.C2.6
+
+co de tres transiormado=»
+os con tres devanados -»
+
+Banco trif
+res monolísic
+separ
+Con
+
+2lla-Estrella-Helta,
+
+Translormador monofásico con cam-
+biador de tomas accionado sin tensión, |-
+
+Transformador trifásico con cambia=
+dor de tomas accionado con carga
+

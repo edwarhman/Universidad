@@ -1,0 +1,267 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\geometry{margin=2.5cm}
+
+\title{Cuadro Comparativo de Distancias de Seguridad\\Líneas de Transmisión}
+\author{Líneas de Transmisión}
+\date{8 de junio de 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Introducción}
+
+Este documento presenta un cuadro comparativo de las distancias de seguridad
+aplicables a líneas eléctricas de alta tensión, basado en dos fuentes:
+
+\begin{itemize}
+    \item \textbf{223-2008}: Normativa española actualizada (ITC-LAT 07).
+          Contiene ecuaciones y consideraciones actualizadas para el cálculo
+          de distancias mínimas.
+    \item \textbf{Distancias OHTL}: Documento original con representaciones
+          gráficas y dibujos ilustrativos de las distintas configuraciones
+          de distancia.
+\end{itemize}
+
+\newpage
+
+\section{Cuadro comparativo}
+
+\begin{longtable}{p{3.5cm}p{5cm}p{5cm}}
+\toprule
+\textbf{Tipo de distancia} & \textbf{223-2008 (normativa)} & \textbf{OHTL (dibujos)} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+\textbf{Distancia al suelo}
+&
+Altura mínima de conductores sobre el terreno:
+\begin{itemize}
+    \item $5$ m en terrenos sin circulación rodada
+    \item $6$ m en terrenos con circulación rodada
+    \item $6$ m mínimo general para conductores recubiertos
+    \item $1$ m sobre altura máxima de maquinaria (mín. $6$ m)
+\end{itemize}
+(Art. 6.4)
+&
+En OHTL se muestran esquemas de la distancia vertical
+desde el conductor (con flecha máxima) hasta el nivel del
+terreno, caminos y superficies de agua, ilustrando las
+cotas mínimas según el tipo de terreno.
+\\
+
+\addlinespace
+
+\textbf{Distancia entre conductores}
+&
+Para conductores recubiertos, distancia mínima:
+\[
+D = \sqrt{F^2 + L^2} + D_{pp} + K
+\]
+con mínimo absoluto de $0.2$ m.
+(Art. 6.3)
+&
+OHTL presenta diagramas de la separación horizontal
+y vertical entre conductores en el mismo vano,
+considerando oscilación por viento y flecha máxima.
+\\
+
+\addlinespace
+
+\textbf{Cruce con líneas AT}
+&
+Cruce con conductores desnudos:
+\begin{itemize}
+    \item Distancia vertical mínima: $0.5$ m ($\le 30$ kV)
+    \item Para $>30$ kV: aplicar distancias ITC-LAT 07 \S 5.6.1
+    \item Línea aislada siempre por debajo de la desnuda
+\end{itemize}
+(Art. 6.5.1)
+&
+OHTL ilustra la configuración de cruce entre líneas,
+mostrando la disposición de apoyos y la distancia
+vertical de separación entre conductores de ambas líneas.
+\\
+
+\addlinespace
+
+\textbf{Paralelismo con líneas AT}
+&
+Separación mínima entre trazas: $1.5 \times$ altura del apoyo
+más alto. Mínimo $0.5$ m para líneas $\le 30$ kV.
+(Art. 6.5.2)
+&
+OHTL muestra en planta y perfil la disposición de
+líneas paralelas, con las distancias horizontales entre
+ejes y la zona de servidumbre.
+\\
+
+\addlinespace
+
+\textbf{Cruce con BT o}
+\textbf{telecomunicación}
+&
+Distancia vertical mínima:
+\begin{itemize}
+    \item Con BT: $0.5$ m (cables aislados), $1$ m (conductores recubiertos)
+    \item Con telecomunicación: $1$ m (aislados), $1.5$ m (recubiertos)
+\end{itemize}
+(Art. 6.6)
+&
+OHTL detalla con dibujos la disposición de los cruces,
+indicando la separación vertical y la ubicación relativa
+de apoyos.
+\\
+
+\addlinespace
+
+\textbf{Distancia a carreteras}
+&
+Cruce sobre carretera:
+\begin{itemize}
+    \item Distancia vertical mínima: $7$ m sobre la rasante
+    \item Aplican prescripciones especiales del art. 6.2
+\end{itemize}
+(Art. 6.7)
+&
+OHTL representa gráficamente el cruce sobre calzada,
+con la cota de $7$ m y la distancia a los bordes de la vía.
+\\
+
+\addlinespace
+
+\textbf{Distancia a ferrocarriles}
+&
+\begin{itemize}
+    \item Sin electrificar: $7$ m sobre cabezas de carriles
+    \item Electrificados: $4$ m sobre conductor más alto
+          (líneas de energía, telefónica y telegráfica)
+\end{itemize}
+(Arts. 6.8 y 6.9)
+&
+OHTL ilustra la configuración de cruce sobre vías
+férreas, la altura sobre carril y las distancias laterales
+a los postes de catenaria.
+\\
+
+\addlinespace
+
+\textbf{Distancia a teleféricos}
+&
+Distancia vertical mínima: $5$ m entre conductor y
+parte más elevada del teleférico. El teleférico debe
+ponerse a tierra en dos puntos.
+(Art. 6.10)
+&
+OHTL muestra esquemas del cruce con teleféricos,
+con las distancias verticales y la ubicación de las
+tomas de tierra.
+\\
+
+\addlinespace
+
+\textbf{Distancia a ríos y canales}
+&
+Se aplica lo indicado en ITC-LAT 07 \S 5.11,
+con prescripciones especiales del art. 6.2.
+(Art. 6.11)
+&
+OHTL ilustra el cruce sobre cursos de agua navegables,
+con la altura mínima sobre el nivel máximo de agua
+y las distancias a los márgenes.
+\\
+
+\addlinespace
+
+\textbf{Distancia a antenas y}
+\textbf{pararrayos}
+&
+Distancia mínima:
+\begin{itemize}
+    \item $1$ m para cables aislados reunidos en haz
+    \item $1.5$ m para conductores recubiertos
+\end{itemize}
+Prohibido fijar antenas en apoyos de líneas AT.
+(Art. 6.12)
+&
+OHTL representa la separación mínima entre
+conductores y antenas/pararrayos cercanos.
+\\
+
+\addlinespace
+
+\textbf{Paso por bosques y}
+\textbf{arbolado}
+&
+Distancia mínima desde conductor a masa de arbolado:
+\begin{itemize}
+    \item $2$ m para líneas de $30$ kV
+    \item $1.5$ m para líneas $\le 20$ kV
+\end{itemize}
+(Art. 6.13.1)
+&
+OHTL detalla la franja de corte de arbolado y la
+distancia de seguridad entre conductores y copas
+de los árboles.
+\\
+
+\addlinespace
+
+\textbf{Distancia a edificaciones}
+&
+Se aplica lo especificado en ITC-LAT 07 \S 5.12.2
+para conductores recubiertos.
+(Art. 6.13.2)
+&
+OHTL muestra las distancias horizontales y verticales
+desde los conductores a fachadas, techos y otras partes
+de las edificaciones.
+\\
+
+\end{longtable}
+
+\newpage
+
+\section*{Resumen de distancias mínimas}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Concepto} & \textbf{Cables aislados} & \textbf{Conductores recubiertos} \\
+\midrule
+Suelo (sin circulación)    & $5$ m                & $6$ m \\
+Suelo (con circulación)    & $6$ m                & $6$ m \\
+Carreteras                 & $7$ m                & $7$ m \\
+Ferrocarril sin elec.      & $7$ m                & $7$ m \\
+Ferrocarril electrificado  & $4$ m                & $4$ m \\
+Cruce con BT               & $0.5$ m              & $1$ m \\
+Cruce con telecomunicación & $1$ m                & $1.5$ m \\
+Antenas/pararrayos         & $1$ m                & $1.5$ m \\
+Teleféricos                & $5$ m                & $5$ m \\
+Arbolado ($30$ kV)         & ---                  & $2$ m \\
+Arbolado ($\le 20$ kV)     & ---                  & $1.5$ m \\
+\midrule
+\textbf{Fuente} & \multicolumn{2}{l}{223-2008 (ITC-LAT 07, cap. 6)} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\noindent\textbf{Nota:} Para las representaciones gráficas detalladas de cada
+configuración, consultar el documento \textit{Distancias OHTL}, el cual
+contiene los dibujos ilustrativos de cada tipo de distancia de seguridad
+aquí descrita.
+
+\end{document}

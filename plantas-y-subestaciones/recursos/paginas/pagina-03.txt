@@ -1,0 +1,12 @@
+LU vato 7d A o
+
+«12.
+Farte 4.B; Máquinas
+B.1 Símbolos generales
+No. SIMBOLO DESCRIPCION
+4.Bl.1 (6) Generador.
+4.B1.2 (o) Motor.
+4.B1.3 Máquina capaz de ser usada como motor o
+como generador.
+4.B1,4 o.e Máquinas acopladas mecánicamente.
+

@@ -1,0 +1,17 @@
+COVENIN 391 Agosto 197%
+«16,
+B.5 Máquinas de inducción
+N? SIMBOLOS DESCRIPCION
+4.B5.1 e) Motor de inducción con rotor en cortocircui-
+to
+4.B5.2 O Motor de inducción con rotor devanado
+47B573 Motor de inducción trifásico, jaula de ardilla
+4.B5.4 Motor de inducción monofásico, jaula de
+ardilla
+4.B5.5 M Motor de inducción trifásico, jaula de ar-
+
+En
+2
+
+dilla, con todos sus terminales accesibles
+

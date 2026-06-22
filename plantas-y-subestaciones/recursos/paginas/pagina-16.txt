@@ -1,0 +1,32 @@
+COVENIN 391
+
+Agosto 1574
+218,
+
+C.3 Autotransformadores
+
+SIMBOLO
+
+No. UNIFILAR DESCRIPCION
+
+4,C3.1
+Opei Autotransformador monofásico.
+
+pcional]
+
+4.C3.2 há Autotransformador trifísico. Cone-
+Opci xión estrella cor: cambiador de tomas.
+
+pcional|
+
+4.C03,3 Má Banco de autotrausformadores 11o00-
+p ; 3 fásicos, conexión estrella, coy cam-
+Ppcional biador de tomas.
+
+4,C3,4 3 E Banco de autotransformadores mono-
+Opcional z fásicos, conexión estrella, con cam-
+
+Pp: A biador de tomas y con devanados se-
+
+parados conectados en delta.
+

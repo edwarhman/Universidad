@@ -1,0 +1,30 @@
+COVENIN 391
+
+Agosto 1%/%
+
+13,
+B.2 Máquinas de corriente continua
+No. SIMBOLO DESCRIPCION
+4.B2.1 (<) Generador de corriente contínua,
+4.B2.2 Gx) Motor de corriente contínua.
+Generador ( G) 6 motor ( M ) de imán perma-
+4.B2.3 nente, corriente contínua y dos conductores.
+5]
+Generador ( G) 6 motor ( M ) de corriente
+4.B2,4 contínua, dos conductores y excitación en-
+serie,
+4.B2.5 Generador ( G ) 6 motor ( M) de corriente
+contínua, dos conductores y excitación inde-
+pera pendiente,
+Generador ( G ) 6 motor ( M ) de corriente
+4.B2.6 contínua, dos conductores y excitación en de-
+Y rivación. |
+Lrrrnil i
+c Generador (G ) 6 motor ( M ) de corriente 1]
+a contínua, dos conductores y €xcitación com-
+4.B2.7 puesta (compound) en derivación corta. *
+LAVA
+zo MA Ej: Generador de corriente continua dos
+4,B2. 7%] conductores, excitación compuesta en
+derivación corta, 20KW, 220 V,
+
