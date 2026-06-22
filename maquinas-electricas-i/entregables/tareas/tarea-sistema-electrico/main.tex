@@ -1,0 +1,418 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{array}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue]{hyperref}
+\geometry{margin=2.5cm}
+\sloppy
+
+\begin{document}
+\input{portada}
+
+\tableofcontents
+\newpage
+
+% ======================================================================
+\section{Introducción}
+% ======================================================================
+
+El sistema eléctrico venezolano es el conjunto de instalaciones, redes y
+equipos destinados a la generación, transmisión, distribución y
+comercialización de energía eléctrica en Venezuela. Su evolución ha estado
+marcada por la creación de empresas estatales, la expansión de la
+hidroelectricidad y, más recientemente, por cambios legislativos y
+operativos que buscan garantizar el suministro eléctrico a nivel nacional.
+
+En este documento se abordan los principales aspectos históricos,
+técnicos y regulatorios del sistema eléctrico venezolano: la
+conformación del sistema en la Gran Caracas, los niveles de tensión
+utilizados, las empresas que lo han gestionado (CADAFE, Electricidad de
+Caracas), la central hidroeléctrica del Guri, el Sistema Eléctrico
+Nacional (SEN), la Ley del Servicio Eléctrico, las fuentes de energía
+convencionales y renovables, y la división por regiones.
+
+% ======================================================================
+\section{El Sistema Eléctrico de la Gran Caracas}
+% ======================================================================
+
+La Gran Caracas (conformada por el Distrito Capital y los estados Miranda
+y La Guaira) ha concentrado históricamente la mayor densidad de
+población y carga eléctrica del país. Su sistema eléctrico se caracteriza
+por:
+
+\begin{itemize}[nosep]
+    \item Una red de transmisión y subtransisión que recibe energía
+          principalmente desde la Central Hidroeléctrica Simón Bolívar
+          (Guri), en el estado Bolívar, a través de líneas de
+          \SI{765}{\kilo\volt} y \SI{400}{\kilo\volt}.
+    \item Subestaciones reductoras que bajan la tensión a niveles de
+          distribución (\SI{34.5}{\kilo\volt}, \SI{13.8}{\kilo\volt} y
+          \SI{4.16}{\kilo\volt}) para alimentar los circuitos de
+          media y baja tensión.
+    \item Una red de distribución densa, con numerosos circuitos
+          subterráneos y aéreos que atienden la demanda residencial,
+          comercial e industrial del área metropolitana.
+    \item Históricamente, el servicio en Caracas fue prestado por
+          Electricidad de Caracas (fundada en 1885 como ``La
+          Electricidad de Caracas''), mientras que el resto del estado
+          Miranda y La Guaira eran atendidos por CADAFE.
+\end{itemize}
+
+% ======================================================================
+\section{Niveles de Tensión en el Sistema Eléctrico Venezolano}
+% ======================================================================
+
+Los niveles de tensión empleados en Venezuela se clasifican según su
+función dentro del sistema:
+
+\subsection{Transmisión}
+
+\begin{itemize}[nosep]
+    \item \textbf{\SI{765}{\kilo\volt}} (extra alta tensión): líneas que
+          conectan el Guri con el centro del país (San Gerónimo, La
+          Horqueta, etc.).
+    \item \textbf{\SI{400}{\kilo\volt}} (extra alta tensión): anillo de
+          transmisión que interconecta las principales subestaciones del
+          país.
+    \item \textbf{\SI{230}{\kilo\volt}} (alta tensión): subtransmisión
+          regional y alimentación a grandes centros de consumo.
+    \item \textbf{\SI{115}{\kilo\volt}} (alta tensión): distribución
+          primaria a subestaciones de distribución.
+\end{itemize}
+
+\subsection{Distribución}
+
+\begin{itemize}[nosep]
+    \item \textbf{\SI{34.5}{\kilo\volt}} y \textbf{\SI{13.8}{\kilo\volt}}:
+          distribución primaria en media tensión.
+    \item \textbf{\SI{4.16}{\kilo\volt}} y \textbf{\SI{480}{\volt}}:
+          distribución secundaria para clientes industriales y
+          comerciales.
+    \item \textbf{\SI{240}{\volt}} y \textbf{\SI{120}{\volt}}:
+          distribución residencial (baja tensión).
+\end{itemize}
+
+% ======================================================================
+\section{CADAFE (C.A. de Administración y Fomento Eléctrico)}
+% ======================================================================
+
+CADAFE fue creada el 11 de agosto de 1958 mediante decreto ejecutivo,
+con el objetivo de planificar, administrar y fomentar el desarrollo
+eléctrico en Venezuela. Sus principales hitos son:
+
+\begin{itemize}[nosep]
+    \item \textbf{1958--1970}: expansión de redes de transmisión y
+          distribución, especialmente en el interior del país.
+    \item \textbf{1970--1990}: construcción de líneas de \SI{400}{\kilo\volt}
+          y \SI{765}{\kilo\volt}, y desarrollo de sistemas de
+          interconexión regional.
+    \item \textbf{1990--2007}: período de crisis operativa y financiera,
+          con racionamientos y deterioro del servicio.
+    \item \textbf{2007}: fusión en CORPOELEC (Corporación Eléctrica
+          Nacional), creada mediante decreto presidencial, que agrupó a
+          CADAFE, EDELCA, ENELBAR y otras empresas regionales.
+\end{itemize}
+
+% ======================================================================
+\section{Electricidad de Caracas}
+% ======================================================================
+
+Fundada en 1885 como ``La Electricidad de Caracas'', fue la primera
+empresa eléctrica del país. Durante gran parte del siglo XX operó como
+concesionaria exclusiva del servicio eléctrico para el Distrito Federal
+(actual Distrito Capital). Se destaca por:
+
+\begin{itemize}[nosep]
+    \item La construcción de la primera planta termoeléctrica de
+          importancia en Caracas (Planta Tacoa, luego Planta José María
+          España).
+    \item La expansión de la red de distribución subterránea en el
+          centro y este de Caracas.
+    \item En 2007, el Estado venezolano adquirió las acciones de la
+          empresa (pertenecientes a AES Corporation) y la integró a
+          CORPOELEC.
+\end{itemize}
+
+% ======================================================================
+\section{Central Hidroeléctrica Simón Bolívar (Guri)}
+% ======================================================================
+
+La Central Hidroeléctrica Simón Bolívar, conocida como el Guri, es la
+mayor central de generación de Venezuela y una de las más grandes del
+mundo. Se encuentra ubicada en el estado Bolívar, sobre el río Caroní.
+Sus características principales son:
+
+\begin{itemize}[nosep]
+    \item \textbf{Potencia instalada}: \SI{10235}{\mega\watt}
+    \item \textbf{Número de turbinas}: 18 unidades
+    \item \textbf{Turbinas}: 10 unidades de \SI{730}{\mega\watt} cada una,
+          4 de \SI{180}{\mega\watt}, 3 de \SI{400}{\mega\watt} y 1 de
+          \SI{340}{\mega\watt}
+    \item \textbf{Tipo de turbinas}: Francis (mayoría), Kaplan (menores)
+    \item \textbf{Embalse}: Embalse de Guri, con una superficie de
+          aproximadamente \SI{4250}{\square\km}
+    \item \textbf{Generación promedio}: aproximadamente 60\,\% de la
+          electricidad total del país
+    \item \textbf{Primera etapa}: 1963--1978 (3,000 MW)
+    \item \textbf{Segunda etapa}: 1978--1986 (3,000 MW adicionales)
+    \item \textbf{Ampliación}: 1986--2000 (alcanzando los 10,235 MW
+          actuales)
+\end{itemize}
+
+El Guri es la columna vertebral del Sistema Eléctrico Nacional. Su
+producción se evacúa principalmente a través de líneas de
+\SI{765}{\kilo\volt} y \SI{400}{\kilo\volt} hacia los centros de consumo
+del centro-norte del país.
+
+% ======================================================================
+\section{Sistema Eléctrico Nacional (SEN)}
+% ======================================================================
+
+El Sistema Eléctrico Nacional (SEN) es el conjunto interconectado de
+instalaciones de generación, transmisión y distribución que operan de
+forma coordinada para suministrar energía eléctrica en todo el
+territorio venezolano.
+
+\subsection{Componentes del SEN}
+
+\begin{enumerate}[nosep]
+    \item \textbf{Generación}: parque de generación compuesto
+          mayoritariamente por hidroeléctricas (Guri, Caruachi,
+          Macagua, Tocoma) y plantas termoeléctricas (ciclo combinado,
+          turbogas, diésel y fuel oil).
+    \item \textbf{Transmisión}: red de líneas de extra alta tensión
+          (\SI{765}{\kilo\volt} y \SI{400}{\kilo\volt}) que conforman
+          el ``anillo'' de transmisión nacional, y líneas de
+          \SI{230}{\kilo\volt} y \SI{115}{\kilo\volt} para
+          subtransmisión.
+    \item \textbf{Distribución}: redes de media y baja tensión
+          operadas por las empresas distribuidoras regionales
+          (CORPOELEC).
+    \item \textbf{Operación}: a cargo del Centro Nacional de Gestión
+          del Sistema Eléctrico (CNG), dependiente de CORPOELEC.
+\end{enumerate}
+
+\subsection{Esquema simplificado del SEN}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.9\textwidth}
+    \centering
+    \vspace{2em}
+    \noindent
+    \begin{tabular}{|c|}
+        \hline
+        \textbf{Centrales de Generación} \\
+        (Guri, Caruachi, Macagua, Tocoma, \\
+        termoeléctricas) \\
+        \hline
+        \ $\downarrow$ \ \\
+        \hline
+        \textbf{Red de Transmisión} \\
+        (\SI{765}{\kilo\volt}, \SI{400}{\kilo\volt}) \\
+        \hline
+        \ $\downarrow$ \ \\
+        \hline
+        \textbf{Subestaciones Reductoras} \\
+        (\SI{230}{\kilo\volt}, \SI{115}{\kilo\volt}) \\
+        \hline
+        \ $\downarrow$ \ \\
+        \hline
+        \textbf{Red de Distribución Primaria} \\
+        (\SI{34.5}{\kilo\volt}, \SI{13.8}{\kilo\volt}) \\
+        \hline
+        \ $\downarrow$ \ \\
+        \hline
+        \textbf{Red de Distribución Secundaria} \\
+        (\SI{4.16}{\kilo\volt}, \SI{240}{\volt}, \SI{120}{\volt}) \\
+        \hline
+        \ $\downarrow$ \ \\
+        \hline
+        \textbf{Usuarios Finales} \\
+        (Residencial, Comercial, Industrial) \\
+        \hline
+    \end{tabular}
+    \end{minipage}
+    \caption{Esquema simplificado del Sistema Eléctrico Nacional.}
+\end{figure}
+
+% ======================================================================
+\section{Ley del Servicio Eléctrico}
+% ======================================================================
+
+La Ley del Servicio Eléctrico (publicada en Gaceta Oficial Nº 39.573
+del 16 de diciembre de 2010) es el marco legal que rige la actividad
+eléctrica en Venezuela. Sus aspectos más relevantes son:
+
+\begin{itemize}[nosep]
+    \item \textbf{Objeto}: establecer las normas para la generación,
+          transmisión, distribución, comercialización y uso de la
+          energía eléctrica.
+    \item \textbf{Principios}: servicio público obligatorio,
+          continuidad, calidad, y tarifas justas.
+    \item \textbf{Organismo rector}: el Ministerio del Poder Popular
+          para la Energía Eléctrica (MPPEE), creado en 2009.
+    \item \textbf{Operador del sistema}: CORPOELEC, como empresa
+          estatal única encargada de la gestión del SEN.
+    \item \textbf{Planificación}: el Estado planifica y ejecuta la
+          expansión del sistema, con la posibilidad de participación
+          privada bajo figuras de concesión o asociación estratégica.
+    \item \textbf{Uso racional y eficiente}: la ley promueve la
+          eficiencia energética y el uso racional de la electricidad.
+    \item \textbf{Reforma parcial}: en 2018 se introdujeron
+          modificaciones para flexibilizar la participación privada en
+          generación distribuida y fuentes renovables.
+\end{itemize}
+
+% ======================================================================
+\section{Fuentes de Energía en Venezuela}
+% ======================================================================
+
+\subsection{Fuentes Convencionales}
+
+\begin{itemize}[nosep]
+    \item \textbf{Hidroeléctrica}: es la principal fuente de generación.
+          Además del Guri, existen otras centrales en el río Caroní:
+          Caruachi (2,160 MW), Macagua (2,890 MW) y Tocoma (2,160 MW,
+          en construcción/paralizada). En total, el potencial
+          hidroeléctrico del Caroní supera los 17,000 MW.
+    \item \textbf{Térmica convencional}: plantas a gas natural, fuel
+          oil, diésel y carbón. Destacan las plantas de ciclo combinado
+          (Planta Centro, Josefa Camejo, Termozulia) y las turbinas de
+          gas.
+    \item \textbf{Térmica a gas natural}: Venezuela posee grandes
+          reservas de gas natural (las mayores de Sudamérica), utilizado
+          en plantas termoeléctricas de ciclo abierto y combinado.
+\end{itemize}
+
+\subsection{Fuentes No Convencionales (Renovables)}
+
+\begin{itemize}[nosep]
+    \item \textbf{Solar}: por su ubicación tropical, Venezuela tiene un
+          alto potencial de radiación solar (promedio de
+          5--6 kWh/m$^2$/día). Existen proyectos aislados de parques
+          solares y paneles en comunidades rurales.
+    \item \textbf{Eólica}: el potencial eólico se concentra en la
+          península de Paraguaná (estado Falcón) y la costa
+          nororiental. Existe un parque eólico en Paraguaná (Paraíso)
+          y proyectos piloto en La Guajira.
+    \item \textbf{Biomasa}: se utiliza bagazo de caña en ingenios
+          azucareros y residuos agroindustriales para generación
+          distribuida.
+    \item \textbf{Geotérmica}: existe potencial en la región andina
+          (estados Mérida, Táchira), pero no hay explotación comercial
+          significativa.
+    \item \textbf{Mareomotriz}: el Golfo de Venezuela y la costa de
+          Paria presentan potencial, pero no hay proyectos en
+          operación.
+\end{itemize}
+
+\subsection{Alternativas Renovables para el Futuro}
+
+Dada la dependencia del Guri y la vulnerabilidad del sistema ante
+sequías prolongadas (como la ocurrida en 2009--2010 y 2015--2016), se
+han planteado diversas alternativas:
+
+\begin{enumerate}[nosep]
+    \item Diversificación de la matriz energética, reduciendo la
+          participación hidroeléctrica de 70\,\% a un 50--60\,\%.
+    \item Desarrollo masivo de parques solares fotovoltaicos en
+          regiones con alta irradiación (Falcón, Zulia, Lara, Anzoátegui).
+    \item Expansión de la generación eólica en la costa caribeña y la
+          península de Paraguaná.
+    \item Repotenciación y mantenimiento de las plantas termoeléctricas
+          existentes para garantizar respaldo térmico.
+    \item Instalación de sistemas de generación distribuida con fuentes
+          renovables en comunidades aisladas (sistemas híbridos
+          solar-diésel).
+\end{enumerate}
+
+% ======================================================================
+\section{Regiones del Sistema Eléctrico Venezolano}
+% ======================================================================
+
+El SEN se divide operativamente en regiones para facilitar la gestión y
+el despacho de carga:
+
+\begin{enumerate}[nosep]
+    \item \textbf{Región Centro-Norte}: comprende el Distrito Capital,
+          Miranda, La Guaira y Aragua. Es la de mayor consumo y
+          densidad de carga. Recibe energía del Guri a través de las
+          líneas de \SI{765}{\kilo\volt}.
+    \item \textbf{Región Central}: estados Carabobo, Cojedes y parte de
+          Guárico. Concentra gran parte de la industria petroquímica y
+          manufacturera.
+    \item \textbf{Región Occidental}: estados Zulia, Falcón, Lara,
+          Yaracuy y Portuguesa. Incluye la cuenca petrolera del Zulia y
+          la refinería de Paraguaná. Cuenta con generación térmica
+          significativa.
+    \item \textbf{Región de los Llanos}: estados Barinas, Apure y
+          Portuguesa (sur). Zona de baja densidad de carga, con
+          generación aislada y redes de distribución radiales.
+    \item \textbf{Región Sur-Oriental (Guayana)}: estados Bolívar,
+          Amazonas y Delta Amacuro. Alberga las principales centrales
+          hidroeléctricas (Guri, Caruachi, Macagua, Tocoma) y la
+          industria pesada básica (CVG, SIDOR, Alcasa, Venalum).
+    \item \textbf{Región Nor-Oriental}: estados Anzoátegui, Monagas,
+          Sucre y Nueva Esparta. Incluye la Faja Petrolífera del Orinoco
+          y centros turísticos como Margarita y Mochima.
+    \item \textbf{Región Los Andes}: estados Mérida, Táchira y Trujillo.
+          Zona de alta montaña con generación hidroeléctrica de pequeña
+          escala y redes de transmisión limitadas.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.85\textwidth}
+    \centering
+    \vspace{1em}
+    \noindent
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Región} & \textbf{Capital regional} & \textbf{Participación aprox. en demanda} \\
+        \hline
+        Centro-Norte & Caracas & 35\,\% \\
+        Central & Valencia & 15\,\% \\
+        Occidental & Maracaibo & 20\,\% \\
+        Llanos & Barinas & 5\,\% \\
+        Sur-Oriental & Ciudad Guayana & 15\,\% \\
+        Nor-Oriental & Barcelona & 7\,\% \\
+        Los Andes & Mérida & 3\,\% \\
+        \hline
+    \end{tabular}
+    \caption{Regiones del SEN y su participación aproximada en la demanda nacional.}
+    \end{minipage}
+\end{figure}
+
+% ======================================================================
+\section{Conclusiones}
+% ======================================================================
+
+El sistema eléctrico venezolano se caracteriza por una alta dependencia
+de la generación hidroeléctrica, concentrada en el río Caroní (estado
+Bolívar), con el Guri como su principal activo. La red de transmisión
+en extra alta tensión (\SI{765}{\kilo\volt} y \SI{400}{\kilo\volt})
+permite evacuar la energía desde Guayana hasta los centros de consumo
+del centro-norte y occidente del país.
+
+Históricamente, el sector ha transitado desde empresas privadas
+regionales (Electricidad de Caracas) y estatales (CADAFE) hacia un
+modelo centralizado bajo CORPOELEC, regulado por la Ley del Servicio
+Eléctrico. La vulnerabilidad del sistema ante sequías y la falta de
+mantenimiento han evidenciado la necesidad de diversificar la matriz
+energética mediante fuentes renovables (solar, eólica) y la
+repotenciación del parque termoeléctrico.
+
+La división regional del SEN permite una gestión operativa adaptada a
+las características geográficas, demográficas y de carga de cada zona,
+aunque persisten desafíos en la calidad y continuidad del servicio,
+especialmente en las regiones más alejadas.
+
+\end{document}
