@@ -1,0 +1,357 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\geometry{margin=2.5cm}
+
+\title{Simulacro --- Parcial 1\\Mecánica Aplicada}
+\author{Mecánica Aplicada}
+\date{11 de junio de 2026}
+
+\newtcolorbox{solbox}[1][]{colback=green!5!white,colframe=green!50!black,fonttitle=\bfseries,title=Solución}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\textbf{Instrucciones:} Resuelva cada problema mostrando todo el desarrollo.
+Duración estimada: 90 minutos.
+\end{center}
+
+\vspace{1cm}
+
+% ============================================
+\section*{Problema 1 (25\%) --- Coordenadas Cartesianas e Intrínsecas}
+% ============================================
+
+El movimiento de una partícula $P$ respecto a tierra está definido por:
+\[
+x(t) = 3t^2 - 6t \qquad\text{[m]},\qquad
+y(t) = 4t^2 - 8t + 2 \qquad\text{[m]}.
+\]
+
+Para el instante $t = 1$ s, determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item El vector velocidad y el vector aceleración.
+    \item La componente tangencial y normal de la aceleración.
+    \item El radio de curvatura de la trayectoria.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{solbox}
+\textbf{Datos:} $x(t) = 3t^2 - 6t$, $y(t) = 4t^2 - 8t + 2$.
+
+Derivamos:
+\[
+\dot{x} = 6t - 6, \quad \ddot{x} = 6
+\qquad
+\dot{y} = 8t - 8, \quad \ddot{y} = 8
+\]
+
+\textbf{a) Para $t = 1$ s:}
+
+\[
+\dot{x}(1) = 0,\quad \dot{y}(1) = 0 \Rightarrow \mathbf{v} = \mathbf{0}
+\]
+\[
+\ddot{x} = 6,\quad \ddot{y} = 8 \Rightarrow \mathbf{a} = 6\mathbf{i} + 8\mathbf{j} \ \text{m/s}^2
+\]
+
+\textbf{b)} Como $\mathbf{v} = \mathbf{0}$, las componentes tangencial y normal no están
+definidas en este instante (la partícula se detiene instantáneamente).
+La aceleración $\mathbf{a}$ es puramente normal si la velocidad es cero
+(cambio de dirección).
+
+\textbf{c)} El radio de curvatura no está definido cuando $v=0$ pues $\rho = v^2/a_n$
+da una indeterminación. Se requiere analizar el límite. Sin embargo,
+podemos calcular $\rho$ a partir de:
+\[
+\rho(t) = \frac{|\mathbf{v}(t)|^3}{|\mathbf{v}(t) \times \mathbf{a}(t)|}
+\]
+Evaluando para $t$ cercano a $1$ s se obtendría un valor finito.
+La trayectoria es una recta (ver inciso adicional), por lo que
+$\rho \to \infty$ (trayectoria rectilínea).
+
+\smallskip
+\textbf{Verificación -- ecuación de trayectoria:}
+Eliminamos $t$. De $x = 3t^2 - 6t$, $y = 4t^2 - 8t + 2$.
+
+Observamos que $\frac{x}{3} = t^2 - 2t$ y $\frac{y-2}{4} = t^2 - 2t$.
+
+Por lo tanto:
+\[
+\frac{x}{3} = \frac{y-2}{4} \quad\Rightarrow\quad y = \frac{4}{3}x + 2
+\]
+Es una recta. Para movimiento rectilíneo $\rho = \infty$.
+\end{solbox}
+
+\newpage
+
+% ============================================
+\section*{Problema 2 (25\%) --- Coordenadas Polares}
+% ============================================
+
+La partícula $P$ describe una trayectoria plana respecto a tierra. En un
+instante dado se sabe que:
+\[
+r = 2\ \text{m},\quad \dot{r} = 3\ \text{m/s},\quad \ddot{r} = 1\ \text{m/s}^2,
+\]
+\[
+\theta = 30^\circ,\quad \dot{\theta} = 4\ \text{rad/s},\quad \ddot{\theta} = -2\ \text{rad/s}^2.
+\]
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item El vector velocidad en componentes polares.
+    \item El vector aceleración en componentes polares.
+    \item La magnitud de la velocidad y la aceleración.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{solbox}
+\textbf{Datos:} $r=2$, $\dot{r}=3$, $\ddot{r}=1$, $\dot{\theta}=4$, $\ddot{\theta}=-2$.
+
+\textbf{a) Velocidad:}
+\[
+\mathbf{v} = \dot{r}\,\mathbf{e}_r + r\dot{\theta}\,\mathbf{e}_\theta
+= 3\,\mathbf{e}_r + (2)(4)\,\mathbf{e}_\theta
+= \boxed{3\,\mathbf{e}_r + 8\,\mathbf{e}_\theta \ \text{m/s}}
+\]
+
+\textbf{b) Aceleración:}
+\[
+\mathbf{a} = (\ddot{r} - r\dot{\theta}^2)\,\mathbf{e}_r
+           + (2\dot{r}\dot{\theta} + r\ddot{\theta})\,\mathbf{e}_\theta
+\]
+\[
+a_r = 1 - (2)(4^2) = 1 - 32 = -31\ \text{m/s}^2
+\]
+\[
+a_\theta = 2(3)(4) + (2)(-2) = 24 - 4 = 20\ \text{m/s}^2
+\]
+\[
+\boxed{\mathbf{a} = -31\,\mathbf{e}_r + 20\,\mathbf{e}_\theta \ \text{m/s}^2}
+\]
+
+\textbf{c) Magnitudes:}
+\[
+|\mathbf{v}| = \sqrt{3^2 + 8^2} = \sqrt{9 + 64} = \sqrt{73}
+\approx \boxed{8.54\ \text{m/s}}
+\]
+\[
+|\mathbf{a}| = \sqrt{(-31)^2 + 20^2} = \sqrt{961 + 400} = \sqrt{1361}
+\approx \boxed{36.89\ \text{m/s}^2}
+\]
+\end{solbox}
+
+\newpage
+
+% ============================================
+\section*{Problema 3 (25\%) --- Cinemática del Cuerpo Rígido}
+% ============================================
+
+La barra $AB$ de longitud $L = 2\ \text{m}$ está articulada a tierra en $A$.
+El extremo $B$ se desliza sobre una superficie horizontal. En la configuración
+mostrada, $AB$ forma $60^\circ$ con la horizontal, la velocidad angular de la
+barra es $\omega_{AB} = 3\ \text{rad/s}$ en sentido antihorario y la
+aceleración angular es $\alpha_{AB} = 2\ \text{rad/s}^2$ en sentido horario.
+
+\begin{center}
+\fbox{Nota: No hay figura disponible. Imagine la barra AB con A fijo, B sobre superficie horizontal.}
+\end{center}
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item El vector velocidad del punto $B$.
+    \item El vector aceleración del punto $B$.
+    \item La velocidad del punto medio $M$ de la barra.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{solbox}
+\textbf{Datos:} $L = 2\ \text{m}$, $\omega = 3\ \text{rad/s}$ (antihorario, $+$),
+$\alpha = -2\ \text{rad/s}^2$ (horario, $-$). $\theta = 60^\circ$.
+
+Sistema de referencia: $\mathbf{i}$ horizontal derecha, $\mathbf{j}$ vertical arriba.
+
+Vector de $A$ a $B$:
+\[
+\mathbf{r}_{AB} = L\cos\theta\,\mathbf{i} + L\sin\theta\,\mathbf{j}
+= 2\cos60^\circ\,\mathbf{i} + 2\sin60^\circ\,\mathbf{j}
+= \mathbf{i} + \sqrt{3}\,\mathbf{j} \ \text{m}
+\]
+
+\textbf{a) Velocidad de B:}
+$A$ está fijo a tierra ($\mathbf{v}_A = \mathbf{0}$).
+\[
+\mathbf{v}_B = \mathbf{v}_A + \boldsymbol{\omega} \times \mathbf{r}_{AB}
+= \mathbf{0} + (3\mathbf{k}) \times (\mathbf{i} + \sqrt{3}\mathbf{j})
+\]
+\[
+\mathbf{v}_B = 3\mathbf{k} \times \mathbf{i} + 3\mathbf{k} \times \sqrt{3}\mathbf{j}
+= 3\mathbf{j} - 3\sqrt{3}\,\mathbf{i}
+= \boxed{-3\sqrt{3}\,\mathbf{i} + 3\mathbf{j} \ \text{m/s}}
+\]
+
+\textbf{b) Aceleración de B:}
+\[
+\mathbf{a}_B = \mathbf{a}_A + \boldsymbol{\alpha} \times \mathbf{r}_{AB}
+             + \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}_{AB})
+\]
+$\mathbf{a}_A = \mathbf{0}$, $\boldsymbol{\alpha} = -2\mathbf{k}$.
+
+Término angular:
+\[
+\boldsymbol{\alpha} \times \mathbf{r}_{AB} = (-2\mathbf{k}) \times (\mathbf{i} + \sqrt{3}\mathbf{j})
+= -2\mathbf{k} \times \mathbf{i} -2\mathbf{k} \times \sqrt{3}\mathbf{j}
+= -2\mathbf{j} + 2\sqrt{3}\,\mathbf{i}
+\]
+
+Término centrípeto:
+\[
+\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}_{AB})
+= 3\mathbf{k} \times (3\mathbf{k} \times (\mathbf{i} + \sqrt{3}\mathbf{j}))
+\]
+Primero $\boldsymbol{\omega} \times \mathbf{r}_{AB} = \mathbf{v}_B$ (ya calculado).
+\[
+\boldsymbol{\omega} \times \mathbf{v}_B = 3\mathbf{k} \times (-3\sqrt{3}\,\mathbf{i} + 3\mathbf{j})
+= -9\sqrt{3}\,\mathbf{k}\times\mathbf{i} + 9\,\mathbf{k}\times\mathbf{j}
+= -9\sqrt{3}\,\mathbf{j} - 9\mathbf{i}
+\]
+
+Sumando:
+\[
+\mathbf{a}_B = (2\sqrt{3} - 9)\,\mathbf{i} + (-2 - 9\sqrt{3})\,\mathbf{j}
+\]
+\[
+\boxed{\mathbf{a}_B \approx (-5.54\,\mathbf{i} - 17.59\,\mathbf{j})\ \text{m/s}^2}
+\]
+
+\textbf{c) Velocidad del punto medio M:}
+\[
+\mathbf{r}_{AM} = \frac{1}{2}\mathbf{r}_{AB} = 0.5\,\mathbf{i} + 0.5\sqrt{3}\,\mathbf{j}
+\]
+\[
+\mathbf{v}_M = \boldsymbol{\omega} \times \mathbf{r}_{AM}
+= 3\mathbf{k} \times (0.5\mathbf{i} + 0.5\sqrt{3}\mathbf{j})
+= 1.5\mathbf{j} - 1.5\sqrt{3}\,\mathbf{i}
+\]
+\[
+\boxed{\mathbf{v}_M = -1.5\sqrt{3}\,\mathbf{i} + 1.5\mathbf{j}\ \text{m/s}}
+\]
+\end{solbox}
+
+\newpage
+
+% ============================================
+\section*{Problema 4 (25\%) --- Rodadura}
+% ============================================
+
+Un disco de radio $R = 0.5\ \text{m}$ rueda sin deslizar sobre una superficie
+horizontal. El centro $C$ del disco se mueve con velocidad $v_C = 4\ \text{m/s}$
+hacia la derecha y aceleración $a_C = 2\ \text{m/s}^2$ hacia la derecha.
+
+Determine:
+
+\begin{enumerate}[label=\alph*)]
+    \item La velocidad angular $\boldsymbol{\omega}$ del disco.
+    \item La aceleración angular $\boldsymbol{\alpha}$ del disco.
+    \item El vector velocidad del punto $P$ en la periferia, ubicado en la
+          posición más alta del disco.
+    \item El vector aceleración del mismo punto $P$.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{solbox}
+\textbf{Datos:} $R = 0.5\ \text{m}$, $v_C = 4\ \text{m/s}$ ($\rightarrow$),
+$a_C = 2\ \text{m/s}^2$ ($\rightarrow$).
+
+\textbf{a) Velocidad angular:}
+Rodadura sin deslizamiento: $v_C = \omega R$.
+\[
+\omega = \frac{v_C}{R} = \frac{4}{0.5} = 8\ \text{rad/s}
+\]
+Sentido horario (para que el disco avance a la derecha):
+\[
+\boxed{\boldsymbol{\omega} = -8\mathbf{k}\ \text{rad/s}}
+\]
+
+\textbf{b) Aceleración angular:}
+\[
+\alpha = \frac{a_C}{R} = \frac{2}{0.5} = 4\ \text{rad/s}^2
+\]
+Mismo sentido que $\omega$ (acelera):
+\[
+\boxed{\boldsymbol{\alpha} = -4\mathbf{k}\ \text{rad/s}^2}
+\]
+
+\textbf{c) Velocidad del punto P (punto más alto):}
+Vector de $C$ a $P$: $\mathbf{r}_{CP} = R\mathbf{j} = 0.5\mathbf{j}$.
+\[
+\mathbf{v}_P = \mathbf{v}_C + \boldsymbol{\omega} \times \mathbf{r}_{CP}
+\]
+\[
+\mathbf{v}_P = 4\mathbf{i} + (-8\mathbf{k}) \times (0.5\mathbf{j})
+= 4\mathbf{i} - 4(\mathbf{k}\times\mathbf{j})
+= 4\mathbf{i} - 4(-\mathbf{i})
+= 4\mathbf{i} + 4\mathbf{i}
+\]
+\[
+\boxed{\mathbf{v}_P = 8\mathbf{i}\ \text{m/s}}
+\]
+(El punto más alto tiene el doble de la velocidad del centro.)
+
+\textbf{d) Aceleración del punto P:}
+\[
+\mathbf{a}_P = \mathbf{a}_C + \boldsymbol{\alpha} \times \mathbf{r}_{CP}
+             + \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}_{CP})
+\]
+
+Término angular:
+\[
+\boldsymbol{\alpha} \times \mathbf{r}_{CP} = (-4\mathbf{k}) \times (0.5\mathbf{j})
+= -2(\mathbf{k}\times\mathbf{j}) = -2(-\mathbf{i}) = 2\mathbf{i}
+\]
+
+Término centrípeto:
+\[
+\boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}_{CP})
+= (-8\mathbf{k}) \times [(-8\mathbf{k}) \times (0.5\mathbf{j})]
+\]
+Calculamos $\boldsymbol{\omega} \times \mathbf{r}_{CP}$:
+\[
+(-8\mathbf{k}) \times (0.5\mathbf{j}) = -4(\mathbf{k}\times\mathbf{j}) = -4(-\mathbf{i}) = 4\mathbf{i}
+\]
+\[
+(-8\mathbf{k}) \times (4\mathbf{i}) = -32(\mathbf{k}\times\mathbf{i}) = -32\mathbf{j}
+\]
+
+Sumando:
+\[
+\mathbf{a}_P = 2\mathbf{i} + 2\mathbf{i} - 32\mathbf{j}
+= \boxed{4\mathbf{i} - 32\mathbf{j}\ \text{m/s}^2}
+\]
+\end{solbox}
+
+\vfill
+
+\begin{center}
+\rule{0.5\textwidth}{0.5pt}
+\small Fin del simulacro. Revise sus respuestas con los criterios del curso.
+\end{center}
+
+\end{document}

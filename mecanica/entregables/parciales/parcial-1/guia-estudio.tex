@@ -1,0 +1,385 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\geometry{margin=2.5cm}
+
+\title{Guía de Estudio --- Parcial 1\\Mecánica Aplicada (0602)}
+\author{Mecánica Aplicada}
+\date{11 de junio de 2026}
+
+\definecolor{bluemint}{HTML}{2563EB}
+\definecolor{redmint}{HTML}{DC2626}
+\definecolor{greenmint}{HTML}{16A34A}
+
+\newtcolorbox{formbox}[1][]{colback=blue!5!white,colframe=bluemint,fonttitle=\bfseries,title=#1}
+\newtcolorbox{warnbox}[1][]{colback=red!5!white,colframe=redmint,fonttitle=\bfseries,title=#1}
+\newtcolorbox{tipbox}[1][]{colback=green!5!white,colframe=greenmint,fonttitle=\bfseries,title=#1}
+
+\begin{document}
+\maketitle
+
+\section*{Temas del parcial 1 (0602-Mecánica Aplicada)}
+
+El parcial 1 cubre los Temas 1 y 2 del programa:
+
+\begin{enumerate}
+    \item \textbf{Tema 1: Principios Fundamentales de la Mecánica}
+          --- conceptos, unidades, leyes de Newton, grados de libertad,
+          vinculación, diagrama de cuerpo libre.
+    \item \textbf{Tema 2: Cinemática}
+          --- partícula (cartesianas, intrínsecas, polares) y
+          cuerpo rígido (movimiento plano, CIR, rodadura).
+\end{enumerate}
+
+\newpage
+
+\section{Tema 1: Principios Fundamentales de la Mecánica}
+
+\subsection{Conceptos fundamentales}
+
+\begin{itemize}
+    \item \textbf{Partícula:} cuerpo con masa pero dimensiones despreciables.
+    \item \textbf{Cuerpo rígido:} sistema de partículas con distancias fijas entre sí.
+    \item \textbf{Fuerza:} interacción que produce o tiende a producir cambio en el
+          estado de movimiento.
+    \item \textbf{Masa:} medida cuantitativa de la inercia.
+    \item \textbf{Tiempo y espacio:} absolutos en la mecánica clásica.
+\end{itemize}
+
+\subsection{Sistemas de unidades y análisis dimensional}
+
+Sistema SI (absoluto):
+\begin{itemize}
+    \item Longitud: metro (m), Masa: kilogramo (kg), Tiempo: segundo (s)
+    \item Fuerza derivada: newton (N) = kg$\cdot$m/s$^2$
+\end{itemize}
+
+\begin{formbox}[Análisis dimensional]
+Toda ecuación física debe ser dimensionalmente homogénea.
+
+Dimensiones básicas: $[L]$, $[M]$, $[T]$
+
+Ejemplos:
+\[
+[F] = MLT^{-2},\quad [\omega] = T^{-1},\quad [\text{Potencia}] = ML^2T^{-3}
+\]
+\end{formbox}
+
+\subsection{Leyes de Newton}
+
+\begin{enumerate}
+    \item \textbf{Primera ley (Inercia):} Un cuerpo permanece en reposo o MRU
+          a menos que una fuerza neta actúe sobre él.
+    \item \textbf{Segunda ley:} $\displaystyle \sum \mathbf{F} = m\mathbf{a}$
+          (válida solo en sistemas inerciales).
+    \item \textbf{Tercera ley (Acción-Reacción):} A toda acción le corresponde
+          una reacción de igual magnitud y dirección, pero sentido opuesto.
+\end{enumerate}
+
+\subsection{Sistemas de referencia inerciales}
+
+Son aquellos en los que se cumple la primera ley de Newton. Un sistema fijo a
+tierra se considera aproximadamente inercial.
+
+\subsection{Grados de libertad (GDL)}
+
+Número de coordenadas independientes necesarias para describir la configuración
+de un sistema.
+
+\begin{itemize}
+    \item Partícula libre en el plano: 2 GDL
+    \item Partícula libre en el espacio: 3 GDL
+    \item Cuerpo rígido en el plano: 3 GDL (2 de traslación + 1 de rotación)
+    \item Cuerpo rígido en el espacio: 6 GDL
+\end{itemize}
+
+\subsection{Vinculación de sistemas materiales}
+
+\textbf{Vínculo:} restricción geométrica o cinemática que limita el movimiento.
+
+\begin{itemize}
+    \item \textbf{Holónomos:} expresables como ecuaciones algebraicas en las coordenadas.
+          Ej: una partícula obligada a moverse sobre una superficie.
+    \item \textbf{No holónomos:} involucran velocidades, no integrables.
+          Ej: rodadura sin deslizamiento.
+    \item \textbf{Unilaterales:} solo restringen en un sentido (ej: una mesa).
+    \item \textbf{Bilaterales:} restringen en ambos sentidos (ej: una barra rígida).
+\end{itemize}
+
+\begin{formbox}[GDL con vínculos]
+\[
+\text{GDL} = 3N - k
+\]
+donde $N$ = número de partículas, $k$ = número de ecuaciones de vínculo
+independientes (para un sistema de partículas en 3D).
+\end{formbox}
+
+\subsection{Diagrama de cuerpo libre (DCL)}
+
+Procedimiento:
+\begin{enumerate}
+    \item Aislar el cuerpo de su entorno.
+    \item Dibujar todas las fuerzas externas (peso, normales, tensiones, etc.).
+    \item Indicar dimensiones y ángulos relevantes.
+    \item Establecer sistema de coordenadas.
+\end{enumerate}
+
+\begin{tipbox}[Claves para el DCL]
+\begin{itemize}
+    \item Solo fuerzas \textbf{externas} al cuerpo.
+    \item No incluir fuerzas internas (se cancelan por acción-reacción).
+    \item El peso siempre vertical hacia abajo, aplicado en el centro de masa.
+    \item Las reacciones en apoyos dependen del tipo de vínculo.
+\end{itemize}
+\end{tipbox}
+
+\newpage
+
+\section{Tema 2: Cinemática}
+
+\subsection{Cinemática de la Partícula}
+
+\subsubsection*{Coordenadas Cartesianas (movimiento plano)}
+
+\[
+\mathbf{r} = x\,\mathbf{i} + y\,\mathbf{j}
+\qquad
+\mathbf{v} = \dot{x}\,\mathbf{i} + \dot{y}\,\mathbf{j}
+\qquad
+\mathbf{a} = \ddot{x}\,\mathbf{i} + \ddot{y}\,\mathbf{j}
+\]
+
+Trayectoria: se obtiene eliminando $t$ de $x(t), y(t)$.
+
+\subsubsection*{Coordenadas Intrínsecas}
+
+\[
+\mathbf{v} = v\,\mathbf{e}_t = \dot{s}\,\mathbf{e}_t
+\]
+
+\[
+\mathbf{a} = a_t\,\mathbf{e}_t + a_n\,\mathbf{e}_n
+\]
+
+Aceleración tangencial (proyección escalar de $\mathbf{a}$ sobre $\mathbf{v}$):
+\[
+a_t = \mathbf{a} \cdot \mathbf{e}_t = \frac{\mathbf{a} \cdot \mathbf{v}}{|\mathbf{v}|}
+\]
+
+Aceleración normal:
+\[
+a_n = \frac{v^2}{\rho} = \sqrt{|\mathbf{a}|^2 - a_t^2}
+\]
+
+\begin{formbox}[Radio de curvatura --- forma directa en 3D]
+\[
+\rho = \frac{|\mathbf{v}|^3}{|\mathbf{v} \times \mathbf{a}|}
+\]
+\end{formbox}
+
+Relaciones útiles:
+\[
+v\,dv = a_t\,ds \qquad
+s(t) = \int v\,dt \qquad
+v(t) = \int a_t\,dt
+\]
+
+\subsubsection*{Coordenadas Polares}
+
+Vectores unitarios y sus derivadas:
+\[
+\mathbf{e}_r = \cos\theta\,\mathbf{i} + \sin\theta\,\mathbf{j}
+\qquad
+\mathbf{e}_\theta = -\sin\theta\,\mathbf{i} + \cos\theta\,\mathbf{j}
+\]
+\[
+\dot{\mathbf{e}}_r = \dot{\theta}\,\mathbf{e}_\theta
+\qquad
+\dot{\mathbf{e}}_\theta = -\dot{\theta}\,\mathbf{e}_r
+\]
+
+\[
+\mathbf{r} = r\,\mathbf{e}_r
+\]
+
+\[
+\boxed{\mathbf{v} = \dot{r}\,\mathbf{e}_r + r\dot{\theta}\,\mathbf{e}_\theta}
+\]
+
+\[
+\boxed{\mathbf{a} = (\ddot{r} - r\dot{\theta}^2)\,\mathbf{e}_r
+      + (2\dot{r}\dot{\theta} + r\ddot{\theta})\,\mathbf{e}_\theta}
+\]
+
+\begin{formbox}[Componentes]
+\begin{tabular}{lll}
+\toprule
+Componente & Velocidad & Aceleración \\
+\midrule
+Radial ($\mathbf{e}_r$) & $v_r = \dot{r}$ & $a_r = \ddot{r} - r\dot{\theta}^2$ \\
+Transversal ($\mathbf{e}_\theta$) & $v_\theta = r\dot{\theta}$ & $a_\theta = 2\dot{r}\dot{\theta} + r\ddot{\theta}$ \\
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+
+Nota: $a_\theta = \dfrac{1}{r}\dfrac{d}{dt}(r^2\dot{\theta})$
+\end{formbox}
+
+\subsection{Movimiento circular}
+
+Radio constante $R$:
+\[
+\mathbf{v} = R\dot{\theta}\,\mathbf{e}_\theta
+\qquad
+\mathbf{a} = -R\dot{\theta}^2\,\mathbf{e}_r + R\ddot{\theta}\,\mathbf{e}_\theta
+\]
+
+MCU ($\dot{\theta} = \omega$ constante, $\ddot{\theta}=0$):
+\[
+\mathbf{a} = -\frac{v^2}{R}\,\mathbf{e}_r
+\]
+
+\newpage
+
+\subsection{Cinemática del Cuerpo Rígido}
+
+\subsubsection*{Velocidad en movimiento plano}
+
+Dos puntos $A$ y $B$ del mismo cuerpo rígido:
+\[
+\mathbf{v}_B = \mathbf{v}_A + \boldsymbol{\omega} \times \mathbf{r}_{AB}
+\]
+
+\subsubsection*{Aceleración en movimiento plano}
+
+\[
+\mathbf{a}_B = \mathbf{a}_A + \boldsymbol{\alpha} \times \mathbf{r}_{AB}
+              + \boldsymbol{\omega} \times (\boldsymbol{\omega} \times \mathbf{r}_{AB})
+\]
+
+El término centrípeto se reduce a $-\omega^2\,\mathbf{r}_{AB}$ cuando
+$\boldsymbol{\omega} \perp \mathbf{r}_{AB}$.
+
+\subsubsection*{Centro instantáneo de rotación (CIR)}
+
+Punto del cuerpo (o su extensión) con velocidad cero:
+\[
+\mathbf{v}_P = \boldsymbol{\omega} \times \mathbf{r}_{P/\text{CIR}}
+\]
+
+\begin{tipbox}[Cómo ubicar el CIR]
+\begin{itemize}
+    \item Con las direcciones de $\mathbf{v}_A$ y $\mathbf{v}_B$, el CIR está en la
+          intersección de las perpendiculares a ambas velocidades.
+    \item Si $\mathbf{v}_A \parallel \mathbf{v}_B$, el CIR está en el infinito
+          (traslación pura).
+\end{itemize}
+\end{tipbox}
+
+\subsubsection*{Distribución triangular de velocidades (método semigráfico)}
+
+En un cuerpo rígido con movimiento plano, las velocidades de los puntos varían
+linealmente con la distancia al CIR. Esto permite construir un triángulo de
+velocidades: si se conoce la velocidad de un punto, la de cualquier otro se
+obtiene por proporción geométrica de distancias al CIR.
+
+\subsubsection*{Rodadura sin deslizamiento}
+
+El punto de contacto $C$ con la superficie tiene $\mathbf{v}_C = \mathbf{0}$
+(es el CIR instantáneo).
+
+Relaciones:
+\[
+v_{\text{centro}} = \omega R
+\qquad
+a_{\text{centro}} = \alpha R
+\]
+
+\newpage
+
+\section{Ejercicios de práctica recomendados}
+
+Basados en los PDF de \texttt{recursos/} y el problemario:
+
+\subsection*{Cinemática de la partícula}
+
+\begin{enumerate}
+    \item \textbf{Problema 1}: $x(t)=8t+4t^2$, $y(t)=16t+8t^2-6$,
+          hallar $\mathbf{v}$, $\mathbf{a}$ en $t=0$, $y(x)$, $s(t)$.
+    \item \textbf{Problema 2}: Anillo en semiaro $R=4$ m,
+          $s(t)=4\pi t^2/3$, $\mathbf{v}$ y $\mathbf{a}$ en el punto más alto.
+    \item \textbf{Problema 4}: $v_r = v_\theta$, aceleración radial;
+          hallar $r(\theta)$ y $a(r)$.
+    \item \textbf{Problema 5}: $\mathbf{v}=3\mathbf{i}+4\mathbf{j}+2\mathbf{k}$,
+          $\mathbf{a}=2\mathbf{i}+3\mathbf{j}+4\mathbf{k}$; $a_t$ y $\rho$.
+    \item \textbf{Problema 7}: $v$ cte con $\theta = \omega t$;
+          trayectoria, $\rho$, $a_n$.
+\end{enumerate}
+
+\subsection*{Cinemática del cuerpo rígido}
+
+\begin{enumerate}
+    \item \textbf{Problema 1}: Barras AB-BC-CD; $\boldsymbol{\omega}_{CD}$,
+          $\boldsymbol{\alpha}_{CD}$.
+    \item \textbf{Problema 2}: Disco rodando en rampa $60^\circ$;
+          $\mathbf{v}_A$, $\mathbf{a}_A$.
+    \item \textbf{Problema 4}: Disco rodando en sup. circular;
+          $\boldsymbol{\omega}_{\text{disco}}$, $\boldsymbol{\alpha}_{\text{disco}}$.
+    \item \textbf{Problema 5}: Barra OA con $\omega,\alpha$;
+          $\mathbf{v}$, $\mathbf{a}$ del punto medio de AB.
+    \item \textbf{Problema 10}: Dos barras con bloques;
+          $\mathbf{v}_B$, $\mathbf{a}_B$.
+\end{enumerate}
+
+\newpage
+
+\section{Resumen de fórmulas}
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Tema} & \textbf{Magnitud} & \textbf{Ecuación} \\
+\midrule
+\multirow{3}{*}{\parbox{2.5cm}{Coordenadas\\cartesianas}} & Posición & $\mathbf{r}=x\mathbf{i}+y\mathbf{j}$ \\
+                                                     & Velocidad & $\mathbf{v}=\dot{x}\mathbf{i}+\dot{y}\mathbf{j}$ \\
+                                                     & Aceleración & $\mathbf{a}=\ddot{x}\mathbf{i}+\ddot{y}\mathbf{j}$ \\
+\midrule
+\multirow{4}{*}{\parbox{2.5cm}{Coordenadas\\intrínsecas}} & Velocidad & $\mathbf{v}=v\mathbf{e}_t$ \\
+                                                      & $a_t$ & $a_t = \dfrac{\mathbf{a}\cdot\mathbf{v}}{|\mathbf{v}|}$ \\
+                                                      & Aceleración & $\mathbf{a}=a_t\mathbf{e}_t+\dfrac{v^2}{\rho}\mathbf{e}_n$ \\
+                                                      & Radio curv. & $\rho = \dfrac{|\mathbf{v}|^3}{|\mathbf{v}\times\mathbf{a}|}$ \\
+\midrule
+\multirow{3}{*}{\parbox{2.5cm}{Coordenadas\\polares}} & Posición & $\mathbf{r}=r\mathbf{e}_r$ \\
+                                                     & Velocidad & $\mathbf{v}=\dot{r}\mathbf{e}_r+r\dot{\theta}\mathbf{e}_\theta$ \\
+                                                     & Aceleración & $\mathbf{a}=(\ddot{r}-r\dot{\theta}^2)\mathbf{e}_r+(2\dot{r}\dot{\theta}+r\ddot{\theta})\mathbf{e}_\theta$ \\
+\midrule
+\multirow{3}{*}{\parbox{2.5cm}{Cuerpo\\rígido}} & Velocidad & $\mathbf{v}_B=\mathbf{v}_A+\boldsymbol{\omega}\times\mathbf{r}_{AB}$ \\
+                                                & Aceleración & $\mathbf{a}_B=\mathbf{a}_A+\boldsymbol{\alpha}\times\mathbf{r}_{AB}+\boldsymbol{\omega}\times(\boldsymbol{\omega}\times\mathbf{r}_{AB})$ \\
+                                                & Rodadura & $v_{\text{centro}}=\omega R$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{warnbox}[Errores comunes]
+\begin{itemize}
+    \item Confundir $a_\theta$ con $r\ddot{\theta}$: no olvidar el término de Coriolis $2\dot{r}\dot{\theta}$.
+    \item En cuerpo rígido, olvidar el término centrípeto $\boldsymbol{\omega}\times(\boldsymbol{\omega}\times\mathbf{r})$.
+    \item Usar mal la regla de la mano derecha para $\boldsymbol{\omega}\times\mathbf{r}$.
+    \item No verificar que el CIR existe: solo sirve para velocidades, no para aceleraciones.
+    \item En el DCL, incluir fuerzas internas o confundir acción-reacción.
+    \item No verificar homogeneidad dimensional en las ecuaciones.
+\end{itemize}
+\end{warnbox}
+
+\end{document}
