@@ -8,4 +8,6 @@
 2026-06-05 | maquinas-electricas-i | prelab_3: resolver prelaboratorio, modularizar, corregir tabla de mediciones y agregar imágenes | done
 2026-06-05 | maquinas-electricas-i | prelab_2: modularización e implementación de la sección de tablas de mediciones | awaiting_review
 2026-06-09 | plantas-y-subestaciones | tarea_2: Registrar feature y crear directorio de entregable | pending
+2026-06-20 | sistema-de-potencia | tarea_transformacion: Relaciones de transformación y redes de secuencia en LaTeX | awaiting_review
+2026-06-20 | maquinas-electricas-i | informe_3: registrar feature, agregar mediciones reales y figuras a resultados, e incluir anexos | awaiting_review
 

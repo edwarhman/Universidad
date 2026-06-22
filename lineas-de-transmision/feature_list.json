@@ -22,10 +22,24 @@
         "Evaluación de los 5 conductores asignados",
         "Información de contacto con proveedor (precio, condiciones de pago y entrega)"
       ],
-      "status": "awaiting_review"
+      "status": "done"
     },
     {
       "id": 2,
+      "type": "tarea",
+      "name": "tarea_distancias_seguridad",
+      "title": "Tarea — Distancias de seguridad",
+      "due": "2026-06-08",
+      "description": "Cuadro comparativo de distancias de seguridad según normativa 223-2008 (ecuaciones) y distancias OHTL (dibujos). Incluir: cruce de línea, distancia al suelo, distancia a edificaciones, distancia a otros servicios, etc.",
+      "acceptance": [
+        "Tabla comparativa con las diferentes distancias de seguridad",
+        "Referencias a 223-2008 y OHTL",
+        "Entregado en PDF en entregables/tareas/distancias-seguridad/"
+      ],
+      "status": "in_progress"
+    },
+    {
+      "id": 3,
       "type": "tarea",
       "name": "tarea_parametros",
       "title": "Tarea 1 — Parámetros de líneas",

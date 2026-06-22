@@ -12,7 +12,8 @@
 *.run.xml
 
 # Compiled PDFs (track source, not output)
-*.pdf
+main.pdf
+
 
 # OS generated files
 Thumbs.db

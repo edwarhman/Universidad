@@ -1,3 +1,6 @@
 [submodule "micromouse"]
 	path = micromouse
 	url = git@github.com:edwarhman/micromouse.git
+[submodule "maquinas-electricas-i/entregables/informes"]
+	path = maquinas-electricas-i/entregables/informes
+	url = git@github.com:edwarhman/informes-maquinas.git

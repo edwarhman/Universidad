@@ -20,6 +20,21 @@
         "Cálculos detallados en pu y valores reales",
         "Matriz de admitancias incluida"
       ],
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "type": "tarea",
+      "name": "tarea_transformacion",
+      "title": "Tarea — Relaciones de transformación y redes de secuencia",
+      "due": "",
+      "description": "1) Relación de transformación trifásica para conexiones Y-Δ, Δ-Y, Δ-Δ, Y-Y. 2) Redes de secuencia para conexión Y-Y. 3) Gráficos de los tres sistemas de secuencia balanceados para un sistema desbalanceado particular.",
+      "acceptance": [
+        "Documento PDF en entregables/tareas/tarea-transformacion/",
+        "Incluye relaciones de transformación para las 4 conexiones",
+        "Redes de secuencia para Y-Y deducidas",
+        "Gráficos de secuencia balanceada incluidos"
+      ],
       "status": "awaiting_review"
     }
   ]

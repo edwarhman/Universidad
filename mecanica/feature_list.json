@@ -20,20 +20,7 @@
         "Desarrollo paso a paso en entregables/tareas/vel-acel-polares/",
         "Formato LaTeX compilable o PDF"
       ],
-      "status": "awaiting_review"
-    },
-    {
-      "id": 2,
-      "type": "tarea",
-      "name": "tarea_estatica",
-      "title": "Tarea 1 — Estática",
-      "due": "2026-06-10",
-      "description": "Ejercicios de equilibrio de fuerzas y momentos.",
-      "acceptance": [
-        "Cálculos realizados y validados",
-        "PDF en entregables/tareas/tarea-estatica/"
-      ],
-      "status": "pending"
+      "status": "done"
     },
     {
       "id": 3,
@@ -46,7 +33,7 @@
         "Guía de estudio creada en entregables/parciales/parcial-1/",
         "Simulacro resuelto"
       ],
-      "status": "pending"
+      "status": "done"
     }
   ]
 }

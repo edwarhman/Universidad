@@ -9,24 +9,24 @@
   },
   "features": [
     {
-      "id": 1,
+      "id": 2,
       "type": "tarea",
-      "name": "tarea_1",
-      "title": "Tarea 1 — Tipos de subestaciones",
-      "due": "2026-06-12",
-      "description": "Clasificación y componentes de subestaciones eléctricas.",
+      "name": "tarea_2",
+      "title": "Tarea 2 — Transcripción COVENIN 391 (sección 4)",
+      "due": "2026-06-18",
+      "description": "Transcripción de la sección 4 de la normativa COVENIN 391 para símbolos gráficos aplicados a sistemas de potencia.",
       "acceptance": [
-        "Investigación realizada",
-        "PDF en entregables/tareas/tarea-1/"
+        "Transcripción realizada (formato ODT) en entregables/tareas/tarea-2/",
+        "Incluye la sección 4 completa"
       ],
-      "status": "pending"
+      "status": "done"
     },
     {
-      "id": 2,
+      "id": 3,
       "type": "parcial",
       "name": "parcial_1",
       "title": "Parcial 1",
-      "due": "2026-07-04",
+      "due": "2026-06-23",
       "description": "Primer parcial de Plantas y Subestaciones.",
       "acceptance": [
         "Guía de estudio creada en entregables/parciales/parcial-1/",

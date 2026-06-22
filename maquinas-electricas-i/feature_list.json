@@ -9,6 +9,20 @@
   },
   "features": [
     {
+      "id": 8,
+      "type": "tarea",
+      "name": "tarea_sistema_electrico",
+      "title": "Tarea — Sistema Eléctrico Venezolano",
+      "due": "2026-06-23",
+      "description": "Investigación sobre el sistema eléctrico venezolano: Gran Caracas, niveles de tensión, CADAFE, Electricidad de Caracas, Guri, SEN, fuentes de energía y regiones.",
+      "acceptance": [
+        "Documento PDF en entregables/tareas/tarea-sistema-electrico/",
+        "Todas las preguntas respondidas",
+        "Incluye esquema del SEN y mapa de regiones"
+      ],
+      "status": "awaiting_review"
+    },
+    {
       "id": 1,
       "type": "prelaboratorio",
       "name": "prelab_1",
@@ -21,7 +35,7 @@
         "Cálculos de errores incluidos y correctos",
         "Cifras significativas aplicadas correctamente"
       ],
-      "status": "awaiting_review"
+      "status": "done"
     },
     {
       "id": 2,
@@ -36,7 +50,7 @@
         "Portada incluida (UCV, Facultad, Escuela, Dpto Potencia)",
         "Cálculos incluidos y correctos"
       ],
-      "status": "awaiting_review"
+      "status": "done"
     },
     {
       "id": 3,
@@ -95,7 +109,63 @@
         "Secciones completas: Portada, Introducción, Objetivos, Marco Teórico, Metodología, Equipos e Instrumentos, Diagramas de Conexiones, Resultados, Análisis de Resultados, Conclusiones y Referencias",
         "Cálculos y análisis de curvas de histéresis incluidos"
       ],
+      "status": "done"
+    },
+    {
+      "id": 7,
+      "type": "prelaboratorio",
+      "name": "prelab_4",
+      "title": "Prelaboratorio 4 — Transformador Monofásico. Modelo",
+      "due": "2026-06-25",
+      "description": "Determinación del circuito equivalente del transformador monofásico: medición de resistencia de devanados, relación de transformación, polaridad, ensayo de cortocircuito y ensayo de vacío conforme a COVENIN 3172-95.",
+      "acceptance": [
+        "Existe en entregables/prelaboratorios/prelab-4/",
+        "Documento LaTeX compila sin errores",
+        "Portada incluida (UCV, Facultad, Escuela, Dpto Potencia)",
+        "Incluye introducción, marco teórico, procedimiento y tablas de mediciones",
+        "Referencia bibliográfica a COVENIN 3172-95 incluida"
+      ],
+      "status": "done"
+    },
+    {
+      "id": 9,
+      "type": "informe",
+      "name": "informe_3",
+      "title": "Informe 3 — Estudio del Contactor o Conmutador Electromagnéticos",
+      "due": "",
+      "description": "Estudio del contactor o conmutador electromagnéticos: partes constitutivas, funcionamiento, y análisis de mediciones/curvas.",
+      "acceptance": [
+        "Existe en entregables/informes/Informe3/",
+        "Documento LaTeX compila sin errores",
+        "Secciones completas: Portada, Introducción, Objetivos, Marco Teórico, Metodología, Equipos e Instrumentos, Diagramas de Conexiones, Resultados, Análisis de Resultados, Conclusiones y Referencias",
+        "Tablas de mediciones y gráficos correspondientes agregados"
+      ],
       "status": "awaiting_review"
+    },
+    {
+      "id": 10,
+      "type": "prelaboratorio",
+      "name": "prelab_5",
+      "title": "Prelaboratorio 5",
+      "due": "2026-06-25",
+      "description": "Prelaboratorio 5 de Máquinas Eléctricas I.",
+      "acceptance": [
+        "Existe en entregables/prelaboratorios/prelab-5/",
+        "Documento LaTeX compila sin errores"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 11,
+      "type": "parcial",
+      "name": "parcial_1",
+      "title": "Parcial 1",
+      "due": "2026-06-30",
+      "description": "Primer parcial de Máquinas Eléctricas I.",
+      "acceptance": [
+        "Guía de estudio o simulacro resuelto en entregables/parciales/parcial-1/"
+      ],
+      "status": "pending"
     }
   ]
 }
